@@ -61,8 +61,10 @@ This website is designed to be deployed on Cloudflare Pages for optimal performa
 2. In the Cloudflare dashboard, go to Pages and create a new project
 3. Connect your GitHub repository
 4. Configure the build settings:
-   - Build command: `npm run build`
-   - Build output directory: `out`
+   - Framework preset: Next.js
+   - Build command: `npx @cloudflare/next-on-pages@1`
+   - Build output directory: `.vercel/output/static`
+   - Compatibility flags: Add `nodejs_compat` flag
    - Environment variables: Add any required environment variables
 
 ## Gumroad Integration
