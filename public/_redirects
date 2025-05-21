@@ -1,0 +1,8 @@
+# Redirect domain aliases to primary domain
+https://www.hivetechs.io/* https://hivetechs.io/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://hivetechs.netlify.app/* https://hivetechs.io/:splat 301!
+
+# Handle 404s with custom page
+/* /index.html 200
