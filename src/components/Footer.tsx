@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-1">
-            <h3 className="text-xl font-bold mb-4">HiveTechs</h3>
+            <h3 className="text-xl font-bold mb-4">HiveTechs Collective</h3>
             <p className="text-gray-300 mb-4">
               Developing innovative AI tools for developers and businesses.
             </p>

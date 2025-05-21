@@ -13,7 +13,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold text-primary">HiveTechs</span>
+            <span className="text-2xl font-bold text-primary">HiveTechs Collective</span>
           </Link>
 
           {/* Desktop Navigation */}
