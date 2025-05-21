@@ -10,11 +10,40 @@ export default function Features() {
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="heading-1 mb-6">
-              Multi-Model Consensus Features
+              Hive.AI: Revolutionary Multi-Model Consensus Pipeline
             </h1>
             <p className="text-xl mb-8">
-              Our innovative AI pipeline combines the strengths of multiple models to deliver superior results for developers and businesses.
+              Our 4-stage consensus pipeline harnesses the collective intelligence of multiple specialized AI models to deliver unparalleled response quality for developers and businesses.
             </p>
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-3">
+                <span className="font-semibold">Generator</span>
+              </div>
+              <div className="flex items-center">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-3">
+                <span className="font-semibold">Refiner</span>
+              </div>
+              <div className="flex items-center">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-3">
+                <span className="font-semibold">Validator</span>
+              </div>
+              <div className="flex items-center">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-3">
+                <span className="font-semibold">Curator</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -24,106 +53,325 @@ export default function Features() {
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
             <div>
-              <h2 className="heading-2 mb-6">Multi-Model Consensus</h2>
+              <h2 className="heading-2 mb-6">🧠 4-Stage Consensus Pipeline</h2>
               <p className="text-lg text-gray-600 mb-6">
-                Our pipeline combines results from multiple leading AI models including GPT-4, Claude, Gemini, and Grok to deliver more accurate, comprehensive, and reliable answers.
+                Our revolutionary 4-stage consensus pipeline transforms user queries into exceptionally high-quality responses by combining the strengths of multiple specialized AI models.
               </p>
-              <ul className="space-y-4">
+              <ul className="space-y-6">
                 <li className="flex items-start">
-                  <svg className="w-6 h-6 text-primary mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                  </svg>
-                  <span>Leverages the unique strengths of each model</span>
+                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mr-4">
+                    <span className="font-bold">1</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Generator Stage</h3>
+                    <p className="text-gray-600">Creates comprehensive initial responses with broad topic coverage</p>
+                  </div>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-6 h-6 text-primary mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                  </svg>
-                  <span>Reduces hallucinations and factual errors</span>
+                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mr-4">
+                    <span className="font-bold">2</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Refiner Stage</h3>
+                    <p className="text-gray-600">Enhances clarity, corrects inaccuracies, and improves structure</p>
+                  </div>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-6 h-6 text-primary mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                  </svg>
-                  <span>Provides more comprehensive and nuanced responses</span>
+                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mr-4">
+                    <span className="font-bold">3</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Validator Stage</h3>
+                    <p className="text-gray-600">Verifies factual accuracy and performs critical reasoning checks</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mr-4">
+                    <span className="font-bold">4</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Curator Stage</h3>
+                    <p className="text-gray-600">Delivers polished, well-formatted responses with consistent tone</p>
+                  </div>
                 </li>
               </ul>
             </div>
-            <div className="bg-gray-100 rounded-lg p-8 flex items-center justify-center h-80">
-              <div className="text-center">
-                <div className="text-5xl font-bold text-primary mb-4">4+</div>
-                <p className="text-xl">Leading AI Models Combined</p>
+            <div className="bg-gray-100 rounded-lg p-8 flex items-center justify-center h-auto py-12">
+              <div className="space-y-6 w-full max-w-md">
+                <div className="bg-white rounded-lg p-6 shadow-md border-l-4 border-primary">
+                  <div className="flex items-center mb-3">
+                    <div className="w-3 h-3 rounded-full bg-primary mr-2"></div>
+                    <h4 className="font-semibold">Generator</h4>
+                  </div>
+                  <p className="text-sm text-gray-600">"The quantum computing field emerged in the 1980s..."</p>
+                </div>
+                
+                <div className="bg-white rounded-lg p-6 shadow-md border-l-4 border-blue-500">
+                  <div className="flex items-center mb-3">
+                    <div className="w-3 h-3 rounded-full bg-blue-500 mr-2"></div>
+                    <h4 className="font-semibold">Refiner</h4>
+                  </div>
+                  <p className="text-sm text-gray-600">"Quantum computing emerged in the early 1980s when physicists like Richard Feynman proposed using quantum mechanics to solve computational problems..."</p>
+                </div>
+                
+                <div className="bg-white rounded-lg p-6 shadow-md border-l-4 border-purple-500">
+                  <div className="flex items-center mb-3">
+                    <div className="w-3 h-3 rounded-full bg-purple-500 mr-2"></div>
+                    <h4 className="font-semibold">Validator</h4>
+                  </div>
+                  <p className="text-sm text-gray-600">"Correction: While Feynman was influential, the field began in the late 1970s with early work by Benioff. Feynman's famous lecture was in 1981..."</p>
+                </div>
+                
+                <div className="bg-white rounded-lg p-6 shadow-md border-l-4 border-green-500">
+                  <div className="flex items-center mb-3">
+                    <div className="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
+                    <h4 className="font-semibold">Curator</h4>
+                  </div>
+                  <p className="text-sm text-gray-600">"Quantum computing emerged in the late 1970s through Paul Benioff's work, with significant contributions from Richard Feynman's 1981 proposal to use quantum mechanics for computation..."</p>
+                </div>
               </div>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
-            <div className="order-2 md:order-1 bg-gray-100 rounded-lg p-8 flex items-center justify-center h-80">
-              <div className="text-center">
-                <div className="text-5xl font-bold text-primary mb-4">∞</div>
-                <p className="text-xl">Unlimited Context Length</p>
+            <div className="order-2 md:order-1 bg-gray-100 rounded-lg p-8 flex items-center justify-center h-auto py-12">
+              <div className="w-full max-w-md">
+                <div className="relative">
+                  {/* Knowledge Graph Visualization */}
+                  <div className="mb-6">
+                    <div className="flex justify-center">
+                      <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center border-2 border-primary">
+                        <span className="text-primary font-bold">Query</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex justify-between mt-6">
+                      <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center border-2 border-blue-400">
+                        <span className="text-blue-500 text-sm font-medium">Topic 1</span>
+                      </div>
+                      <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center border-2 border-purple-400">
+                        <span className="text-purple-500 text-sm font-medium">Topic 2</span>
+                      </div>
+                      <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center border-2 border-green-400">
+                        <span className="text-green-500 text-sm font-medium">Topic 3</span>
+                      </div>
+                    </div>
+                    
+                    {/* Connection Lines */}
+                    <div className="absolute top-16 left-1/2 -translate-x-1/2 w-px h-12 bg-gray-300"></div>
+                    <div className="absolute top-28 left-1/4 w-1/2 h-px bg-gray-300"></div>
+                    <div className="absolute top-28 left-1/4 w-px h-8 bg-gray-300"></div>
+                    <div className="absolute top-28 left-1/2 w-px h-8 bg-gray-300"></div>
+                    <div className="absolute top-28 left-3/4 w-px h-8 bg-gray-300"></div>
+                  </div>
+                  
+                  <div className="text-center mt-8">
+                    <div className="text-3xl font-bold text-primary mb-2">Thematic</div>
+                    <p className="text-lg font-medium text-gray-700">Knowledge Retrieval</p>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="order-1 md:order-2">
-              <h2 className="heading-2 mb-6">Unlimited Context Length</h2>
+              <h2 className="heading-2 mb-6">🔄 Thematic Knowledge Retrieval</h2>
               <p className="text-lg text-gray-600 mb-6">
-                Unlike other AI services that limit your context window, our pipeline handles conversations of any length without artificial constraints.
+                Unlike standard AI assistants, Hive.AI features an advanced thematic knowledge retrieval system that maintains context across your entire conversation history.
               </p>
-              <ul className="space-y-4">
+              <ul className="space-y-4 mb-6">
                 <li className="flex items-start">
                   <svg className="w-6 h-6 text-primary mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
-                  <span>No token limitations on your conversations</span>
+                  <span>Automatically maintains conversation continuity across related topics</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-6 h-6 text-primary mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
-                  <span>Maintain context across long conversations</span>
+                  <span>Identifies thematic relationships between seemingly disparate queries</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-6 h-6 text-primary mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
-                  <span>Perfect for complex projects and detailed discussions</span>
+                  <span>Builds a comprehensive knowledge graph from your interactions</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-primary mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                  </svg>
+                  <span>Provides context-aware responses without requiring explicit references</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
             <div>
-              <h2 className="heading-2 mb-6">Flexible API Integration</h2>
+              <h2 className="heading-2 mb-6">🧩 Technical Domain Expertise</h2>
               <p className="text-lg text-gray-600 mb-6">
-                Seamlessly integrate our multi-model consensus pipeline into your applications, workflows, and development environments.
+                Hive.AI excels at specialized technical domains with deep understanding across a wide range of technical fields and disciplines.
               </p>
-              <ul className="space-y-4">
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="bg-gray-50 rounded-lg p-4 border-l-4 border-primary">
+                  <h3 className="font-bold text-gray-800 mb-2">Software Engineering</h3>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    <li>• Architecture Patterns</li>
+                    <li>• Design Principles</li>
+                    <li>• Testing Strategies</li>
+                  </ul>
+                </div>
+                <div className="bg-gray-50 rounded-lg p-4 border-l-4 border-blue-500">
+                  <h3 className="font-bold text-gray-800 mb-2">Machine Learning</h3>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    <li>• Model Selection</li>
+                    <li>• Training Pipelines</li>
+                    <li>• Hyperparameter Tuning</li>
+                  </ul>
+                </div>
+                <div className="bg-gray-50 rounded-lg p-4 border-l-4 border-purple-500">
+                  <h3 className="font-bold text-gray-800 mb-2">Database Technologies</h3>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    <li>• Query Optimization</li>
+                    <li>• Schema Design</li>
+                    <li>• Data Modeling</li>
+                  </ul>
+                </div>
+                <div className="bg-gray-50 rounded-lg p-4 border-l-4 border-green-500">
+                  <h3 className="font-bold text-gray-800 mb-2">Cloud Infrastructure</h3>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    <li>• Deployment Strategies</li>
+                    <li>• Scaling Solutions</li>
+                    <li>• Cost Optimization</li>
+                  </ul>
+                </div>
+              </div>
+              <p className="text-sm text-gray-500 italic">
+                "The depth of technical knowledge across multiple domains has helped us solve complex problems that would have taken weeks to research." - Michael T., CTO
+              </p>
+            </div>
+            <div className="bg-gray-100 rounded-lg p-8 flex items-center justify-center h-auto py-12">
+              <div className="w-full max-w-md">
+                <div className="relative">
+                  <div className="flex flex-wrap justify-center gap-3 mb-8">
+                    {/* Programming Languages */}
+                    <div className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Python</div>
+                    <div className="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">JavaScript</div>
+                    <div className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Go</div>
+                    <div className="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-medium">Rust</div>
+                    <div className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">C++</div>
+                    <div className="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-sm font-medium">TypeScript</div>
+                    <div className="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Java</div>
+                    
+                    {/* Frameworks */}
+                    <div className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">React</div>
+                    <div className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">TensorFlow</div>
+                    <div className="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">Vue</div>
+                    <div className="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-medium">PyTorch</div>
+                    <div className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">Django</div>
+                    <div className="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Flask</div>
+                    
+                    {/* Cloud Platforms */}
+                    <div className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">AWS</div>
+                    <div className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Azure</div>
+                    <div className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">GCP</div>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="inline-block px-6 py-3 bg-primary text-white rounded-lg font-bold text-lg">
+                      Deep Technical Expertise
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Fourth Feature: Persistent Contextual Memory */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div className="order-2 md:order-1 bg-gray-100 rounded-lg p-8 flex items-center justify-center h-auto py-12">
+              <div className="w-full max-w-md">
+                <div className="relative flex flex-col items-center">
+                  {/* Memory Database Visualization */}
+                  <div className="w-full bg-white rounded-lg shadow-md p-6 mb-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="font-bold text-gray-800">Persistent Memory</h3>
+                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <div className="flex items-center">
+                        <div className="w-2 h-2 rounded-full bg-primary mr-2"></div>
+                        <div className="text-xs text-gray-600 bg-gray-100 rounded px-2 py-1 flex-grow">
+                          <span className="font-medium">Session #1:</span> Project setup discussion
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-center">
+                        <div className="w-2 h-2 rounded-full bg-primary mr-2"></div>
+                        <div className="text-xs text-gray-600 bg-gray-100 rounded px-2 py-1 flex-grow">
+                          <span className="font-medium">Session #2:</span> Database schema design
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-center">
+                        <div className="w-2 h-2 rounded-full bg-primary mr-2"></div>
+                        <div className="text-xs text-gray-600 bg-gray-100 rounded px-2 py-1 flex-grow">
+                          <span className="font-medium">Session #3:</span> API endpoint implementation
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-center">
+                        <div className="w-2 h-2 rounded-full bg-green-500 mr-2"></div>
+                        <div className="text-xs text-gray-600 bg-green-100 rounded px-2 py-1 flex-grow font-medium">
+                          Current Session: Frontend integration
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary text-white">
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="order-1 md:order-2">
+              <h2 className="heading-2 mb-6">📚 Persistent Contextual Memory</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                Our SQLite-based persistent storage ensures your conversations and context are preserved across sessions, creating a truly continuous experience.
+              </p>
+              <ul className="space-y-4 mb-6">
                 <li className="flex items-start">
                   <svg className="w-6 h-6 text-primary mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
-                  <span>RESTful API with comprehensive documentation</span>
+                  <span>Long-term memory across sessions</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-6 h-6 text-primary mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
-                  <span>Client libraries for popular programming languages</span>
+                  <span>Automatic context retrieval for related questions</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-6 h-6 text-primary mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
-                  <span>Webhook support for event-driven architectures</span>
+                  <span>Progressive knowledge building from user interactions</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-primary mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                  </svg>
+                  <span>Intelligent response adaptation based on conversation history</span>
                 </li>
               </ul>
-            </div>
-            <div className="bg-gray-100 rounded-lg p-8 flex items-center justify-center h-80">
-              <div className="text-center">
-                <div className="text-5xl font-bold text-primary mb-4">&lt;/&gt;</div>
-                <p className="text-xl">Simple API Integration</p>
-              </div>
+              <p className="text-sm text-gray-500 italic">
+                "It's like having a team member who remembers every detail of our past conversations and builds on that knowledge over time." - Alex R., Product Manager
+              </p>
             </div>
           </div>
         </div>
