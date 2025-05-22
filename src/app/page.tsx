@@ -1,6 +1,7 @@
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link'
 import Image from 'next/image'
+import WorkingButton from '@/components/WorkingButton'
 
 export default function Home() {
   return (
@@ -13,21 +14,19 @@ export default function Home() {
               <h1 className="heading-1 mb-6">
                 Multi-Model AI Consensus Pipeline
               </h1>
-              <p className="text-xl mb-8">
-                Get better answers by combining multiple AI models. HiveTechs provides a powerful consensus pipeline that delivers superior results for developers and businesses.
+              <p className="text-xl mb-8 font-medium">
+                Get better answers by combining multiple AI models. HiveTechs Collective provides a powerful consensus pipeline that delivers superior results for developers and businesses.
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <a 
-                  href="https://store.hivetechs.io/l/basic-plan?wanted=true" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="btn-primary text-center"
-                >
-                  Start Free Trial
-                </a>
-                <Link href="/features" className="bg-white text-primary px-6 py-2 rounded-md hover:bg-opacity-90 transition-all text-center">
-                  Learn More
-                </Link>
+                <WorkingButton 
+                  url="https://buy.stripe.com/test_28o5mf0Wd8Hn4Sc000" 
+                  text="Start Free Trial" 
+                />
+                <WorkingButton 
+                  url="/features" 
+                  text="Learn More" 
+                  variant="light"
+                />
               </div>
             </div>
             <div className="hidden md:block">
@@ -45,7 +44,7 @@ export default function Home() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="heading-2 mb-4">Key Features</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl max-w-3xl mx-auto" style={{color: '#111827', fontWeight: 600, backgroundColor: 'white', padding: '10px', borderRadius: '5px'}}>
               Our multi-model consensus pipeline combines the strengths of different AI models to deliver superior results.
             </p>
           </div>
@@ -58,8 +57,8 @@ export default function Home() {
                   <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-4">Multi-Model Consensus</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold mb-4 text-gray-900">Multi-Model Consensus</h3>
+              <p className="text-gray-800 font-medium">
                 Combine results from multiple AI models including GPT-4, Claude, Gemini, and Grok to get the most accurate and comprehensive answers.
               </p>
             </div>
@@ -71,9 +70,9 @@ export default function Home() {
                   <path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-4">Unlimited Context Length</h3>
-              <p className="text-gray-600">
-                No token limitations on your conversations. Our pipeline handles long contexts efficiently without artificial constraints.
+              <h3 className="text-xl font-bold mb-4 text-gray-900">Advanced Code Generation</h3>
+              <p className="text-gray-800 font-medium">
+                Generate high-quality code with improved accuracy and best practices across multiple programming languages and frameworks.
               </p>
             </div>
 
@@ -84,9 +83,9 @@ export default function Home() {
                   <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-4">Flexible Subscription Plans</h3>
-              <p className="text-gray-600">
-                Choose from various subscription tiers based on your usage needs, with the ability to purchase additional credits as needed.
+              <h3 className="text-xl font-bold mb-4 text-gray-900">Flexible Integration</h3>
+              <p className="text-gray-800 font-medium">
+                Seamlessly integrate with your existing tools and workflows through our comprehensive API and SDK options.
               </p>
             </div>
           </div>
@@ -98,8 +97,8 @@ export default function Home() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="heading-2 mb-4">Simple, Transparent Pricing</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              All plans include a 7-day free trial with full access to all features.
+            <p className="text-xl improved-text max-w-3xl mx-auto" style={{color: '#1f2937', fontWeight: 500}}>
+              Our pricing is designed to be flexible and scale with your needs. Choose the plan that works best for you.
             </p>
           </div>
 
@@ -107,39 +106,40 @@ export default function Home() {
             {/* Basic Plan */}
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 flex flex-col">
               <h3 className="text-xl font-bold mb-2">Basic Plan</h3>
-              <div className="text-3xl font-bold mb-2">$5<span className="text-lg text-gray-500">/mo</span></div>
-              <p className="text-gray-500 mb-6">For individual developers</p>
+              <div className="text-3xl font-bold mb-2" style={{color: '#111827'}}>$5<span className="text-lg" style={{color: '#4B5563', fontWeight: 600}}>/mo</span></div>
+              <p style={{color: '#111827', fontWeight: 600}} className="mb-6">For individual developers</p>
               <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
                   50 daily conversations
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
                   1,000 monthly conversations
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
                   Multi-model consensus
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
                   Unlimited context length
                 </li>
               </ul>
               <a 
-                href="https://store.hivetechs.io/l/basic-plan?wanted=true" 
+                href="https://buy.stripe.com/test_28o5mf0Wd8Hn4Sc000" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="btn-primary w-full text-center"
+                className="working-button w-full text-center"
+                style={{fontWeight: 500, color: 'white'}}
               >
                 Start Free Trial
               </a>
@@ -148,29 +148,29 @@ export default function Home() {
             {/* Standard Plan */}
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 flex flex-col">
               <h3 className="text-xl font-bold mb-2">Standard Plan</h3>
-              <div className="text-3xl font-bold mb-2">$10<span className="text-lg text-gray-500">/mo</span></div>
-              <p className="text-gray-500 mb-6">For power users</p>
+              <div className="text-3xl font-bold mb-2" style={{color: '#111827'}}>$10<span className="text-lg" style={{color: '#4B5563', fontWeight: 600}}>/mo</span></div>
+              <p style={{color: '#111827', fontWeight: 600}} className="mb-6">For power users</p>
               <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
                   100 daily conversations
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
                   2,000 monthly conversations
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
                   Priority processing
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
                   Standard model combinations
@@ -239,45 +239,46 @@ export default function Home() {
             {/* Team Plan */}
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 flex flex-col">
               <h3 className="text-xl font-bold mb-2">Team Plan</h3>
-              <div className="text-3xl font-bold mb-2">$50<span className="text-lg text-gray-500">/mo</span></div>
-              <p className="text-gray-500 mb-6">For development teams</p>
+              <div className="text-3xl font-bold mb-2" style={{color: '#111827'}}>$50<span className="text-lg" style={{color: '#4B5563', fontWeight: 600}}>/mo</span></div>
+              <p style={{color: '#111827', fontWeight: 600}} className="mb-6">For development teams</p>
               <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
                   600 daily shared conversations
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
                   12,000 monthly shared conversations
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
                   5 team members included
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
                   Team management dashboard
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
                   Priority email support
                 </li>
               </ul>
               <a 
-                href="https://store.hivetechs.io/l/team-plan?wanted=true" 
+                href="https://buy.stripe.com/test_28o5mf0Wd8Hn4Sc000" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="btn-primary w-full text-center"
+                className="working-button w-full text-center"
+                style={{fontWeight: 500, color: 'white'}}
               >
                 Start Free Trial
               </a>
@@ -285,7 +286,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <Link href="/pricing" className="text-primary font-medium hover:underline">
+            <Link href="/pricing" className="text-primary font-bold hover:underline" style={{backgroundColor: 'white', padding: '8px 16px', borderRadius: '5px'}}>
               View all pricing details and credit packs →
             </Link>
           </div>
@@ -293,21 +294,18 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-dark text-white">
+      <section className="py-20 bg-gray-900 text-white">
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="heading-2 mb-6">Ready to experience better AI answers?</h2>
-            <p className="text-xl mb-8">
+            <p className="text-xl mb-8 font-semibold">
               Start your 7-day free trial today and see the difference our multi-model consensus pipeline can make for your projects.
             </p>
-            <a 
-              href="https://store.hivetechs.io/l/basic-plan?wanted=true" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn-primary text-lg px-8 py-3"
-            >
-              Start Free Trial
-            </a>
+            <WorkingButton 
+              url="https://buy.stripe.com/test_28o5mf0Wd8Hn4Sc000" 
+              text="Start Free Trial" 
+              large={true}
+            />
           </div>
         </div>
       </section>
