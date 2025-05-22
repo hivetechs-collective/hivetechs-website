@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import Image from 'next/image'
+import WorkingButton from './WorkingButton'
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -40,14 +41,10 @@ export default function Navigation() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <a 
-              href="https://store.hivetechs.io/l/basic-plan?wanted=true" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn-primary"
-            >
-              Get Started
-            </a>
+            <WorkingButton 
+              url="https://buy.stripe.com/test_28o5mf0Wd8Hn4Sc000" 
+              text="Get Started" 
+            />
           </div>
 
           {/* Mobile Menu Button */}
@@ -91,14 +88,10 @@ export default function Navigation() {
               <Link href="/contact" className="text-gray-700 hover:text-primary">
                 Contact
               </Link>
-              <a 
-                href="https://store.hivetechs.io/l/basic-plan?wanted=true" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="btn-primary inline-block text-center"
-              >
-                Get Started
-              </a>
+              <WorkingButton 
+                url="https://buy.stripe.com/test_28o5mf0Wd8Hn4Sc000" 
+                text="Get Started" 
+              />
             </div>
           </div>
         )}

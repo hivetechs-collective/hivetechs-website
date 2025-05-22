@@ -54,7 +54,7 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-4">Resources</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/docs" className="text-gray-300 hover:text-white">
+                <Link href="/documentation" className="text-gray-300 hover:text-white">
                   Documentation
                 </Link>
               </li>
@@ -70,7 +70,7 @@ export default function Footer() {
               </li>
               <li>
                 <a 
-                  href="https://store.hivetechs.io" 
+                  href="https://buy.stripe.com/test_28o5mf0Wd8Hn4Sc000" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white"
