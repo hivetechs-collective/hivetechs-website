@@ -4,15 +4,21 @@ import PageLayout from '@/components/PageLayout'
 import Link from 'next/link'
 import Image from 'next/image'
 import WorkingButton from '@/components/WorkingButton'
-import { createCheckout } from '@/lib/subscription'
 
 export default function Home() {
-  const handleSubscribe = async (plan: string) => {
-    try {
-      const checkoutUrl = await createCheckout(plan)
-      window.open(checkoutUrl, '_blank')
-    } catch (error) {
-      console.error('Failed to create checkout:', error)
+  const handleSubscribe = (plan: string) => {
+    // Direct Gumroad URLs for static site deployment
+    const productMap: Record<string, string> = {
+      'basic': 'basic-plan',
+      'standard': 'standard-plan', 
+      'premium': 'premium-plan',
+      'team': 'team-plan',
+    };
+    
+    const productId = productMap[plan];
+    if (productId) {
+      const checkoutUrl = `https://store.hivetechs.io/l/${productId}?wanted=true`;
+      window.open(checkoutUrl, '_blank');
     }
   }
   return (
