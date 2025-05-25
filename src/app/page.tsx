@@ -44,7 +44,7 @@ export default function Home() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="heading-2 mb-4">Key Features</h2>
-            <p className="text-xl max-w-3xl mx-auto" style={{color: '#111827', fontWeight: 600, backgroundColor: 'white', padding: '10px', borderRadius: '5px'}}>
+            <p className="text-xl max-w-3xl mx-auto text-high-contrast bg-white p-4 rounded-lg shadow-sm">
               Our multi-model consensus pipeline combines the strengths of different AI models to deliver superior results.
             </p>
           </div>
@@ -97,7 +97,7 @@ export default function Home() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="heading-2 mb-4">Simple, Transparent Pricing</h2>
-            <p className="text-xl improved-text max-w-3xl mx-auto" style={{color: '#1f2937', fontWeight: 500}}>
+            <p className="text-xl max-w-3xl mx-auto text-medium-contrast">
               Our pricing is designed to be flexible and scale with your needs. Choose the plan that works best for you.
             </p>
           </div>
@@ -106,8 +106,8 @@ export default function Home() {
             {/* Basic Plan */}
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 flex flex-col">
               <h3 className="text-xl font-bold mb-2">Basic Plan</h3>
-              <div className="text-3xl font-bold mb-2" style={{color: '#111827'}}>$5<span className="text-lg" style={{color: '#4B5563', fontWeight: 600}}>/mo</span></div>
-              <p style={{color: '#111827', fontWeight: 600}} className="mb-6">For individual developers</p>
+              <div className="text-3xl font-bold mb-2 text-gray-900">$5<span className="text-lg text-gray-700 font-semibold">/mo</span></div>
+              <p className="pricing-text mb-6">For individual developers</p>
               <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-center">
                   <svg className="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -148,8 +148,8 @@ export default function Home() {
             {/* Standard Plan */}
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 flex flex-col">
               <h3 className="text-xl font-bold mb-2">Standard Plan</h3>
-              <div className="text-3xl font-bold mb-2" style={{color: '#111827'}}>$10<span className="text-lg" style={{color: '#4B5563', fontWeight: 600}}>/mo</span></div>
-              <p style={{color: '#111827', fontWeight: 600}} className="mb-6">For power users</p>
+              <div className="text-3xl font-bold mb-2 text-gray-900">$10<span className="text-lg text-gray-700 font-semibold">/mo</span></div>
+              <p className="pricing-text mb-6">For power users</p>
               <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-center">
                   <svg className="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -192,8 +192,8 @@ export default function Home() {
                 Most Popular
               </div>
               <h3 className="text-xl font-bold mb-2">Premium Plan</h3>
-              <div className="text-3xl font-bold mb-2">$20<span className="text-lg opacity-75">/mo</span></div>
-              <p className="text-white/75 mb-6">For professional developers</p>
+              <div className="text-3xl font-bold mb-2">$20<span className="text-lg text-white/90 font-semibold">/mo</span></div>
+              <p className="text-white mb-6 font-medium">For professional developers</p>
               <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-center">
                   <svg className="w-5 h-5 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -239,8 +239,8 @@ export default function Home() {
             {/* Team Plan */}
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 flex flex-col">
               <h3 className="text-xl font-bold mb-2">Team Plan</h3>
-              <div className="text-3xl font-bold mb-2" style={{color: '#111827'}}>$50<span className="text-lg" style={{color: '#4B5563', fontWeight: 600}}>/mo</span></div>
-              <p style={{color: '#111827', fontWeight: 600}} className="mb-6">For development teams</p>
+              <div className="text-3xl font-bold mb-2 text-gray-900">$50<span className="text-lg text-gray-700 font-semibold">/mo</span></div>
+              <p className="pricing-text mb-6">For development teams</p>
               <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-center">
                   <svg className="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -286,7 +286,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <Link href="/pricing" className="text-primary font-bold hover:underline" style={{backgroundColor: 'white', padding: '8px 16px', borderRadius: '5px'}}>
+            <Link href="/pricing" className="text-primary font-bold hover:underline bg-white px-4 py-2 rounded-md shadow-sm inline-block">
               View all pricing details and credit packs →
             </Link>
           </div>

@@ -105,7 +105,7 @@ export default function Footer() {
         </div>
         
         {/* Copyright */}
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
           <p>© {currentYear} HiveTechs Collective LLC. All rights reserved.</p>
         </div>
       </div>

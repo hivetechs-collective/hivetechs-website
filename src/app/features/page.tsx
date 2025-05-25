@@ -54,7 +54,7 @@ export default function Features() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
             <div>
               <h2 className="heading-2 mb-6">🧠 4-Stage Consensus Pipeline</h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-gray-800 font-medium mb-6">
                 Our revolutionary 4-stage consensus pipeline transforms user queries into exceptionally high-quality responses by combining the strengths of multiple specialized AI models.
               </p>
               <ul className="space-y-6">
@@ -64,7 +64,7 @@ export default function Features() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-1">Generator Stage</h3>
-                    <p className="text-gray-600">Creates comprehensive initial responses with broad topic coverage</p>
+                    <p className="text-gray-800 font-medium">Creates comprehensive initial responses with broad topic coverage</p>
                   </div>
                 </li>
                 <li className="flex items-start">
@@ -73,7 +73,7 @@ export default function Features() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-1">Refiner Stage</h3>
-                    <p className="text-gray-600">Enhances clarity, corrects inaccuracies, and improves structure</p>
+                    <p className="text-gray-800 font-medium">Enhances clarity, corrects inaccuracies, and improves structure</p>
                   </div>
                 </li>
                 <li className="flex items-start">
@@ -82,7 +82,7 @@ export default function Features() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-1">Validator Stage</h3>
-                    <p className="text-gray-600">Verifies factual accuracy and performs critical reasoning checks</p>
+                    <p className="text-gray-800 font-medium">Verifies factual accuracy and performs critical reasoning checks</p>
                   </div>
                 </li>
                 <li className="flex items-start">
@@ -91,7 +91,7 @@ export default function Features() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-1">Curator Stage</h3>
-                    <p className="text-gray-600">Delivers polished, well-formatted responses with consistent tone</p>
+                    <p className="text-gray-800 font-medium">Delivers polished, well-formatted responses with consistent tone</p>
                   </div>
                 </li>
               </ul>
@@ -103,7 +103,7 @@ export default function Features() {
                     <div className="w-3 h-3 rounded-full bg-primary mr-2"></div>
                     <h4 className="font-semibold">Generator</h4>
                   </div>
-                  <p className="text-sm text-gray-600">"The quantum computing field emerged in the 1980s..."</p>
+                  <p className="text-sm text-gray-800 font-medium">"The quantum computing field emerged in the 1980s..."</p>
                 </div>
                 
                 <div className="bg-white rounded-lg p-6 shadow-md border-l-4 border-blue-500">
@@ -111,7 +111,7 @@ export default function Features() {
                     <div className="w-3 h-3 rounded-full bg-blue-500 mr-2"></div>
                     <h4 className="font-semibold">Refiner</h4>
                   </div>
-                  <p className="text-sm text-gray-600">"Quantum computing emerged in the early 1980s when physicists like Richard Feynman proposed using quantum mechanics to solve computational problems..."</p>
+                  <p className="text-sm text-gray-800 font-medium">"Quantum computing emerged in the early 1980s when physicists like Richard Feynman proposed using quantum mechanics to solve computational problems..."</p>
                 </div>
                 
                 <div className="bg-white rounded-lg p-6 shadow-md border-l-4 border-purple-500">
@@ -119,7 +119,7 @@ export default function Features() {
                     <div className="w-3 h-3 rounded-full bg-purple-500 mr-2"></div>
                     <h4 className="font-semibold">Validator</h4>
                   </div>
-                  <p className="text-sm text-gray-600">"Correction: While Feynman was influential, the field began in the late 1970s with early work by Benioff. Feynman's famous lecture was in 1981..."</p>
+                  <p className="text-sm text-gray-800 font-medium">"Correction: While Feynman was influential, the field began in the late 1970s with early work by Benioff. Feynman's famous lecture was in 1981..."</p>
                 </div>
                 
                 <div className="bg-white rounded-lg p-6 shadow-md border-l-4 border-green-500">
@@ -127,7 +127,7 @@ export default function Features() {
                     <div className="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
                     <h4 className="font-semibold">Curator</h4>
                   </div>
-                  <p className="text-sm text-gray-600">"Quantum computing emerged in the late 1970s through Paul Benioff's work, with significant contributions from Richard Feynman's 1981 proposal to use quantum mechanics for computation..."</p>
+                  <p className="text-sm text-gray-800 font-medium">"Quantum computing emerged in the late 1970s through Paul Benioff's work, with significant contributions from Richard Feynman's 1981 proposal to use quantum mechanics for computation..."</p>
                 </div>
               </div>
             </div>
@@ -174,7 +174,7 @@ export default function Features() {
             </div>
             <div className="order-1 md:order-2">
               <h2 className="heading-2 mb-6">🔄 Thematic Knowledge Retrieval</h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-gray-800 font-medium mb-6">
                 Unlike standard AI assistants, Hive.AI features an advanced thematic knowledge retrieval system that maintains context across your entire conversation history.
               </p>
               <ul className="space-y-4 mb-6">
@@ -209,13 +209,13 @@ export default function Features() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
             <div>
               <h2 className="heading-2 mb-6">🧩 Technical Domain Expertise</h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-gray-800 font-medium mb-6">
                 Hive.AI excels at specialized technical domains with deep understanding across a wide range of technical fields and disciplines.
               </p>
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="bg-gray-50 rounded-lg p-4 border-l-4 border-primary">
                   <h3 className="font-bold text-gray-800 mb-2">Software Engineering</h3>
-                  <ul className="text-sm text-gray-600 space-y-1">
+                  <ul className="text-sm text-gray-800 font-medium space-y-1">
                     <li>• Architecture Patterns</li>
                     <li>• Design Principles</li>
                     <li>• Testing Strategies</li>
@@ -223,7 +223,7 @@ export default function Features() {
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4 border-l-4 border-blue-500">
                   <h3 className="font-bold text-gray-800 mb-2">Machine Learning</h3>
-                  <ul className="text-sm text-gray-600 space-y-1">
+                  <ul className="text-sm text-gray-800 font-medium space-y-1">
                     <li>• Model Selection</li>
                     <li>• Training Pipelines</li>
                     <li>• Hyperparameter Tuning</li>
@@ -231,7 +231,7 @@ export default function Features() {
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4 border-l-4 border-purple-500">
                   <h3 className="font-bold text-gray-800 mb-2">Database Technologies</h3>
-                  <ul className="text-sm text-gray-600 space-y-1">
+                  <ul className="text-sm text-gray-800 font-medium space-y-1">
                     <li>• Query Optimization</li>
                     <li>• Schema Design</li>
                     <li>• Data Modeling</li>
@@ -239,14 +239,14 @@ export default function Features() {
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4 border-l-4 border-green-500">
                   <h3 className="font-bold text-gray-800 mb-2">Cloud Infrastructure</h3>
-                  <ul className="text-sm text-gray-600 space-y-1">
+                  <ul className="text-sm text-gray-800 font-medium space-y-1">
                     <li>• Deployment Strategies</li>
                     <li>• Scaling Solutions</li>
                     <li>• Cost Optimization</li>
                   </ul>
                 </div>
               </div>
-              <p className="text-sm text-gray-500 italic">
+              <p className="text-sm text-gray-700 italic">
                 "The depth of technical knowledge across multiple domains has helped us solve complex problems that would have taken weeks to research." - Michael T., CTO
               </p>
             </div>
@@ -302,28 +302,28 @@ export default function Features() {
                     <div className="space-y-3">
                       <div className="flex items-center">
                         <div className="w-2 h-2 rounded-full bg-primary mr-2"></div>
-                        <div className="text-xs text-gray-600 bg-gray-100 rounded px-2 py-1 flex-grow">
+                        <div className="text-xs text-gray-800 font-medium bg-gray-100 rounded px-2 py-1 flex-grow">
                           <span className="font-medium">Session #1:</span> Project setup discussion
                         </div>
                       </div>
                       
                       <div className="flex items-center">
                         <div className="w-2 h-2 rounded-full bg-primary mr-2"></div>
-                        <div className="text-xs text-gray-600 bg-gray-100 rounded px-2 py-1 flex-grow">
+                        <div className="text-xs text-gray-800 font-medium bg-gray-100 rounded px-2 py-1 flex-grow">
                           <span className="font-medium">Session #2:</span> Database schema design
                         </div>
                       </div>
                       
                       <div className="flex items-center">
                         <div className="w-2 h-2 rounded-full bg-primary mr-2"></div>
-                        <div className="text-xs text-gray-600 bg-gray-100 rounded px-2 py-1 flex-grow">
+                        <div className="text-xs text-gray-800 font-medium bg-gray-100 rounded px-2 py-1 flex-grow">
                           <span className="font-medium">Session #3:</span> API endpoint implementation
                         </div>
                       </div>
                       
                       <div className="flex items-center">
                         <div className="w-2 h-2 rounded-full bg-green-500 mr-2"></div>
-                        <div className="text-xs text-gray-600 bg-green-100 rounded px-2 py-1 flex-grow font-medium">
+                        <div className="text-xs text-gray-800 font-medium bg-green-100 rounded px-2 py-1 flex-grow font-medium">
                           Current Session: Frontend integration
                         </div>
                       </div>
@@ -340,7 +340,7 @@ export default function Features() {
             </div>
             <div className="order-1 md:order-2">
               <h2 className="heading-2 mb-6">📚 Persistent Contextual Memory</h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-gray-800 font-medium mb-6">
                 Our SQLite-based persistent storage ensures your conversations and context are preserved across sessions, creating a truly continuous experience.
               </p>
               <ul className="space-y-4 mb-6">
@@ -369,7 +369,7 @@ export default function Features() {
                   <span>Intelligent response adaptation based on conversation history</span>
                 </li>
               </ul>
-              <p className="text-sm text-gray-500 italic">
+              <p className="text-sm text-gray-700 italic">
                 "It's like having a team member who remembers every detail of our past conversations and builds on that knowledge over time." - Alex R., Product Manager
               </p>
             </div>
@@ -382,7 +382,7 @@ export default function Features() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="heading-2 mb-4">More Powerful Features</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-800 font-medium max-w-3xl mx-auto">
               Explore the full range of capabilities that make our multi-model consensus pipeline the preferred choice for developers.
             </p>
           </div>
@@ -396,7 +396,7 @@ export default function Features() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold mb-4">Customizable Model Combinations</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-800 font-medium">
                 Select which AI models to include in your consensus pipeline based on your specific needs and use cases.
               </p>
             </div>
@@ -409,7 +409,7 @@ export default function Features() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold mb-4">Advanced Prompt Engineering</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-800 font-medium">
                 Our system optimizes prompts for each model in the pipeline to extract the best possible responses.
               </p>
             </div>
@@ -422,7 +422,7 @@ export default function Features() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold mb-4">Detailed Response Analysis</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-800 font-medium">
                 Get insights into how each model contributed to the final consensus response with our detailed analysis.
               </p>
             </div>
@@ -435,7 +435,7 @@ export default function Features() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold mb-4">Code Generation & Analysis</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-800 font-medium">
                 Generate high-quality code across multiple programming languages with improved accuracy and best practices.
               </p>
             </div>
@@ -448,7 +448,7 @@ export default function Features() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold mb-4">Team Collaboration</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-800 font-medium">
                 Share conversation history and insights with team members for improved collaboration on complex projects.
               </p>
             </div>
@@ -461,7 +461,7 @@ export default function Features() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold mb-4">Enhanced Security</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-800 font-medium">
                 Enterprise-grade security with data encryption, secure API endpoints, and customizable data retention policies.
               </p>
             </div>

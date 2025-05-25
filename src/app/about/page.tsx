@@ -25,10 +25,10 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="heading-2 mb-6">Our Story</h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-gray-800 mb-6">
                 HiveTechs was founded in 2024 with a simple but powerful insight: while individual AI models have their strengths, they also have unique weaknesses and blindspots. By combining multiple models in a consensus pipeline, we could leverage their collective intelligence to deliver superior results.
               </p>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-gray-800">
                 Our team of AI engineers and developers built a system that doesn't just query multiple models, but intelligently combines their outputs, weighing their responses based on confidence, accuracy, and relevance to provide the most comprehensive and reliable answers possible.
               </p>
             </div>
@@ -47,7 +47,7 @@ export default function About() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="heading-2 mb-4">Our Mission</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-800 max-w-3xl mx-auto">
               To empower developers and businesses with AI tools that deliver more accurate, comprehensive, and reliable answers through multi-model consensus technology.
             </p>
           </div>
@@ -61,7 +61,7 @@ export default function About() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold mb-4">Quality</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-800">
                 We're committed to delivering the highest quality AI responses by combining the strengths of multiple models and eliminating their individual weaknesses.
               </p>
             </div>
@@ -74,7 +74,7 @@ export default function About() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold mb-4">Accessibility</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-800">
                 We believe in making advanced AI technology accessible to developers and businesses of all sizes through simple APIs and flexible pricing.
               </p>
             </div>
@@ -87,7 +87,7 @@ export default function About() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold mb-4">Community</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-800">
                 We're building a community of developers and AI enthusiasts who share our vision of more reliable and trustworthy AI systems.
               </p>
             </div>
@@ -100,7 +100,7 @@ export default function About() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="heading-2 mb-4">Our Team</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-800 max-w-3xl mx-auto">
               Meet the passionate team behind HiveTechs' multi-model consensus technology.
             </p>
           </div>
@@ -116,7 +116,7 @@ export default function About() {
               </div>
               <h3 className="text-xl font-bold mb-1">Verone Lazio</h3>
               <p className="text-primary mb-4">Founder & CEO</p>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-800 mb-6">
                 AI enthusiast with a passion for creating tools that help developers build better software.
               </p>
               <div className="flex justify-center space-x-4">
@@ -148,7 +148,7 @@ export default function About() {
               </div>
               <h3 className="text-xl font-bold mb-1">Alex Ivanov</h3>
               <p className="text-primary mb-4">CTO</p>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-800 mb-6">
                 Machine learning expert with a background in distributed systems and cloud architecture.
               </p>
               <div className="flex justify-center space-x-4">
@@ -180,7 +180,7 @@ export default function About() {
               </div>
               <h3 className="text-xl font-bold mb-1">Sarah Johnson</h3>
               <p className="text-primary mb-4">Head of Product</p>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-800 mb-6">
                 Product strategist focused on creating intuitive and powerful AI tools for developers.
               </p>
               <div className="flex justify-center space-x-4">

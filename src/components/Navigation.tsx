@@ -37,6 +37,9 @@ export default function Navigation() {
             <Link href="/contact" className="text-gray-700 hover:text-primary">
               Contact
             </Link>
+            <Link href="/documentation" className="text-gray-700 hover:text-primary">
+              Documentation
+            </Link>
           </div>
 
           {/* CTA Button */}
@@ -87,6 +90,9 @@ export default function Navigation() {
               </Link>
               <Link href="/contact" className="text-gray-700 hover:text-primary">
                 Contact
+              </Link>
+              <Link href="/documentation" className="text-gray-700 hover:text-primary">
+                Documentation
               </Link>
               <WorkingButton 
                 url="https://buy.stripe.com/test_28o5mf0Wd8Hn4Sc000" 

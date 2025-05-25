@@ -16,13 +16,6 @@
   --text-light: 107, 114, 128; /* Gray-500 */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 249, 250, 251;
-    --background-rgb: 17, 24, 39;
-  }
-}
-
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
@@ -198,5 +191,40 @@ body {
   
   .medium-contrast-text {
     @apply text-gray-800 font-medium;
+  }
+
+  /* Enhanced Text Contrast Utilities */
+  .text-on-light {
+    @apply text-gray-800 font-medium;
+  }
+
+  .text-on-dark {
+    @apply text-gray-100 font-medium;
+  }
+
+  .text-readable {
+    @apply text-gray-700 font-medium;
+  }
+
+  .text-subtle {
+    @apply text-gray-600;
+  }
+
+  /* Pricing Text Improvements */
+  .pricing-text {
+    @apply text-gray-800 font-semibold;
+  }
+
+  .pricing-description {
+    @apply text-gray-700 font-medium;
+  }
+
+  /* Footer Text Improvements */
+  .footer-text {
+    @apply text-gray-100;
+  }
+
+  .footer-link {
+    @apply text-gray-100 hover:text-white;
   }
 }

@@ -1,5 +1,9 @@
+'use client'
+
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link'
+import WorkingButton from '@/components/WorkingButton'
+import { handleSubscribe, handleCreditPurchase } from '@/lib/subscription'
 
 export default function Pricing() {
   return (
@@ -25,8 +29,8 @@ export default function Pricing() {
             {/* Basic Plan */}
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 flex flex-col">
               <h3 className="text-xl font-bold mb-2">Basic Plan</h3>
-              <div className="text-3xl font-bold mb-2">$5<span className="text-lg text-gray-500">/mo</span></div>
-              <p className="text-gray-500 mb-6">For individual developers</p>
+              <div className="text-3xl font-bold mb-2 text-gray-900">$5<span className="text-lg text-gray-700 font-semibold">/mo</span></div>
+              <p className="pricing-description mb-6">For individual developers</p>
               <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-center">
                   <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -53,21 +57,19 @@ export default function Pricing() {
                   Unlimited context length
                 </li>
               </ul>
-              <a 
-                href="https://store.hivetechs.io/l/basic-plan?wanted=true" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="btn-primary w-full text-center"
-              >
-                Start Free Trial
-              </a>
+              <WorkingButton
+                url="#"
+                text="Start Free Trial"
+                fullWidth={true}
+                onClick={() => handleSubscribe('basic')}
+              />
             </div>
 
             {/* Standard Plan */}
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 flex flex-col">
               <h3 className="text-xl font-bold mb-2">Standard Plan</h3>
-              <div className="text-3xl font-bold mb-2">$10<span className="text-lg text-gray-500">/mo</span></div>
-              <p className="text-gray-500 mb-6">For power users</p>
+              <div className="text-3xl font-bold mb-2 text-gray-900">$10<span className="text-lg text-gray-700 font-semibold">/mo</span></div>
+              <p className="pricing-description mb-6">For power users</p>
               <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-center">
                   <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -94,14 +96,12 @@ export default function Pricing() {
                   Standard model combinations
                 </li>
               </ul>
-              <a 
-                href="https://store.hivetechs.io/l/standard-plan?wanted=true" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="btn-primary w-full text-center"
-              >
-                Start Free Trial
-              </a>
+              <WorkingButton
+                url="#"
+                text="Start Free Trial"
+                fullWidth={true}
+                onClick={() => handleSubscribe('standard')}
+              />
             </div>
 
             {/* Premium Plan */}
@@ -110,8 +110,8 @@ export default function Pricing() {
                 Most Popular
               </div>
               <h3 className="text-xl font-bold mb-2">Premium Plan</h3>
-              <div className="text-3xl font-bold mb-2">$20<span className="text-lg opacity-75">/mo</span></div>
-              <p className="text-white/75 mb-6">For professional developers</p>
+              <div className="text-3xl font-bold mb-2">$20<span className="text-lg text-white/90 font-semibold">/mo</span></div>
+              <p className="text-white mb-6 font-medium">For professional developers</p>
               <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-center">
                   <svg className="w-5 h-5 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -144,21 +144,20 @@ export default function Pricing() {
                   Email support
                 </li>
               </ul>
-              <a 
-                href="https://store.hivetechs.io/l/premium-plan?wanted=true" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-white text-primary px-6 py-2 rounded-md hover:bg-opacity-90 transition-all w-full text-center"
-              >
-                Start Free Trial
-              </a>
+              <WorkingButton
+                url="#"
+                text="Start Free Trial"
+                fullWidth={true}
+                variant="light"
+                onClick={() => handleSubscribe('premium')}
+              />
             </div>
 
             {/* Team Plan */}
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 flex flex-col">
               <h3 className="text-xl font-bold mb-2">Team Plan</h3>
-              <div className="text-3xl font-bold mb-2">$50<span className="text-lg text-gray-500">/mo</span></div>
-              <p className="text-gray-500 mb-6">For development teams</p>
+              <div className="text-3xl font-bold mb-2 text-gray-900">$50<span className="text-lg text-gray-700 font-semibold">/mo</span></div>
+              <p className="pricing-description mb-6">For development teams</p>
               <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-center">
                   <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -191,14 +190,12 @@ export default function Pricing() {
                   Priority email support
                 </li>
               </ul>
-              <a 
-                href="https://store.hivetechs.io/l/team-plan?wanted=true" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="btn-primary w-full text-center"
-              >
-                Start Free Trial
-              </a>
+              <WorkingButton
+                url="#"
+                text="Start Free Trial"
+                fullWidth={true}
+                onClick={() => handleSubscribe('team')}
+              />
             </div>
           </div>
         </div>
@@ -209,7 +206,7 @@ export default function Pricing() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="heading-2 mb-4">Need More Conversations?</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-800 max-w-3xl mx-auto">
               Purchase additional credit packs to extend your monthly conversation limits.
             </p>
           </div>
@@ -219,45 +216,39 @@ export default function Pricing() {
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200">
               <h3 className="text-xl font-bold mb-2">Small Pack</h3>
               <div className="text-3xl font-bold mb-2">$10</div>
-              <p className="text-gray-500 mb-6">500 additional conversations</p>
-              <a 
-                href="https://store.hivetechs.io/l/small-credit-pack?wanted=true" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="btn-primary w-full text-center block"
-              >
-                Purchase Now
-              </a>
+              <p className="pricing-description mb-6">500 additional conversations</p>
+              <WorkingButton
+                url="#"
+                text="Purchase Now"
+                fullWidth={true}
+                onClick={() => handleCreditPurchase('50')}
+              />
             </div>
 
             {/* Credit Pack 2 */}
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200">
               <h3 className="text-xl font-bold mb-2">Medium Pack</h3>
               <div className="text-3xl font-bold mb-2">$20</div>
-              <p className="text-gray-500 mb-6">1,200 additional conversations</p>
-              <a 
-                href="https://store.hivetechs.io/l/medium-credit-pack?wanted=true" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="btn-primary w-full text-center block"
-              >
-                Purchase Now
-              </a>
+              <p className="pricing-description mb-6">1,200 additional conversations</p>
+              <WorkingButton
+                url="#"
+                text="Purchase Now"
+                fullWidth={true}
+                onClick={() => handleCreditPurchase('200')}
+              />
             </div>
 
             {/* Credit Pack 3 */}
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200">
               <h3 className="text-xl font-bold mb-2">Large Pack</h3>
               <div className="text-3xl font-bold mb-2">$50</div>
-              <p className="text-gray-500 mb-6">3,500 additional conversations</p>
-              <a 
-                href="https://store.hivetechs.io/l/large-credit-pack?wanted=true" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="btn-primary w-full text-center block"
-              >
-                Purchase Now
-              </a>
+              <p className="pricing-description mb-6">3,500 additional conversations</p>
+              <WorkingButton
+                url="#"
+                text="Purchase Now"
+                fullWidth={true}
+                onClick={() => handleCreditPurchase('500')}
+              />
             </div>
           </div>
         </div>
@@ -268,7 +259,7 @@ export default function Pricing() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="heading-2 mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-800 max-w-3xl mx-auto">
               Have questions about our pricing? Find answers to common questions below.
             </p>
           </div>
@@ -276,35 +267,35 @@ export default function Pricing() {
           <div className="max-w-4xl mx-auto space-y-6">
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-2">What happens when I reach my conversation limit?</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-800">
                 When you reach your daily or monthly conversation limit, you can purchase additional credit packs to continue using the service. Your subscription will automatically reset at the beginning of each billing cycle.
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-2">Can I upgrade or downgrade my plan?</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-800">
                 Yes, you can upgrade or downgrade your plan at any time. When upgrading, you'll be charged the prorated difference for the remainder of your billing cycle. When downgrading, the new rate will apply at the start of your next billing cycle.
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-2">Do unused conversations roll over?</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-800">
                 No, unused conversations do not roll over to the next month. Your conversation count resets at the beginning of each billing cycle.
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-2">What counts as a conversation?</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-800">
                 A conversation is defined as a single request to our multi-model consensus pipeline. Each time you send a prompt and receive a response, that counts as one conversation.
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-2">Is there a refund policy?</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-800">
                 We offer a 7-day free trial for all subscription plans. If you cancel during the trial period, you won't be charged. After the trial period, subscriptions are non-refundable for the current billing cycle.
               </p>
             </div>
@@ -320,14 +311,12 @@ export default function Pricing() {
             <p className="text-xl mb-8">
               Start your 7-day free trial today and see the difference our multi-model consensus pipeline can make for your projects.
             </p>
-            <a 
-              href="https://store.hivetechs.io/l/basic-plan?wanted=true" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn-primary text-lg px-8 py-3"
-            >
-              Start Free Trial
-            </a>
+            <WorkingButton
+              url="#"
+              text="Start Free Trial"
+              large={true}
+              onClick={() => handleSubscribe('basic')}
+            />
           </div>
         </div>
       </section>
