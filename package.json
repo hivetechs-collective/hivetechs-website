@@ -30,5 +30,8 @@
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.3"
+  },
+  "overrides": {
+    "inflight": "npm:@npmcli/promise-spawn@^7.0.0"
   }
 }

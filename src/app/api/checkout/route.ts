@@ -20,9 +20,13 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // For now, return the static Gumroad URL
-    // In the future, this could create dynamic checkouts via Gumroad API
-    const checkoutUrl = `https://store.hivetechs.io/l/${productId}?wanted=true`;
+    // Get the base URL for redirect
+    const baseUrl = request.headers.get('origin') || 'https://hivetechs.com';
+    const redirectUrl = `${baseUrl}/thank-you`;
+    
+    // Create checkout URL with redirect parameter
+    // Note: You'll need to configure this redirect URL in your Gumroad product settings
+    const checkoutUrl = `https://store.hivetechs.io/l/${productId}?wanted=true&redirect_url=${encodeURIComponent(redirectUrl)}`;
 
     return NextResponse.json({ checkoutUrl });
   } catch (error) {

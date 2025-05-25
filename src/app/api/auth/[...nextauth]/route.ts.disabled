@@ -1,13 +1,9 @@
-// Original file backed up while fixing NextAuth issues
 import NextAuth from "next-auth";
-import { MongoDBAdapter } from "@auth/mongodb-adapter";
 import CredentialsProvider from "next-auth/providers/credentials";
-import GoogleProvider from "next-auth/providers/google";
-import clientPromise from "@/lib/mongodb";
 import { NextAuthOptions } from "next-auth";
 
-export const authOptions: NextAuthOptions = {
-  adapter: MongoDBAdapter(clientPromise),
+// Simplified configuration that doesn't require external dependencies
+const authOptions: NextAuthOptions = {
   providers: [
     CredentialsProvider({
       name: "Credentials",
@@ -16,14 +12,12 @@ export const authOptions: NextAuthOptions = {
         password: { label: "Password", type: "password" }
       },
       async authorize(credentials) {
-        // Here you would typically fetch the user from your database
-        // For now, we'll use a simple check for demo purposes
+        // Simple demo authentication
         if (!credentials?.email || !credentials?.password) {
           return null;
         }
 
-        // In production, replace this with actual database lookup
-        // and proper password comparison using bcrypt
+        // Demo user - in production, this would check against a database
         if (credentials.email === "demo@hivetechs.io" && credentials.password === "password") {
           return {
             id: "1",
@@ -34,32 +28,28 @@ export const authOptions: NextAuthOptions = {
         return null;
       }
     }),
-    GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID as string,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
-    }),
+    // Google provider removed until environment variables are set up
   ],
   session: {
     strategy: "jwt",
+    maxAge: 30 * 24 * 60 * 60, // 30 days
   },
+  secret: process.env.NEXTAUTH_SECRET || "a-temporary-secret-for-development-only",
+  // Simplified pages configuration
   pages: {
-    signIn: "/auth/signin",
-    signOut: "/auth/signout",
-    error: "/auth/error",
-    verifyRequest: "/auth/verify-request",
+    signIn: "/", // Redirect to home page for now
+    error: "/",
   },
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
         token.id = user.id;
-        // You can add custom claims here, such as subscription status
       }
       return token;
     },
     async session({ session, token }) {
       if (session.user) {
         (session.user as any).id = token.id;
-        // Add custom session data here
       }
       return session;
     },

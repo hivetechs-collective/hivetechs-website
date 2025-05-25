@@ -1,9 +1,20 @@
+'use client'
+
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link'
 import Image from 'next/image'
 import WorkingButton from '@/components/WorkingButton'
+import { createCheckout } from '@/lib/subscription'
 
 export default function Home() {
+  const handleSubscribe = async (plan: string) => {
+    try {
+      const checkoutUrl = await createCheckout(plan)
+      window.open(checkoutUrl, '_blank')
+    } catch (error) {
+      console.error('Failed to create checkout:', error)
+    }
+  }
   return (
     <PageLayout>
       {/* Hero Section */}
@@ -18,10 +29,12 @@ export default function Home() {
                 Get better answers by combining multiple AI models. HiveTechs Collective provides a powerful consensus pipeline that delivers superior results for developers and businesses.
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <WorkingButton 
-                  url="https://buy.stripe.com/test_28o5mf0Wd8Hn4Sc000" 
-                  text="Start Free Trial" 
-                />
+                <button 
+                  onClick={() => handleSubscribe('basic')}
+                  className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+                >
+                  Start Free Trial
+                </button>
                 <WorkingButton 
                   url="/features" 
                   text="Learn More" 
@@ -134,15 +147,13 @@ export default function Home() {
                   Unlimited context length
                 </li>
               </ul>
-              <a 
-                href="https://buy.stripe.com/test_28o5mf0Wd8Hn4Sc000" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <button 
+                onClick={() => handleSubscribe('basic')}
                 className="working-button w-full text-center"
                 style={{fontWeight: 500, color: 'white'}}
               >
                 Start Free Trial
-              </a>
+              </button>
             </div>
 
             {/* Standard Plan */}
@@ -176,14 +187,12 @@ export default function Home() {
                   Standard model combinations
                 </li>
               </ul>
-              <a 
-                href="https://store.hivetechs.io/l/standard-plan?wanted=true" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <button 
+                onClick={() => handleSubscribe('standard')}
                 className="btn-primary w-full text-center"
               >
                 Start Free Trial
-              </a>
+              </button>
             </div>
 
             {/* Premium Plan */}
@@ -226,14 +235,12 @@ export default function Home() {
                   Email support
                 </li>
               </ul>
-              <a 
-                href="https://store.hivetechs.io/l/premium-plan?wanted=true" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <button 
+                onClick={() => handleSubscribe('premium')}
                 className="bg-white text-primary px-6 py-2 rounded-md hover:bg-opacity-90 transition-all w-full text-center"
               >
                 Start Free Trial
-              </a>
+              </button>
             </div>
 
             {/* Team Plan */}
@@ -273,15 +280,13 @@ export default function Home() {
                   Priority email support
                 </li>
               </ul>
-              <a 
-                href="https://buy.stripe.com/test_28o5mf0Wd8Hn4Sc000" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <button 
+                onClick={() => handleSubscribe('team')}
                 className="working-button w-full text-center"
                 style={{fontWeight: 500, color: 'white'}}
               >
                 Start Free Trial
-              </a>
+              </button>
             </div>
           </div>
 

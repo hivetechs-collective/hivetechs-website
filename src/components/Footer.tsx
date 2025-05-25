@@ -69,14 +69,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a 
-                  href="https://buy.stripe.com/test_28o5mf0Wd8Hn4Sc000" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white"
-                >
+                <Link href="/pricing" className="text-gray-300 hover:text-white">
                   Store
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
