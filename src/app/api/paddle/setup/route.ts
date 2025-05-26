@@ -9,6 +9,15 @@ export async function POST() {
       'Content-Type': 'application/json',
     }
 
+    // First, check existing products
+    const existingResponse = await fetch(`${apiUrl}/products`, {
+      headers
+    })
+    const existingData = await existingResponse.json()
+    const existingProducts = existingData.data || []
+    
+    console.log('Existing products:', existingProducts.map((p: any) => p.name))
+
     // Define all products
     const products = [
       {
@@ -66,6 +75,18 @@ export async function POST() {
 
     // Create each product
     for (const product of products) {
+      // Check if product already exists
+      const existing = existingProducts.find((p: any) => p.name === product.name)
+      if (existing) {
+        console.log(`Product ${product.name} already exists with ID: ${existing.id}`)
+        createdProducts.push({
+          name: product.name,
+          id: existing.id,
+          type: existing.type || product.type
+        })
+        continue
+      }
+
       const response = await fetch(`${apiUrl}/products`, {
         method: 'POST',
         headers,
@@ -79,9 +100,10 @@ export async function POST() {
       }
 
       const data = await response.json()
+      console.log(`Created product ${product.name}:`, data)
       createdProducts.push({
         name: product.name,
-        id: data.data.id,
+        id: data.data?.id || data.id,
         type: product.type
       })
     }
