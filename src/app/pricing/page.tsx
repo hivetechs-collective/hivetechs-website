@@ -173,7 +173,7 @@ export default function Pricing() {
                 
                 <div className="relative z-10">
                   {plan.popular && (
-                    <div className="absolute -top-12 left-0 right-0 mx-auto w-fit bg-gradient-to-r from-primary to-accent-blue text-dark px-4 py-1 rounded-full text-sm font-semibold shadow-lg">
+                    <div className="bg-gradient-to-r from-primary to-accent-blue text-dark px-4 py-1 rounded-full text-sm font-semibold shadow-lg w-fit mx-auto mb-4">
                       Most popular
                     </div>
                   )}
@@ -216,7 +216,7 @@ export default function Pricing() {
                     className={cn(
                       "w-full",
                       plan.popular 
-                        ? "bg-gradient-to-r from-primary to-accent-blue hover:from-primary-light hover:to-accent-blue transform hover:scale-105 transition-all shadow-lg shadow-primary/25" 
+                        ? "bg-gradient-to-r from-primary to-accent-blue hover:from-primary-light hover:to-accent-blue transform hover:scale-105 transition-all shadow-lg shadow-primary/25 animate-pulse" 
                         : "bg-dark-700 border-dark-600 text-white hover:bg-dark-600"
                     )}
                     onClick={() => handleSubscribe(plan.id)}

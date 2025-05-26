@@ -58,7 +58,7 @@ export default function Home() {
                 </p>
                 
                 <div className="flex flex-wrap gap-4 mb-6">
-                  <Button size="lg" onClick={() => handleSubscribe('basic')} className="bg-gradient-to-r from-primary to-accent-blue hover:from-primary-light hover:to-accent-blue transform hover:scale-105 transition-all shadow-lg shadow-primary/25">
+                  <Button size="lg" onClick={() => handleSubscribe('basic')} className="bg-gradient-to-r from-primary to-accent-blue hover:from-primary-light hover:to-accent-blue transform hover:scale-105 transition-all shadow-lg shadow-primary/25 animate-pulse">
                     Start free trial
                   </Button>
                   <Button variant="secondary" size="lg" className="bg-dark-700 border-dark-600 text-white hover:bg-dark-600">
@@ -201,23 +201,50 @@ export default function Home() {
 
 
       {/* Pricing Preview - Paddle Style */}
-      <section className="section-padding bg-dark">
-        <div className="container-custom">
+      <section className="section-padding bg-dark relative overflow-hidden">
+        {/* Animated Background - matching hero section */}
+        <div className="absolute inset-0 bg-gradient-to-br from-dark-800 via-dark to-dark-900" />
+        <div className="absolute inset-0 bg-gradient-to-r from-accent-yellow/5 via-transparent to-accent-blue/5" />
+        
+        {/* Floating Orbs */}
+        <div className="absolute top-20 left-20 w-64 h-64 bg-accent-yellow/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent-blue/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        
+        <div className="relative container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Simple, transparent pricing
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Start with a 7-day free trial. No credit card required.
-            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                Simple, transparent pricing
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Start with a 7-day free trial. No credit card required.
+              </p>
+            </motion.div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Basic Plan */}
             <motion.div 
-              className="bg-dark-700 rounded-2xl border border-dark-600 p-8 hover:border-primary smooth-transition"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0 }}
+              viewport={{ once: true }}
               whileHover={{ y: -5 }}
+              className="relative overflow-hidden rounded-2xl p-8 border border-dark-600 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all"
             >
+              {/* Card Background with gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-dark-700 via-dark-800 to-dark-900" />
+              <div className="absolute inset-0 bg-gradient-to-r from-accent-yellow/5 via-transparent to-accent-blue/5" />
+              
+              {/* Floating Orb for each card */}
+              <div className="absolute -top-10 -right-10 w-32 h-32 bg-accent-blue/10 rounded-full blur-3xl animate-pulse" />
+              
+              <div className="relative z-10">
               <h3 className="text-2xl font-bold text-white mb-2">Basic</h3>
               <div className="flex items-baseline gap-2 mb-2">
                 <span className="text-5xl font-bold text-white">$5</span>
@@ -247,22 +274,34 @@ export default function Home() {
               </ul>
               
               <Button 
-                variant="secondary" 
-                className="w-full"
+                className="w-full bg-dark-700 border-dark-600 text-white hover:bg-dark-600"
                 onClick={() => handleSubscribe('basic')}
               >
                 Start free trial
               </Button>
+              </div>
             </motion.div>
 
             {/* Premium Plan - Most Popular */}
             <motion.div 
-              className="relative bg-dark-700 rounded-2xl border-2 border-primary p-8 shadow-xl"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
               whileHover={{ y: -5 }}
+              className="relative overflow-hidden rounded-2xl p-8 border-2 border-primary shadow-2xl shadow-primary/20 scale-105"
             >
-              <div className="absolute -top-4 left-0 right-0 mx-auto w-fit bg-primary text-dark px-4 py-1 rounded-full text-sm font-semibold">
-                Most popular
-              </div>
+              {/* Card Background with gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-dark-700 via-dark-800 to-dark-900" />
+              <div className="absolute inset-0 bg-gradient-to-r from-accent-yellow/5 via-transparent to-accent-blue/5" />
+              
+              {/* Floating Orb for popular card */}
+              <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/20 rounded-full blur-3xl animate-pulse" />
+              
+              <div className="relative z-10">
+                <div className="bg-gradient-to-r from-primary to-accent-blue text-dark px-4 py-1 rounded-full text-sm font-semibold shadow-lg w-fit mx-auto mb-4">
+                  Most popular
+                </div>
               
               <h3 className="text-2xl font-bold text-white mb-2">Premium</h3>
               <div className="flex items-baseline gap-2 mb-2">
@@ -299,18 +338,31 @@ export default function Home() {
               </ul>
               
               <Button 
-                className="w-full"
+                className="w-full bg-gradient-to-r from-primary to-accent-blue hover:from-primary-light hover:to-accent-blue transform hover:scale-105 transition-all shadow-lg shadow-primary/25 animate-pulse"
                 onClick={() => handleSubscribe('premium')}
               >
                 Start free trial
               </Button>
+              </div>
             </motion.div>
 
             {/* Team Plan */}
             <motion.div 
-              className="bg-dark-700 rounded-2xl border border-dark-600 p-8 hover:border-primary smooth-transition"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
               whileHover={{ y: -5 }}
+              className="relative overflow-hidden rounded-2xl p-8 border border-dark-600 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all"
             >
+              {/* Card Background with gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-dark-700 via-dark-800 to-dark-900" />
+              <div className="absolute inset-0 bg-gradient-to-r from-accent-yellow/5 via-transparent to-accent-blue/5" />
+              
+              {/* Floating Orb for each card */}
+              <div className="absolute -top-10 -right-10 w-32 h-32 bg-accent-blue/10 rounded-full blur-3xl animate-pulse" />
+              
+              <div className="relative z-10">
               <h3 className="text-2xl font-bold text-white mb-2">Team</h3>
               <div className="flex items-baseline gap-2 mb-2">
                 <span className="text-5xl font-bold text-white">$50</span>
@@ -346,12 +398,12 @@ export default function Home() {
               </ul>
               
               <Button 
-                variant="secondary" 
-                className="w-full"
+                className="w-full bg-dark-700 border-dark-600 text-white hover:bg-dark-600"
                 onClick={() => handleSubscribe('team')}
               >
                 Start free trial
               </Button>
+              </div>
             </motion.div>
           </div>
 

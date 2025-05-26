@@ -13,7 +13,7 @@ export default function About() {
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="heading-1 mb-6">
-              About HiveTechs
+              About HiveTechs Collective
             </h1>
             <p className="text-xl mb-8">
               We're on a mission to deliver better AI answers through multi-model consensus technology.
@@ -29,15 +29,15 @@ export default function About() {
             <div>
               <h2 className="heading-2 mb-6">Our Story</h2>
               <p className="text-lg text-white mb-6">
-                HiveTechs Collective was founded in 2024 with a simple but powerful insight: while individual AI models have their strengths, they also have unique weaknesses and blindspots. By combining multiple models in a consensus pipeline, we could leverage their collective intelligence to deliver superior results.
+                HiveTechs Collective was founded in 2025 with a simple but powerful insight: while individual AI models have their strengths, they also have unique weaknesses and blindspots. By combining multiple models in a consensus pipeline, we could leverage their collective intelligence to deliver superior results.
               </p>
               <p className="text-lg text-white">
-                Our team of AI engineers and developers built a system that doesn't just query multiple models, but intelligently combines their outputs, weighing their responses based on confidence, accuracy, and relevance to provide the most comprehensive and reliable answers possible.
+                Working alongside a team of AI systems, we built a tool that doesn't just query multiple models, but intelligently combines their outputs, weighing their responses based on confidence, accuracy, and relevance to provide the most comprehensive and reliable answers possible. In fact, our consensus AI technology was instrumental in creating itself.
               </p>
             </div>
             <div className="bg-dark-800 rounded-lg p-8 flex items-center justify-center h-80">
               <div className="text-center">
-                <div className="text-5xl font-bold text-primary mb-4">2024</div>
+                <div className="text-5xl font-bold text-primary mb-4">2025</div>
                 <p className="text-xl">Founded in St. Petersburg, FL</p>
               </div>
             </div>
@@ -104,11 +104,11 @@ export default function About() {
           <div className="text-center mb-16">
             <h2 className="heading-2 mb-4">Our Team</h2>
             <p className="text-xl text-white max-w-3xl mx-auto">
-              Meet the founder behind HiveTechs Collective's multi-model consensus technology.
+              Meet the human and AI team behind HiveTechs Collective's multi-model consensus technology.
             </p>
           </div>
 
-          <div className="flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             {/* Team Member 1 */}
             <div className="bg-dark-700 p-8 rounded-lg shadow-md text-center">
               <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
@@ -138,6 +138,33 @@ export default function About() {
                     <path fillRule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V19c0 .27.16.59.67.5C17.14 18.16 20 14.42 20 10A10 10 0 0010 0z" clipRule="evenodd"></path>
                   </svg>
                 </a>
+              </div>
+            </div>
+
+            {/* AI Team Member */}
+            <div className="bg-dark-700 p-8 rounded-lg shadow-md text-center relative overflow-hidden">
+              {/* Animated background for AI */}
+              <div className="absolute inset-0 bg-gradient-to-br from-dark-700 via-dark-800 to-dark-900" />
+              <div className="absolute inset-0 bg-gradient-to-r from-accent-yellow/5 via-transparent to-accent-blue/5" />
+              <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl animate-pulse" />
+              
+              <div className="relative z-10">
+                <div className="w-32 h-32 bg-gradient-to-br from-primary to-accent-blue rounded-full mx-auto mb-6 overflow-hidden flex items-center justify-center animate-pulse shadow-lg shadow-primary/25">
+                  <div className="text-4xl font-bold text-dark">AI</div>
+                </div>
+                <h3 className="text-xl font-bold mb-1">Consensus AI System</h3>
+                <p className="text-primary mb-4">CTO (Chief Technology Officer)</p>
+                <p className="text-white mb-6">
+                  A sophisticated ensemble of AI models working in harmony. Helped design and build the very system it powers.
+                </p>
+                <div className="flex justify-center space-x-4">
+                  <div className="text-gray-400">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <span className="text-sm text-gray-400">4+ AI models in consensus</span>
+                </div>
               </div>
             </div>
 
