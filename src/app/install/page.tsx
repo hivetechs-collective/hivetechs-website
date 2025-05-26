@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function InstallPage() {
   const [activeTab, setActiveTab] = useState('windows')
@@ -20,7 +21,17 @@ export default function InstallPage() {
   }
 
   return (
-    <div className="min-h-screen bg-dark-800">
+    <div className="min-h-screen bg-dark-800 relative">
+      {/* Background Logo - top left, rotated */}
+      <div className="absolute top-0 left-0 pointer-events-none">
+        <Image 
+          src="/Hive-Logo.jpg" 
+          alt="" 
+          width={200} 
+          height={200} 
+          className="opacity-5 transform -translate-x-1/2 -translate-y-1/2 rotate-45"
+        />
+      </div>
       {/* Header */}
       <div className="bg-dark-700 border-b border-dark-600">
         <div className="max-w-4xl mx-auto px-4 py-6">

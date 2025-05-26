@@ -2,14 +2,36 @@
 
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 export default function Contact() {
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
-        <div className="container-custom">
+      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white relative overflow-hidden">
+        {/* Background Logo - centered with pulse animation for contact */}
+        <motion.div 
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+          animate={{
+            scale: [1, 1.1, 1],
+            opacity: [0.1, 0.15, 0.1]
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        >
+          <Image 
+            src="/Hive-Logo.jpg" 
+            alt="" 
+            width={400} 
+            height={400} 
+            className="transform"
+          />
+        </motion.div>
+        <div className="container-custom relative z-10">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="heading-1 mb-6">
               Contact Us

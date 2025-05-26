@@ -1,8 +1,19 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function SupportPage() {
   return (
-    <div className="min-h-screen bg-dark-800">
+    <div className="min-h-screen bg-dark-800 relative overflow-hidden">
+      {/* Background Logo - bottom left corner */}
+      <div className="fixed bottom-0 left-0 pointer-events-none z-0">
+        <Image 
+          src="/Hive-Logo.jpg" 
+          alt="" 
+          width={250} 
+          height={250} 
+          className="opacity-5 transform -translate-x-1/3 translate-y-1/3"
+        />
+      </div>
       {/* Header */}
       <div className="bg-dark-700 border-b border-dark-600">
         <div className="max-w-4xl mx-auto px-4 py-6">
