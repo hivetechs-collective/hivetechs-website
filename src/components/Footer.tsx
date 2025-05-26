@@ -100,8 +100,21 @@ export default function Footer() {
         </div>
         
         {/* Copyright */}
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-          <p>© {currentYear} HiveTechs Collective LLC. All rights reserved.</p>
+        <div className="border-t border-gray-700 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center text-gray-300">
+            <p>© {currentYear} HiveTechs Collective LLC. All rights reserved.</p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link href="/terms" className="hover:text-white text-sm">
+                Terms of Service
+              </Link>
+              <Link href="/privacy" className="hover:text-white text-sm">
+                Privacy Policy
+              </Link>
+              <Link href="/refund" className="hover:text-white text-sm">
+                Refund Policy
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
