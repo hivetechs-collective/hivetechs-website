@@ -23,17 +23,29 @@ interface PricingPlan {
 
 const plans: PricingPlan[] = [
   {
+    id: 'free',
+    name: 'Free',
+    price: 0,
+    description: 'For occasional users and hobbyists',
+    features: [
+      { text: '5 daily / 100 monthly conversations', included: true },
+      { text: 'Eliminates AI hallucinations', included: true },
+      { text: 'Unlimited context & long-term memory', included: true },
+      { text: 'All terminal and IDE integrations', included: true },
+      { text: 'Community support', included: true },
+    ]
+  },
+  {
     id: 'basic',
     name: 'Basic',
     price: 5,
     description: 'Perfect for individual developers',
     features: [
-      { text: '1,000 monthly conversations', included: true },
-      { text: 'Multi-model consensus', included: true },
-      { text: 'VS Code & Cursor integration', included: true },
+      { text: '50 daily / 1,000 monthly conversations', included: true },
+      { text: 'Eliminates AI hallucinations', included: true },
+      { text: 'Unlimited context & long-term memory', included: true },
+      { text: 'All terminal and IDE integrations', included: true },
       { text: 'Community support', included: true },
-      { text: 'Priority processing', included: false },
-      { text: 'Team collaboration', included: false },
     ]
   },
   {
@@ -42,12 +54,11 @@ const plans: PricingPlan[] = [
     price: 10,
     description: 'For power users and small teams',
     features: [
-      { text: '2,000 monthly conversations', included: true },
-      { text: 'Multi-model consensus', included: true },
-      { text: 'All IDE integrations', included: true },
+      { text: '100 daily / 2,000 monthly conversations', included: true },
+      { text: 'Eliminates AI hallucinations', included: true },
+      { text: 'Unlimited context & long-term memory', included: true },
+      { text: 'All terminal and IDE integrations', included: true },
       { text: 'Priority processing', included: true },
-      { text: 'Email support', included: true },
-      { text: 'Team collaboration', included: false },
     ]
   },
   {
@@ -57,12 +68,12 @@ const plans: PricingPlan[] = [
     description: 'For professional developers',
     popular: true,
     features: [
-      { text: '4,000 monthly conversations', included: true },
-      { text: 'Advanced model combinations', included: true },
-      { text: 'All IDE integrations', included: true },
+      { text: '200 daily / 4,000 monthly conversations', included: true },
+      { text: 'Eliminates AI hallucinations', included: true },
+      { text: 'Unlimited context & long-term memory', included: true },
+      { text: 'All terminal and IDE integrations', included: true },
       { text: 'Priority processing', included: true },
-      { text: 'Priority email support', included: true },
-      { text: 'API access', included: true },
+      { text: 'Advanced model combinations', included: true },
     ]
   },
   {
@@ -71,24 +82,31 @@ const plans: PricingPlan[] = [
     price: 50,
     description: 'For development teams',
     features: [
-      { text: '12,000 monthly conversations', included: true },
+      { text: '600 daily / 12,000 monthly conversations (shared)', included: true },
+      { text: 'Eliminates AI hallucinations', included: true },
+      { text: 'Unlimited context & long-term memory', included: true },
+      { text: 'All terminal and IDE integrations', included: true },
+      { text: 'Priority processing', included: true },
       { text: '5 team members included', included: true },
-      { text: 'Team collaboration tools', included: true },
-      { text: 'Shared conversation history', included: true },
-      { text: 'Admin dashboard', included: true },
       { text: 'Dedicated support', included: true },
     ]
   }
 ]
 
 const creditPacks = [
-  { id: '500', credits: 500, price: 10, description: 'Small pack for extra needs' },
-  { id: '1200', credits: 1200, price: 20, description: 'Medium pack with 20% bonus' },
-  { id: '3500', credits: 3500, price: 50, description: 'Large pack with 40% bonus' },
+  { id: '25', credits: 25, price: 3, description: '25 additional conversations that can be used at any time and never expire' },
+  { id: '75', credits: 75, price: 7, description: '75 additional conversations that can be used at any time and never expire' },
+  { id: '200', credits: 200, price: 15, description: '200 additional conversations that can be used at any time and never expire' },
 ]
 
 export default function Pricing() {
   const handleSubscribe = (plan: string) => {
+    if (plan === 'free') {
+      // For free tier, direct to signup page
+      window.location.href = '/auth/signup'
+      return
+    }
+    
     const productMap: Record<string, string> = {
       'basic': 'basic-plan',
       'standard': 'standard-plan', 
@@ -105,9 +123,9 @@ export default function Pricing() {
 
   const handleCreditPurchase = (credits: string) => {
     const creditMap: Record<string, string> = {
-      '500': 'credits-500',
-      '1200': 'credits-1200',
-      '3500': 'credits-3500',
+      '25': 'credits-25',
+      '75': 'credits-75',
+      '200': 'credits-200',
     }
     
     const productId = creditMap[credits]
@@ -132,8 +150,8 @@ export default function Pricing() {
                 Pricing that scales with you
               </h1>
               <p className="text-xl text-gray-300 mb-8">
-                Start with a 7-day free trial. No credit card required. 
-                Upgrade, downgrade, or cancel anytime.
+                Start with a 7-day unlimited trial with full access to all features. 
+                No credit card required. Upgrade, downgrade, or cancel anytime.
               </p>
             </motion.div>
           </div>
@@ -184,7 +202,10 @@ export default function Pricing() {
                       <span className="text-5xl font-bold text-white">${plan.price}</span>
                       <span className="text-gray-300">/month</span>
                     </div>
-                    <p className="text-gray-300">{plan.description}</p>
+                    <p className="text-gray-300 mb-3">{plan.description}</p>
+                    <div className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full w-fit">
+                      7-day unlimited trial included
+                    </div>
                   </div>
                   
                   <ul className="space-y-4 mb-8">
@@ -221,7 +242,7 @@ export default function Pricing() {
                     )}
                     onClick={() => handleSubscribe(plan.id)}
                   >
-                    Start free trial
+                    {plan.id === 'free' ? 'Sign up free' : 'Start 7-day trial'}
                   </Button>
                 </div>
               </motion.div>
@@ -266,8 +287,8 @@ export default function Pricing() {
                 Need more conversations?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Purchase additional credit packs that never expire. 
-                Perfect for busy periods or special projects.
+                Purchase additional conversation credits to supplement your plan. 
+                Credits never expire and are perfect for busy periods or special projects.
               </p>
             </motion.div>
           </div>
@@ -292,7 +313,7 @@ export default function Pricing() {
                 
                 <div className="relative z-10">
                   <h3 className="text-xl font-bold text-white mb-2">
-                    {pack.credits.toLocaleString()} Credits
+                    {pack.credits.toLocaleString()} Conversations
                   </h3>
                   <div className="text-3xl font-bold text-white mb-2">
                     ${pack.price}
@@ -339,7 +360,7 @@ export default function Pricing() {
           <div className="max-w-4xl mx-auto space-y-6">
             <FAQ 
               question="What happens when I reach my conversation limit?"
-              answer="When you reach your monthly limit, you can purchase additional credit packs to continue using the service. Your subscription will automatically reset at the beginning of each billing cycle."
+              answer="We have both daily and monthly limits. When you reach your daily limit, it resets the next day. When you reach your monthly limit, you can purchase additional conversation credits to continue using the service. Your subscription will automatically reset at the beginning of each billing cycle."
             />
             <FAQ 
               question="Can I upgrade or downgrade my plan?"
@@ -347,15 +368,15 @@ export default function Pricing() {
             />
             <FAQ 
               question="Do unused conversations roll over?"
-              answer="Monthly conversation limits don't roll over, but purchased credit packs never expire and can be used anytime."
+              answer="Monthly conversation limits don't roll over, but purchased conversation credits never expire and can be used anytime."
             />
             <FAQ 
               question="What counts as a conversation?"
-              answer="Each request to our multi-model consensus pipeline counts as one conversation, regardless of the response length or complexity."
+              answer="Each request to our multi-model consensus pipeline counts as one conversation, regardless of the response length or complexity. All tiers get access to the same models and features - only the conversation limits differ."
             />
             <FAQ 
               question="Is there a refund policy?"
-              answer="We offer a 15-day money-back guarantee for new subscriptions. See our refund policy for full details."
+              answer="New users get a 7-day unlimited trial with full access. After that, we offer a 15-day money-back guarantee for new subscriptions. See our refund policy for full details."
             />
           </div>
         </div>
@@ -396,6 +417,7 @@ export default function Pricing() {
                 <Button 
                   size="lg" 
                   className="bg-dark-700 border-dark-600 text-white hover:bg-dark-600"
+                  onClick={() => window.location.href = '/#compare-plans'}
                 >
                   Compare plans
                 </Button>

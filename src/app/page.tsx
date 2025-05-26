@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <PageLayout>
       {/* Hero Section - Dark Paddle Style */}
-      <section className="relative overflow-hidden bg-dark min-h-screen flex items-center">
+      <section className="relative overflow-hidden bg-dark">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-dark-800 via-dark to-dark-900" />
         <div className="absolute inset-0 bg-gradient-to-r from-accent-yellow/5 via-transparent to-accent-blue/5" />
@@ -35,7 +35,7 @@ export default function Home() {
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent-blue/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         
         <div className="relative">
-          <div className="container-custom py-24 md:py-32">
+          <div className="container-custom pt-20 md:pt-24 pb-16">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Left Content */}
               <motion.div
@@ -47,14 +47,14 @@ export default function Home() {
                   Multi-Model Consensus AI
                 </p>
                 
-                <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                   Get AI answers you can
                   <span className="text-primary block bg-gradient-to-r from-primary to-accent-blue bg-clip-text text-transparent">actually trust</span>
                 </h1>
                 
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  hive-tools verifies every response through multiple AI models, 
-                  delivering more reliable and consistent code suggestions than single-model tools.
+                  hive-tools eliminates AI hallucinations through multi-model consensus, 
+                  unlimited context awareness, and long-term memory — delivering code you can actually trust.
                 </p>
                 
                 <div className="flex flex-wrap gap-4 mb-6">
@@ -111,15 +111,15 @@ export default function Home() {
 
 
       {/* Features Section - Paddle Style */}
-      <section className="section-padding bg-dark">
+      <section className="py-16 bg-dark">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Built for developers who demand accuracy
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our consensus pipeline combines the best of multiple AI models to deliver 
-              responses you can trust for production code.
+              Our consensus pipeline eliminates hallucinations, provides unlimited context, 
+              and maintains long-term memory for responses you can trust.
             </p>
           </div>
 
@@ -134,12 +134,12 @@ export default function Home() {
               </div>
               
               <h3 className="text-xl font-semibold text-white mb-3">
-                4-Stage Verification
+                Eliminates AI Hallucinations
               </h3>
               
               <p className="text-gray-300 mb-6">
-                Every response passes through Generator, Refiner, Validator, 
-                and Curator models for maximum accuracy.
+                Our 4-stage verification process through multiple AI models 
+                eliminates false or made-up code suggestions.
               </p>
               
               <a href="/features" className="text-primary font-medium inline-flex items-center group">
@@ -182,12 +182,12 @@ export default function Home() {
               </div>
               
               <h3 className="text-xl font-semibold text-white mb-3">
-                Team Collaboration
+                Unlimited Context & Memory
               </h3>
               
               <p className="text-gray-300 mb-6">
-                Share AI conversations, maintain consistent code standards, 
-                and collaborate seamlessly across your team.
+                No token limits or context restrictions. Long-term thematic storage 
+                remembers your project patterns and coding preferences.
               </p>
               
               <a href="/features" className="text-primary font-medium inline-flex items-center group">
@@ -228,7 +228,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {/* Basic Plan */}
+            {/* Free Plan */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -245,39 +245,48 @@ export default function Home() {
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-accent-blue/10 rounded-full blur-3xl animate-pulse" />
               
               <div className="relative z-10">
-              <h3 className="text-2xl font-bold text-white mb-2">Basic</h3>
+              <h3 className="text-2xl font-bold text-white mb-2">Free</h3>
               <div className="flex items-baseline gap-2 mb-2">
-                <span className="text-5xl font-bold text-white">$5</span>
+                <span className="text-5xl font-bold text-white">$0</span>
                 <span className="text-gray-300">/month</span>
               </div>
-              <p className="text-gray-300 mb-6">Perfect for individual developers</p>
+              <p className="text-gray-300 mb-4">For hobbyists & students</p>
+              <div className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full w-fit mb-4">
+                7-day unlimited trial included
+              </div>
               
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start">
                   <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-3 h-3 text-primary" />
                   </div>
-                  <span className="ml-3 text-gray-300">1,000 monthly conversations</span>
+                  <span className="ml-3 text-gray-300">5 daily / 100 monthly conversations</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-3 h-3 text-primary" />
                   </div>
-                  <span className="ml-3 text-gray-300">Multi-model consensus</span>
+                  <span className="ml-3 text-gray-300">Eliminates AI hallucinations</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-3 h-3 text-primary" />
                   </div>
-                  <span className="ml-3 text-gray-300">VS Code & Cursor integration</span>
+                  <span className="ml-3 text-gray-300">Unlimited context & long-term memory</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-3 h-3 text-primary" />
+                  </div>
+                  <span className="ml-3 text-gray-300">All terminal and IDE integrations</span>
                 </li>
               </ul>
               
               <Button 
                 className="w-full bg-dark-700 border-dark-600 text-white hover:bg-dark-600"
-                onClick={() => handleSubscribe('basic')}
+                onClick={() => window.location.href = '/auth/signup'}
               >
-                Start free trial
+                Get started free
               </Button>
               </div>
             </motion.div>
@@ -308,20 +317,29 @@ export default function Home() {
                 <span className="text-5xl font-bold text-white">$20</span>
                 <span className="text-gray-300">/month</span>
               </div>
-              <p className="text-gray-300 mb-6">For professional developers</p>
+              <p className="text-gray-300 mb-4">For professional developers</p>
+              <div className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full w-fit mb-4">
+                7-day unlimited trial included
+              </div>
               
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start">
                   <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-3 h-3 text-primary" />
                   </div>
-                  <span className="ml-3 text-gray-300">4,000 monthly conversations</span>
+                  <span className="ml-3 text-gray-300">200 daily / 4,000 monthly conversations</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-3 h-3 text-primary" />
                   </div>
-                  <span className="ml-3 text-gray-300">Priority processing</span>
+                  <span className="ml-3 text-gray-300">Eliminates AI hallucinations</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-3 h-3 text-primary" />
+                  </div>
+                  <span className="ml-3 text-gray-300">Unlimited context & long-term memory</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -329,19 +347,13 @@ export default function Home() {
                   </div>
                   <span className="ml-3 text-gray-300">Advanced model combinations</span>
                 </li>
-                <li className="flex items-start">
-                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-3 h-3 text-primary" />
-                  </div>
-                  <span className="ml-3 text-gray-300">Email support</span>
-                </li>
               </ul>
               
               <Button 
                 className="w-full bg-gradient-to-r from-primary to-accent-blue hover:from-primary-light hover:to-accent-blue transform hover:scale-105 transition-all shadow-lg shadow-primary/25 animate-pulse"
                 onClick={() => handleSubscribe('premium')}
               >
-                Start free trial
+                Start 7-day trial
               </Button>
               </div>
             </motion.div>
@@ -368,32 +380,35 @@ export default function Home() {
                 <span className="text-5xl font-bold text-white">$50</span>
                 <span className="text-gray-300">/month</span>
               </div>
-              <p className="text-gray-300 mb-6">For development teams</p>
+              <p className="text-gray-300 mb-4">For development teams</p>
+              <div className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full w-fit mb-4">
+                7-day unlimited trial included
+              </div>
               
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start">
                   <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-3 h-3 text-primary" />
                   </div>
-                  <span className="ml-3 text-gray-300">12,000 monthly conversations</span>
+                  <span className="ml-3 text-gray-300">600 daily / 12,000 monthly conversations (shared)</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-3 h-3 text-primary" />
                   </div>
-                  <span className="ml-3 text-gray-300">5 team members</span>
+                  <span className="ml-3 text-gray-300">Eliminates AI hallucinations</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-3 h-3 text-primary" />
                   </div>
-                  <span className="ml-3 text-gray-300">Team collaboration tools</span>
+                  <span className="ml-3 text-gray-300">Unlimited context & long-term memory</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-3 h-3 text-primary" />
                   </div>
-                  <span className="ml-3 text-gray-300">Priority support</span>
+                  <span className="ml-3 text-gray-300">5 team members included</span>
                 </li>
               </ul>
               
@@ -401,13 +416,14 @@ export default function Home() {
                 className="w-full bg-dark-700 border-dark-600 text-white hover:bg-dark-600"
                 onClick={() => handleSubscribe('team')}
               >
-                Start free trial
+                Start 7-day trial
               </Button>
               </div>
             </motion.div>
           </div>
 
           <div className="text-center mt-12">
+            <p className="text-gray-400 mb-2">Looking for our Basic ($5) or Standard ($10) plans?</p>
             <Link 
               href="/pricing" 
               className="text-primary font-medium inline-flex items-center hover:gap-3 transition-all"
@@ -415,6 +431,165 @@ export default function Home() {
               View all pricing options 
               <ChevronRight className="w-4 h-4 ml-2" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Plan Comparison Matrix */}
+      <section id="compare-plans" className="py-20 bg-dark-900 relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-dark via-dark-900 to-dark-800" />
+        <div className="absolute inset-0 bg-gradient-to-r from-accent-blue/3 via-transparent to-accent-yellow/3" />
+        
+        <div className="relative container-custom">
+          <div className="text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                Compare all plans
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the perfect plan for your needs. All plans include the same powerful features.
+              </p>
+            </motion.div>
+          </div>
+
+          {/* Comparison Table */}
+          <div className="max-w-6xl mx-auto">
+            <div className="overflow-x-auto">
+              <table className="w-full bg-dark-800 rounded-2xl border border-dark-600 overflow-hidden">
+                <thead>
+                  <tr className="bg-dark-700">
+                    <th className="text-left p-6 text-white font-semibold">Features</th>
+                    <th className="text-center p-6 text-white font-semibold">Free</th>
+                    <th className="text-center p-6 text-white font-semibold">Basic</th>
+                    <th className="text-center p-6 text-white font-semibold">Standard</th>
+                    <th className="text-center p-6 text-white font-semibold relative">
+                      <div className="bg-gradient-to-r from-primary to-accent-blue text-dark text-xs px-2 py-1 rounded-full absolute top-1 left-1/2 transform -translate-x-1/2">
+                        Most Popular
+                      </div>
+                      <div className="mt-6">Premium</div>
+                    </th>
+                    <th className="text-center p-6 text-white font-semibold">Team</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-t border-dark-600">
+                    <td className="p-6 text-gray-300 font-medium">Price per month</td>
+                    <td className="p-6 text-center text-white font-bold">$0</td>
+                    <td className="p-6 text-center text-white font-bold">$5</td>
+                    <td className="p-6 text-center text-white font-bold">$10</td>
+                    <td className="p-6 text-center text-white font-bold bg-primary/5">$20</td>
+                    <td className="p-6 text-center text-white font-bold">$50</td>
+                  </tr>
+                  <tr className="border-t border-dark-600">
+                    <td className="p-6 text-gray-300 font-medium">Daily conversations</td>
+                    <td className="p-6 text-center text-gray-300">5</td>
+                    <td className="p-6 text-center text-gray-300">50</td>
+                    <td className="p-6 text-center text-gray-300">100</td>
+                    <td className="p-6 text-center text-gray-300 bg-primary/5">200</td>
+                    <td className="p-6 text-center text-gray-300">600 (shared)</td>
+                  </tr>
+                  <tr className="border-t border-dark-600">
+                    <td className="p-6 text-gray-300 font-medium">Monthly conversations</td>
+                    <td className="p-6 text-center text-gray-300">100</td>
+                    <td className="p-6 text-center text-gray-300">1,000</td>
+                    <td className="p-6 text-center text-gray-300">2,000</td>
+                    <td className="p-6 text-center text-gray-300 bg-primary/5">4,000</td>
+                    <td className="p-6 text-center text-gray-300">12,000 (shared)</td>
+                  </tr>
+                  <tr className="border-t border-dark-600">
+                    <td className="p-6 text-gray-300 font-medium">Multi-model consensus</td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center bg-primary/5"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                  </tr>
+                  <tr className="border-t border-dark-600">
+                    <td className="p-6 text-gray-300 font-medium">All terminal and IDE integrations</td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center bg-primary/5"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                  </tr>
+                  <tr className="border-t border-dark-600">
+                    <td className="p-6 text-gray-300 font-medium">Eliminates AI hallucinations</td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center bg-primary/5"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                  </tr>
+                  <tr className="border-t border-dark-600">
+                    <td className="p-6 text-gray-300 font-medium">Unlimited context & long-term memory</td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center bg-primary/5"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                  </tr>
+                  <tr className="border-t border-dark-600">
+                    <td className="p-6 text-gray-300 font-medium">Priority processing</td>
+                    <td className="p-6 text-center"><span className="w-2 h-0.5 bg-dark-500 block mx-auto" /></td>
+                    <td className="p-6 text-center"><span className="w-2 h-0.5 bg-dark-500 block mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center bg-primary/5"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                  </tr>
+                  <tr className="border-t border-dark-600">
+                    <td className="p-6 text-gray-300 font-medium">Team members included</td>
+                    <td className="p-6 text-center text-gray-300">1</td>
+                    <td className="p-6 text-center text-gray-300">1</td>
+                    <td className="p-6 text-center text-gray-300">1</td>
+                    <td className="p-6 text-center text-gray-300 bg-primary/5">1</td>
+                    <td className="p-6 text-center text-gray-300">5</td>
+                  </tr>
+                  <tr className="border-t border-dark-600">
+                    <td className="p-6 text-gray-300 font-medium">Additional conversation credits</td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center bg-primary/5"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                  </tr>
+                  <tr className="border-t border-dark-600">
+                    <td className="p-6 text-gray-300 font-medium">Support level</td>
+                    <td className="p-6 text-center text-gray-300">Community</td>
+                    <td className="p-6 text-center text-gray-300">Community</td>
+                    <td className="p-6 text-center text-gray-300">Standard</td>
+                    <td className="p-6 text-center text-gray-300 bg-primary/5">Standard</td>
+                    <td className="p-6 text-center text-gray-300">Dedicated</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="text-center mt-12">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-primary to-accent-blue hover:from-primary-light hover:to-accent-blue transform hover:scale-105 transition-all shadow-lg shadow-primary/25"
+                  onClick={() => handleSubscribe('premium')}
+                >
+                  Start with Premium
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="secondary"
+                  className="bg-dark-700 border-dark-600 text-white hover:bg-dark-600"
+                  onClick={() => window.location.href = '/auth/signup'}
+                >
+                  Start free
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
