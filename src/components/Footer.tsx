@@ -7,18 +7,8 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
   
   return (
-    <footer className="bg-dark text-white py-12 relative overflow-hidden">
-      {/* Subtle Background Logo */}
-      <div className="absolute right-0 bottom-0 opacity-5 pointer-events-none">
-        <Image 
-          src="/Hive-Logo.jpg" 
-          alt="" 
-          width={300} 
-          height={300} 
-          className="transform translate-x-1/3 translate-y-1/3"
-        />
-      </div>
-      <div className="container-custom relative z-10">
+    <footer className="bg-dark text-white py-12">
+      <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-1">
@@ -90,23 +80,35 @@ export default function Footer() {
           {/* Contact */}
           <div className="col-span-1">
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
-            <ul className="space-y-2">
-              <li className="text-gray-300">
-                <a href="mailto:founder@hivetechs.io" className="hover:text-white">
-                  founder@hivetechs.io
-                </a>
-              </li>
-              <li className="text-gray-300">
-                <a href="mailto:support@hivetechs.io" className="hover:text-white">
-                  support@hivetechs.io
-                </a>
-              </li>
-              <li className="text-gray-300">
-                <a href="tel:+18134000871" className="hover:text-white">
-                  (813) 400-0871
-                </a>
-              </li>
-            </ul>
+            <div className="flex justify-between items-start">
+              <ul className="space-y-2">
+                <li className="text-gray-300">
+                  <a href="mailto:founder@hivetechs.io" className="hover:text-white">
+                    founder@hivetechs.io
+                  </a>
+                </li>
+                <li className="text-gray-300">
+                  <a href="mailto:support@hivetechs.io" className="hover:text-white">
+                    support@hivetechs.io
+                  </a>
+                </li>
+                <li className="text-gray-300">
+                  <a href="tel:+18134000871" className="hover:text-white">
+                    (813) 400-0871
+                  </a>
+                </li>
+              </ul>
+              {/* Logo in contact section */}
+              <div className="hidden lg:block ml-4">
+                <Image 
+                  src="/Hive-Logo.jpg" 
+                  alt="" 
+                  width={80} 
+                  height={80} 
+                  className="opacity-20"
+                />
+              </div>
+            </div>
           </div>
         </div>
         

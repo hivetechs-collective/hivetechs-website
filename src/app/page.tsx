@@ -31,14 +31,14 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-dark-800 via-dark to-dark-900" />
         <div className="absolute inset-0 bg-gradient-to-r from-accent-yellow/5 via-transparent to-accent-blue/5" />
         
-        {/* Large Background Logo */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        {/* Large Background Logo - positioned to the right */}
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none">
           <Image 
             src="/Hive-Logo.jpg" 
             alt="" 
-            width={600} 
-            height={600} 
-            className="opacity-5 blur-sm transform rotate-12"
+            width={500} 
+            height={500} 
+            className="opacity-10 transform translate-x-1/4"
             priority
           />
         </div>
