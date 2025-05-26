@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { motion } from 'framer-motion'
+import { Check, Lock, CreditCard } from 'lucide-react'
+import Image from 'next/image'
 
 interface CustomCheckoutProps {
   plan: string
@@ -79,19 +81,27 @@ export default function CustomCheckout({ plan, price, onSuccess }: CustomCheckou
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="max-w-md mx-auto p-6 bg-dark-800 rounded-lg border border-dark-600"
+      className="max-w-md mx-auto p-8 bg-dark-700 rounded-2xl border border-dark-600 shadow-xl relative overflow-hidden"
     >
+      {/* Subtle gradient overlay matching site style */}
+      <div className="absolute inset-0 bg-gradient-to-br from-dark-700 via-dark-800 to-dark-900 opacity-50" />
+      <div className="relative z-10">
       <h2 className="text-2xl font-bold text-white mb-6">
         Complete your subscription
       </h2>
       
-      <div className="mb-6 p-4 bg-dark-700 rounded-lg">
+      <div className="mb-6 p-4 bg-dark-800/50 rounded-lg border border-dark-600">
         <div className="flex justify-between items-center">
-          <span className="text-gray-300">{plan} Plan</span>
-          <span className="text-xl font-bold text-white">${price}/month</span>
+          <span className="text-gray-300 font-medium">{plan} Plan</span>
+          <span className="text-2xl font-bold text-white">${price}<span className="text-sm text-gray-400">/month</span></span>
         </div>
         {plan !== 'free' && (
-          <p className="text-sm text-primary mt-2">Includes 7-day free trial</p>
+          <div className="mt-2 flex items-center gap-2">
+            <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+              <Check className="w-3 h-3 text-primary" />
+            </div>
+            <p className="text-sm text-primary">7-day unlimited trial included</p>
+          </div>
         )}
       </div>
 

@@ -101,9 +101,21 @@ const creditPacks = [
 ]
 
 export default function Pricing() {
+  const usePaddle = process.env.NEXT_PUBLIC_USE_PADDLE === 'true'
+  
   const handleSubscribe = (plan: string) => {
+    if (usePaddle) {
+      // Use custom Paddle checkout
+      if (plan === 'free') {
+        window.location.href = '/auth/signup' // or handle free tier differently
+        return
+      }
+      window.location.href = `/checkout/${plan}`
+      return
+    }
+    
+    // Original Gumroad logic
     if (plan === 'free') {
-      // For free tier, direct to store page
       window.open('https://store.hivetechs.io', '_blank')
       return
     }
