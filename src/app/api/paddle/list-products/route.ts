@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server'
 
+export const runtime = 'edge';
+
 // List all existing products in Paddle
 export async function GET() {
   try {

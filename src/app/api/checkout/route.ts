@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { paddleAPI } from '@/lib/paddle/api'
 
+export const runtime = 'edge';
+
 // Feature flag to switch between Paddle and Gumroad
 const USE_PADDLE = process.env.USE_PADDLE === 'true'
 

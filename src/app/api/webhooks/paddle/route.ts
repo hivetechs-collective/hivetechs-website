@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { paddleAPI } from '@/lib/paddle/api'
 import { PaddleWebhookEvent } from '@/lib/paddle/types'
 
+export const runtime = 'edge';
+
 export async function POST(request: NextRequest) {
   try {
     // Get the raw body for signature verification

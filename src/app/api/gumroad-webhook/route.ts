@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import crypto from 'crypto';
 
+export const runtime = 'edge';
+
 // This endpoint receives purchase notifications from Gumroad
 export async function POST(request: NextRequest) {
   try {
