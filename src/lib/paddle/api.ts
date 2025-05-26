@@ -5,19 +5,30 @@ const PADDLE_API_URL = process.env.PADDLE_SANDBOX === 'true'
   : 'https://api.paddle.com'
 
 class PaddleAPI {
-  private apiKey: string
-  private vendorId: string
+  private apiKey: string | undefined
+  private vendorId: string | undefined
+  private initialized = false
 
   constructor() {
-    this.apiKey = process.env.PADDLE_API_KEY || ''
-    this.vendorId = process.env.PADDLE_VENDOR_ID || ''
+    // Don't initialize immediately - wait until first use
+  }
+
+  private initialize() {
+    if (this.initialized) return
+    
+    this.apiKey = process.env.PADDLE_API_KEY
+    this.vendorId = process.env.PADDLE_VENDOR_ID
     
     if (!this.apiKey || !this.vendorId) {
       throw new Error('Paddle API configuration missing')
     }
+    
+    this.initialized = true
   }
 
   private async request(endpoint: string, options: RequestInit = {}) {
+    this.initialize() // Ensure initialized before making requests
+    
     const response = await fetch(`${PADDLE_API_URL}${endpoint}`, {
       ...options,
       headers: {
@@ -37,6 +48,8 @@ class PaddleAPI {
 
   // Create a checkout session
   async createCheckout(request: PaddleCheckoutRequest) {
+    this.initialize() // Ensure initialized
+    
     return this.request('/checkout-sessions', {
       method: 'POST',
       body: JSON.stringify({
@@ -133,5 +146,36 @@ class PaddleAPI {
   }
 }
 
-// Export singleton instance
-export const paddleAPI = new PaddleAPI()
+// Export singleton instance - lazy initialization
+let _paddleAPI: PaddleAPI | null = null
+
+export const paddleAPI = {
+  createCheckout: (request: PaddleCheckoutRequest) => {
+    if (!_paddleAPI) _paddleAPI = new PaddleAPI()
+    return _paddleAPI.createCheckout(request)
+  },
+  getSubscription: (subscriptionId: string) => {
+    if (!_paddleAPI) _paddleAPI = new PaddleAPI()
+    return _paddleAPI.getSubscription(subscriptionId)
+  },
+  cancelSubscription: (subscriptionId: string, immediately = false) => {
+    if (!_paddleAPI) _paddleAPI = new PaddleAPI()
+    return _paddleAPI.cancelSubscription(subscriptionId, immediately)
+  },
+  updateSubscription: (subscriptionId: string, priceId: string) => {
+    if (!_paddleAPI) _paddleAPI = new PaddleAPI()
+    return _paddleAPI.updateSubscription(subscriptionId, priceId)
+  },
+  getTransaction: (transactionId: string) => {
+    if (!_paddleAPI) _paddleAPI = new PaddleAPI()
+    return _paddleAPI.getTransaction(transactionId)
+  },
+  getCustomerPortalUrl: (customerId: string) => {
+    if (!_paddleAPI) _paddleAPI = new PaddleAPI()
+    return _paddleAPI.getCustomerPortalUrl(customerId)
+  },
+  verifyWebhookSignature: (payload: string, signature: string) => {
+    if (!_paddleAPI) _paddleAPI = new PaddleAPI()
+    return _paddleAPI.verifyWebhookSignature(payload, signature)
+  }
+}
