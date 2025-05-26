@@ -1,5 +1,3 @@
-'use client'
-
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link'
 import fs from 'fs'
@@ -9,10 +7,9 @@ import remarkGfm from 'remark-gfm'
 import rehypePrism from 'rehype-prism-plus'
 import './documentation.css'
 import WorkingButton from '@/components/WorkingButton'
-import { motion } from 'framer-motion'
 
-export default function Documentation() {
-  // Read the markdown file
+export default async function Documentation() {
+  // Read the markdown file at build time
   const filePath = path.join(process.cwd(), 'src/app/documentation/mcp-tool-guide.md')
   const fileContent = fs.readFileSync(filePath, 'utf8')
 
