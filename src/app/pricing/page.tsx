@@ -1,231 +1,225 @@
 'use client'
 
 import PageLayout from '@/components/PageLayout'
+import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
-import WorkingButton from '@/components/WorkingButton'
+import { motion } from 'framer-motion'
+import { Check, ChevronRight } from 'lucide-react'
+import { cn } from '@/lib/utils'
+
+interface PricingFeature {
+  text: string
+  included: boolean
+}
+
+interface PricingPlan {
+  name: string
+  price: number
+  description: string
+  features: PricingFeature[]
+  popular?: boolean
+  id: string
+}
+
+const plans: PricingPlan[] = [
+  {
+    id: 'basic',
+    name: 'Basic',
+    price: 5,
+    description: 'Perfect for individual developers',
+    features: [
+      { text: '1,000 monthly conversations', included: true },
+      { text: 'Multi-model consensus', included: true },
+      { text: 'VS Code & Cursor integration', included: true },
+      { text: 'Community support', included: true },
+      { text: 'Priority processing', included: false },
+      { text: 'Team collaboration', included: false },
+    ]
+  },
+  {
+    id: 'standard',
+    name: 'Standard',
+    price: 10,
+    description: 'For power users and small teams',
+    features: [
+      { text: '2,000 monthly conversations', included: true },
+      { text: 'Multi-model consensus', included: true },
+      { text: 'All IDE integrations', included: true },
+      { text: 'Priority processing', included: true },
+      { text: 'Email support', included: true },
+      { text: 'Team collaboration', included: false },
+    ]
+  },
+  {
+    id: 'premium',
+    name: 'Premium',
+    price: 20,
+    description: 'For professional developers',
+    popular: true,
+    features: [
+      { text: '4,000 monthly conversations', included: true },
+      { text: 'Advanced model combinations', included: true },
+      { text: 'All IDE integrations', included: true },
+      { text: 'Priority processing', included: true },
+      { text: 'Priority email support', included: true },
+      { text: 'API access', included: true },
+    ]
+  },
+  {
+    id: 'team',
+    name: 'Team',
+    price: 50,
+    description: 'For development teams',
+    features: [
+      { text: '12,000 monthly conversations', included: true },
+      { text: '5 team members included', included: true },
+      { text: 'Team collaboration tools', included: true },
+      { text: 'Shared conversation history', included: true },
+      { text: 'Admin dashboard', included: true },
+      { text: 'Dedicated support', included: true },
+    ]
+  }
+]
+
+const creditPacks = [
+  { id: '500', credits: 500, price: 10, description: 'Small pack for extra needs' },
+  { id: '1200', credits: 1200, price: 20, description: 'Medium pack with 20% bonus' },
+  { id: '3500', credits: 3500, price: 50, description: 'Large pack with 40% bonus' },
+]
 
 export default function Pricing() {
   const handleSubscribe = (plan: string) => {
-    // Direct Gumroad URLs for static site deployment
     const productMap: Record<string, string> = {
       'basic': 'basic-plan',
       'standard': 'standard-plan', 
       'premium': 'premium-plan',
       'team': 'team-plan',
-    };
+    }
     
-    const productId = productMap[plan];
+    const productId = productMap[plan]
     if (productId) {
-      const checkoutUrl = `https://store.hivetechs.io/l/${productId}?wanted=true`;
-      window.open(checkoutUrl, '_blank');
+      const checkoutUrl = `https://store.hivetechs.io/l/${productId}?wanted=true`
+      window.open(checkoutUrl, '_blank')
     }
   }
 
   const handleCreditPurchase = (credits: string) => {
-    // Direct Gumroad URLs for credit packs
     const creditMap: Record<string, string> = {
-      '100': 'credits-100',
       '500': 'credits-500',
-      '1000': 'credits-1000',
-    };
+      '1200': 'credits-1200',
+      '3500': 'credits-3500',
+    }
     
-    const productId = creditMap[credits];
+    const productId = creditMap[credits]
     if (productId) {
-      const checkoutUrl = `https://store.hivetechs.io/l/${productId}?wanted=true`;
-      window.open(checkoutUrl, '_blank');
+      const checkoutUrl = `https://store.hivetechs.io/l/${productId}?wanted=true`
+      window.open(checkoutUrl, '_blank')
     }
   }
+
   return (
     <PageLayout>
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+      {/* Hero Section - Paddle Style */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-white py-20">
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="heading-1 mb-6">
-              Simple, Transparent Pricing
-            </h1>
-            <p className="text-xl mb-8">
-              Choose the plan that best fits your needs. All plans include a 7-day free trial with full access to all features.
-            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+                Pricing that scales with you
+              </h1>
+              <p className="text-xl text-gray-600 mb-8">
+                Start with a 14-day free trial. No credit card required. 
+                Upgrade, downgrade, or cancel anytime.
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Pricing Plans */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Basic Plan */}
-            <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 flex flex-col">
-              <h3 className="text-xl font-bold mb-2">Basic Plan</h3>
-              <div className="text-3xl font-bold mb-2 text-gray-900">$5<span className="text-lg text-gray-700 font-semibold">/mo</span></div>
-              <p className="pricing-description mb-6">For individual developers</p>
-              <ul className="space-y-3 mb-8 flex-grow">
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                  </svg>
-                  50 daily conversations
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                  </svg>
-                  1,000 monthly conversations
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                  </svg>
-                  Multi-model consensus
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                  </svg>
-                  Unlimited context length
-                </li>
-              </ul>
-              <WorkingButton
-                url="#"
-                text="Start Free Trial"
-                fullWidth={true}
-                onClick={() => handleSubscribe('basic')}
-              />
-            </div>
+            {plans.map((plan, index) => (
+              <motion.div
+                key={plan.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className={cn(
+                  "relative bg-white rounded-2xl p-8 transition-all duration-300",
+                  plan.popular 
+                    ? "border-2 border-primary shadow-xl scale-105" 
+                    : "border border-gray-200 hover:border-gray-300 hover:shadow-lg"
+                )}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-4 left-0 right-0 mx-auto w-fit bg-primary text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    Most popular
+                  </div>
+                )}
+                
+                <div className="mb-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline gap-2 mb-2">
+                    <span className="text-5xl font-bold text-gray-900">${plan.price}</span>
+                    <span className="text-gray-600">/month</span>
+                  </div>
+                  <p className="text-gray-600">{plan.description}</p>
+                </div>
+                
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, i) => (
+                    <li key={i} className="flex items-start">
+                      <div className={cn(
+                        "w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5",
+                        feature.included 
+                          ? "bg-green-100" 
+                          : "bg-gray-100"
+                      )}>
+                        {feature.included ? (
+                          <Check className="w-3 h-3 text-green-600" />
+                        ) : (
+                          <span className="w-2 h-0.5 bg-gray-400" />
+                        )}
+                      </div>
+                      <span className={cn(
+                        "ml-3",
+                        feature.included ? "text-gray-700" : "text-gray-400"
+                      )}>
+                        {feature.text}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <Button 
+                  variant={plan.popular ? "primary" : "secondary"}
+                  className="w-full"
+                  onClick={() => handleSubscribe(plan.id)}
+                >
+                  Start free trial
+                </Button>
+              </motion.div>
+            ))}
+          </div>
 
-            {/* Standard Plan */}
-            <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 flex flex-col">
-              <h3 className="text-xl font-bold mb-2">Standard Plan</h3>
-              <div className="text-3xl font-bold mb-2 text-gray-900">$10<span className="text-lg text-gray-700 font-semibold">/mo</span></div>
-              <p className="pricing-description mb-6">For power users</p>
-              <ul className="space-y-3 mb-8 flex-grow">
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                  </svg>
-                  100 daily conversations
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                  </svg>
-                  2,000 monthly conversations
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                  </svg>
-                  Priority processing
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                  </svg>
-                  Standard model combinations
-                </li>
-              </ul>
-              <WorkingButton
-                url="#"
-                text="Start Free Trial"
-                fullWidth={true}
-                onClick={() => handleSubscribe('standard')}
-              />
-            </div>
-
-            {/* Premium Plan */}
-            <div className="bg-primary text-white p-8 rounded-lg shadow-md border border-primary flex flex-col relative">
-              <div className="absolute -top-4 right-0 left-0 mx-auto w-max bg-accent text-white px-4 py-1 rounded-full text-sm font-bold">
-                Most Popular
-              </div>
-              <h3 className="text-xl font-bold mb-2">Premium Plan</h3>
-              <div className="text-3xl font-bold mb-2">$20<span className="text-lg text-white/90 font-semibold">/mo</span></div>
-              <p className="text-white mb-6 font-medium">For professional developers</p>
-              <ul className="space-y-3 mb-8 flex-grow">
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                  </svg>
-                  200 daily conversations
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                  </svg>
-                  4,000 monthly conversations
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                  </svg>
-                  High-priority processing
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                  </svg>
-                  Premium model combinations
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                  </svg>
-                  Email support
-                </li>
-              </ul>
-              <WorkingButton
-                url="#"
-                text="Start Free Trial"
-                fullWidth={true}
-                variant="light"
-                onClick={() => handleSubscribe('premium')}
-              />
-            </div>
-
-            {/* Team Plan */}
-            <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 flex flex-col">
-              <h3 className="text-xl font-bold mb-2">Team Plan</h3>
-              <div className="text-3xl font-bold mb-2 text-gray-900">$50<span className="text-lg text-gray-700 font-semibold">/mo</span></div>
-              <p className="pricing-description mb-6">For development teams</p>
-              <ul className="space-y-3 mb-8 flex-grow">
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                  </svg>
-                  600 daily shared conversations
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                  </svg>
-                  12,000 monthly shared conversations
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                  </svg>
-                  5 team members included
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                  </svg>
-                  Team management dashboard
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                  </svg>
-                  Priority email support
-                </li>
-              </ul>
-              <WorkingButton
-                url="#"
-                text="Start Free Trial"
-                fullWidth={true}
-                onClick={() => handleSubscribe('team')}
-              />
-            </div>
+          {/* Enterprise CTA */}
+          <div className="mt-16 text-center">
+            <p className="text-gray-600 mb-4">
+              Need more than 12,000 conversations or custom features?
+            </p>
+            <Link 
+              href="/contact" 
+              className="text-primary font-medium inline-flex items-center hover:gap-3 transition-all"
+            >
+              Contact us for Enterprise pricing
+              <ChevronRight className="w-4 h-4 ml-2" />
+            </Link>
           </div>
         </div>
       </section>
@@ -234,121 +228,122 @@ export default function Pricing() {
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="heading-2 mb-4">Need More Conversations?</h2>
-            <p className="text-xl text-gray-800 max-w-3xl mx-auto">
-              Purchase additional credit packs to extend your monthly conversation limits.
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Need more conversations?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Purchase additional credit packs that never expire. 
+              Perfect for busy periods or special projects.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {/* Credit Pack 1 */}
-            <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200">
-              <h3 className="text-xl font-bold mb-2">Small Pack</h3>
-              <div className="text-3xl font-bold mb-2">$10</div>
-              <p className="pricing-description mb-6">500 additional conversations</p>
-              <WorkingButton
-                url="#"
-                text="Purchase Now"
-                fullWidth={true}
-                onClick={() => handleCreditPurchase('50')}
-              />
-            </div>
-
-            {/* Credit Pack 2 */}
-            <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200">
-              <h3 className="text-xl font-bold mb-2">Medium Pack</h3>
-              <div className="text-3xl font-bold mb-2">$20</div>
-              <p className="pricing-description mb-6">1,200 additional conversations</p>
-              <WorkingButton
-                url="#"
-                text="Purchase Now"
-                fullWidth={true}
-                onClick={() => handleCreditPurchase('200')}
-              />
-            </div>
-
-            {/* Credit Pack 3 */}
-            <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200">
-              <h3 className="text-xl font-bold mb-2">Large Pack</h3>
-              <div className="text-3xl font-bold mb-2">$50</div>
-              <p className="pricing-description mb-6">3,500 additional conversations</p>
-              <WorkingButton
-                url="#"
-                text="Purchase Now"
-                fullWidth={true}
-                onClick={() => handleCreditPurchase('500')}
-              />
-            </div>
+            {creditPacks.map((pack, index) => (
+              <motion.div
+                key={pack.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg hover:border-gray-300 transition-all"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  {pack.credits.toLocaleString()} Credits
+                </h3>
+                <div className="text-3xl font-bold text-gray-900 mb-2">
+                  ${pack.price}
+                </div>
+                <p className="text-gray-600 mb-6">
+                  {pack.description}
+                </p>
+                <Button
+                  variant="secondary"
+                  className="w-full"
+                  onClick={() => handleCreditPurchase(pack.id)}
+                >
+                  Purchase credits
+                </Button>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="heading-2 mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-800 max-w-3xl mx-auto">
-              Have questions about our pricing? Find answers to common questions below.
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Frequently asked questions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Everything you need to know about our pricing and plans
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">What happens when I reach my conversation limit?</h3>
-              <p className="text-gray-800">
-                When you reach your daily or monthly conversation limit, you can purchase additional credit packs to continue using the service. Your subscription will automatically reset at the beginning of each billing cycle.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">Can I upgrade or downgrade my plan?</h3>
-              <p className="text-gray-800">
-                Yes, you can upgrade or downgrade your plan at any time. When upgrading, you'll be charged the prorated difference for the remainder of your billing cycle. When downgrading, the new rate will apply at the start of your next billing cycle.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">Do unused conversations roll over?</h3>
-              <p className="text-gray-800">
-                No, unused conversations do not roll over to the next month. Your conversation count resets at the beginning of each billing cycle.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">What counts as a conversation?</h3>
-              <p className="text-gray-800">
-                A conversation is defined as a single request to our multi-model consensus pipeline. Each time you send a prompt and receive a response, that counts as one conversation.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">Is there a refund policy?</h3>
-              <p className="text-gray-800">
-                We offer a 7-day free trial for all subscription plans. If you cancel during the trial period, you won't be charged. After the trial period, subscriptions are non-refundable for the current billing cycle.
-              </p>
-            </div>
+            <FAQ 
+              question="What happens when I reach my conversation limit?"
+              answer="When you reach your monthly limit, you can purchase additional credit packs to continue using the service. Your subscription will automatically reset at the beginning of each billing cycle."
+            />
+            <FAQ 
+              question="Can I upgrade or downgrade my plan?"
+              answer="Yes, you can change your plan at any time. When upgrading, you'll be charged the prorated difference. When downgrading, the new rate applies at your next billing cycle."
+            />
+            <FAQ 
+              question="Do unused conversations roll over?"
+              answer="Monthly conversation limits don't roll over, but purchased credit packs never expire and can be used anytime."
+            />
+            <FAQ 
+              question="What counts as a conversation?"
+              answer="Each request to our multi-model consensus pipeline counts as one conversation, regardless of the response length or complexity."
+            />
+            <FAQ 
+              question="Is there a refund policy?"
+              answer="We offer a 15-day money-back guarantee for new subscriptions. See our refund policy for full details."
+            />
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-dark text-white">
+      <section className="py-20 bg-gradient-to-br from-primary to-primary-dark text-white">
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="heading-2 mb-6">Ready to experience better AI answers?</h2>
-            <p className="text-xl mb-8">
-              Start your 7-day free trial today and see the difference our multi-model consensus pipeline can make for your projects.
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Start building with confidence
+            </h2>
+            <p className="text-xl mb-8 text-white/90">
+              Join thousands of developers using Hive.AI to write better code with AI consensus.
             </p>
-            <WorkingButton
-              url="#"
-              text="Start Free Trial"
-              large={true}
-              onClick={() => handleSubscribe('basic')}
-            />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                size="lg" 
+                variant="secondary"
+                className="bg-white text-primary hover:bg-gray-100"
+                onClick={() => handleSubscribe('basic')}
+              >
+                Start your free trial
+              </Button>
+              <Button 
+                size="lg" 
+                variant="ghost"
+                className="text-white hover:bg-white/10"
+              >
+                Compare plans
+              </Button>
+            </div>
           </div>
         </div>
       </section>
     </PageLayout>
+  )
+}
+
+function FAQ({ question, answer }: { question: string; answer: string }) {
+  return (
+    <div className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-md transition-shadow">
+      <h3 className="text-lg font-semibold text-gray-900 mb-2">{question}</h3>
+      <p className="text-gray-600">{answer}</p>
+    </div>
   )
 }

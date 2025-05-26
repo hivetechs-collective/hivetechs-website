@@ -4,21 +4,48 @@
 @import 'tailwindcss/utilities';
 
 :root {
-  --foreground-rgb: 17, 24, 39;
-  --background-rgb: 249, 250, 251;
-  --primary-color: 79, 70, 229; /* Indigo */
-  --secondary-color: 16, 185, 129; /* Emerald */
-  --accent-color: 245, 158, 11; /* Amber */
-  --dark-color: 17, 24, 39; /* Gray-900 */
-  --light-color: 249, 250, 251; /* Gray-50 */
-  --text-dark: 17, 24, 39; /* Gray-900 */
-  --text-medium: 55, 65, 81; /* Gray-700 */
-  --text-light: 107, 114, 128; /* Gray-500 */
+  /* Primary Brand Colors - Paddle Inspired */
+  --primary: 92, 78, 229;        /* #5C4EE5 - Purple */
+  --primary-light: 123, 110, 246; /* #7B6EF6 */
+  --primary-dark: 67, 56, 202;    /* #4338CA */
+  
+  /* Accent Colors */
+  --accent-green: 16, 185, 129;   /* Success, positive metrics */
+  --accent-blue: 59, 130, 246;    /* Links, secondary actions */
+  --accent-orange: 245, 158, 11;  /* Warnings, highlights */
+  
+  /* Neutral Colors */
+  --gray-900: 17, 24, 39;         /* Darkest text */
+  --gray-800: 31, 41, 55;         /* Dark backgrounds */
+  --gray-700: 55, 65, 81;         /* Secondary text */
+  --gray-600: 75, 85, 99;         /* Muted text */
+  --gray-500: 107, 114, 128;      /* Borders, dividers */
+  --gray-400: 156, 163, 175;      /* Placeholders */
+  --gray-300: 209, 213, 219;      /* Light borders */
+  --gray-200: 229, 231, 235;      /* Light backgrounds */
+  --gray-100: 243, 244, 246;      /* Lightest backgrounds */
+  --gray-50: 249, 250, 251;       /* Off-white */
+  --white: 255, 255, 255;         /* Pure white */
+  
+  /* Legacy support */
+  --foreground-rgb: var(--gray-900);
+  --background-rgb: var(--white);
+  --primary-color: var(--primary);
+  --secondary-color: var(--accent-green);
+  --accent-color: var(--accent-orange);
+  --dark-color: var(--gray-900);
+  --light-color: var(--gray-50);
+  --text-dark: var(--gray-900);
+  --text-medium: var(--gray-700);
+  --text-light: var(--gray-500);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+  color: rgb(var(--gray-900));
+  background: rgb(var(--white));
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @layer components {
@@ -226,5 +253,64 @@ body {
 
   .footer-link {
     @apply text-gray-100 hover:text-white;
+  }
+}
+
+/* Paddle-Inspired Utilities */
+@layer utilities {
+  /* Gradients */
+  .gradient-primary {
+    background: linear-gradient(135deg, rgb(var(--primary)) 0%, rgb(var(--primary-light)) 100%);
+  }
+  
+  .gradient-vibrant {
+    background: linear-gradient(135deg, rgb(var(--primary)) 0%, rgb(var(--accent-blue)) 100%);
+  }
+  
+  .gradient-subtle {
+    background: linear-gradient(180deg, rgb(var(--white)) 0%, rgb(var(--gray-50)) 100%);
+  }
+  
+  .gradient-overlay {
+    background: linear-gradient(135deg, rgba(var(--primary), 0.05) 0%, rgba(var(--accent-blue), 0.05) 100%);
+  }
+  
+  /* Section Spacing */
+  .section-padding {
+    @apply py-24 md:py-32;
+  }
+  
+  /* Card Shadows */
+  .card-shadow {
+    @apply shadow-lg shadow-gray-200/50;
+  }
+  
+  .card-shadow-hover {
+    @apply hover:shadow-xl hover:shadow-gray-300/50;
+  }
+  
+  /* Smooth Transitions */
+  .smooth-transition {
+    @apply transition-all duration-200 ease-out;
+  }
+  
+  /* Card Hover */
+  .card-hover {
+    @apply hover:shadow-xl hover:-translate-y-1 transition-all duration-300;
+  }
+  
+  /* Button Press */
+  .button-press {
+    @apply active:scale-95;
+  }
+  
+  /* Feature Grid */
+  .feature-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+  }
+  
+  /* Two Column Layout */
+  .two-column {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-16 items-center;
   }
 }
