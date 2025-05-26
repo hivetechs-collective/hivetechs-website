@@ -120,7 +120,7 @@ export default function Pricing() {
   return (
     <PageLayout>
       {/* Hero Section - Paddle Style */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-white py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-dark-800 to-dark py-20">
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto">
             <motion.div
@@ -128,11 +128,11 @@ export default function Pricing() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Pricing that scales with you
               </h1>
-              <p className="text-xl text-gray-600 mb-8">
-                Start with a 14-day free trial. No credit card required. 
+              <p className="text-xl text-gray-300 mb-8">
+                Start with a 7-day free trial. No credit card required. 
                 Upgrade, downgrade, or cancel anytime.
               </p>
             </motion.div>
@@ -141,8 +141,12 @@ export default function Pricing() {
       </section>
 
       {/* Pricing Plans */}
-      <section className="py-20 bg-white">
-        <div className="container-custom">
+      <section className="py-20 bg-dark relative overflow-hidden">
+        {/* Animated Background - matching hero section */}
+        <div className="absolute inset-0 bg-gradient-to-br from-dark-800 via-dark to-dark-900" />
+        <div className="absolute inset-0 bg-gradient-to-r from-accent-yellow/5 via-transparent to-accent-blue/5" />
+        
+        <div className="relative container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {plans.map((plan, index) => (
               <motion.div
@@ -151,66 +155,82 @@ export default function Pricing() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={cn(
-                  "relative bg-white rounded-2xl p-8 transition-all duration-300",
+                  "relative overflow-hidden rounded-2xl p-8 transition-all duration-300",
                   plan.popular 
-                    ? "border-2 border-primary shadow-xl scale-105" 
-                    : "border border-gray-200 hover:border-gray-300 hover:shadow-lg"
+                    ? "border-2 border-primary shadow-2xl shadow-primary/20 scale-105" 
+                    : "border border-dark-600 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10"
                 )}
               >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-0 right-0 mx-auto w-fit bg-primary text-white px-4 py-1 rounded-full text-sm font-semibold">
-                    Most popular
-                  </div>
-                )}
+                {/* Card Background with gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-dark-700 via-dark-800 to-dark-900" />
+                <div className="absolute inset-0 bg-gradient-to-r from-accent-yellow/5 via-transparent to-accent-blue/5" />
                 
-                <div className="mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline gap-2 mb-2">
-                    <span className="text-5xl font-bold text-gray-900">${plan.price}</span>
-                    <span className="text-gray-600">/month</span>
+                {/* Floating Orb for each card */}
+                <div className={cn(
+                  "absolute -top-10 -right-10 w-32 h-32 rounded-full blur-3xl animate-pulse",
+                  plan.popular ? "bg-primary/20" : "bg-accent-blue/10"
+                )} />
+                
+                <div className="relative z-10">
+                  {plan.popular && (
+                    <div className="absolute -top-12 left-0 right-0 mx-auto w-fit bg-gradient-to-r from-primary to-accent-blue text-dark px-4 py-1 rounded-full text-sm font-semibold shadow-lg">
+                      Most popular
+                    </div>
+                  )}
+                  
+                  <div className="mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <div className="flex items-baseline gap-2 mb-2">
+                      <span className="text-5xl font-bold text-white">${plan.price}</span>
+                      <span className="text-gray-300">/month</span>
+                    </div>
+                    <p className="text-gray-300">{plan.description}</p>
                   </div>
-                  <p className="text-gray-600">{plan.description}</p>
+                  
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature, i) => (
+                      <li key={i} className="flex items-start">
+                        <div className={cn(
+                          "w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5",
+                          feature.included 
+                            ? "bg-primary/20" 
+                            : "bg-dark-600"
+                        )}>
+                          {feature.included ? (
+                            <Check className="w-3 h-3 text-primary" />
+                          ) : (
+                            <span className="w-2 h-0.5 bg-dark-500" />
+                          )}
+                        </div>
+                        <span className={cn(
+                          "ml-3",
+                          feature.included ? "text-gray-300" : "text-gray-500"
+                        )}>
+                          {feature.text}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Button 
+                    className={cn(
+                      "w-full",
+                      plan.popular 
+                        ? "bg-gradient-to-r from-primary to-accent-blue hover:from-primary-light hover:to-accent-blue transform hover:scale-105 transition-all shadow-lg shadow-primary/25" 
+                        : "bg-dark-700 border-dark-600 text-white hover:bg-dark-600"
+                    )}
+                    onClick={() => handleSubscribe(plan.id)}
+                  >
+                    Start free trial
+                  </Button>
                 </div>
-                
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-start">
-                      <div className={cn(
-                        "w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5",
-                        feature.included 
-                          ? "bg-green-100" 
-                          : "bg-gray-100"
-                      )}>
-                        {feature.included ? (
-                          <Check className="w-3 h-3 text-green-600" />
-                        ) : (
-                          <span className="w-2 h-0.5 bg-gray-400" />
-                        )}
-                      </div>
-                      <span className={cn(
-                        "ml-3",
-                        feature.included ? "text-gray-700" : "text-gray-400"
-                      )}>
-                        {feature.text}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <Button 
-                  variant={plan.popular ? "primary" : "secondary"}
-                  className="w-full"
-                  onClick={() => handleSubscribe(plan.id)}
-                >
-                  Start free trial
-                </Button>
               </motion.div>
             ))}
           </div>
 
           {/* Enterprise CTA */}
           <div className="mt-16 text-center">
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-300 mb-4">
               Need more than 12,000 conversations or custom features?
             </p>
             <Link 
@@ -225,16 +245,31 @@ export default function Pricing() {
       </section>
 
       {/* Credit Packs */}
-      <section className="py-20 bg-gray-50">
-        <div className="container-custom">
+      <section className="py-20 bg-dark relative overflow-hidden">
+        {/* Animated Background - matching hero section */}
+        <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark to-dark-800" />
+        <div className="absolute inset-0 bg-gradient-to-r from-accent-blue/5 via-transparent to-accent-yellow/5" />
+        
+        {/* Floating Orbs */}
+        <div className="absolute top-20 right-20 w-64 h-64 bg-accent-blue/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 left-20 w-48 h-48 bg-primary/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        
+        <div className="relative container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Need more conversations?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Purchase additional credit packs that never expire. 
-              Perfect for busy periods or special projects.
-            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Need more conversations?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Purchase additional credit packs that never expire. 
+                Perfect for busy periods or special projects.
+              </p>
+            </motion.div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -242,26 +277,36 @@ export default function Pricing() {
               <motion.div
                 key={pack.id}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg hover:border-gray-300 transition-all"
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+                className="relative overflow-hidden rounded-2xl p-8 border border-dark-600 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all"
               >
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  {pack.credits.toLocaleString()} Credits
-                </h3>
-                <div className="text-3xl font-bold text-gray-900 mb-2">
-                  ${pack.price}
+                {/* Card Background with gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-dark-700 via-dark-800 to-dark-900" />
+                <div className="absolute inset-0 bg-gradient-to-r from-accent-yellow/5 via-transparent to-accent-blue/5" />
+                
+                {/* Small floating orb for each card */}
+                <div className="absolute -bottom-5 -left-5 w-24 h-24 bg-primary/10 rounded-full blur-2xl animate-pulse" />
+                
+                <div className="relative z-10">
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    {pack.credits.toLocaleString()} Credits
+                  </h3>
+                  <div className="text-3xl font-bold text-white mb-2">
+                    ${pack.price}
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    {pack.description}
+                  </p>
+                  <Button
+                    className="w-full bg-dark-700 border-dark-600 text-white hover:bg-dark-600"
+                    onClick={() => handleCreditPurchase(pack.id)}
+                  >
+                    Purchase credits
+                  </Button>
                 </div>
-                <p className="text-gray-600 mb-6">
-                  {pack.description}
-                </p>
-                <Button
-                  variant="secondary"
-                  className="w-full"
-                  onClick={() => handleCreditPurchase(pack.id)}
-                >
-                  Purchase credits
-                </Button>
               </motion.div>
             ))}
           </div>
@@ -269,15 +314,26 @@ export default function Pricing() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white">
-        <div className="container-custom">
+      <section className="py-20 bg-dark relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-dark-800 via-dark to-dark-900" />
+        <div className="absolute inset-0 bg-gradient-to-r from-accent-yellow/3 via-transparent to-accent-blue/3" />
+        
+        <div className="relative container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Frequently asked questions
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Everything you need to know about our pricing and plans
-            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Frequently asked questions
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need to know about our pricing and plans
+              </p>
+            </motion.div>
           </div>
 
           <div className="max-w-4xl mx-auto space-y-6">
@@ -306,32 +362,45 @@ export default function Pricing() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary to-primary-dark text-white">
-        <div className="container-custom">
+      <section className="relative overflow-hidden bg-dark py-24">
+        {/* Animated Background - matching hero section */}
+        <div className="absolute inset-0 bg-gradient-to-br from-dark-800 via-dark to-dark-900" />
+        <div className="absolute inset-0 bg-gradient-to-r from-accent-yellow/5 via-transparent to-accent-blue/5" />
+        
+        {/* Floating Orbs */}
+        <div className="absolute top-10 left-10 w-48 h-48 bg-accent-yellow/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-10 right-10 w-64 h-64 bg-accent-blue/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        
+        <div className="relative container-custom">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Start building with confidence
-            </h2>
-            <p className="text-xl mb-8 text-white/90">
-              Join thousands of developers using Hive.AI to write better code with AI consensus.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                variant="secondary"
-                className="bg-white text-primary hover:bg-gray-100"
-                onClick={() => handleSubscribe('basic')}
-              >
-                Start your free trial
-              </Button>
-              <Button 
-                size="lg" 
-                variant="ghost"
-                className="text-white hover:bg-white/10"
-              >
-                Compare plans
-              </Button>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Start building with confidence
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                Join developers using hive-tools to write better code with AI consensus.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-primary to-accent-blue hover:from-primary-light hover:to-accent-blue transform hover:scale-105 transition-all shadow-lg shadow-primary/25"
+                  onClick={() => handleSubscribe('basic')}
+                >
+                  Start your free trial
+                </Button>
+                <Button 
+                  size="lg" 
+                  className="bg-dark-700 border-dark-600 text-white hover:bg-dark-600"
+                >
+                  Compare plans
+                </Button>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -341,9 +410,21 @@ export default function Pricing() {
 
 function FAQ({ question, answer }: { question: string; answer: string }) {
   return (
-    <div className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-md transition-shadow">
-      <h3 className="text-lg font-semibold text-gray-900 mb-2">{question}</h3>
-      <p className="text-gray-600">{answer}</p>
-    </div>
+    <motion.div 
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
+      viewport={{ once: true }}
+      className="relative overflow-hidden rounded-lg border border-dark-600 p-6 hover:border-primary/30 transition-all"
+    >
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-dark-700 via-dark-800 to-dark-900" />
+      <div className="absolute inset-0 bg-gradient-to-r from-accent-yellow/3 via-transparent to-accent-blue/3" />
+      
+      <div className="relative z-10">
+        <h3 className="text-lg font-semibold text-white mb-2">{question}</h3>
+        <p className="text-gray-300">{answer}</p>
+      </div>
+    </motion.div>
   )
 }

@@ -26,15 +26,15 @@ export default function Navigation() {
 
   return (
     <nav className={cn(
-      "sticky top-0 z-50 bg-white transition-all duration-300",
-      scrolled ? "shadow-md" : "border-b border-gray-200"
+      "sticky top-0 z-50 bg-dark transition-all duration-300",
+      scrolled ? "shadow-lg shadow-black/20" : "border-b border-dark-600"
     )}>
       <div className="container-custom">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary-light rounded-lg" />
-            <span className="font-semibold text-xl text-gray-900">HiveTechs</span>
+            <span className="font-semibold text-xl text-white">HiveTechs Collective</span>
           </Link>
           
           {/* Desktop Navigation */}
@@ -50,7 +50,7 @@ export default function Navigation() {
           <div className="hidden md:flex items-center gap-4">
             <Link 
               href="/login" 
-              className="text-gray-700 hover:text-gray-900 font-medium transition-colors"
+              className="text-gray-300 hover:text-white font-medium transition-colors"
             >
               Log in
             </Link>
@@ -61,7 +61,7 @@ export default function Navigation() {
           
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden p-2 text-gray-700 hover:text-gray-900"
+            className="md:hidden p-2 text-gray-300 hover:text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
@@ -75,23 +75,23 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden border-t border-gray-200 bg-white">
+        <div className="md:hidden border-t border-dark-600 bg-dark">
           <div className="container-custom py-4">
             <div className="flex flex-col space-y-4">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-primary font-medium py-2"
+                  className="text-gray-300 hover:text-primary font-medium py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-4 space-y-3 border-t border-gray-200">
+              <div className="pt-4 space-y-3 border-t border-dark-600">
                 <Link 
                   href="/login" 
-                  className="block text-center text-gray-700 hover:text-gray-900 font-medium py-2"
+                  className="block text-center text-gray-300 hover:text-white font-medium py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Log in
@@ -112,7 +112,7 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
   return (
     <Link 
       href={href} 
-      className="text-gray-700 hover:text-gray-900 font-medium transition-colors"
+      className="text-gray-300 hover:text-white font-medium transition-colors"
     >
       {children}
     </Link>

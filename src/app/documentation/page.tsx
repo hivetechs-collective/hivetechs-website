@@ -1,3 +1,5 @@
+'use client'
+
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link'
 import fs from 'fs'
@@ -7,6 +9,7 @@ import remarkGfm from 'remark-gfm'
 import rehypePrism from 'rehype-prism-plus'
 import './documentation.css'
 import WorkingButton from '@/components/WorkingButton'
+import { motion } from 'framer-motion'
 
 export default function Documentation() {
   // Read the markdown file
@@ -23,14 +26,14 @@ export default function Documentation() {
               Documentation
             </h1>
             <p className="text-xl mb-8">
-              Learn how to use the Hive.AI Multi-Model Consensus Pipeline (MCP) Tool
+              Learn how to use the hive-tools Multi-Model Consensus Pipeline (MCP) Tool
             </p>
           </div>
         </div>
       </section>
 
       {/* Documentation Content */}
-      <section className="py-20">
+      <section className="py-20 bg-dark">
         <div className="container-custom">
           <div className="prose prose-lg max-w-4xl mx-auto">
             <MDXRemote 

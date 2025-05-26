@@ -161,7 +161,7 @@ export default function ApiKeys() {
               <div className="px-4 py-5 sm:p-6">
                 <h3 className="text-lg leading-6 font-medium text-gray-900">Create New API Key</h3>
                 <div className="mt-2 max-w-xl text-sm text-gray-500">
-                  <p>Create a new API key to access the HiveTechs MCP service. You'll only be able to see the full key once, so make sure to copy it.</p>
+                  <p>Create a new API key to access the HiveTechs Collective MCP service. You'll only be able to see the full key once, so make sure to copy it.</p>
                 </div>
                 <div className="mt-5 sm:flex sm:items-center">
                   <div className="w-full sm:max-w-xs">
@@ -249,7 +249,7 @@ export default function ApiKeys() {
             <div className="px-4 py-5 sm:p-6">
               <h3 className="text-lg leading-6 font-medium text-gray-900">API Documentation</h3>
               <div className="mt-2 max-w-xl text-sm text-gray-500">
-                <p>Learn how to use the HiveTechs MCP API with our comprehensive documentation.</p>
+                <p>Learn how to use the HiveTechs Collective MCP API with our comprehensive documentation.</p>
               </div>
               <div className="mt-5">
                 <Link

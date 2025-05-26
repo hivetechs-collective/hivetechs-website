@@ -34,12 +34,12 @@ function ThankYouContent() {
 
   const getProductName = (productId: string) => {
     const products: { [key: string]: string } = {
-      'basic': 'Hive.AI Basic',
-      'pro': 'Hive.AI Pro', 
-      'enterprise': 'Hive.AI Enterprise',
-      'credits': 'Hive.AI Credits'
+      'basic': 'hive-tools Basic',
+      'pro': 'hive-tools Pro', 
+      'enterprise': 'hive-tools Enterprise',
+      'credits': 'hive-tools Credits'
     }
-    return products[productId] || 'Hive.AI'
+    return products[productId] || 'hive-tools'
   }
 
   return (
@@ -52,7 +52,7 @@ function ThankYouContent() {
             </svg>
           </div>
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            Welcome to Hive.AI! 🐝
+            Welcome to hive-tools! 🐝
           </h1>
           <p className="text-lg text-gray-600">
             Your purchase was successful. Let's get you set up!
@@ -90,7 +90,7 @@ function ThankYouContent() {
               <div className="flex items-start space-x-3">
                 <div className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-semibold mt-0.5">1</div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">Install Hive.AI</h3>
+                  <h3 className="font-semibold text-gray-900">Install hive-tools</h3>
                   <p className="text-gray-600 text-sm">Get the CLI tool installed on your system</p>
                 </div>
               </div>
@@ -107,7 +107,7 @@ function ThankYouContent() {
                 <div className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-semibold mt-0.5">3</div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Setup IDE Integration</h3>
-                  <p className="text-gray-600 text-sm">Connect Hive.AI to your favorite code editor</p>
+                  <p className="text-gray-600 text-sm">Connect hive-tools to your favorite code editor</p>
                 </div>
               </div>
             </div>

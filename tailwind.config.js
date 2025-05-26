@@ -8,16 +8,23 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Paddle-inspired color palette
+        // Paddle-style dark theme palette
         primary: {
-          DEFAULT: 'rgb(var(--primary) / <alpha-value>)',
-          light: 'rgb(var(--primary-light) / <alpha-value>)',
-          dark: 'rgb(var(--primary-dark) / <alpha-value>)',
+          DEFAULT: '#FFC107', // Paddle's yellow
+          light: '#FFD54F',   // Lighter yellow
+          dark: '#FFAD00',    // Darker yellow
         },
-        accent: {
-          green: 'rgb(var(--accent-green) / <alpha-value>)',
-          blue: 'rgb(var(--accent-blue) / <alpha-value>)',
-          orange: 'rgb(var(--accent-orange) / <alpha-value>)',
+        'accent-yellow': '#FFC107',  // Paddle's yellow
+        'accent-blue': '#007BFF',    // Electric blue
+        'accent-purple': '#8A2BE2',  // Deep purple
+        'accent-green': '#28A745',   // Success green
+        dark: {
+          DEFAULT: '#0E1414', // Paddle's black
+          900: '#121818',     // Darker variant
+          800: '#181E21',     // Dark background
+          700: '#1E2427',     // Card backgrounds
+          600: '#2D3336',     // Borders
+          500: '#4B5156',     // Muted elements
         },
         gray: {
           50: 'rgb(var(--gray-50) / <alpha-value>)',

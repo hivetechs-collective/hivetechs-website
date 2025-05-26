@@ -1,7 +1,7 @@
-/* Documentation Styles */
+/* Documentation Styles - Dark Theme */
 .prose {
   max-width: 65ch;
-  color: #111827;
+  color: #ffffff;
 }
 
 .prose h1 {
@@ -9,7 +9,7 @@
   margin-top: 0;
   margin-bottom: 1.5rem;
   font-weight: 700;
-  color: #1e40af;
+  color: #FFC107;
   line-height: 1.2;
 }
 
@@ -18,7 +18,7 @@
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: 600;
-  color: #1e40af;
+  color: #FFC107;
   line-height: 1.3;
 }
 
@@ -27,7 +27,7 @@
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
   font-weight: 600;
-  color: #1e40af;
+  color: #FFC107;
 }
 
 .prose p {
@@ -37,13 +37,13 @@
 }
 
 .prose a {
-  color: #2563eb;
+  color: #FFC107;
   text-decoration: underline;
   font-weight: 500;
 }
 
 .prose a:hover {
-  color: #1d4ed8;
+  color: #FFD54F;
 }
 
 .prose ul {
@@ -66,17 +66,20 @@
 }
 
 .prose blockquote {
-  border-left: 4px solid #e5e7eb;
-  padding-left: 1rem;
+  border-left: 4px solid #FFC107;
+  background-color: #1e293b;
+  padding: 1rem;
   font-style: italic;
   margin-left: 0;
   margin-right: 0;
+  border-radius: 0.25rem;
 }
 
 .prose code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 0.875em;
-  background-color: #f3f4f6;
+  background-color: #1e293b;
+  color: #FFC107;
   padding: 0.2em 0.4em;
   border-radius: 0.25rem;
 }
@@ -109,17 +112,18 @@
 }
 
 .prose thead {
-  border-bottom: 2px solid #e5e7eb;
+  border-bottom: 2px solid #FFC107;
 }
 
 .prose thead th {
   font-weight: 600;
   padding: 0.75rem;
   vertical-align: bottom;
+  color: #FFC107;
 }
 
 .prose tbody tr {
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #374151;
 }
 
 .prose tbody td {

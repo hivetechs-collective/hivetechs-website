@@ -2,27 +2,27 @@ import Link from 'next/link'
 
 export default function TermsPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="bg-white border-b border-gray-200">
+    <div className="min-h-screen bg-dark-800">
+      <div className="bg-dark-700 border-b border-dark-600">
         <div className="max-w-4xl mx-auto px-4 py-6">
           <div className="flex items-center space-x-4">
             <Link href="/" className="text-blue-600 hover:text-blue-700">
               ← Back to Home
             </Link>
-            <h1 className="text-3xl font-bold text-gray-900">Terms of Service</h1>
+            <h1 className="text-3xl font-bold text-white">Terms of Service</h1>
           </div>
-          <p className="text-gray-600 mt-2">Last updated: May 25, 2025</p>
+          <p className="text-gray-300 mt-2">Last updated: May 25, 2025</p>
         </div>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 py-8">
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 prose prose-lg max-w-none">
+        <div className="bg-dark-700 rounded-lg shadow-sm border border-dark-600 p-8 prose prose-lg max-w-none">
           
           <h2>1. Acceptance of Terms</h2>
-          <p>By accessing and using Hive.AI services provided by HiveTechs Collective LLC ("we," "us," or "our"), you accept and agree to be bound by the terms and provision of this agreement.</p>
+          <p>By accessing and using hive-tools services provided by HiveTechs Collective LLC ("we," "us," or "our"), you accept and agree to be bound by the terms and provision of this agreement.</p>
 
           <h2>2. Description of Service</h2>
-          <p>Hive.AI is a software-as-a-service (SaaS) platform that provides AI-powered development tools through a multi-model consensus pipeline. Our service integrates with popular IDEs to assist with code generation, review, and debugging.</p>
+          <p>hive-tools is a software-as-a-service (SaaS) platform that provides AI-powered development tools through a multi-model consensus pipeline. Our service integrates with popular IDEs to assist with code generation, review, and debugging.</p>
 
           <h2>3. Subscription and Payment</h2>
           <p>• Subscription fees are billed in advance on a monthly or annual basis<br/>
@@ -44,7 +44,7 @@ export default function TermsPage() {
           • Resell or redistribute our service without permission</p>
 
           <h2>6. Intellectual Property</h2>
-          <p>• Code generated using Hive.AI belongs to you<br/>
+          <p>• Code generated using hive-tools belongs to you<br/>
           • Our AI models and platform remain our intellectual property<br/>
           • You grant us permission to use aggregated, anonymized usage data to improve our service</p>
 

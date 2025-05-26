@@ -1,5 +1,8 @@
+'use client'
+
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 export default function Contact() {
   return (
@@ -25,14 +28,14 @@ export default function Contact() {
             {/* Contact Form */}
             <div>
               <h2 className="heading-2 mb-6">Get in Touch</h2>
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="text-lg text-gray-300 mb-8">
                 Fill out the form below and we'll get back to you as soon as possible.
               </p>
               
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-1">
                       First Name
                     </label>
                     <input
@@ -44,7 +47,7 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-1">
                       Last Name
                     </label>
                     <input
@@ -58,7 +61,7 @@ export default function Contact() {
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
                     Email Address
                   </label>
                   <input
@@ -71,7 +74,7 @@ export default function Contact() {
                 </div>
                 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-1">
                     Subject
                   </label>
                   <input
@@ -84,7 +87,7 @@ export default function Contact() {
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">
                     Message
                   </label>
                   <textarea
@@ -110,7 +113,7 @@ export default function Contact() {
             {/* Contact Information */}
             <div>
               <h2 className="heading-2 mb-6">Contact Information</h2>
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="text-lg text-gray-300 mb-8">
                 You can also reach out to us directly using the contact information below.
               </p>
               
@@ -124,9 +127,9 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Email</h3>
-                    <p className="text-gray-600 mb-1">General Inquiries:</p>
+                    <p className="text-gray-300 mb-1">General Inquiries:</p>
                     <a href="mailto:founder@hivetechs.io" className="text-primary hover:underline">founder@hivetechs.io</a>
-                    <p className="text-gray-600 mt-2 mb-1">Support:</p>
+                    <p className="text-gray-300 mt-2 mb-1">Support:</p>
                     <a href="mailto:support@hivetechs.io" className="text-primary hover:underline">support@hivetechs.io</a>
                   </div>
                 </div>
@@ -139,7 +142,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Phone</h3>
-                    <p className="text-gray-600 mb-1">Main Office:</p>
+                    <p className="text-gray-300 mb-1">Main Office:</p>
                     <a href="tel:+18134000871" className="text-primary hover:underline">(813) 400-0871</a>
                   </div>
                 </div>
@@ -152,7 +155,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Address</h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-300">
                       HiveTechs Collective LLC<br />
                       7901 4th St N STE 300<br />
                       St. Petersburg, FL 33702<br />
@@ -169,7 +172,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Business Hours</h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-300">
                       Monday - Friday: 9:00 AM - 5:00 PM EST<br />
                       Saturday - Sunday: Closed
                     </p>
@@ -182,40 +185,40 @@ export default function Contact() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-dark-800">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="heading-2 mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Find answers to common questions about our services.
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-dark-700 p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-2">How quickly will you respond to my inquiry?</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-300">
                 We strive to respond to all inquiries within 24 business hours. For urgent matters, please call our office directly.
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-dark-700 p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-2">Do you offer custom solutions for enterprises?</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-300">
                 Yes, we offer custom enterprise solutions tailored to your organization's specific needs. Please contact us to discuss your requirements.
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-dark-700 p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-2">How can I get technical support?</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-300">
                 For technical support, please email support@hivetechs.io with details of your issue. Our support team will assist you as quickly as possible.
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-dark-700 p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-2">Do you offer refunds?</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-300">
                 We offer a 7-day free trial for all subscription plans. If you cancel during the trial period, you won't be charged. After the trial period, subscriptions are non-refundable for the current billing cycle.
               </p>
             </div>
@@ -224,21 +227,37 @@ export default function Contact() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-dark text-white">
-        <div className="container-custom">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="heading-2 mb-6">Ready to experience better AI answers?</h2>
-            <p className="text-xl mb-8">
-              Start your 7-day free trial today and see the difference our multi-model consensus pipeline can make for your projects.
-            </p>
-            <a 
-              href="https://store.hivetechs.io/l/basic-plan?wanted=true" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn-primary text-lg px-8 py-3"
+      <section className="relative overflow-hidden bg-dark min-h-[500px] flex items-center">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-dark-800 via-dark to-dark-900" />
+        <div className="absolute inset-0 bg-gradient-to-r from-accent-yellow/5 via-transparent to-accent-blue/5" />
+        
+        {/* Floating Orbs */}
+        <div className="absolute top-10 left-10 w-48 h-48 bg-accent-yellow/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-10 right-10 w-64 h-64 bg-accent-blue/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        
+        <div className="relative w-full">
+          <div className="container-custom py-20">
+            <motion.div 
+              className="text-center max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
             >
-              Start Free Trial
-            </a>
+              <h2 className="heading-2 mb-6 text-white">Ready to experience better AI answers?</h2>
+              <p className="text-xl mb-8 text-gray-300">
+                Start your 7-day free trial today and see the difference our multi-model consensus pipeline can make for your projects.
+              </p>
+              <a 
+                href="https://store.hivetechs.io/l/basic-plan?wanted=true" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block bg-gradient-to-r from-primary to-accent-blue text-white font-semibold text-lg px-8 py-3 rounded-md hover:from-primary-light hover:to-accent-blue transform hover:scale-105 transition-all shadow-lg shadow-primary/25"
+              >
+                Start Free Trial
+              </a>
+            </motion.div>
           </div>
         </div>
       </section>

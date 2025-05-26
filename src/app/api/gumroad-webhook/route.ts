@@ -72,7 +72,7 @@ async function sendCustomConfirmationEmail(purchaseInfo: any, licenseKey: string
   
   const emailContent = {
     to: purchaseInfo.buyer_email,
-    subject: `🐝 Welcome to Hive.AI! Your License Key Inside`,
+    subject: `🐝 Welcome to hive-tools! Your License Key Inside`,
     html: `
       <h2>Thank you for purchasing ${purchaseInfo.product_name}!</h2>
       
@@ -84,7 +84,7 @@ async function sendCustomConfirmationEmail(purchaseInfo: any, licenseKey: string
       
       <h3>Next Steps:</h3>
       <ol>
-        <li><strong>Install Hive.AI:</strong> <code>npm install -g @hivetechs/hive-ai</code></li>
+        <li><strong>Install hive-tools:</strong> <code>npm install -g @hivetechs/hive-ai</code></li>
         <li><strong>Configure License:</strong> <code>hive-ai configure</code></li>
         <li><strong>Setup IDE:</strong> <code>hive-ai configure-ide</code></li>
       </ol>

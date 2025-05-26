@@ -20,31 +20,31 @@ export default function InstallPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-dark-800">
       {/* Header */}
-      <div className="bg-white border-b border-gray-200">
+      <div className="bg-dark-700 border-b border-dark-600">
         <div className="max-w-4xl mx-auto px-4 py-6">
           <div className="flex items-center space-x-4">
             <Link href="/" className="text-blue-600 hover:text-blue-700">
               ← Back to Home
             </Link>
-            <h1 className="text-3xl font-bold text-gray-900">Installation Guide</h1>
+            <h1 className="text-3xl font-bold text-white">Installation Guide</h1>
           </div>
-          <p className="text-gray-600 mt-2">Get Hive.AI set up on your system in just a few steps</p>
+          <p className="text-gray-300 mt-2">Get hive-tools set up on your system in just a few steps</p>
         </div>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 py-8">
         {/* Prerequisites */}
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Prerequisites</h2>
+        <div className="bg-dark-700 rounded-lg shadow-sm border border-dark-600 p-6 mb-8">
+          <h2 className="text-xl font-semibold text-white mb-4">Prerequisites</h2>
           <div className="space-y-3">
             <div className="flex items-start space-x-3">
               <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center mt-0.5">
                 <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
               </div>
               <div>
-                <p className="text-gray-700">
+                <p className="text-gray-300">
                   <strong>Node.js 18+</strong> - 
                   <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline ml-1">
                     Download from nodejs.org
@@ -57,7 +57,7 @@ export default function InstallPage() {
                 <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
               </div>
               <div>
-                <p className="text-gray-700">
+                <p className="text-gray-300">
                   <strong>A supported IDE</strong> - VS Code, Cursor, Claude Dev, or others with MCP support
                 </p>
               </div>
@@ -66,8 +66,8 @@ export default function InstallPage() {
         </div>
 
         {/* Installation Steps */}
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-6">Step 1: Install Hive.AI</h2>
+        <div className="bg-dark-700 rounded-lg shadow-sm border border-dark-600 p-6 mb-8">
+          <h2 className="text-xl font-semibold text-white mb-6">Step 1: Install hive-tools</h2>
           
           {/* OS Tabs */}
           <div className="flex space-x-4 mb-4">
@@ -82,7 +82,7 @@ export default function InstallPage() {
                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-colors ${
                   activeTab === tab.id
                     ? 'bg-blue-50 border-blue-200 text-blue-700'
-                    : 'bg-gray-50 border-gray-200 text-gray-600 hover:bg-gray-100'
+                    : 'bg-dark-800 border-dark-600 text-gray-300 hover:bg-dark-800'
                 }`}
               >
                 <span>{tab.icon}</span>
@@ -121,8 +121,8 @@ export default function InstallPage() {
         </div>
 
         {/* Configuration */}
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Step 2: Configure Your License</h2>
+        <div className="bg-dark-700 rounded-lg shadow-sm border border-dark-600 p-6 mb-8">
+          <h2 className="text-xl font-semibold text-white mb-4">Step 2: Configure Your License</h2>
           
           <div className="space-y-4">
             <div className="bg-gray-900 rounded-lg p-4">
@@ -153,8 +153,8 @@ export default function InstallPage() {
         </div>
 
         {/* IDE Setup */}
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Step 3: Setup IDE Integration</h2>
+        <div className="bg-dark-700 rounded-lg shadow-sm border border-dark-600 p-6 mb-8">
+          <h2 className="text-xl font-semibold text-white mb-4">Step 3: Setup IDE Integration</h2>
           
           <div className="space-y-4">
             <div className="bg-gray-900 rounded-lg p-4">
@@ -171,9 +171,9 @@ export default function InstallPage() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-4">
-              <div className="border border-gray-200 rounded-lg p-4">
-                <h3 className="font-semibold text-gray-900 mb-2">Supported IDEs</h3>
-                <ul className="text-sm text-gray-600 space-y-1">
+              <div className="border border-dark-600 rounded-lg p-4">
+                <h3 className="font-semibold text-white mb-2">Supported IDEs</h3>
+                <ul className="text-sm text-gray-300 space-y-1">
                   <li>• VS Code</li>
                   <li>• Cursor</li>
                   <li>• Claude Dev</li>
@@ -181,9 +181,9 @@ export default function InstallPage() {
                 </ul>
               </div>
               
-              <div className="border border-gray-200 rounded-lg p-4">
-                <h3 className="font-semibold text-gray-900 mb-2">Features Enabled</h3>
-                <ul className="text-sm text-gray-600 space-y-1">
+              <div className="border border-dark-600 rounded-lg p-4">
+                <h3 className="font-semibold text-white mb-2">Features Enabled</h3>
+                <ul className="text-sm text-gray-300 space-y-1">
                   <li>• Multi-model AI consensus</li>
                   <li>• Code generation & review</li>
                   <li>• Intelligent suggestions</li>
@@ -195,8 +195,8 @@ export default function InstallPage() {
         </div>
 
         {/* Test Installation */}
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Step 4: Test Your Installation</h2>
+        <div className="bg-dark-700 rounded-lg shadow-sm border border-dark-600 p-6 mb-8">
+          <h2 className="text-xl font-semibold text-white mb-4">Step 4: Test Your Installation</h2>
           
           <div className="bg-gray-900 rounded-lg p-4 mb-4">
             <div className="flex items-center justify-between mb-2">
@@ -217,7 +217,7 @@ export default function InstallPage() {
               <div>
                 <p className="text-green-800 font-medium">Success!</p>
                 <p className="text-green-700 text-sm">
-                  If you see the help menu, Hive.AI is installed and ready to use in your IDE.
+                  If you see the help menu, hive-tools is installed and ready to use in your IDE.
                 </p>
               </div>
             </div>
@@ -225,14 +225,14 @@ export default function InstallPage() {
         </div>
 
         {/* Next Steps */}
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">What's Next?</h2>
+        <div className="bg-dark-700 rounded-lg shadow-sm border border-dark-600 p-6">
+          <h2 className="text-xl font-semibold text-white mb-4">What's Next?</h2>
           
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Start Coding</h3>
-              <p className="text-gray-600 text-sm mb-3">
-                Open your IDE and start using Hive.AI's multi-model consensus for enhanced code generation and review.
+              <h3 className="font-semibold text-white mb-2">Start Coding</h3>
+              <p className="text-gray-300 text-sm mb-3">
+                Open your IDE and start using hive-tools's multi-model consensus for enhanced code generation and review.
               </p>
               <Link href="/features" className="text-blue-600 hover:underline text-sm font-medium">
                 Explore Features →
@@ -240,8 +240,8 @@ export default function InstallPage() {
             </div>
             
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Need Help?</h3>
-              <p className="text-gray-600 text-sm mb-3">
+              <h3 className="font-semibold text-white mb-2">Need Help?</h3>
+              <p className="text-gray-300 text-sm mb-3">
                 Having trouble with installation? Our support team is here to help.
               </p>
               <Link href="/support" className="text-blue-600 hover:underline text-sm font-medium">

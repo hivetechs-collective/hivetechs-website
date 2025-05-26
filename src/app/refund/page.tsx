@@ -2,24 +2,24 @@ import Link from 'next/link'
 
 export default function RefundPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="bg-white border-b border-gray-200">
+    <div className="min-h-screen bg-dark-800">
+      <div className="bg-dark-700 border-b border-dark-600">
         <div className="max-w-4xl mx-auto px-4 py-6">
           <div className="flex items-center space-x-4">
             <Link href="/" className="text-blue-600 hover:text-blue-700">
               ← Back to Home
             </Link>
-            <h1 className="text-3xl font-bold text-gray-900">Refund Policy</h1>
+            <h1 className="text-3xl font-bold text-white">Refund Policy</h1>
           </div>
-          <p className="text-gray-600 mt-2">Last updated: May 25, 2025</p>
+          <p className="text-gray-300 mt-2">Last updated: May 25, 2025</p>
         </div>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 py-8">
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 prose prose-lg max-w-none">
+        <div className="bg-dark-700 rounded-lg shadow-sm border border-dark-600 p-8 prose prose-lg max-w-none">
           
           <h2>1. 15-Day Money-Back Guarantee</h2>
-          <p>We offer a 15-day money-back guarantee for all new subscription purchases. If you're not satisfied with Hive.AI within 15 days of your initial purchase, we'll provide a full refund.</p>
+          <p>We offer a 15-day money-back guarantee for all new subscription purchases. If you're not satisfied with hive-tools within 15 days of your initial purchase, we'll provide a full refund.</p>
 
           <h2>2. Subscription Refunds</h2>
           

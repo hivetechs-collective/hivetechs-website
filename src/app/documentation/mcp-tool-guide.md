@@ -1,10 +1,10 @@
-# Hive.AI Multi-Model Consensus Pipeline (MCP) Tool
+# hive-tools Multi-Model Consensus Pipeline (MCP) Tool
 
-The Hive.AI MCP tool provides access to our powerful multi-model consensus pipeline, enabling developers to generate higher quality AI responses by combining the strengths of multiple specialized models.
+The hive-tools MCP tool provides access to our powerful multi-model consensus pipeline, enabling developers to generate higher quality AI responses by combining the strengths of multiple specialized models.
 
 ## Getting Started
 
-There are two primary ways to interact with the Hive.AI MCP tool:
+There are two primary ways to interact with the hive-tools MCP tool:
 
 1. **Through our AI Assistant** - Natural language interface
 2. **Using the CLI** - Command-line interface for configuration and automation
@@ -24,13 +24,13 @@ pip install hivetechs
 
 ## Configuration
 
-Before using the Hive.AI MCP tool, you'll need to configure your API key:
+Before using the hive-tools MCP tool, you'll need to configure your API key:
 
 ```bash
 hive configure --api-key YOUR_API_KEY
 ```
 
-You can obtain an API key from your [Hive.AI dashboard](https://dashboard.hivetechs.io).
+You can obtain an API key from your [hive-tools dashboard](https://dashboard.hivetechs.io).
 
 ## Basic Usage
 
@@ -50,7 +50,7 @@ hive capture --title "Next.js Authentication Best Practices" --content "..." --t
 
 ### Using the AI Assistant
 
-You can also interact with the Hive.AI MCP tool through our AI Assistant by simply asking questions in natural language. The assistant will use the appropriate MCP tools behind the scenes.
+You can also interact with the hive-tools MCP tool through our AI Assistant by simply asking questions in natural language. The assistant will use the appropriate MCP tools behind the scenes.
 
 ## Advanced Configuration
 
@@ -101,7 +101,7 @@ hive set-default-profile "technical_profile"
 
 ### VS Code Extension
 
-Our VS Code extension allows you to access the Hive.AI MCP tool directly from your editor. Install it from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=hivetechs.mcp-tool).
+Our VS Code extension allows you to access the hive-tools MCP tool directly from your editor. Install it from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=hivetechs.mcp-tool).
 
 ### API Usage
 

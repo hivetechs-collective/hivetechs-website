@@ -62,7 +62,7 @@ export default function LicensePage() {
             </Link>
             <h1 className="text-3xl font-bold text-gray-900">Get Your License Key</h1>
           </div>
-          <p className="text-gray-600 mt-2">Enter your Gumroad order ID to retrieve your Hive.AI license key</p>
+          <p className="text-gray-600 mt-2">Enter your Gumroad order ID to retrieve your hive-tools license key</p>
         </div>
       </div>
 
@@ -138,7 +138,7 @@ export default function LicensePage() {
               <div className="flex items-start space-x-3">
                 <div className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-semibold mt-0.5">1</div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">Install Hive.AI</h3>
+                  <h3 className="font-semibold text-gray-900">Install hive-tools</h3>
                   <code className="text-sm text-gray-600 bg-gray-100 px-2 py-1 rounded">npm install -g @hivetechs/hive-ai</code>
                 </div>
               </div>
