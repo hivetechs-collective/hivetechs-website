@@ -1,13 +1,24 @@
 "use client"
 
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
   
   return (
-    <footer className="bg-dark text-white py-12">
-      <div className="container-custom">
+    <footer className="bg-dark text-white py-12 relative overflow-hidden">
+      {/* Subtle Background Logo */}
+      <div className="absolute right-0 bottom-0 opacity-5 pointer-events-none">
+        <Image 
+          src="/Hive-Logo.jpg" 
+          alt="" 
+          width={300} 
+          height={300} 
+          className="transform translate-x-1/3 translate-y-1/3"
+        />
+      </div>
+      <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-1">

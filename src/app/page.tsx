@@ -3,6 +3,7 @@
 import PageLayout from '@/components/PageLayout'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ChevronRight, Check, Star, Zap, Shield, Users, ArrowRight } from 'lucide-react'
 
@@ -29,6 +30,18 @@ export default function Home() {
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-dark-800 via-dark to-dark-900" />
         <div className="absolute inset-0 bg-gradient-to-r from-accent-yellow/5 via-transparent to-accent-blue/5" />
+        
+        {/* Large Background Logo */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <Image 
+            src="/Hive-Logo.jpg" 
+            alt="" 
+            width={600} 
+            height={600} 
+            className="opacity-5 blur-sm transform rotate-12"
+            priority
+          />
+        </div>
         
         {/* Floating Orbs */}
         <div className="absolute top-20 left-20 w-64 h-64 bg-accent-yellow/10 rounded-full blur-3xl animate-pulse"></div>
@@ -113,8 +126,28 @@ export default function Home() {
 
 
       {/* Features Section - Paddle Style */}
-      <section className="py-16 bg-dark">
-        <div className="container-custom">
+      <section className="py-16 bg-dark relative">
+        {/* Floating Logo Animation */}
+        <motion.div 
+          className="absolute left-10 top-1/2 -translate-y-1/2 opacity-5 pointer-events-none hidden lg:block"
+          animate={{
+            y: [0, -20, 0],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        >
+          <Image 
+            src="/Hive-Logo.jpg" 
+            alt="" 
+            width={200} 
+            height={200} 
+            className="transform -rotate-12"
+          />
+        </motion.div>
+        <div className="container-custom relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Built for developers who demand accuracy

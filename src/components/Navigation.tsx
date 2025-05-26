@@ -34,13 +34,17 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <Image 
-              src="/Hive-Logo.jpg" 
-              alt="Hive Logo" 
-              width={40} 
-              height={40} 
-              className="w-10 h-10 object-contain"
-            />
+            <div className="relative">
+              <Image 
+                src="/Hive-Logo.jpg" 
+                alt="Hive Logo" 
+                width={40} 
+                height={40} 
+                className="w-10 h-10 object-contain relative z-10"
+              />
+              {/* Subtle glow effect */}
+              <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full" />
+            </div>
             <span className="font-semibold text-xl text-white">HiveTechs Collective</span>
           </Link>
           
