@@ -4,10 +4,8 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ['store.hivetechs.io'],
-    unoptimized: true, // Required for static export
   },
-  output: 'export', // Static site generation for Cloudflare Pages
-  // Disable server-side features that aren't compatible with static export
+  // Remove output: 'export' to enable API routes on Cloudflare Pages
   trailingSlash: true,
 }
 
