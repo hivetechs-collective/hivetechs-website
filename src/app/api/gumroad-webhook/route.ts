@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import crypto from 'crypto';
 
 export const runtime = 'edge';
 
@@ -28,7 +27,7 @@ export async function POST(request: NextRequest) {
     console.log('🐝 Gumroad purchase received:', purchaseInfo);
 
     // Generate license key for this purchase
-    const licenseKey = generateLicenseKey(purchaseInfo.sale_id!, purchaseInfo.product_id!);
+    const licenseKey = await generateLicenseKey(purchaseInfo.sale_id!, purchaseInfo.product_id!);
     
     // Send custom confirmation email with license key and installation instructions
     await sendCustomConfirmationEmail(purchaseInfo, licenseKey);
@@ -57,11 +56,17 @@ export async function POST(request: NextRequest) {
   }
 }
 
-function generateLicenseKey(saleId: string, productId: string): string {
+async function generateLicenseKey(saleId: string, productId: string): Promise<string> {
   // Create a unique license key based on sale info
   const timestamp = Date.now().toString();
   const input = `${saleId}-${productId}-${timestamp}`;
-  const hash = crypto.createHash('sha256').update(input).digest('hex');
+  
+  // Use Web Crypto API for Edge Runtime compatibility
+  const encoder = new TextEncoder();
+  const data = encoder.encode(input);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  const hash = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
   
   // Format as: HIVE-XXXX-XXXX-XXXX
   const key = hash.substring(0, 16).toUpperCase();
