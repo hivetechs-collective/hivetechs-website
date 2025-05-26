@@ -23,30 +23,34 @@ export default function About() {
       </section>
 
       {/* Our Story */}
-      <section className="py-20">
+      <section className="pt-20 pb-12">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="heading-2 mb-6">Our Story</h2>
               <p className="text-lg text-white mb-6">
                 HiveTechs Collective was founded in 2025 with a simple but powerful insight: while individual AI models have their strengths, they also have unique weaknesses and blindspots. By combining multiple models in a consensus pipeline, we could leverage their collective intelligence to deliver superior results.
               </p>
-              <p className="text-lg text-white">
+              <p className="text-lg text-white mb-8">
                 Working alongside a team of AI systems, we built a tool that doesn't just query multiple models, but intelligently combines their outputs, weighing their responses based on confidence, accuracy, and relevance to provide the most comprehensive and reliable answers possible. In fact, our consensus AI technology was instrumental in creating itself.
               </p>
-            </div>
-            <div className="bg-dark-800 rounded-lg p-8 flex items-center justify-center h-80">
-              <div className="text-center">
-                <div className="text-5xl font-bold text-primary mb-4">2025</div>
-                <p className="text-xl">Founded in St. Petersburg, FL</p>
+              
+              <div className="bg-dark-800 rounded-lg p-6 inline-block">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-primary mb-2">2025</div>
+                  <p className="text-lg">Founded in St. Petersburg, FL</p>
+                </div>
               </div>
+            </div>
+            <div className="hidden md:block">
+              {/* Empty column for layout */}
             </div>
           </div>
         </div>
       </section>
 
       {/* Our Mission */}
-      <section className="py-20 bg-dark-800">
+      <section className="pt-8 pb-12 bg-dark-800">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="heading-2 mb-4">Our Mission</h2>
@@ -99,7 +103,7 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20">
+      <section className="pt-8 pb-20">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="heading-2 mb-4">Our Team</h2>
