@@ -9,8 +9,18 @@ export default function Features() {
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
-        <div className="container-custom">
+      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white relative overflow-hidden">
+        {/* Background Logo */}
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none">
+          <Image 
+            src="/Hive-Logo.jpg" 
+            alt="" 
+            width={500} 
+            height={500} 
+            className="opacity-10 transform translate-x-1/4"
+          />
+        </div>
+        <div className="container-custom relative z-10">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="heading-1 mb-6">
               hive-tools: Revolutionary Multi-Model Consensus Pipeline

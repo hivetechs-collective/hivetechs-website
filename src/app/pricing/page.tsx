@@ -3,6 +3,7 @@
 import PageLayout from '@/components/PageLayout'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Check, ChevronRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -139,7 +140,17 @@ export default function Pricing() {
     <PageLayout>
       {/* Hero Section - Paddle Style */}
       <section className="relative overflow-hidden bg-gradient-to-br from-dark-800 to-dark py-20">
-        <div className="container-custom">
+        {/* Background Logo */}
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 pointer-events-none">
+          <Image 
+            src="/Hive-Logo.jpg" 
+            alt="" 
+            width={400} 
+            height={400} 
+            className="opacity-10 transform -translate-x-1/3"
+          />
+        </div>
+        <div className="container-custom relative z-10">
           <div className="text-center max-w-3xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
