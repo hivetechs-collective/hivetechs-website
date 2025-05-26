@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/Button'
 import { cn } from '@/lib/utils'
@@ -33,7 +34,13 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary-light rounded-lg" />
+            <Image 
+              src="/Hive-Logo.jpg" 
+              alt="Hive Logo" 
+              width={40} 
+              height={40} 
+              className="w-10 h-10 object-contain"
+            />
             <span className="font-semibold text-xl text-white">HiveTechs Collective</span>
           </Link>
           
@@ -46,15 +53,12 @@ export default function Navigation() {
             ))}
           </div>
           
-          {/* CTA Buttons */}
+          {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
-            <Link 
-              href="/login" 
-              className="text-gray-300 hover:text-white font-medium transition-colors"
+            <Button 
+              size="sm"
+              onClick={() => window.open('https://store.hivetechs.io', '_blank')}
             >
-              Log in
-            </Link>
-            <Button size="sm">
               Get started
             </Button>
           </div>
@@ -89,14 +93,10 @@ export default function Navigation() {
                 </Link>
               ))}
               <div className="pt-4 space-y-3 border-t border-dark-600">
-                <Link 
-                  href="/login" 
-                  className="block text-center text-gray-300 hover:text-white font-medium py-2"
-                  onClick={() => setIsMenuOpen(false)}
+                <Button 
+                  className="w-full"
+                  onClick={() => window.open('https://store.hivetechs.io', '_blank')}
                 >
-                  Log in
-                </Link>
-                <Button className="w-full">
                   Get started
                 </Button>
               </div>

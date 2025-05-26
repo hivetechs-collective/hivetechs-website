@@ -54,12 +54,28 @@ export default function Features() {
       {/* Main Features */}
       <section className="py-20">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
+          <div id="hallucination-prevention" className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
             <div>
-              <h2 className="heading-2 mb-6">🧠 4-Stage Consensus Pipeline</h2>
+              <h2 className="heading-2 mb-6">🧠 Eliminates AI Hallucinations</h2>
               <p className="text-lg text-white font-medium mb-6">
-                Our revolutionary 4-stage consensus pipeline transforms user queries into exceptionally high-quality responses by combining the strengths of multiple specialized AI models.
+                Our revolutionary 4-stage consensus pipeline eliminates AI hallucinations by combining multiple specialized AI models that cross-verify each other's outputs. Unlike single-model AI tools that can confidently generate false information, our consensus approach ensures accuracy through collective intelligence.
               </p>
+              <div className="bg-dark-800/50 rounded-lg p-4 mb-6 border-l-4 border-red-500">
+                <p className="text-sm text-gray-300 mb-2"><strong>Why Single AI Models Hallucinate:</strong></p>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  <li>• Generate confident-sounding but false information</li>
+                  <li>• No built-in verification mechanism</li>
+                  <li>• Prone to filling knowledge gaps with plausible fiction</li>
+                </ul>
+              </div>
+              <div className="bg-dark-800/50 rounded-lg p-4 mb-6 border-l-4 border-primary">
+                <p className="text-sm text-gray-300 mb-2"><strong>How Our Consensus Prevents This:</strong></p>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  <li>• Multiple models independently verify facts</li>
+                  <li>• Cross-validation catches inconsistencies</li>
+                  <li>• Only consensus-verified information passes through</li>
+                </ul>
+              </div>
               <ul className="space-y-6">
                 <li className="flex items-start">
                   <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mr-4">
@@ -136,6 +152,86 @@ export default function Features() {
             </div>
           </div>
 
+          {/* Production-Ready Code Section */}
+          <div id="production-ready-code" className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
+            <div className="order-2 md:order-1 bg-dark-800 rounded-lg p-8 flex items-center justify-center h-auto py-12">
+              <div className="w-full max-w-md">
+                <div className="space-y-4">
+                  {/* Code Quality Visualization */}
+                  <div className="bg-dark-700 rounded-lg p-4 border-l-4 border-red-500">
+                    <div className="flex items-center mb-2">
+                      <div className="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                      <h4 className="font-semibold text-red-400">Typical AI Code</h4>
+                    </div>
+                    <div className="text-xs text-gray-400 font-mono">
+                      {`// No error handling\nfunction getData() {\n  return fetch('/api/data').then(r => r.json())\n}`}
+                    </div>
+                  </div>
+                  
+                  <div className="bg-dark-700 rounded-lg p-4 border-l-4 border-primary">
+                    <div className="flex items-center mb-2">
+                      <div className="w-3 h-3 rounded-full bg-primary mr-2"></div>
+                      <h4 className="font-semibold text-primary">hive-tools Code</h4>
+                    </div>
+                    <div className="text-xs text-gray-300 font-mono">
+                      {`async function getData(): Promise<ApiResponse> {\n  try {\n    const response = await fetch('/api/data', {\n      headers: { 'Content-Type': 'application/json' },\n      timeout: 5000\n    })\n    \n    if (!response.ok) {\n      throw new Error(\`HTTP \${response.status}\`)\n    }\n    \n    return await response.json()\n  } catch (error) {\n    logger.error('Failed to fetch data:', error)\n    throw new DataFetchError(error.message)\n  }\n}`}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="order-1 md:order-2">
+              <h2 className="heading-2 mb-6">🛡️ Production-Ready Code</h2>
+              <p className="text-lg text-white font-medium mb-6">
+                hive-tools doesn't just generate code - it generates production-ready code that follows best practices, includes comprehensive error handling, and is optimized for real-world applications.
+              </p>
+              <div className="bg-dark-800/50 rounded-lg p-4 mb-6 border-l-4 border-red-500">
+                <p className="text-sm text-gray-300 mb-2"><strong>Typical AI Code Issues:</strong></p>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  <li>• Missing error handling and edge cases</li>
+                  <li>• No type safety or validation</li>
+                  <li>• Poor performance and security practices</li>
+                  <li>• Lacks proper logging and monitoring</li>
+                </ul>
+              </div>
+              <div className="bg-dark-800/50 rounded-lg p-4 mb-6 border-l-4 border-primary">
+                <p className="text-sm text-gray-300 mb-2"><strong>hive-tools Production Standards:</strong></p>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  <li>• Comprehensive error handling and validation</li>
+                  <li>• Type safety and proper interfaces</li>
+                  <li>• Performance optimization and security best practices</li>
+                  <li>• Built-in logging, monitoring, and debugging</li>
+                </ul>
+              </div>
+              <ul className="space-y-4 mb-6">
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-primary mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                  </svg>
+                  <span>Enterprise-grade error handling and resilience patterns</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-primary mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                  </svg>
+                  <span>Security-first coding practices and vulnerability prevention</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-primary mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                  </svg>
+                  <span>Performance optimization and scalability considerations</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-primary mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                  </svg>
+                  <span>Comprehensive testing strategies and documentation</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
             <div className="order-2 md:order-1 bg-dark-800 rounded-lg p-8 flex items-center justify-center h-auto py-12">
               <div className="w-full max-w-md">
@@ -176,10 +272,26 @@ export default function Features() {
               </div>
             </div>
             <div className="order-1 md:order-2">
-              <h2 className="heading-2 mb-6">🔄 Thematic Knowledge Retrieval</h2>
+              <h2 id="unlimited-memory" className="heading-2 mb-6">🔄 Unlimited Context & Long-Term Memory</h2>
               <p className="text-lg text-white font-medium mb-6">
-                Unlike standard AI assistants, hive-tools features an advanced thematic knowledge retrieval system that maintains context across your entire conversation history.
+                Unlike token-limited AI assistants, hive-tools provides unlimited context awareness and persistent long-term memory. No more losing conversation history or repeating context - our system remembers everything and builds upon previous interactions.
               </p>
+              <div className="bg-dark-800/50 rounded-lg p-4 mb-6 border-l-4 border-yellow-500">
+                <p className="text-sm text-gray-300 mb-2"><strong>Traditional AI Limitations:</strong></p>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  <li>• Token limits cut off conversation history</li>
+                  <li>• Lose context after a few exchanges</li>
+                  <li>• Must re-explain project details repeatedly</li>
+                </ul>
+              </div>
+              <div className="bg-dark-800/50 rounded-lg p-4 mb-6 border-l-4 border-primary">
+                <p className="text-sm text-gray-300 mb-2"><strong>Our Unlimited Memory Advantage:</strong></p>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  <li>• Unlimited conversation history retention</li>
+                  <li>• Thematic pattern recognition across sessions</li>
+                  <li>• Builds comprehensive project knowledge base</li>
+                </ul>
+              </div>
               <ul className="space-y-4 mb-6">
                 <li className="flex items-start">
                   <svg className="w-6 h-6 text-primary mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -211,10 +323,19 @@ export default function Features() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
             <div>
-              <h2 className="heading-2 mb-6">🧩 Technical Domain Expertise</h2>
+              <h2 className="heading-2 mb-6">🌐 Universal Language & Framework Support</h2>
               <p className="text-lg text-white font-medium mb-6">
-                hive-tools excels at specialized technical domains with deep understanding across a wide range of technical fields and disciplines.
+                hive-tools works with ANY programming language, framework, or technology stack. Unlike limited AI assistants, our consensus pipeline has no artificial restrictions - if you can code it, we can help optimize it.
               </p>
+              <div className="bg-dark-800/50 rounded-lg p-4 mb-6 border-l-4 border-primary">
+                <p className="text-sm text-gray-300 mb-2"><strong>Truly Universal Support:</strong></p>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  <li>• All programming languages (Python, Rust, COBOL, Assembly...)</li>
+                  <li>• Every framework and library ecosystem</li>
+                  <li>• Legacy systems and cutting-edge technologies</li>
+                  <li>• Domain-specific languages and niche tools</li>
+                </ul>
+              </div>
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="bg-dark-800 rounded-lg p-4 border-l-4 border-primary">
                   <h3 className="font-bold text-white mb-2">Software Engineering</h3>
@@ -254,35 +375,26 @@ export default function Features() {
               </p>
             </div>
             <div className="bg-dark-800 rounded-lg p-8 flex items-center justify-center h-auto py-12">
-              <div className="w-full max-w-md">
+              <div className="w-full max-w-md text-center">
                 <div className="relative">
-                  <div className="flex flex-wrap justify-center gap-3 mb-8">
-                    {/* Programming Languages */}
-                    <div className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium">Python</div>
-                    <div className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium">JavaScript</div>
-                    <div className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium">Go</div>
-                    <div className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium">Rust</div>
-                    <div className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium">C++</div>
-                    <div className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium">TypeScript</div>
-                    <div className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium">Java</div>
-                    
-                    {/* Frameworks */}
-                    <div className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium">React</div>
-                    <div className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium">TensorFlow</div>
-                    <div className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium">Vue</div>
-                    <div className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium">PyTorch</div>
-                    <div className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium">Django</div>
-                    <div className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium">Flask</div>
-                    
-                    {/* Cloud Platforms */}
-                    <div className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium">AWS</div>
-                    <div className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium">Azure</div>
-                    <div className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium">GCP</div>
+                  {/* Infinite Symbol */}
+                  <div className="flex justify-center mb-8">
+                    <svg className="w-24 h-24 text-primary" fill="currentColor" viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M25 25C25 15 35 5 50 5C65 5 75 15 75 25C75 35 65 45 50 45C35 45 25 35 25 25ZM75 25C75 35 65 45 50 45C35 45 25 35 25 25C25 15 35 5 50 5C65 5 75 15 75 25Z" stroke="currentColor" strokeWidth="4" fill="none" />
+                    </svg>
                   </div>
                   
-                  <div className="text-center">
-                    <div className="inline-block px-6 py-3 bg-primary text-white rounded-lg font-bold text-lg">
-                      Deep Technical Expertise
+                  <h3 className="text-2xl font-bold text-white mb-4">∞ Languages</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4">∞ Frameworks</h3>
+                  <h3 className="text-2xl font-bold text-white mb-6">∞ Possibilities</h3>
+                  
+                  <p className="text-sm text-gray-300 italic">
+                    "If you can code it, we can help optimize it"
+                  </p>
+                  
+                  <div className="mt-6">
+                    <div className="inline-block px-6 py-3 bg-gradient-to-r from-primary to-accent-blue text-white rounded-lg font-bold text-lg">
+                      No Limitations
                     </div>
                   </div>
                 </div>

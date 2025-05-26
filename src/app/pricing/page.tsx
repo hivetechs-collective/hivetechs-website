@@ -102,8 +102,8 @@ const creditPacks = [
 export default function Pricing() {
   const handleSubscribe = (plan: string) => {
     if (plan === 'free') {
-      // For free tier, direct to signup page
-      window.location.href = '/auth/signup'
+      // For free tier, direct to store page
+      window.open('https://store.hivetechs.io', '_blank')
       return
     }
     

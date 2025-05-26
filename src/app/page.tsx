@@ -144,7 +144,7 @@ export default function Home() {
                 eliminates false or made-up code suggestions.
               </p>
               
-              <a href="/features" className="text-primary font-medium inline-flex items-center group">
+              <a href="/features#hallucination-prevention" className="text-primary font-medium inline-flex items-center group">
                 Learn more 
                 <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </a>
@@ -168,7 +168,7 @@ export default function Home() {
                 and is optimized for performance.
               </p>
               
-              <a href="/features" className="text-primary font-medium inline-flex items-center group">
+              <a href="/features#production-ready-code" className="text-primary font-medium inline-flex items-center group">
                 Learn more 
                 <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </a>
@@ -192,7 +192,7 @@ export default function Home() {
                 remembers your project patterns and coding preferences.
               </p>
               
-              <a href="/features" className="text-primary font-medium inline-flex items-center group">
+              <a href="/features#unlimited-memory" className="text-primary font-medium inline-flex items-center group">
                 Learn more 
                 <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </a>
@@ -229,7 +229,7 @@ export default function Home() {
             </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
             {/* Free Plan */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -237,7 +237,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
-              className="relative overflow-hidden rounded-2xl p-8 border border-dark-600 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all"
+              className="relative overflow-hidden rounded-2xl p-6 border border-dark-600 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all"
             >
               {/* Card Background with gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-dark-700 via-dark-800 to-dark-900" />
@@ -247,48 +247,111 @@ export default function Home() {
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-accent-blue/10 rounded-full blur-3xl animate-pulse" />
               
               <div className="relative z-10">
-              <h3 className="text-2xl font-bold text-white mb-2">Free</h3>
+              <h3 className="text-xl font-bold text-white mb-2">Free</h3>
               <div className="flex items-baseline gap-2 mb-2">
-                <span className="text-5xl font-bold text-white">$0</span>
-                <span className="text-gray-300">/month</span>
+                <span className="text-4xl font-bold text-white">$0</span>
+                <span className="text-gray-300 text-sm">/month</span>
               </div>
-              <p className="text-gray-300 mb-4">For hobbyists & students</p>
-              <div className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full w-fit mb-4">
-                7-day unlimited trial included
+              <p className="text-gray-300 mb-3 text-sm">For hobbyists & students</p>
+              <div className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full w-fit mb-4">
+                7-day unlimited trial
               </div>
               
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-3 mb-6">
                 <li className="flex items-start">
-                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-3 h-3 text-primary" />
+                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-3 text-gray-300">5 daily / 100 monthly conversations</span>
+                  <span className="ml-2 text-gray-300 text-sm">5 daily / 100 monthly</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-3 h-3 text-primary" />
+                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-3 text-gray-300">Eliminates AI hallucinations</span>
+                  <span className="ml-2 text-gray-300 text-sm">Eliminates hallucinations</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-3 h-3 text-primary" />
+                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-3 text-gray-300">Unlimited context & long-term memory</span>
+                  <span className="ml-2 text-gray-300 text-sm">Unlimited context</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-3 h-3 text-primary" />
+                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-3 text-gray-300">All terminal and IDE integrations</span>
+                  <span className="ml-2 text-gray-300 text-sm">All integrations</span>
                 </li>
               </ul>
               
               <Button 
-                className="w-full bg-dark-700 border-dark-600 text-white hover:bg-dark-600"
-                onClick={() => window.location.href = '/auth/signup'}
+                className="w-full bg-dark-700 border-dark-600 text-white hover:bg-dark-600 text-sm"
+                onClick={() => window.open('https://store.hivetechs.io', '_blank')}
               >
                 Get started free
+              </Button>
+              </div>
+            </motion.div>
+
+            {/* Basic Plan */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5 }}
+              className="relative overflow-hidden rounded-2xl p-6 border border-dark-600 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all"
+            >
+              {/* Card Background with gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-dark-700 via-dark-800 to-dark-900" />
+              <div className="absolute inset-0 bg-gradient-to-r from-accent-yellow/5 via-transparent to-accent-blue/5" />
+              
+              {/* Floating Orb for each card */}
+              <div className="absolute -top-10 -right-10 w-32 h-32 bg-accent-blue/10 rounded-full blur-3xl animate-pulse" />
+              
+              <div className="relative z-10">
+              <h3 className="text-xl font-bold text-white mb-2">Basic</h3>
+              <div className="flex items-baseline gap-2 mb-2">
+                <span className="text-4xl font-bold text-white">$5</span>
+                <span className="text-gray-300 text-sm">/month</span>
+              </div>
+              <p className="text-gray-300 mb-3 text-sm">For individual developers</p>
+              <div className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full w-fit mb-4">
+                7-day unlimited trial
+              </div>
+              
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start">
+                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-2.5 h-2.5 text-primary" />
+                  </div>
+                  <span className="ml-2 text-gray-300 text-sm">50 daily / 1,000 monthly</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-2.5 h-2.5 text-primary" />
+                  </div>
+                  <span className="ml-2 text-gray-300 text-sm">Eliminates hallucinations</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-2.5 h-2.5 text-primary" />
+                  </div>
+                  <span className="ml-2 text-gray-300 text-sm">Unlimited context</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-2.5 h-2.5 text-primary" />
+                  </div>
+                  <span className="ml-2 text-gray-300 text-sm">All integrations</span>
+                </li>
+              </ul>
+              
+              <Button 
+                className="w-full bg-dark-700 border-dark-600 text-white hover:bg-dark-600 text-sm"
+                onClick={() => handleSubscribe('basic')}
+              >
+                Start 7-day trial
               </Button>
               </div>
             </motion.div>
@@ -297,10 +360,10 @@ export default function Home() {
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
-              className="relative overflow-hidden rounded-2xl p-8 border-2 border-primary shadow-2xl shadow-primary/20 scale-105"
+              className="relative overflow-hidden rounded-2xl p-6 border-2 border-primary shadow-2xl shadow-primary/20 scale-105"
             >
               {/* Card Background with gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-dark-700 via-dark-800 to-dark-900" />
@@ -310,49 +373,49 @@ export default function Home() {
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/20 rounded-full blur-3xl animate-pulse" />
               
               <div className="relative z-10">
-                <div className="bg-gradient-to-r from-primary to-accent-blue text-dark px-4 py-1 rounded-full text-sm font-semibold shadow-lg w-fit mx-auto mb-4">
+                <div className="bg-gradient-to-r from-primary to-accent-blue text-dark px-3 py-1 rounded-full text-xs font-semibold shadow-lg w-fit mx-auto mb-3">
                   Most popular
                 </div>
               
-              <h3 className="text-2xl font-bold text-white mb-2">Premium</h3>
+              <h3 className="text-xl font-bold text-white mb-2">Premium</h3>
               <div className="flex items-baseline gap-2 mb-2">
-                <span className="text-5xl font-bold text-white">$20</span>
-                <span className="text-gray-300">/month</span>
+                <span className="text-4xl font-bold text-white">$20</span>
+                <span className="text-gray-300 text-sm">/month</span>
               </div>
-              <p className="text-gray-300 mb-4">For professional developers</p>
-              <div className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full w-fit mb-4">
-                7-day unlimited trial included
+              <p className="text-gray-300 mb-3 text-sm">For professional developers</p>
+              <div className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full w-fit mb-4">
+                7-day unlimited trial
               </div>
               
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-3 mb-6">
                 <li className="flex items-start">
-                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-3 h-3 text-primary" />
+                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-3 text-gray-300">200 daily / 4,000 monthly conversations</span>
+                  <span className="ml-2 text-gray-300 text-sm">200 daily / 4,000 monthly</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-3 h-3 text-primary" />
+                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-3 text-gray-300">Eliminates AI hallucinations</span>
+                  <span className="ml-2 text-gray-300 text-sm">Eliminates hallucinations</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-3 h-3 text-primary" />
+                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-3 text-gray-300">Unlimited context & long-term memory</span>
+                  <span className="ml-2 text-gray-300 text-sm">Unlimited context</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-3 h-3 text-primary" />
+                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-3 text-gray-300">Advanced model combinations</span>
+                  <span className="ml-2 text-gray-300 text-sm">Advanced models</span>
                 </li>
               </ul>
               
               <Button 
-                className="w-full bg-gradient-to-r from-primary to-accent-blue hover:from-primary-light hover:to-accent-blue transform hover:scale-105 transition-all shadow-lg shadow-primary/25 animate-pulse"
+                className="w-full bg-gradient-to-r from-primary to-accent-blue hover:from-primary-light hover:to-accent-blue transform hover:scale-105 transition-all shadow-lg shadow-primary/25 text-sm"
                 onClick={() => handleSubscribe('premium')}
               >
                 Start 7-day trial
@@ -364,10 +427,10 @@ export default function Home() {
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
-              className="relative overflow-hidden rounded-2xl p-8 border border-dark-600 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all"
+              className="relative overflow-hidden rounded-2xl p-6 border border-dark-600 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all"
             >
               {/* Card Background with gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-dark-700 via-dark-800 to-dark-900" />
@@ -377,45 +440,45 @@ export default function Home() {
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-accent-blue/10 rounded-full blur-3xl animate-pulse" />
               
               <div className="relative z-10">
-              <h3 className="text-2xl font-bold text-white mb-2">Team</h3>
+              <h3 className="text-xl font-bold text-white mb-2">Team</h3>
               <div className="flex items-baseline gap-2 mb-2">
-                <span className="text-5xl font-bold text-white">$50</span>
-                <span className="text-gray-300">/month</span>
+                <span className="text-4xl font-bold text-white">$50</span>
+                <span className="text-gray-300 text-sm">/month</span>
               </div>
-              <p className="text-gray-300 mb-4">For development teams</p>
-              <div className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full w-fit mb-4">
-                7-day unlimited trial included
+              <p className="text-gray-300 mb-3 text-sm">For development teams</p>
+              <div className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full w-fit mb-4">
+                7-day unlimited trial
               </div>
               
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-3 mb-6">
                 <li className="flex items-start">
-                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-3 h-3 text-primary" />
+                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-3 text-gray-300">600 daily / 12,000 monthly conversations (shared)</span>
+                  <span className="ml-2 text-gray-300 text-sm">600 daily / 12,000 monthly</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-3 h-3 text-primary" />
+                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-3 text-gray-300">Eliminates AI hallucinations</span>
+                  <span className="ml-2 text-gray-300 text-sm">Eliminates hallucinations</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-3 h-3 text-primary" />
+                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-3 text-gray-300">Unlimited context & long-term memory</span>
+                  <span className="ml-2 text-gray-300 text-sm">Unlimited context</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-3 h-3 text-primary" />
+                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-3 text-gray-300">5 team members included</span>
+                  <span className="ml-2 text-gray-300 text-sm">5 team members</span>
                 </li>
               </ul>
               
               <Button 
-                className="w-full bg-dark-700 border-dark-600 text-white hover:bg-dark-600"
+                className="w-full bg-dark-700 border-dark-600 text-white hover:bg-dark-600 text-sm"
                 onClick={() => handleSubscribe('team')}
               >
                 Start 7-day trial
@@ -425,7 +488,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-gray-400 mb-2">Looking for our Basic ($5) or Standard ($10) plans?</p>
+            <p className="text-gray-400 mb-2">Looking for our Standard ($10) plan?</p>
             <Link 
               href="/pricing" 
               className="text-primary font-medium inline-flex items-center hover:gap-3 transition-all"
@@ -586,7 +649,7 @@ export default function Home() {
                   size="lg" 
                   variant="secondary"
                   className="bg-dark-700 border-dark-600 text-white hover:bg-dark-600"
-                  onClick={() => window.location.href = '/auth/signup'}
+                  onClick={() => window.open('https://store.hivetechs.io', '_blank')}
                 >
                   Start free
                 </Button>
