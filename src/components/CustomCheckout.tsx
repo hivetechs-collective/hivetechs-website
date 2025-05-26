@@ -183,6 +183,7 @@ export default function CustomCheckout({ plan, price, onSuccess }: CustomCheckou
           Powered by Paddle. Your payment info is secure and encrypted.
         </p>
       </form>
+      </div>
     </motion.div>
   )
 }
