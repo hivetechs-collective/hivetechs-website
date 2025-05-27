@@ -14,6 +14,19 @@ export class PaddleClient {
     if (this.initialized) return
     if (this.initPromise) return this.initPromise
 
+    // Check for cookie consent before loading Paddle
+    const consent = localStorage.getItem('cookie-consent')
+    if (consent !== 'accepted') {
+      // Wait for consent
+      return new Promise((resolve) => {
+        const handleConsent = () => {
+          window.removeEventListener('cookieConsentAccepted', handleConsent)
+          this.initialize().then(resolve)
+        }
+        window.addEventListener('cookieConsentAccepted', handleConsent)
+      })
+    }
+
     this.initPromise = new Promise((resolve) => {
       // Load Paddle.js
       const script = document.createElement('script')

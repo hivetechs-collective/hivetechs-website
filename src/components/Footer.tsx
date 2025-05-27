@@ -126,6 +126,9 @@ export default function Footer() {
               <Link href="/refund" className="hover:text-white text-sm">
                 Refund Policy
               </Link>
+              <Link href="/cookie-preferences" className="hover:text-white text-sm">
+                Cookie Preferences
+              </Link>
             </div>
           </div>
         </div>

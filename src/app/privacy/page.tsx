@@ -79,10 +79,30 @@ export default function PrivacyPage() {
           • Opt out of non-essential communications</p>
 
           <h2>8. Cookies and Tracking</h2>
-          <p>We use minimal cookies for:<br/>
+          <p>We use cookies to enhance your experience on our platform. You can manage your cookie preferences at any time by visiting our <a href="/cookie-preferences" className="text-primary hover:underline">Cookie Preferences</a> page.</p>
+          
+          <h3>Types of Cookies We Use:</h3>
+          <p><strong>Essential Cookies:</strong><br/>
           • Authentication and session management<br/>
-          • Basic analytics to improve our service<br/>
-          • Preference storage</p>
+          • Cookie consent preferences (stored locally)<br/>
+          • Security features and fraud prevention</p>
+          
+          <p><strong>Third-Party Cookies:</strong><br/>
+          • <strong>Paddle:</strong> Payment processing and subscription management cookies<br/>
+          • These cookies are only loaded after you provide consent<br/>
+          • Required for checkout and billing functionality</p>
+          
+          <h3>Cookie Management:</h3>
+          <p>• We request your consent before setting any non-essential cookies<br/>
+          • You can change your preferences at any time via the footer link<br/>
+          • Rejecting cookies may limit access to payment features<br/>
+          • Cookie preferences are stored locally in your browser</p>
+          
+          <h3>GDPR Compliance:</h3>
+          <p>• We comply with GDPR requirements for EU users<br/>
+          • Explicit consent is required for non-essential cookies<br/>
+          • You have the right to withdraw consent at any time<br/>
+          • No tracking or analytics cookies without your permission</p>
 
           <h2>9. Third-Party Services</h2>
           <p>Our service integrates with third-party AI providers. Please review their privacy policies:<br/>
