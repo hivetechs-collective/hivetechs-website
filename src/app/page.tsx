@@ -68,6 +68,7 @@ export default function Home() {
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                   hive-tools eliminates AI hallucinations through multi-model consensus, 
                   unlimited context awareness, and long-term memory — delivering code you can actually trust.
+                  No prompt engineering required: our 4-stage pipeline automatically optimizes every query for the best results.
                 </p>
                 
                 <div className="flex flex-wrap gap-4 mb-6">

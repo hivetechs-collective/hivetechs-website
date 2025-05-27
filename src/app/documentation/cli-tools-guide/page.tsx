@@ -6,12 +6,13 @@ import path from 'path'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
 import rehypePrism from 'rehype-prism-plus'
-import './documentation.css'
+import '../documentation.css'
 import WorkingButton from '@/components/WorkingButton'
+import { ChevronLeft } from 'lucide-react'
 
-export default async function Documentation() {
+export default async function CLIToolsGuide() {
   // Read the markdown file at build time
-  const filePath = path.join(process.cwd(), 'src/app/documentation/documentation-index.md')
+  const filePath = path.join(process.cwd(), 'src/app/documentation/cli-tools-guide.md')
   const fileContent = fs.readFileSync(filePath, 'utf8')
 
   return (
@@ -30,11 +31,15 @@ export default async function Documentation() {
         </div>
         <div className="container-custom relative z-10">
           <div className="text-center max-w-3xl mx-auto">
+            <Link href="/documentation" className="inline-flex items-center text-white/80 hover:text-white mb-4 transition-colors">
+              <ChevronLeft className="w-4 h-4 mr-1" />
+              Back to Documentation
+            </Link>
             <h1 className="heading-1 mb-6">
-              Documentation
+              CLI Tools Complete Guide
             </h1>
             <p className="text-xl mb-8">
-              Complete guides for using hive-tools CLI and MCP integration
+              Learn how to use all hive-tools CLI commands with automatic prompt optimization
             </p>
           </div>
         </div>
@@ -63,13 +68,11 @@ export default async function Documentation() {
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="heading-2 mb-6">Ready to experience better AI answers?</h2>
             <p className="text-xl mb-8 font-semibold">
-              Start your 7-day free trial today and see the difference our multi-model consensus pipeline can make for your projects.
+              Start your 7-day free trial today. No prompt engineering required!
             </p>
             <WorkingButton 
               url="https://store.hivetechs.io/l/basic-plan" 
               text="Start Free Trial" 
-              large={true}
-              variant="light"
             />
           </div>
         </div>
