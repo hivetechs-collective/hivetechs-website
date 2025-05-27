@@ -114,22 +114,24 @@ export default function Footer() {
         
         {/* Copyright */}
         <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center text-gray-300">
-            <p>© {currentYear} HiveTechs Collective LLC. All rights reserved.</p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/terms" className="hover:text-white text-sm">
-                Terms of Service
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center text-gray-300 space-y-4 lg:space-y-0">
+            <p className="text-sm">© {currentYear} HiveTechs Collective LLC. All rights reserved.</p>
+            
+            {/* Mobile: Stack links in two columns */}
+            <div className="grid grid-cols-2 gap-x-4 gap-y-2 sm:flex sm:flex-wrap sm:gap-4 lg:space-x-6">
+              <Link href="/terms" className="hover:text-white text-sm whitespace-nowrap">
+                Terms
               </Link>
-              <Link href="/privacy" className="hover:text-white text-sm">
-                Privacy Policy
+              <Link href="/privacy" className="hover:text-white text-sm whitespace-nowrap">
+                Privacy
               </Link>
-              <Link href="/refund" className="hover:text-white text-sm">
-                Refund Policy
+              <Link href="/refund" className="hover:text-white text-sm whitespace-nowrap">
+                Refunds
               </Link>
-              <Link href="/cookie-preferences" className="hover:text-white text-sm">
-                Cookie Preferences
+              <Link href="/cookie-preferences" className="hover:text-white text-sm whitespace-nowrap">
+                Cookies
               </Link>
-              <Link href="/manage-subscription" className="hover:text-white text-sm">
+              <Link href="/manage-subscription" className="hover:text-white text-sm whitespace-nowrap col-span-2 sm:col-span-1">
                 Manage Subscription
               </Link>
             </div>
