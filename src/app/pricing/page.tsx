@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { Check, ChevronRight, AlertCircle } from 'lucide-react'
+import { Check, ChevronRight, AlertCircle, CheckCircle, Shield, RefreshCw, CreditCard } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { useCookieConsent } from '@/hooks/useCookieConsent'
 import CookieConsentModal from '@/components/CookieConsentModal'
@@ -211,6 +211,50 @@ export default function Pricing() {
                 Start with a 7-day unlimited trial with full access to all features. 
                 No credit card required. Upgrade, downgrade, or cancel anytime.
               </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Indicators */}
+      <section className="py-8 bg-dark-800 border-b border-dark-600">
+        <div className="container-custom">
+          <div className="flex flex-wrap justify-center items-center gap-8 text-sm">
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="flex items-center gap-2"
+            >
+              <CheckCircle className="w-5 h-5 text-primary" />
+              <span className="text-gray-300">Cancel anytime online</span>
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="flex items-center gap-2"
+            >
+              <Shield className="w-5 h-5 text-primary" />
+              <span className="text-gray-300">No cancellation fees</span>
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="flex items-center gap-2"
+            >
+              <RefreshCw className="w-5 h-5 text-primary" />
+              <span className="text-gray-300">15-day money-back guarantee</span>
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="flex items-center gap-2"
+            >
+              <CreditCard className="w-5 h-5 text-primary" />
+              <span className="text-gray-300">Secure payments by Paddle</span>
             </motion.div>
           </div>
         </div>
@@ -461,6 +505,10 @@ export default function Pricing() {
             <FAQ 
               question="Is there a refund policy?"
               answer="New users get a 7-day unlimited trial with full access. After that, we offer a 15-day money-back guarantee for new subscriptions. See our refund policy for full details."
+            />
+            <FAQ 
+              question="How do I cancel my subscription?"
+              answer="You can cancel anytime through Paddle's customer portal - no hoops to jump through. Access your portal from the link in your email or visit our Manage Subscription page. Your access continues until the end of your billing period. We believe in earning your business every month."
             />
           </div>
         </div>

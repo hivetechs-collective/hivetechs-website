@@ -75,7 +75,7 @@ export default function CookieConsent() {
               {/* Content */}
               <p className="text-sm text-gray-300 mb-4 leading-relaxed">
                 We use cookies to enhance your experience and enable payment processing through our partner Paddle. 
-                <Link href="/privacy" className="text-primary/80 hover:text-primary underline decoration-dotted underline-offset-2 ml-1">
+                <Link href="/cookie-preferences" className="text-primary/80 hover:text-primary underline decoration-dotted underline-offset-2 ml-1">
                   Learn more
                 </Link>
               </p>

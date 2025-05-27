@@ -1,131 +1,306 @@
+'use client'
+
+import PageLayout from '@/components/PageLayout'
+import { motion } from 'framer-motion'
+import { Shield, Lock, Eye, Cookie, Server, CreditCard, ChevronRight } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-dark-800">
-      <div className="bg-dark-700 border-b border-dark-600">
-        <div className="max-w-4xl mx-auto px-4 py-6">
-          <div className="flex items-center space-x-4">
-            <Link href="/" className="text-blue-600 hover:text-blue-700">
-              ← Back to Home
-            </Link>
-            <h1 className="text-3xl font-bold text-white">Privacy Policy</h1>
+    <PageLayout>
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-dark-800 to-dark py-16">
+        {/* Background elements */}
+        <div className="absolute inset-0 bg-gradient-to-r from-accent-yellow/5 via-transparent to-accent-blue/5" />
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 pointer-events-none">
+          <Image 
+            src="/Hive-Logo.jpg" 
+            alt="" 
+            width={300} 
+            height={300} 
+            className="opacity-10 transform -translate-x-1/3"
+          />
+        </div>
+        
+        <div className="container-custom relative z-10">
+          <div className="max-w-3xl">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                  <Shield className="w-6 h-6 text-primary" />
+                </div>
+                <h1 className="text-4xl font-bold text-white">Privacy Policy</h1>
+              </div>
+              <p className="text-xl text-gray-300 mb-4">
+                We believe in minimal data collection. No tracking, no analytics, just what&apos;s necessary.
+              </p>
+              <p className="text-gray-400">Last updated: May 27, 2025</p>
+            </motion.div>
           </div>
-          <p className="text-gray-300 mt-2">Last updated: May 25, 2025</p>
         </div>
-      </div>
+      </section>
 
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <div className="bg-dark-700 rounded-lg shadow-sm border border-dark-600 p-8 prose prose-lg max-w-none">
-          
-          <h2>1. Information We Collect</h2>
-          <h3>Account Information</h3>
-          <p>• Email address for account creation and communication<br/>
-          • Billing information processed securely through our payment processors<br/>
-          • License keys and subscription status</p>
+      {/* Content Section */}
+      <section className="py-16 bg-dark">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            {/* Privacy Philosophy */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-dark-700 rounded-2xl border border-dark-600 p-8 mb-8"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <Lock className="w-6 h-6 text-primary" />
+                <h2 className="text-2xl font-semibold text-white">Our Privacy Philosophy</h2>
+              </div>
+              <p className="text-gray-300 leading-relaxed">
+                HiveTechs Collective LLC respects your privacy. We built our tools to enhance your development workflow, 
+                not to harvest your data. We don&apos;t use analytics trackers, we don&apos;t profile users, and we never sell data. 
+                Your code and queries remain private and are never stored permanently.
+              </p>
+            </motion.div>
 
-          <h3>Usage Data</h3>
-          <p>• Code completion requests and responses (anonymized)<br/>
-          • Feature usage patterns and frequency<br/>
-          • Error logs and performance metrics<br/>
-          • IDE integration data</p>
+            {/* What We Collect */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-dark-700 rounded-2xl border border-dark-600 p-8 mb-8"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <Eye className="w-6 h-6 text-accent-blue" />
+                <h2 className="text-2xl font-semibold text-white">What We Actually Collect</h2>
+              </div>
+              
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-medium text-white mb-3">When You Visit Our Website</h3>
+                  <ul className="space-y-2 text-gray-300">
+                    <li className="flex items-start">
+                      <span className="text-primary mr-2">•</span>
+                      <span><strong className="text-white">Nothing</strong> - No Google Analytics, no tracking pixels, no behavioral tracking</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-2">•</span>
+                      <span><strong className="text-white">Cookie consent choice</strong> - Stored locally in your browser using localStorage</span>
+                    </li>
+                  </ul>
+                </div>
 
-          <h3>Technical Information</h3>
-          <p>• IP address and device information<br/>
-          • Browser type and version<br/>
-          • Operating system and IDE version</p>
+                <div>
+                  <h3 className="text-lg font-medium text-white mb-3">When You Make a Purchase</h3>
+                  <ul className="space-y-2 text-gray-300">
+                    <li className="flex items-start">
+                      <span className="text-accent-blue mr-2">•</span>
+                      <span><strong className="text-white">Email address</strong> - To send your license key and important updates</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent-blue mr-2">•</span>
+                      <span><strong className="text-white">Payment information</strong> - Handled entirely by Paddle (we never see your card details)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent-blue mr-2">•</span>
+                      <span><strong className="text-white">License key</strong> - Generated for your hive-tools CLI activation</span>
+                    </li>
+                  </ul>
+                </div>
 
-          <h2>2. How We Use Your Information</h2>
-          <p>We use collected information to:<br/>
-          • Provide and maintain our service<br/>
-          • Process payments and manage subscriptions<br/>
-          • Improve our AI models and platform<br/>
-          • Send important service communications<br/>
-          • Provide customer support<br/>
-          • Analyze usage patterns to enhance features</p>
+                <div>
+                  <h3 className="text-lg font-medium text-white mb-3">When You Use hive-tools CLI</h3>
+                  <ul className="space-y-2 text-gray-300">
+                    <li className="flex items-start">
+                      <span className="text-primary mr-2">•</span>
+                      <span><strong className="text-white">License validation</strong> - Periodic checks to verify active subscription</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-2">•</span>
+                      <span><strong className="text-white">Your code stays private</strong> - All AI processing happens through your API keys, not ours</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-2">•</span>
+                      <span><strong className="text-white">No usage tracking</strong> - We don&apos;t monitor what you build or how you use the tools</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
 
-          <h2>3. Code and Content Privacy</h2>
-          <p>• Your code submissions are processed securely and not stored permanently<br/>
-          • We use anonymized, aggregated data to improve AI model performance<br/>
-          • Individual code snippets are not used for training without explicit consent<br/>
-          • All code processing happens through encrypted connections</p>
+            {/* Cookies */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="bg-dark-700 rounded-2xl border border-dark-600 p-8 mb-8"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <Cookie className="w-6 h-6 text-primary" />
+                <h2 className="text-2xl font-semibold text-white">Cookie Usage</h2>
+              </div>
+              
+              <p className="text-gray-300 mb-4">
+                We use minimal cookies and only with your consent. 
+                <Link href="/cookie-preferences" className="text-primary hover:text-primary-light underline ml-1">
+                  Manage your preferences
+                </Link>
+              </p>
 
-          <h2>4. Information Sharing</h2>
-          <p>We do not sell your personal information. We may share information with:<br/>
-          • Payment processors (Paddle, Stripe) for billing<br/>
-          • AI service providers (OpenAI, Anthropic) for code processing<br/>
-          • Service providers who assist with operations<br/>
-          • Legal authorities when required by law</p>
+              <div className="space-y-4">
+                <div>
+                  <h3 className="text-lg font-medium text-white mb-2">Essential Cookies</h3>
+                  <p className="text-gray-300">None. We use localStorage for consent preferences instead.</p>
+                </div>
 
-          <h2>5. Data Retention</h2>
-          <p>• Account information: Retained while account is active plus 2 years<br/>
-          • Usage data: Aggregated data retained indefinitely, individual data 1 year<br/>
-          • Code submissions: Not permanently stored, processed in real-time<br/>
-          • Payment information: Handled by payment processors per their policies</p>
+                <div>
+                  <h3 className="text-lg font-medium text-white mb-2">Third-Party Cookies</h3>
+                  <ul className="space-y-2 text-gray-300">
+                    <li className="flex items-start">
+                      <span className="text-accent-blue mr-2">•</span>
+                      <span><strong className="text-white">Paddle</strong> - Payment processing and subscription management</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent-blue mr-2">•</span>
+                      <span>Only loaded after you explicitly consent</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent-blue mr-2">•</span>
+                      <span>Required for checkout functionality</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
 
-          <h2>6. Data Security</h2>
-          <p>We implement appropriate security measures including:<br/>
-          • Encryption in transit and at rest<br/>
-          • Access controls and authentication<br/>
-          • Regular security audits<br/>
-          • Secure coding practices</p>
+            {/* Data Sharing */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="bg-dark-700 rounded-2xl border border-dark-600 p-8 mb-8"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <Server className="w-6 h-6 text-accent-blue" />
+                <h2 className="text-2xl font-semibold text-white">Data Sharing & Third Parties</h2>
+              </div>
+              
+              <p className="text-gray-300 mb-4">We never sell your data. We share information only with:</p>
+              
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span>
+                    <strong className="text-white">Paddle</strong> - Our payment processor 
+                    <Link href="https://paddle.com/privacy" target="_blank" rel="noopener" className="text-primary hover:text-primary-light underline ml-1">
+                      (Privacy Policy)
+                    </Link>
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span><strong className="text-white">Your chosen AI providers</strong> - When you use hive-tools, it connects directly to your AI providers of choice using your API keys</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span><strong className="text-white">Legal authorities</strong> - Only when required by law</span>
+                </li>
+              </ul>
+            </motion.div>
 
-          <h2>7. Your Rights</h2>
-          <p>You have the right to:<br/>
-          • Access your personal information<br/>
-          • Correct inaccurate data<br/>
-          • Delete your account and associated data<br/>
-          • Export your data<br/>
-          • Opt out of non-essential communications</p>
+            {/* Your Rights */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="bg-dark-700 rounded-2xl border border-dark-600 p-8 mb-8"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <CreditCard className="w-6 h-6 text-primary" />
+                <h2 className="text-2xl font-semibold text-white">Your Rights & Control</h2>
+              </div>
+              
+              <p className="text-gray-300 mb-4">You have complete control over your data:</p>
+              
+              <ul className="space-y-2 text-gray-300">
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span><strong className="text-white">Access</strong> - Request what information we have about you</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span><strong className="text-white">Correction</strong> - Update any inaccurate information</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span><strong className="text-white">Deletion</strong> - Request deletion of your account and data</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span><strong className="text-white">Portability</strong> - Request your account data (email, license key, and subscription details)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span><strong className="text-white">Cookie Control</strong> - Manage preferences anytime via our 
+                    <Link href="/cookie-preferences" className="text-primary hover:text-primary-light underline ml-1">
+                      Cookie Preferences
+                    </Link> page
+                  </span>
+                </li>
+              </ul>
+            </motion.div>
 
-          <h2>8. Cookies and Tracking</h2>
-          <p>We use cookies to enhance your experience on our platform. You can manage your cookie preferences at any time by visiting our <a href="/cookie-preferences" className="text-primary hover:underline">Cookie Preferences</a> page.</p>
-          
-          <h3>Types of Cookies We Use:</h3>
-          <p><strong>Essential Cookies:</strong><br/>
-          • Authentication and session management<br/>
-          • Cookie consent preferences (stored locally)<br/>
-          • Security features and fraud prevention</p>
-          
-          <p><strong>Third-Party Cookies:</strong><br/>
-          • <strong>Paddle:</strong> Payment processing and subscription management cookies<br/>
-          • These cookies are only loaded after you provide consent<br/>
-          • Required for checkout and billing functionality</p>
-          
-          <h3>Cookie Management:</h3>
-          <p>• We request your consent before setting any non-essential cookies<br/>
-          • You can change your preferences at any time via the footer link<br/>
-          • Rejecting cookies may limit access to payment features<br/>
-          • Cookie preferences are stored locally in your browser</p>
-          
-          <h3>GDPR Compliance:</h3>
-          <p>• We comply with GDPR requirements for EU users<br/>
-          • Explicit consent is required for non-essential cookies<br/>
-          • You have the right to withdraw consent at any time<br/>
-          • No tracking or analytics cookies without your permission</p>
+            {/* Contact */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="bg-gradient-to-br from-dark-700 to-dark-800 rounded-2xl border border-dark-600 p-8"
+            >
+              <h2 className="text-2xl font-semibold text-white mb-4">Questions or Concerns?</h2>
+              <p className="text-gray-300 mb-6">
+                We&apos;re committed to transparency. If you have any questions about our privacy practices or want to exercise your rights, please contact us.
+              </p>
+              
+              <div className="space-y-3">
+                <div>
+                  <span className="text-gray-400">Email:</span>
+                  <a href="mailto:privacy@hivetechs.io" className="text-primary hover:text-primary-light ml-2">
+                    privacy@hivetechs.io
+                  </a>
+                </div>
+                <div>
+                  <span className="text-gray-400">Address:</span>
+                  <span className="text-gray-300 ml-2">
+                    HiveTechs Collective LLC, 7901 4th St N STE 300, St. Petersburg, FL 33702
+                  </span>
+                </div>
+              </div>
 
-          <h2>9. Third-Party Services</h2>
-          <p>Our service integrates with third-party AI providers. Please review their privacy policies:<br/>
-          • OpenAI Privacy Policy<br/>
-          • Anthropic Privacy Policy<br/>
-          • Other AI service provider policies</p>
+              <div className="mt-6 pt-6 border-t border-dark-600">
+                <Link 
+                  href="/contact" 
+                  className="text-primary font-medium inline-flex items-center hover:gap-3 transition-all"
+                >
+                  Contact Support
+                  <ChevronRight className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
+            </motion.div>
 
-          <h2>10. International Data Transfers</h2>
-          <p>Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place for such transfers.</p>
-
-          <h2>11. Children's Privacy</h2>
-          <p>Our service is not intended for children under 13. We do not knowingly collect personal information from children under 13.</p>
-
-          <h2>12. Changes to This Policy</h2>
-          <p>We may update this privacy policy from time to time. We will notify you of any material changes via email or service notifications.</p>
-
-          <h2>13. Contact Us</h2>
-          <p>For questions about this Privacy Policy, please contact us at:<br/>
-          Email: privacy@hivetechs.com<br/>
-          Address: HiveTechs Collective LLC, Florida, United States</p>
-
+            {/* Updates Notice */}
+            <div className="mt-8 text-center">
+              <p className="text-gray-400 text-sm">
+                This policy may be updated occasionally. We&apos;ll notify you of any significant changes via email.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </PageLayout>
   )
 }

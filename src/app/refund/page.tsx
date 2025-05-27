@@ -1,105 +1,334 @@
+'use client'
+
+import PageLayout from '@/components/PageLayout'
+import { motion } from 'framer-motion'
+import { RefreshCw, Clock, CreditCard, AlertCircle, CheckCircle, XCircle, ChevronRight } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function RefundPage() {
   return (
-    <div className="min-h-screen bg-dark-800">
-      <div className="bg-dark-700 border-b border-dark-600">
-        <div className="max-w-4xl mx-auto px-4 py-6">
-          <div className="flex items-center space-x-4">
-            <Link href="/" className="text-blue-600 hover:text-blue-700">
-              ← Back to Home
-            </Link>
-            <h1 className="text-3xl font-bold text-white">Refund Policy</h1>
+    <PageLayout>
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-dark-800 to-dark py-16">
+        {/* Background elements */}
+        <div className="absolute inset-0 bg-gradient-to-r from-accent-yellow/5 via-transparent to-accent-blue/5" />
+        <div className="absolute left-0 bottom-0 pointer-events-none">
+          <Image 
+            src="/Hive-Logo.jpg" 
+            alt="" 
+            width={300} 
+            height={300} 
+            className="opacity-10 transform -translate-x-1/3 translate-y-1/3"
+          />
+        </div>
+        
+        <div className="container-custom relative z-10">
+          <div className="max-w-3xl">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                  <RefreshCw className="w-6 h-6 text-primary" />
+                </div>
+                <h1 className="text-4xl font-bold text-white">Refund Policy</h1>
+              </div>
+              <p className="text-xl text-gray-300 mb-4">
+                We stand behind our tools with a fair, transparent refund policy.
+              </p>
+              <p className="text-gray-400">Last updated: May 27, 2025</p>
+            </motion.div>
           </div>
-          <p className="text-gray-300 mt-2">Last updated: May 25, 2025</p>
         </div>
-      </div>
+      </section>
 
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <div className="bg-dark-700 rounded-lg shadow-sm border border-dark-600 p-8 prose prose-lg max-w-none">
-          
-          <h2>1. 15-Day Money-Back Guarantee</h2>
-          <p>We offer a 15-day money-back guarantee for all new subscription purchases. If you're not satisfied with hive-tools within 15 days of your initial purchase, we'll provide a full refund.</p>
+      {/* Content Section */}
+      <section className="py-16 bg-dark">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            
+            {/* Money-Back Guarantee */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-gradient-to-br from-dark-700 to-dark-800 rounded-2xl border border-primary/30 p-8 mb-8"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <CheckCircle className="w-6 h-6 text-primary" />
+                <h2 className="text-2xl font-semibold text-white">15-Day Money-Back Guarantee</h2>
+              </div>
+              <p className="text-gray-300 text-lg leading-relaxed">
+                Try hive-tools risk-free. If you&apos;re not completely satisfied within 15 days of your first purchase, 
+                we&apos;ll give you a full refund. No questions asked.
+              </p>
+              <div className="mt-4 bg-primary/10 rounded-lg p-4">
+                <p className="text-primary text-sm">
+                  <strong>Note:</strong> This applies to new subscriptions only. The 7-day free trial doesn&apos;t count toward the 15-day period.
+                </p>
+              </div>
+            </motion.div>
 
-          <h2>2. Subscription Refunds</h2>
-          
-          <h3>Monthly Subscriptions</h3>
-          <p>• Full refund within 15 days of first purchase<br/>
-          • No refunds for subsequent monthly renewals<br/>
-          • Cancellations take effect at the end of the current billing cycle</p>
+            {/* Subscription Refunds */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-dark-700 rounded-2xl border border-dark-600 p-8 mb-8"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <Clock className="w-6 h-6 text-accent-blue" />
+                <h2 className="text-2xl font-semibold text-white">Subscription Refunds</h2>
+              </div>
+              
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-medium text-white mb-3">Monthly Subscriptions</h3>
+                  <ul className="space-y-2 text-gray-300">
+                    <li className="flex items-start">
+                      <span className="text-primary mr-2">•</span>
+                      <span><strong className="text-white">First month:</strong> Full refund within 15 days</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-2">•</span>
+                      <span><strong className="text-white">Renewals:</strong> No refunds for subsequent months</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-2">•</span>
+                      <span><strong className="text-white">Cancellation:</strong> Access continues until period ends</span>
+                    </li>
+                  </ul>
+                </div>
 
-          <h3>Annual Subscriptions</h3>
-          <p>• Full refund within 15 days of purchase<br/>
-          • Pro-rated refund within 30 days of purchase<br/>
-          • No refunds after 30 days from purchase date</p>
+                <div>
+                  <h3 className="text-lg font-medium text-white mb-3">Annual Subscriptions</h3>
+                  <ul className="space-y-2 text-gray-300">
+                    <li className="flex items-start">
+                      <span className="text-accent-blue mr-2">•</span>
+                      <span><strong className="text-white">0-15 days:</strong> Full refund</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent-blue mr-2">•</span>
+                      <span><strong className="text-white">16-30 days:</strong> Pro-rated refund</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent-blue mr-2">•</span>
+                      <span><strong className="text-white">After 30 days:</strong> No refunds</span>
+                    </li>
+                  </ul>
+                </div>
 
-          <h2>3. Credit Pack Refunds</h2>
-          <p>Credit packs are generally non-refundable once purchased. However, we may provide refunds in the following circumstances:<br/>
-          • Technical issues preventing credit usage within 7 days of purchase<br/>
-          • Accidental duplicate purchases<br/>
-          • Service outages affecting credit availability</p>
+                <div>
+                  <h3 className="text-lg font-medium text-white mb-3">Team Plans</h3>
+                  <p className="text-gray-300">
+                    Same refund terms as individual subscriptions. Refunds apply to the entire team license.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
 
-          <h2>4. Team Plan Refunds</h2>
-          <p>• Same terms as individual subscriptions apply<br/>
-          • Refunds apply to the entire team license<br/>
-          • Pro-rated refunds for removed team members (annual plans only)</p>
+            {/* Credit Packs */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="bg-dark-700 rounded-2xl border border-dark-600 p-8 mb-8"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <CreditCard className="w-6 h-6 text-primary" />
+                <h2 className="text-2xl font-semibold text-white">Credit Pack Refunds</h2>
+              </div>
+              
+              <p className="text-gray-300 mb-4">
+                Credit packs are generally non-refundable since they never expire. 
+                However, we&apos;ll consider refunds for:
+              </p>
+              
+              <ul className="space-y-2 text-gray-300">
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span>Accidental duplicate purchases</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span>Technical issues preventing credit use within 7 days</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span>Billing errors or unauthorized charges</span>
+                </li>
+              </ul>
+            </motion.div>
 
-          <h2>5. Free Trial Conversions</h2>
-          <p>• Free trials that convert to paid subscriptions are eligible for refunds<br/>
-          • The 15-day refund period starts from the paid subscription start date<br/>
-          • Usage during free trial does not affect refund eligibility</p>
+            {/* Refund Process */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="bg-dark-700 rounded-2xl border border-dark-600 p-8 mb-8"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <RefreshCw className="w-6 h-6 text-accent-blue" />
+                <h2 className="text-2xl font-semibold text-white">How to Request a Refund</h2>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-primary font-semibold">1</span>
+                  </div>
+                  <div>
+                    <h4 className="text-white font-medium mb-1">Contact Support</h4>
+                    <p className="text-gray-300">
+                      Email <a href="mailto:support@hivetechs.io" className="text-primary hover:text-primary-light underline">support@hivetechs.io</a> with 
+                      "Refund Request" in the subject line
+                    </p>
+                  </div>
+                </div>
 
-          <h2>6. Refund Process</h2>
-          <p>To request a refund:<br/>
-          1. Contact support@hivetechs.com with your account details<br/>
-          2. Include your order/transaction ID<br/>
-          3. Briefly explain the reason for the refund request<br/>
-          4. We'll respond within 2 business days<br/>
-          5. Approved refunds are processed within 5-10 business days</p>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-primary font-semibold">2</span>
+                  </div>
+                  <div>
+                    <h4 className="text-white font-medium mb-1">Include Details</h4>
+                    <p className="text-gray-300">
+                      Provide your license key or order ID from Paddle
+                    </p>
+                  </div>
+                </div>
 
-          <h2>7. Refund Method</h2>
-          <p>• Refunds are issued to the original payment method<br/>
-          • Credit card refunds may take 3-10 business days to appear<br/>
-          • PayPal refunds typically appear within 3-5 business days<br/>
-          • Bank transfer refunds may take 5-10 business days</p>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-primary font-semibold">3</span>
+                  </div>
+                  <div>
+                    <h4 className="text-white font-medium mb-1">Quick Response</h4>
+                    <p className="text-gray-300">
+                      We&apos;ll respond within 2 business days
+                    </p>
+                  </div>
+                </div>
 
-          <h2>8. Non-Refundable Situations</h2>
-          <p>Refunds may not be provided in the following cases:<br/>
-          • Violation of our Terms of Service<br/>
-          • Excessive or fraudulent usage<br/>
-          • Chargebacks or payment disputes<br/>
-          • Accounts suspended for policy violations</p>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-primary font-semibold">4</span>
+                  </div>
+                  <div>
+                    <h4 className="text-white font-medium mb-1">Processing</h4>
+                    <p className="text-gray-300">
+                      Paddle processes refunds within 5-10 business days to your original payment method
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
 
-          <h2>9. Service Credits</h2>
-          <p>In some cases, we may offer service credits instead of refunds:<br/>
-          • Extended service outages<br/>
-          • Performance issues<br/>
-          • Feature disruptions<br/>
-          Service credits must be used within 12 months of issuance.</p>
+            {/* Non-Refundable */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="bg-dark-700 rounded-2xl border border-amber-500/20 p-8 mb-8"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <AlertCircle className="w-6 h-6 text-amber-400" />
+                <h2 className="text-2xl font-semibold text-white">When Refunds Aren&apos;t Available</h2>
+              </div>
+              
+              <ul className="space-y-2 text-gray-300">
+                <li className="flex items-start">
+                  <span className="text-amber-400 mr-2">✗</span>
+                  <span>Violation of our Terms of Service</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-amber-400 mr-2">✗</span>
+                  <span>Attempting to abuse the refund policy</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-amber-400 mr-2">✗</span>
+                  <span>Chargebacks filed without contacting us first</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-amber-400 mr-2">✗</span>
+                  <span>Accounts suspended for policy violations</span>
+                </li>
+              </ul>
+            </motion.div>
 
-          <h2>10. Dispute Resolution</h2>
-          <p>If you're not satisfied with our refund decision:<br/>
-          • Email escalation@hivetechs.com<br/>
-          • Include all previous correspondence<br/>
-          • A senior team member will review within 3 business days<br/>
-          • Final decisions will be communicated in writing</p>
+            {/* Important Notes */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="bg-gradient-to-br from-dark-700 to-dark-800 rounded-2xl border border-dark-600 p-8"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <CheckCircle className="w-6 h-6 text-primary" />
+                <h2 className="text-2xl font-semibold text-white">Good to Know</h2>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <span className="text-primary mr-3">•</span>
+                  <div>
+                    <p className="text-gray-300">
+                      <strong className="text-white">Cancellation vs Refund:</strong> Canceling stops future charges but keeps access until the period ends. 
+                      Refunds return your money but may end access immediately.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <span className="text-primary mr-3">•</span>
+                  <div>
+                    <p className="text-gray-300">
+                      <strong className="text-white">Free Trial:</strong> The 7-day unlimited trial is separate from the 15-day money-back guarantee, 
+                      which starts when you make your first payment.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <span className="text-primary mr-3">•</span>
+                  <div>
+                    <p className="text-gray-300">
+                      <strong className="text-white">Payment Processor:</strong> All refunds are processed by Paddle, our payment partner, 
+                      ensuring secure and timely returns.
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-          <h2>11. Cancellation vs. Refund</h2>
-          <p>• Cancellation: Stops future billing, service continues until period ends<br/>
-          • Refund: Returns money for current period and typically ends service immediately<br/>
-          • You can cancel anytime from your account dashboard</p>
+              <div className="mt-6 pt-6 border-t border-dark-600">
+                <p className="text-gray-400 text-sm mb-4">
+                  Questions about refunds? We&apos;re here to help.
+                </p>
+                <div className="flex gap-4">
+                  <Link 
+                    href="/contact" 
+                    className="text-primary font-medium inline-flex items-center hover:gap-3 transition-all"
+                  >
+                    Contact Support
+                    <ChevronRight className="w-4 h-4 ml-2" />
+                  </Link>
+                  <Link 
+                    href="/terms" 
+                    className="text-primary font-medium inline-flex items-center hover:gap-3 transition-all"
+                  >
+                    Terms of Service
+                    <ChevronRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
 
-          <h2>12. Contact Information</h2>
-          <p>For refund requests or questions about this policy:<br/>
-          Email: support@hivetechs.com<br/>
-          Subject: "Refund Request - [Your Account Email]"<br/>
-          Response time: Within 2 business days</p>
-
-          <h2>13. Policy Updates</h2>
-          <p>This refund policy may be updated from time to time. Material changes will be communicated via email and will not affect existing subscriptions unfavorably.</p>
-
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </PageLayout>
   )
 }

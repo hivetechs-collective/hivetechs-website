@@ -727,6 +727,14 @@ export default function Home() {
                     <td className="p-6 text-center text-gray-300 bg-primary/5">Standard</td>
                     <td className="p-6 text-center text-gray-300">Dedicated</td>
                   </tr>
+                  <tr className="border-t border-dark-600">
+                    <td className="p-6 text-gray-300 font-medium">Cancel anytime online</td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center bg-primary/5"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                  </tr>
                 </tbody>
               </table>
             </div>

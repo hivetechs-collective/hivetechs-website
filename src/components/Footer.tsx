@@ -129,6 +129,9 @@ export default function Footer() {
               <Link href="/cookie-preferences" className="hover:text-white text-sm">
                 Cookie Preferences
               </Link>
+              <Link href="/manage-subscription" className="hover:text-white text-sm">
+                Manage Subscription
+              </Link>
             </div>
           </div>
         </div>
