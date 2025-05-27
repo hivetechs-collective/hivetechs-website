@@ -233,26 +233,35 @@ export default function Pricing() {
                   
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, i) => (
-                      <li key={i} className="flex items-start">
-                        <div className={cn(
-                          "w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5",
-                          feature.included 
-                            ? "bg-primary/20" 
-                            : "bg-dark-600"
-                        )}>
-                          {feature.included ? (
-                            <Check className="w-3 h-3 text-primary" />
-                          ) : (
-                            <span className="w-2 h-0.5 bg-dark-500" />
-                          )}
-                        </div>
-                        <span className={cn(
-                          "ml-3",
-                          feature.included ? "text-gray-300" : "text-gray-500"
-                        )}>
-                          {feature.text}
-                        </span>
-                      </li>
+                      <>
+                        <li key={i} className="flex items-start">
+                          <div className={cn(
+                            "w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5",
+                            feature.included 
+                              ? "bg-primary/20" 
+                              : "bg-dark-600"
+                          )}>
+                            {feature.included ? (
+                              <Check className="w-3 h-3 text-primary" />
+                            ) : (
+                              <span className="w-2 h-0.5 bg-dark-500" />
+                            )}
+                          </div>
+                          <span className={cn(
+                            "ml-3",
+                            feature.included ? "text-gray-300" : "text-gray-500"
+                          )}>
+                            {feature.text}
+                          </span>
+                        </li>
+                        {i === 0 && (
+                          <li className="flex items-start">
+                            <Link href="#credit-packs" className="ml-8 text-xs text-primary/80 hover:text-primary transition-colors underline decoration-dotted underline-offset-2">
+                              Need more? Get credit packs →
+                            </Link>
+                          </li>
+                        )}
+                      </>
                     ))}
                   </ul>
                   
@@ -289,7 +298,7 @@ export default function Pricing() {
       </section>
 
       {/* Credit Packs */}
-      <section className="py-20 bg-dark relative overflow-hidden">
+      <section id="credit-packs" className="py-20 bg-dark relative overflow-hidden">
         {/* Animated Background - matching hero section */}
         <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark to-dark-800" />
         <div className="absolute inset-0 bg-gradient-to-r from-accent-blue/5 via-transparent to-accent-yellow/5" />

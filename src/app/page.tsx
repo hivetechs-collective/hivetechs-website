@@ -299,6 +299,11 @@ export default function Home() {
                   <span className="ml-2 text-gray-300 text-sm">5 daily / 100 monthly</span>
                 </li>
                 <li className="flex items-start">
+                  <Link href="/pricing#credit-packs" className="ml-6 text-xs text-primary/80 hover:text-primary transition-colors underline decoration-dotted underline-offset-2">
+                    Need more? Get credit packs →
+                  </Link>
+                </li>
+                <li className="flex items-start">
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
@@ -360,6 +365,11 @@ export default function Home() {
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
                   <span className="ml-2 text-gray-300 text-sm">50 daily / 1,000 monthly</span>
+                </li>
+                <li className="flex items-start">
+                  <Link href="/pricing#credit-packs" className="ml-6 text-xs text-primary/80 hover:text-primary transition-colors underline decoration-dotted underline-offset-2">
+                    Need more? Get credit packs →
+                  </Link>
                 </li>
                 <li className="flex items-start">
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -429,6 +439,11 @@ export default function Home() {
                   <span className="ml-2 text-gray-300 text-sm">200 daily / 4,000 monthly</span>
                 </li>
                 <li className="flex items-start">
+                  <Link href="/pricing#credit-packs" className="ml-6 text-xs text-primary/80 hover:text-primary transition-colors underline decoration-dotted underline-offset-2">
+                    Need more? Get credit packs →
+                  </Link>
+                </li>
+                <li className="flex items-start">
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
@@ -490,6 +505,11 @@ export default function Home() {
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
                   <span className="ml-2 text-gray-300 text-sm">600 daily / 12,000 monthly</span>
+                </li>
+                <li className="flex items-start">
+                  <Link href="/pricing#credit-packs" className="ml-6 text-xs text-primary/80 hover:text-primary transition-colors underline decoration-dotted underline-offset-2">
+                    Need more? Get credit packs →
+                  </Link>
                 </li>
                 <li className="flex items-start">
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
