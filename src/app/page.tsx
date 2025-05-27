@@ -1,14 +1,27 @@
 'use client'
 
+import { useState } from 'react'
 import PageLayout from '@/components/PageLayout'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { ChevronRight, Check, Star, Zap, Shield, Users, ArrowRight } from 'lucide-react'
+import { ChevronRight, Check, Star, Zap, Shield, Users, ArrowRight, AlertCircle } from 'lucide-react'
+import { useCookieConsent } from '@/hooks/useCookieConsent'
+import CookieConsentModal from '@/components/CookieConsentModal'
 
 export default function Home() {
+  const { isAccepted, updateConsent } = useCookieConsent()
+  const [showConsentModal, setShowConsentModal] = useState(false)
+  const [pendingPlan, setPendingPlan] = useState<string | null>(null)
+  
   const handleSubscribe = (plan: string) => {
+    // Check cookie consent for non-free plans
+    if (plan !== 'free' && !isAccepted) {
+      setPendingPlan(plan)
+      setShowConsentModal(true)
+      return
+    }
     const productMap: Record<string, string> = {
       'basic': 'basic-plan',
       'standard': 'standard-plan',
@@ -20,6 +33,19 @@ export default function Home() {
     if (productId) {
       const checkoutUrl = `https://store.hivetechs.io/l/${productId}?wanted=true`
       window.open(checkoutUrl, '_blank')
+    }
+  }
+
+  const handleConsentAccept = () => {
+    updateConsent('accepted')
+    setShowConsentModal(false)
+    
+    // Execute pending action after consent
+    if (pendingPlan) {
+      setTimeout(() => {
+        handleSubscribe(pendingPlan)
+        setPendingPlan(null)
+      }, 100)
     }
   }
 
@@ -235,6 +261,22 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Cookie Rejection Notice */}
+      {!isAccepted && (
+        <section className="py-4 bg-amber-500/10 border-y border-amber-500/20">
+          <div className="container-custom">
+            <div className="flex items-center justify-center gap-3">
+              <AlertCircle className="w-5 h-5 text-amber-400 flex-shrink-0" />
+              <p className="text-amber-200 text-sm">
+                Cookies are required for checkout functionality. 
+                <Link href="/cookie-preferences" className="text-amber-400 hover:text-amber-300 underline ml-1">
+                  Update preferences
+                </Link>
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Pricing Preview - Paddle Style */}
       <section className="section-padding bg-dark relative overflow-hidden">
@@ -759,6 +801,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      {/* Cookie Consent Modal */}
+      <CookieConsentModal
+        isOpen={showConsentModal}
+        onClose={() => setShowConsentModal(false)}
+        onAccept={handleConsentAccept}
+      />
     </PageLayout>
   )
 }

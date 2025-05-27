@@ -1,12 +1,15 @@
 'use client'
 
+import { useState } from 'react'
 import PageLayout from '@/components/PageLayout'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { Check, ChevronRight } from 'lucide-react'
+import { Check, ChevronRight, AlertCircle } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { useCookieConsent } from '@/hooks/useCookieConsent'
+import CookieConsentModal from '@/components/CookieConsentModal'
 
 interface PricingFeature {
   text: string
@@ -102,8 +105,17 @@ const creditPacks = [
 
 export default function Pricing() {
   const usePaddle = process.env.NEXT_PUBLIC_USE_PADDLE === 'true'
+  const { isAccepted, updateConsent } = useCookieConsent()
+  const [showConsentModal, setShowConsentModal] = useState(false)
+  const [pendingAction, setPendingAction] = useState<{ type: 'subscribe' | 'credit', value: string } | null>(null)
   
   const handleSubscribe = (plan: string) => {
+    // Check cookie consent for non-free plans
+    if (plan !== 'free' && !isAccepted) {
+      setPendingAction({ type: 'subscribe', value: plan })
+      setShowConsentModal(true)
+      return
+    }
     if (usePaddle) {
       // Use custom Paddle checkout
       if (plan === 'free') {
@@ -135,6 +147,12 @@ export default function Pricing() {
   }
 
   const handleCreditPurchase = (credits: string) => {
+    // Check cookie consent for credit purchases
+    if (!isAccepted) {
+      setPendingAction({ type: 'credit', value: credits })
+      setShowConsentModal(true)
+      return
+    }
     const creditMap: Record<string, string> = {
       '25': 'credits-25',
       '75': 'credits-75',
@@ -145,6 +163,23 @@ export default function Pricing() {
     if (productId) {
       const checkoutUrl = `https://store.hivetechs.io/l/${productId}?wanted=true`
       window.open(checkoutUrl, '_blank')
+    }
+  }
+
+  const handleConsentAccept = () => {
+    updateConsent('accepted')
+    setShowConsentModal(false)
+    
+    // Execute pending action after consent
+    if (pendingAction) {
+      setTimeout(() => {
+        if (pendingAction.type === 'subscribe') {
+          handleSubscribe(pendingAction.value)
+        } else {
+          handleCreditPurchase(pendingAction.value)
+        }
+        setPendingAction(null)
+      }, 100)
     }
   }
 
@@ -180,6 +215,23 @@ export default function Pricing() {
           </div>
         </div>
       </section>
+
+      {/* Cookie Rejection Notice */}
+      {!isAccepted && (
+        <section className="py-4 bg-amber-500/10 border-y border-amber-500/20">
+          <div className="container-custom">
+            <div className="flex items-center justify-center gap-3">
+              <AlertCircle className="w-5 h-5 text-amber-400 flex-shrink-0" />
+              <p className="text-amber-200 text-sm">
+                Cookies are required for checkout functionality. 
+                <Link href="/cookie-preferences" className="text-amber-400 hover:text-amber-300 underline ml-1">
+                  Update preferences
+                </Link>
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Pricing Plans */}
       <section className="py-20 bg-dark relative overflow-hidden">
@@ -458,6 +510,13 @@ export default function Pricing() {
           </div>
         </div>
       </section>
+      
+      {/* Cookie Consent Modal */}
+      <CookieConsentModal
+        isOpen={showConsentModal}
+        onClose={() => setShowConsentModal(false)}
+        onAccept={handleConsentAccept}
+      />
     </PageLayout>
   )
 }

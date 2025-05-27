@@ -1,9 +1,13 @@
 'use client'
 
-import { useParams } from 'next/navigation'
+import { useParams, useRouter } from 'next/navigation'
+import { useEffect } from 'react'
 import PageLayout from '@/components/PageLayout'
 import CustomCheckout from '@/components/CustomCheckout'
 import Image from 'next/image'
+import { useCookieConsent } from '@/hooks/useCookieConsent'
+import { AlertCircle } from 'lucide-react'
+import Link from 'next/link'
 
 const planDetails = {
   basic: { name: 'Basic', price: 5 },
@@ -14,14 +18,45 @@ const planDetails = {
 
 export default function CheckoutClient() {
   const params = useParams()
+  const router = useRouter()
+  const { isAccepted, isLoading } = useCookieConsent()
   const plan = params.plan as keyof typeof planDetails
   const details = planDetails[plan]
+
+  useEffect(() => {
+    // Redirect to pricing if cookies not accepted
+    if (!isLoading && !isAccepted) {
+      router.push('/pricing')
+    }
+  }, [isAccepted, isLoading, router])
 
   if (!details) {
     return (
       <PageLayout>
         <div className="min-h-screen flex items-center justify-center">
           <p className="text-white">Invalid plan selected</p>
+        </div>
+      </PageLayout>
+    )
+  }
+
+  // Show cookie requirement message if not accepted
+  if (!isLoading && !isAccepted) {
+    return (
+      <PageLayout>
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="max-w-md text-center">
+            <div className="w-16 h-16 bg-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <AlertCircle className="w-8 h-8 text-amber-400" />
+            </div>
+            <h2 className="text-2xl font-bold text-white mb-2">Cookies Required</h2>
+            <p className="text-gray-300 mb-6">
+              Cookie consent is required to proceed with checkout. Please update your preferences to continue.
+            </p>
+            <Link href="/cookie-preferences" className="text-primary hover:text-primary-light underline">
+              Update Cookie Preferences
+            </Link>
+          </div>
         </div>
       </PageLayout>
     )
