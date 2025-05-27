@@ -101,11 +101,6 @@ export default function Home() {
                   <Button size="lg" onClick={() => handleSubscribe('basic')} className="bg-gradient-to-r from-primary to-accent-blue hover:from-primary-light hover:to-accent-blue transform hover:scale-105 transition-all shadow-lg shadow-primary/25 animate-pulse">
                     Start free trial
                   </Button>
-                  <Link href="/contact">
-                    <Button variant="secondary" size="lg" className="bg-dark-700 border-dark-600 text-white hover:bg-dark-600">
-                      Book a demo
-                    </Button>
-                  </Link>
                 </div>
                 
                 <p className="text-sm text-gray-400">
@@ -796,14 +791,6 @@ export default function Home() {
                 >
                   Start your free trial
                 </Button>
-                <Link href="/contact">
-                  <Button 
-                    size="lg" 
-                    className="bg-dark-700 border-dark-600 text-white hover:bg-dark-600"
-                  >
-                    Book a demo
-                  </Button>
-                </Link>
               </div>
             </motion.div>
           </div>
