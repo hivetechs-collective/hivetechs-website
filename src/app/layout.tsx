@@ -1,17 +1,12 @@
-import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import CookieConsent from '@/components/CookieConsent'
+import './globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
-  title: 'HiveTechs Collective - Multi-Model AI Consensus Pipeline',
-  description: 'HiveTechs Collective provides a powerful multi-model consensus pipeline that combines multiple AI models to deliver better answers for developers and businesses.',
-  keywords: 'AI, consensus pipeline, multi-model, HiveTechs Collective, AI tools, developer tools',
-  authors: [{ name: 'HiveTechs Collective LLC' }],
-  creator: 'HiveTechs Collective LLC',
-  publisher: 'HiveTechs Collective LLC',
+  title: 'HiveTechs - Coming Soon',
+  description: 'We\'re building something amazing. Check back soon!',
 }
 
 export default function RootLayout({
@@ -21,9 +16,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.variable}>
         {children}
-        <CookieConsent />
       </body>
     </html>
   )
