@@ -9,8 +9,12 @@ export default function Features() {
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white relative overflow-hidden">
-        {/* Background Logo */}
+      <section className="relative overflow-hidden bg-dark py-16">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-dark-800 via-dark to-dark-900" />
+        <div className="absolute inset-0 bg-gradient-to-r from-accent-yellow/5 via-transparent to-accent-blue/5" />
+        
+        {/* Large Background Logo - positioned to the right */}
         <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none">
           <Image 
             src="/Hive-Logo.jpg" 
@@ -20,42 +24,56 @@ export default function Features() {
             className="opacity-10 transform translate-x-1/4"
           />
         </div>
-        <div className="container-custom relative z-10">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="heading-1 mb-6">
-              hive-tools: Revolutionary Multi-Model Consensus Pipeline
-            </h1>
-            <p className="text-xl mb-8">
-              Our 4-stage consensus pipeline harnesses the collective intelligence of multiple specialized AI models to deliver unparalleled response quality for developers and businesses.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <div className="bg-dark-700/20 backdrop-blur-sm rounded-lg px-6 py-3">
-                <span className="font-semibold">Generator</span>
-              </div>
-              <div className="flex items-center">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </div>
-              <div className="bg-dark-700/20 backdrop-blur-sm rounded-lg px-6 py-3">
-                <span className="font-semibold">Refiner</span>
-              </div>
-              <div className="flex items-center">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </div>
-              <div className="bg-dark-700/20 backdrop-blur-sm rounded-lg px-6 py-3">
-                <span className="font-semibold">Validator</span>
-              </div>
-              <div className="flex items-center">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </div>
-              <div className="bg-dark-700/20 backdrop-blur-sm rounded-lg px-6 py-3">
-                <span className="font-semibold">Curator</span>
-              </div>
+        
+        {/* Floating Orbs */}
+        <div className="absolute top-20 left-20 w-64 h-64 bg-accent-yellow/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent-blue/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        
+        <div className="relative">
+          <div className="container-custom">
+            <div className="text-center max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <p className="text-sm font-semibold text-primary mb-4 tracking-wide uppercase">
+                  Revolutionary AI Technology
+                </p>
+                
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                  Revolutionary AI Model Access +
+                  <span className="text-primary block bg-gradient-to-r from-primary to-accent-blue bg-clip-text text-transparent">Trusted Consensus</span>
+                </h1>
+                
+                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                  Access 319+ models from 55+ providers through auto-discovery, then get accurate results through our 4-stage consensus pipeline.
+                </p>
+                
+                <div className="flex flex-wrap justify-center items-center gap-3 text-sm">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/20">
+                    <span className="font-semibold text-white">Generator</span>
+                  </div>
+                  <svg className="w-4 h-4 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/20">
+                    <span className="font-semibold text-white">Refiner</span>
+                  </div>
+                  <svg className="w-4 h-4 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/20">
+                    <span className="font-semibold text-white">Validator</span>
+                  </div>
+                  <svg className="w-4 h-4 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/20">
+                    <span className="font-semibold text-white">Curator</span>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -157,6 +175,103 @@ export default function Features() {
                     <h4 className="font-semibold">Curator</h4>
                   </div>
                   <p className="text-sm text-white font-medium">"Quantum computing emerged in the late 1970s through Paul Benioff's work, with significant contributions from Richard Feynman's 1981 proposal to use quantum mechanics for computation..."</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Model Discovery Feature - NEW */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
+            <div>
+              <h2 className="heading-2 mb-6">🔍 Revolutionary Model Discovery</h2>
+              <p className="text-lg text-white font-medium mb-6">
+                Never research AI models again. Our system automatically discovers, catalogs, and compares 319+ models from 55+ providers daily. 
+                Find the perfect model for any task with real-time cost comparison and capability matching.
+              </p>
+              <div className="bg-dark-800/50 rounded-lg p-4 mb-6 border-l-4 border-red-500">
+                <p className="text-sm text-gray-300 mb-2"><strong>Traditional AI Tool Limitations:</strong></p>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  <li>• Hours researching which models exist</li>
+                  <li>• Manually tracking pricing changes</li>
+                  <li>• Missing new model releases</li>
+                  <li>• Complex multi-provider management</li>
+                </ul>
+              </div>
+              <div className="bg-dark-800/50 rounded-lg p-4 mb-6 border-l-4 border-primary">
+                <p className="text-sm text-gray-300 mb-2"><strong>Our Auto-Discovery Advantage:</strong></p>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  <li>• 319+ models discovered automatically</li>
+                  <li>• Real-time pricing updates daily</li>
+                  <li>• Instant access to new releases</li>
+                  <li>• Unified interface for all providers</li>
+                </ul>
+              </div>
+              <ul className="space-y-6">
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mr-4">
+                    <span className="font-bold">🔍</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Intelligent Search</h3>
+                    <p className="text-white font-medium">Filter by capability, cost, context window, and performance metrics</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mr-4">
+                    <span className="font-bold">⚖️</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Side-by-Side Comparison</h3>
+                    <p className="text-white font-medium">Compare any models for cost, capabilities, and context limits</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mr-4">
+                    <span className="font-bold">🔄</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Zero Maintenance</h3>
+                    <p className="text-white font-medium">Daily auto-updates keep you current with the latest AI capabilities</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-dark-800 rounded-lg p-8 flex items-center justify-center h-auto py-12">
+              <div className="space-y-4 w-full max-w-md">
+                <div className="text-center mb-6">
+                  <div className="text-6xl font-bold text-primary mb-2">319+</div>
+                  <div className="text-lg text-gray-300">Models Available</div>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-4 text-center">
+                  <div className="bg-dark-700 rounded-lg p-4">
+                    <div className="text-2xl font-bold text-accent-blue mb-1">55+</div>
+                    <div className="text-sm text-gray-300">Providers</div>
+                  </div>
+                  <div className="bg-dark-700 rounded-lg p-4">
+                    <div className="text-2xl font-bold text-accent-green mb-1">Daily</div>
+                    <div className="text-sm text-gray-300">Updates</div>
+                  </div>
+                </div>
+                
+                <div className="space-y-3 mt-6">
+                  <div className="flex items-center justify-between bg-dark-700 rounded p-3">
+                    <span className="text-sm text-gray-300">OpenAI</span>
+                    <span className="text-xs bg-primary/20 text-primary px-2 py-1 rounded">39 models</span>
+                  </div>
+                  <div className="flex items-center justify-between bg-dark-700 rounded p-3">
+                    <span className="text-sm text-gray-300">Anthropic</span>
+                    <span className="text-xs bg-primary/20 text-primary px-2 py-1 rounded">24 models</span>
+                  </div>
+                  <div className="flex items-center justify-between bg-dark-700 rounded p-3">
+                    <span className="text-sm text-gray-300">Google</span>
+                    <span className="text-xs bg-primary/20 text-primary px-2 py-1 rounded">23 models</span>
+                  </div>
+                  <div className="flex items-center justify-between bg-dark-700 rounded p-3">
+                    <span className="text-sm text-gray-300">Meta</span>
+                    <span className="text-xs bg-primary/20 text-primary px-2 py-1 rounded">26 models</span>
+                  </div>
+                  <div className="text-center text-xs text-gray-400 mt-2">+ 51 more providers</div>
                 </div>
               </div>
             </div>

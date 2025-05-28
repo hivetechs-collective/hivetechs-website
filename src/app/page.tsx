@@ -146,6 +146,46 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Feature Announcement - Model Discovery */}
+      <section className="py-8 bg-gradient-to-r from-primary/90 to-accent-blue/90 relative overflow-hidden border-y border-primary/20">
+        <div className="container-custom relative z-10">
+          <motion.div 
+            className="flex flex-col sm:flex-row items-center justify-between gap-6"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex items-center gap-4">
+              <div className="bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
+                <span className="text-white font-semibold text-sm tracking-wide uppercase">🎯 New</span>
+              </div>
+              <div>
+                <h3 className="text-xl md:text-2xl font-bold text-white">
+                  Access 319+ AI Models Automatically
+                </h3>
+                <p className="text-base text-white/85 mt-1">
+                  Zero research, zero maintenance — auto-discovery from 55+ providers
+                </p>
+              </div>
+            </div>
+            
+            <div className="flex items-center gap-4">
+              <div className="hidden sm:flex items-center text-white/75 text-sm">
+                <div className="w-2 h-2 rounded-full bg-white/60 mr-2 animate-pulse"></div>
+                Updated daily
+              </div>
+              <Button 
+                size="lg" 
+                className="bg-white text-primary hover:bg-gray-100 font-semibold shadow-lg hover:shadow-xl transition-all whitespace-nowrap"
+                onClick={() => window.open('/features', '_self')}
+              >
+                Learn More →
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Features Section - Paddle Style */}
       <section className="py-16 bg-dark relative">
