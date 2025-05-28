@@ -47,7 +47,7 @@ export default function Features() {
                 </h1>
                 
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Access 319+ models from 55+ providers through auto-discovery, then get accurate results through our 4-stage consensus pipeline.
+                  Access 319+ models from 55+ providers through auto-discovery, with advanced analytics, cost tracking, performance benchmarking, and automatic failover — all through our trusted 4-stage consensus pipeline.
                 </p>
                 
                 <div className="flex flex-wrap justify-center items-center gap-3 text-sm">
@@ -142,6 +142,18 @@ export default function Features() {
                   </div>
                 </li>
               </ul>
+              
+              <div className="mt-8">
+                <Link 
+                  href="/documentation/consensus-pipeline" 
+                  className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary-600 text-dark font-semibold rounded-lg transition-colors duration-200 group"
+                >
+                  📖 Learn More About Consensus Pipeline
+                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </div>
             </div>
             <div className="bg-dark-800 rounded-lg p-8 flex items-center justify-center h-auto py-12">
               <div className="space-y-6 w-full max-w-md">
@@ -189,12 +201,12 @@ export default function Features() {
                 Find the perfect model for any task with real-time cost comparison and capability matching.
               </p>
               <div className="bg-dark-800/50 rounded-lg p-4 mb-6 border-l-4 border-red-500">
-                <p className="text-sm text-gray-300 mb-2"><strong>Traditional AI Tool Limitations:</strong></p>
+                <p className="text-sm text-gray-300 mb-2"><strong>Current Multi-Model Platform Limitations:</strong></p>
                 <ul className="text-sm text-gray-300 space-y-1">
-                  <li>• Hours researching which models exist</li>
-                  <li>• Manually tracking pricing changes</li>
-                  <li>• Missing new model releases</li>
-                  <li>• Complex multi-provider management</li>
+                  <li>• Limited to 20-50 models from select providers</li>
+                  <li>• Static catalogs without real-time intelligence</li>
+                  <li>• Manual model selection without AI optimization</li>
+                  <li>• Platform-specific vendor lock-in elements</li>
                 </ul>
               </div>
               <div className="bg-dark-800/50 rounded-lg p-4 mb-6 border-l-4 border-primary">
@@ -235,6 +247,18 @@ export default function Features() {
                   </div>
                 </li>
               </ul>
+              
+              <div className="mt-8">
+                <Link 
+                  href="/documentation/model-discovery" 
+                  className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary-600 text-dark font-semibold rounded-lg transition-colors duration-200 group"
+                >
+                  🔍 Learn More About Model Discovery
+                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </div>
             </div>
             <div className="bg-dark-800 rounded-lg p-8 flex items-center justify-center h-auto py-12">
               <div className="space-y-4 w-full max-w-md">
@@ -273,6 +297,346 @@ export default function Features() {
                   </div>
                   <div className="text-center text-xs text-gray-400 mt-2">+ 51 more providers</div>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Advanced Analytics & Insights - NEW */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
+            <div className="order-2 md:order-1 bg-dark-800 rounded-lg p-8 flex items-center justify-center h-auto py-12">
+              <div className="space-y-4 w-full max-w-md">
+                <div className="text-center mb-6">
+                  <div className="text-4xl font-bold text-primary mb-2">📊</div>
+                  <div className="text-lg text-gray-300">Real-Time Analytics</div>
+                </div>
+                
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between bg-dark-700 rounded p-3">
+                    <span className="text-sm text-gray-300">Usage Tracking</span>
+                    <span className="text-xs bg-primary/20 text-primary px-2 py-1 rounded">Live</span>
+                  </div>
+                  <div className="flex items-center justify-between bg-dark-700 rounded p-3">
+                    <span className="text-sm text-gray-300">Cost Analysis</span>
+                    <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">$0.032</span>
+                  </div>
+                  <div className="flex items-center justify-between bg-dark-700 rounded p-3">
+                    <span className="text-sm text-gray-300">Performance Score</span>
+                    <span className="text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded">94.2%</span>
+                  </div>
+                  <div className="flex items-center justify-between bg-dark-700 rounded p-3">
+                    <span className="text-sm text-gray-300">Success Rate</span>
+                    <span className="text-xs bg-accent-green/20 text-accent-green px-2 py-1 rounded">99.8%</span>
+                  </div>
+                </div>
+                
+                <div className="mt-6 p-4 bg-dark-700 rounded-lg border-l-4 border-primary">
+                  <div className="text-xs text-primary font-semibold mb-1">💡 Smart Insight</div>
+                  <div className="text-xs text-gray-300">Your usage increased 23% this week. Consider upgrading to Premium for better cost efficiency.</div>
+                </div>
+              </div>
+            </div>
+            <div className="order-1 md:order-2">
+              <h2 className="heading-2 mb-6">📊 Advanced Analytics & Insights</h2>
+              <p className="text-lg text-white font-medium mb-6">
+                Get deep insights into your AI usage with comprehensive analytics, cost tracking, and automated recommendations. 
+                Our SQLite-based analytics database provides real-time visibility into performance, costs, and optimization opportunities.
+              </p>
+              <div className="bg-dark-800/50 rounded-lg p-4 mb-6 border-l-4 border-red-500">
+                <p className="text-sm text-gray-300 mb-2"><strong>Without Analytics Tracking:</strong></p>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  <li>• No visibility into AI spending patterns</li>
+                  <li>• Missing performance optimization opportunities</li>
+                  <li>• Manual cost tracking and budget management</li>
+                  <li>• No insights for model selection</li>
+                </ul>
+              </div>
+              <div className="bg-dark-800/50 rounded-lg p-4 mb-6 border-l-4 border-primary">
+                <p className="text-sm text-gray-300 mb-2"><strong>Our Analytics Advantage:</strong></p>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  <li>• Real-time usage and cost monitoring</li>
+                  <li>• Automated insights and recommendations</li>
+                  <li>• Performance trending and optimization alerts</li>
+                  <li>• Export capabilities (JSON/CSV) for reporting</li>
+                </ul>
+              </div>
+              <ul className="space-y-6">
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mr-4">
+                    <span className="font-bold">📈</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Usage Analytics</h3>
+                    <p className="text-white font-medium">Track model usage patterns, success rates, and performance metrics</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mr-4">
+                    <span className="font-bold">💰</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Cost Intelligence</h3>
+                    <p className="text-white font-medium">Automated cost tracking with budget alerts and spending projections</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mr-4">
+                    <span className="font-bold">🔍</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Smart Insights</h3>
+                    <p className="text-white font-medium">AI-powered recommendations for optimization and cost savings</p>
+                  </div>
+                </li>
+              </ul>
+              
+              <div className="mt-8">
+                <Link 
+                  href="/documentation/analytics-insights" 
+                  className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary-600 text-dark font-semibold rounded-lg transition-colors duration-200 group"
+                >
+                  📊 Learn More About Analytics & Insights
+                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Performance Benchmarking - NEW */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
+            <div>
+              <h2 className="heading-2 mb-6">🏆 Performance Benchmarking & Scoring</h2>
+              <p className="text-lg text-white font-medium mb-6">
+                Automatically benchmark and score AI models across multiple capability categories. 
+                Our comprehensive testing suite evaluates reasoning, coding, writing, and specialized tasks to help you choose the best model for each use case.
+              </p>
+              <div className="bg-dark-800/50 rounded-lg p-4 mb-6 border-l-4 border-red-500">
+                <p className="text-sm text-gray-300 mb-2"><strong>Manual Model Testing Issues:</strong></p>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  <li>• Time-consuming manual testing across models</li>
+                  <li>• Inconsistent evaluation criteria</li>
+                  <li>• No standardized performance comparison</li>
+                  <li>• Missing capability-specific insights</li>
+                </ul>
+              </div>
+              <div className="bg-dark-800/50 rounded-lg p-4 mb-6 border-l-4 border-primary">
+                <p className="text-sm text-gray-300 mb-2"><strong>Our Benchmarking System:</strong></p>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  <li>• Automated testing across capability categories</li>
+                  <li>• Standardized scoring methodology</li>
+                  <li>• Real-time performance leaderboards</li>
+                  <li>• Task-specific model recommendations</li>
+                </ul>
+              </div>
+              <ul className="space-y-6">
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mr-4">
+                    <span className="font-bold">🧠</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Multi-Category Testing</h3>
+                    <p className="text-white font-medium">Reasoning, coding, writing, math, and specialized domain testing</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mr-4">
+                    <span className="font-bold">📊</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Performance Scoring</h3>
+                    <p className="text-white font-medium">Comprehensive scoring based on accuracy, speed, and cost efficiency</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mr-4">
+                    <span className="font-bold">🏅</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Dynamic Leaderboards</h3>
+                    <p className="text-white font-medium">Real-time rankings updated with each benchmark run</p>
+                  </div>
+                </li>
+              </ul>
+              
+              <div className="mt-8">
+                <Link 
+                  href="/documentation/performance-benchmarking" 
+                  className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary-600 text-dark font-semibold rounded-lg transition-colors duration-200 group"
+                >
+                  🏆 Learn More About Performance Benchmarking
+                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+            <div className="bg-dark-800 rounded-lg p-8 flex items-center justify-center h-auto py-12">
+              <div className="space-y-4 w-full max-w-md">
+                <div className="text-center mb-6">
+                  <div className="text-4xl font-bold text-primary mb-2">🏆</div>
+                  <div className="text-lg text-gray-300">Performance Leaderboard</div>
+                </div>
+                
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between bg-dark-700 rounded p-3 border-l-4 border-primary">
+                    <div>
+                      <div className="text-sm font-semibold text-white">🥇 GPT-4</div>
+                      <div className="text-xs text-gray-400">OpenAI</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-sm font-bold text-primary">94.8</div>
+                      <div className="text-xs text-gray-400">Reasoning</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center justify-between bg-dark-700 rounded p-3 border-l-4 border-blue-500">
+                    <div>
+                      <div className="text-sm font-semibold text-white">🥈 Claude-3 Opus</div>
+                      <div className="text-xs text-gray-400">Anthropic</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-sm font-bold text-blue-400">93.2</div>
+                      <div className="text-xs text-gray-400">Writing</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center justify-between bg-dark-700 rounded p-3 border-l-4 border-green-500">
+                    <div>
+                      <div className="text-sm font-semibold text-white">🥉 Code Llama</div>
+                      <div className="text-xs text-gray-400">Meta</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-sm font-bold text-green-400">91.7</div>
+                      <div className="text-xs text-gray-400">Coding</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-4 text-center mt-6">
+                  <div className="bg-dark-700 rounded-lg p-3">
+                    <div className="text-xl font-bold text-accent-blue mb-1">8</div>
+                    <div className="text-xs text-gray-300">Test Categories</div>
+                  </div>
+                  <div className="bg-dark-700 rounded-lg p-3">
+                    <div className="text-xl font-bold text-accent-green mb-1">319+</div>
+                    <div className="text-xs text-gray-300">Models Tested</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Automatic Failover & Redundancy - NEW */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
+            <div className="order-2 md:order-1 bg-dark-800 rounded-lg p-8 flex items-center justify-center h-auto py-12">
+              <div className="space-y-4 w-full max-w-md">
+                <div className="text-center mb-6">
+                  <div className="text-4xl font-bold text-primary mb-2">🛡️</div>
+                  <div className="text-lg text-gray-300">System Health Monitor</div>
+                </div>
+                
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between bg-dark-700 rounded p-3">
+                    <span className="text-sm text-gray-300">OpenAI</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                      <span className="text-xs text-green-400">Healthy</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between bg-dark-700 rounded p-3">
+                    <span className="text-sm text-gray-300">Anthropic</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                      <span className="text-xs text-green-400">Healthy</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between bg-dark-700 rounded p-3">
+                    <span className="text-sm text-gray-300">Google</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-yellow-500 animate-pulse"></div>
+                      <span className="text-xs text-yellow-400">Degraded</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between bg-dark-700 rounded p-3">
+                    <span className="text-sm text-gray-300">Meta</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-red-500"></div>
+                      <span className="text-xs text-red-400">Failed</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mt-6 p-4 bg-dark-700 rounded-lg border-l-4 border-yellow-500">
+                  <div className="text-xs text-yellow-400 font-semibold mb-1">⚡ Auto-Failover Active</div>
+                  <div className="text-xs text-gray-300">Switched from Meta to Anthropic due to high error rate (25% > 20% threshold)</div>
+                </div>
+              </div>
+            </div>
+            <div className="order-1 md:order-2">
+              <h2 className="heading-2 mb-6">🛡️ Automatic Failover & Redundancy</h2>
+              <p className="text-lg text-white font-medium mb-6">
+                Ensure uninterrupted AI workflows with intelligent failover and provider redundancy. 
+                Our system continuously monitors provider health and automatically switches to backup providers when issues are detected.
+              </p>
+              <div className="bg-dark-800/50 rounded-lg p-4 mb-6 border-l-4 border-red-500">
+                <p className="text-sm text-gray-300 mb-2"><strong>Single Provider Risks:</strong></p>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  <li>• Service outages break your workflow</li>
+                  <li>• Rate limits halt development</li>
+                  <li>• No backup when providers fail</li>
+                  <li>• Manual intervention required</li>
+                </ul>
+              </div>
+              <div className="bg-dark-800/50 rounded-lg p-4 mb-6 border-l-4 border-primary">
+                <p className="text-sm text-gray-300 mb-2"><strong>Our Failover System:</strong></p>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  <li>• Real-time health monitoring across all providers</li>
+                  <li>• Automatic failover within seconds</li>
+                  <li>• Configurable thresholds and strategies</li>
+                  <li>• Zero-downtime provider switching</li>
+                </ul>
+              </div>
+              <ul className="space-y-6">
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mr-4">
+                    <span className="font-bold">🔍</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Health Monitoring</h3>
+                    <p className="text-white font-medium">Continuous monitoring of error rates, response times, and availability</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mr-4">
+                    <span className="font-bold">⚡</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Instant Switching</h3>
+                    <p className="text-white font-medium">Automatic failover triggered by configurable thresholds</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mr-4">
+                    <span className="font-bold">⚖️</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Load Balancing</h3>
+                    <p className="text-white font-medium">Smart routing based on performance, cost, and availability</p>
+                  </div>
+                </li>
+              </ul>
+              
+              <div className="mt-8">
+                <Link 
+                  href="/documentation/automatic-failover" 
+                  className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary-600 text-dark font-semibold rounded-lg transition-colors duration-200 group"
+                >
+                  🛡️ Learn More About Automatic Failover
+                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
               </div>
             </div>
           </div>
@@ -621,88 +985,89 @@ export default function Features() {
       <section className="py-20 bg-dark-800">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="heading-2 mb-4">More Powerful Features</h2>
+            <h2 className="heading-2 mb-4">Complete AI Development Platform</h2>
             <p className="text-xl text-white font-medium max-w-3xl mx-auto">
-              Explore the full range of capabilities that make our multi-model consensus pipeline the preferred choice for developers.
+              Beyond consensus AI, hive-tools provides a comprehensive suite of advanced features that transform how you work with AI models.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Feature 1 */}
-            <div className="bg-dark-700 p-8 rounded-lg shadow-md">
-              <div className="bg-primary/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-4">Customizable Model Combinations</h3>
-              <p className="text-white font-medium">
-                Select which AI models to include in your consensus pipeline based on your specific needs and use cases.
-              </p>
-            </div>
-
-            {/* Feature 2 */}
+            {/* Feature 1 - Rich Terminal UI */}
             <div className="bg-dark-700 p-8 rounded-lg shadow-md">
               <div className="bg-primary/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fillRule="evenodd" d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z" clipRule="evenodd"></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-4">Advanced Prompt Engineering</h3>
+              <h3 className="text-xl font-bold mb-4">Rich Terminal UI</h3>
               <p className="text-white font-medium">
-                Our system optimizes prompts for each model in the pipeline to extract the best possible responses.
+                Beautiful interactive menus, colorized tables, progress bars, and real-time status indicators for an enhanced CLI experience.
               </p>
             </div>
 
-            {/* Feature 3 */}
+            {/* Feature 2 - Cost Intelligence */}
             <div className="bg-dark-700 p-8 rounded-lg shadow-md">
               <div className="bg-primary/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd"></path>
+                  <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"></path>
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clipRule="evenodd"></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-4">Detailed Response Analysis</h3>
+              <h3 className="text-xl font-bold mb-4">Cost Intelligence</h3>
               <p className="text-white font-medium">
-                Get insights into how each model contributed to the final consensus response with our detailed analysis.
+                Smart budget management with automated cost tracking, spending alerts, and optimization recommendations.
               </p>
             </div>
 
-            {/* Feature 4 */}
+            {/* Feature 3 - Interactive Profiles */}
+            <div className="bg-dark-700 p-8 rounded-lg shadow-md">
+              <div className="bg-primary/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-4">Smart Model Profiles</h3>
+              <p className="text-white font-medium">
+                Pre-configured profiles (cost_effective, high_quality, balanced) with automatic model selection for different use cases.
+              </p>
+            </div>
+
+            {/* Feature 4 - Advanced Search */}
+            <div className="bg-dark-700 p-8 rounded-lg shadow-md">
+              <div className="bg-primary/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-4">Advanced Model Search</h3>
+              <p className="text-white font-medium">
+                Powerful search and filtering by capability, cost, context window, latency, and quality scores across 319+ models.
+              </p>
+            </div>
+
+            {/* Feature 5 - MCP Integration */}
             <div className="bg-dark-700 p-8 rounded-lg shadow-md">
               <div className="bg-primary/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-4">Code Generation & Analysis</h3>
+              <h3 className="text-xl font-bold mb-4">41 MCP Tools</h3>
               <p className="text-white font-medium">
-                Generate high-quality code across multiple programming languages with improved accuracy and best practices.
+                Complete IDE integration with 41 Model Context Protocol tools for Cursor, Zed, VS Code, and other editors.
               </p>
             </div>
 
-            {/* Feature 5 */}
+            {/* Feature 6 - Data Export */}
             <div className="bg-dark-700 p-8 rounded-lg shadow-md">
               <div className="bg-primary/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
+                  <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd"></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-4">Team Collaboration</h3>
+              <h3 className="text-xl font-bold mb-4">Data Export & Reporting</h3>
               <p className="text-white font-medium">
-                Share conversation history and insights with team members for improved collaboration on complex projects.
-              </p>
-            </div>
-
-            {/* Feature 6 */}
-            <div className="bg-dark-700 p-8 rounded-lg shadow-md">
-              <div className="bg-primary/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-4">Enhanced Security</h3>
-              <p className="text-white font-medium">
-                Enterprise-grade security with data encryption, secure API endpoints, and customizable data retention policies.
+                Export analytics, usage data, and insights in JSON/CSV formats for integration with business intelligence tools.
               </p>
             </div>
           </div>

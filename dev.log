@@ -4,82 +4,324 @@
 
   ▲ Next.js 14.2.29
   - Local:        http://localhost:3000
+  - Environments: .env.local
 
  ✓ Starting...
- ✓ Ready in 901ms
+ ✓ Ready in 919ms
  ○ Compiling / ...
- ✓ Compiled / in 882ms (1376 modules)
- GET / 200 in 1053ms
- ✓ Compiled in 144ms (697 modules)
- ✓ Compiled /_not-found in 301ms (1365 modules)
- GET /api/auth/session/ 404 in 338ms
- GET /api/auth/session/ 404 in 11ms
- POST /api/auth/_log/ 404 in 11ms
- POST /api/auth/_log/ 404 in 10ms
- ✓ Compiled /features in 190ms (1371 modules)
- GET /features/ 200 in 249ms
- GET /api/auth/session/ 404 in 14ms
- GET /api/auth/session/ 404 in 11ms
- POST /api/auth/_log/ 404 in 11ms
- POST /api/auth/_log/ 404 in 13ms
- GET /features/ 200 in 43ms
- GET /api/auth/session/ 404 in 12ms
- GET /api/auth/session/ 404 in 10ms
- POST /api/auth/_log/ 404 in 13ms
- POST /api/auth/_log/ 404 in 11ms
- GET / 200 in 41ms
- GET /api/auth/session/ 404 in 12ms
- GET /api/auth/session/ 404 in 8ms
- POST /api/auth/_log/ 404 in 10ms
- POST /api/auth/_log/ 404 in 14ms
- ✓ Compiled in 237ms (1382 modules)
- GET / 200 in 114ms
- ✓ Compiled /_not-found in 103ms (1371 modules)
- GET /api/auth/session/ 404 in 130ms
- GET /api/auth/session/ 404 in 11ms
- POST /api/auth/_log/ 404 in 9ms
- POST /api/auth/_log/ 404 in 9ms
- ✓ Compiled /pricing in 307ms (1379 modules)
- ✓ Compiled in 255ms (1390 modules)
- GET / 200 in 104ms
- ✓ Compiled /_not-found in 83ms (1379 modules)
- GET /api/auth/session/ 404 in 122ms
- GET /api/auth/session/ 404 in 9ms
- POST /api/auth/_log/ 404 in 10ms
- POST /api/auth/_log/ 404 in 10ms
+ ✓ Compiled / in 782ms (1342 modules)
+ ⚠ The "images.domains" configuration is deprecated. Please use "images.remotePatterns" configuration instead.
+ GET / 200 in 951ms
+ ✓ Compiled in 164ms (680 modules)
  ○ Compiling /documentation ...
- ✓ Compiled /documentation in 771ms (1898 modules)
- ✓ Compiled in 266ms (1898 modules)
- GET / 200 in 102ms
- ✓ Compiled /_not-found in 128ms (1887 modules)
- GET /api/auth/session/ 404 in 171ms
- GET /api/auth/session/ 404 in 11ms
- POST /api/auth/_log/ 404 in 13ms
- POST /api/auth/_log/ 404 in 13ms
- ✓ Compiled in 291ms (1898 modules)
- ✓ Compiled in 294ms (1898 modules)
- ✓ Compiled in 219ms (1898 modules)
- ✓ Compiled in 208ms (1898 modules)
- ✓ Compiled in 410ms (1898 modules)
- ✓ Compiled in 283ms (1898 modules)
- ✓ Compiled in 260ms (1898 modules)
- GET / 200 in 108ms
- ✓ Compiled /_not-found in 293ms (1887 modules)
- GET /api/auth/session/ 404 in 328ms
- GET /api/auth/session/ 404 in 10ms
- POST /api/auth/_log/ 404 in 12ms
- POST /api/auth/_log/ 404 in 11ms
- ✓ Compiled in 278ms (1898 modules)
- ✓ Compiled in 351ms (1898 modules)
- ✓ Compiled in 211ms (1898 modules)
- ✓ Compiled in 270ms (1898 modules)
- ✓ Compiled in 207ms (1898 modules)
- ✓ Compiled in 213ms (1898 modules)
- ✓ Compiled in 177ms (1898 modules)
- ✓ Compiled in 283ms (1898 modules)
- ✓ Compiled in 192ms (1898 modules)
- ✓ Compiled in 206ms (1898 modules)
- ✓ Compiled in 199ms (1898 modules)
- ✓ Compiled in 282ms (1898 modules)
- ✓ Compiled in 219ms (1898 modules)
- ✓ Compiled in 207ms (1898 modules)
+ ✓ Compiled /documentation in 657ms (1861 modules)
+ ✓ Compiled /documentation/cli-tools-guide in 186ms (1859 modules)
+ GET /documentation/cli-tools-guide/ 200 in 400ms
+ ✓ Compiled /_not-found in 545ms (1850 modules)
+ GET /documentation/cli-tools-guide/ 404 in 26ms
+ ✓ Compiled /documentation/cli-tools-guide in 524ms (1862 modules)
+ ✓ Compiled in 303ms (1873 modules)
+ ✓ Compiled in 219ms (1873 modules)
+ ✓ Compiled in 191ms (1873 modules)
+ ✓ Compiled in 193ms (1873 modules)
+ ✓ Compiled /pricing in 307ms (1867 modules)
+ ✓ Compiled in 276ms (1881 modules)
+ ✓ Compiled in 259ms (1881 modules)
+ ✓ Compiled in 160ms (1881 modules)
+ ✓ Compiled in 246ms (1881 modules)
+ ✓ Compiled in 191ms (1881 modules)
+ ✓ Compiled in 193ms (1881 modules)
+ ✓ Compiled in 364ms (1881 modules)
+ ✓ Compiled in 207ms (1881 modules)
+ ✓ Compiled in 149ms (688 modules)
+ ✓ Compiled in 240ms (1881 modules)
+ ✓ Compiled in 358ms (1888 modules)
+ ⚠ Fast Refresh had to perform a full reload when chs-website/node_modules/next/font/google/target.css?{\"path\":\"src/app/layout.tsx\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-inter\"}],\"variableName\":\"inter\"}","ids":[]}, chs-website/src/app/globals.css","ids":[]}, chs-website/src/components/CookieConsent.tsx","ids":["default"]} changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET / 200 in 67ms
+ GET / 200 in 51ms
+ GET / 200 in 46ms
+ GET / 200 in 41ms
+ ✓ Compiled in 148ms (691 modules)
+ ✓ Compiled in 144ms (1874 modules)
+ GET / 200 in 110ms
+ GET / 200 in 45ms
+ ✓ Compiled in 302ms (1888 modules)
+ ✓ Compiled /cookie-preferences in 206ms (1884 modules)
+ ✓ Compiled in 101ms (695 modules)
+ ✓ Compiled /_not-found in 582ms (1870 modules)
+ GET /cookie-preferences/ 404 in 31ms
+ ✓ Compiled /cookie-preferences in 535ms (1887 modules)
+ ✓ Compiled in 153ms (695 modules)
+ ✓ Compiled in 259ms (1898 modules)
+ ✓ Compiled in 216ms (1898 modules)
+ ✓ Compiled in 214ms (1898 modules)
+ ✓ Compiled in 218ms (1898 modules)
+ GET / 200 in 110ms
+ ✓ Compiled in 311ms (1900 modules)
+ ✓ Compiled in 244ms (1904 modules)
+ ✓ Compiled in 251ms (1904 modules)
+ ✓ Compiled in 193ms (1904 modules)
+ ✓ Compiled in 261ms (1904 modules)
+ ✓ Compiled in 322ms (1904 modules)
+ ✓ Compiled in 154ms (698 modules)
+ ✓ Compiled in 100ms (698 modules)
+ ✓ Compiled /privacy in 323ms (1894 modules)
+ GET /cookie-preferences/ 200 in 105ms
+ ✓ Compiled in 380ms (1905 modules)
+ ✓ Compiled in 379ms (1903 modules)
+ GET / 200 in 121ms
+ ✓ Compiled in 282ms (1917 modules)
+ ✓ Compiled in 194ms (1917 modules)
+ ✓ Compiled in 297ms (1917 modules)
+ GET /privacy/ 200 in 107ms
+ ✓ Compiled /terms in 310ms (1907 modules)
+ ✓ Compiled in 395ms (1396 modules)
+ GET /terms/ 200 in 60ms
+ GET /terms/ 200 in 49ms
+ ✓ Compiled in 278ms (1410 modules)
+ ✓ Compiled in 272ms (1410 modules)
+ ✓ Compiled /refund in 202ms (1402 modules)
+ ✓ Compiled in 386ms (1403 modules)
+ GET /refund/ 200 in 57ms
+ ✓ Compiled in 277ms (1417 modules)
+ ✓ Compiled in 147ms (717 modules)
+ ✓ Compiled in 126ms (1403 modules)
+ ✓ Compiled in 183ms (717 modules)
+ ✓ Compiled in 157ms (717 modules)
+ ✓ Compiled in 125ms (717 modules)
+ ✓ Compiled in 306ms (1417 modules)
+ GET /refund/ 200 in 107ms
+ ✓ Compiled /manage-subscription in 294ms (1415 modules)
+ ✓ Compiled in 266ms (1424 modules)
+ ✓ Compiled in 265ms (1424 modules)
+ GET /manage-subscription/ 200 in 101ms
+ ✓ Compiled /cookie-preferences in 131ms (707 modules)
+ ✓ Compiled /contact in 186ms (1421 modules)
+ ✓ Compiled /pricing in 241ms (700 modules)
+ ✓ Compiled /terms in 87ms (702 modules)
+ ✓ Compiled /privacy in 128ms (703 modules)
+ ✓ Compiled /refund in 109ms (704 modules)
+ ✓ Compiled /cookie-preferences in 77ms (705 modules)
+ ✓ Compiled /manage-subscription in 128ms (705 modules)
+ ✓ Compiled in 350ms (1421 modules)
+ GET /manage-subscription/ 200 in 123ms
+ ✓ Compiled / in 142ms (707 modules)
+ ✓ Compiled in 296ms (1421 modules)
+ ✓ Compiled / in 191ms (707 modules)
+ GET / 200 in 289ms
+ ✓ Compiled /documentation in 371ms (1214 modules)
+ ✓ Compiled /documentation/cli-tools-guide in 187ms (1225 modules)
+ GET /documentation/cli-tools-guide/ 200 in 439ms
+ ✓ Compiled /documentation/mcp-tool-guide in 256ms (1922 modules)
+ GET /documentation/mcp-tool-guide/ 200 in 432ms
+ ✓ Compiled in 360ms (1931 modules)
+ ✓ Compiled in 176ms (724 modules)
+ GET / 200 in 118ms
+ ✓ Compiled /features in 305ms (1923 modules)
+ GET /features/ 200 in 383ms
+ GET /features/ 200 in 44ms
+ ✓ Compiled in 333ms (1928 modules)
+ GET /features/ 200 in 111ms
+ ✓ Compiled in 345ms (1928 modules)
+ GET /features/ 200 in 123ms
+ ✓ Compiled in 363ms (1928 modules)
+ GET /features/ 200 in 112ms
+ ✓ Compiled in 346ms (1928 modules)
+ ✓ Compiled in 373ms (1928 modules)
+ GET /features/ 200 in 112ms
+ GET /features/ 200 in 53ms
+ GET /features/ 200 in 54ms
+ ✓ Compiled /pricing in 195ms (1210 modules)
+ ✓ Compiled in 353ms (1934 modules)
+ ✓ Compiled in 313ms (1934 modules)
+ ✓ Compiled in 342ms (1926 modules)
+ ✓ Compiled in 303ms (1921 modules)
+ ✓ Compiled in 297ms (1921 modules)
+ ✓ Compiled in 402ms (1934 modules)
+ ✓ Compiled in 297ms (1934 modules)
+ GET / 200 in 131ms
+ GET /features/ 200 in 49ms
+ ✓ Compiled in 354ms (1934 modules)
+ GET /features/ 200 in 114ms
+ ✓ Compiled in 374ms (1934 modules)
+ ✓ Compiled in 274ms (1934 modules)
+ ✓ Compiled in 258ms (1934 modules)
+ ✓ Compiled in 264ms (1934 modules)
+ ✓ Compiled in 150ms (726 modules)
+ ✓ Compiled in 161ms (726 modules)
+ ✓ Compiled in 164ms (726 modules)
+ ✓ Compiled in 375ms (1934 modules)
+ GET /features/ 200 in 127ms
+ GET /documentation/ 200 in 51ms
+ ✓ Compiled /documentation/cli-tools-guide in 248ms (1210 modules)
+ GET /documentation/cli-tools-guide/ 200 in 510ms
+ GET /documentation/cli-tools-guide/ 200 in 89ms
+ GET /documentation/ 200 in 62ms
+ GET /documentation/ 200 in 61ms
+ GET /documentation/ 200 in 61ms
+ GET /documentation/ 200 in 48ms
+ GET /documentation/ 200 in 51ms
+ ✓ Compiled in 184ms (726 modules)
+ ✓ Compiled in 124ms (726 modules)
+ ✓ Compiled in 142ms (726 modules)
+ ✓ Compiled in 192ms (1920 modules)
+ ✓ Compiled in 177ms (726 modules)
+ ✓ Compiled in 132ms (726 modules)
+ GET /documentation/ 200 in 117ms
+ GET /documentation/ 200 in 71ms
+ ✓ Compiled /_not-found in 233ms (1923 modules)
+ GET /documentation/model-discovery/ 404 in 291ms
+ GET /documentation/ 200 in 219ms
+ GET /documentation/analytics-insights/ 404 in 29ms
+ GET /documentation/ 200 in 65ms
+ GET /documentation/terminal-ui/ 404 in 32ms
+ GET /documentation/ 200 in 71ms
+ GET /documentation/cost-intelligence/ 404 in 28ms
+ GET /documentation/cost-intelligence/ 404 in 36ms
+ GET /documentation/ 200 in 85ms
+ GET /api/ 404 in 34ms
+ GET /documentation/ 200 in 77ms
+ GET /documentation/ 200 in 67ms
+ ✓ Compiled in 408ms (1937 modules)
+ GET /documentation/analytics-insights/ 404 in 80ms
+ GET /documentation/ 200 in 86ms
+ ✓ Compiled in 183ms (726 modules)
+ ✓ Compiled in 273ms (1934 modules)
+ ✓ Compiled in 176ms (726 modules)
+ ✓ Compiled in 133ms (726 modules)
+ ✓ Compiled in 151ms (726 modules)
+ ✓ Compiled in 190ms (1920 modules)
+ ✓ Compiled /documentation/model-discovery in 322ms (1924 modules)
+ GET /documentation/model-discovery/ 200 in 561ms
+ ✓ Compiled in 189ms (727 modules)
+ ✓ Compiled in 137ms (727 modules)
+ ✓ Compiled in 138ms (727 modules)
+ ✓ Compiled in 143ms (727 modules)
+ ✓ Compiled in 174ms (727 modules)
+ ✓ Compiled in 136ms (727 modules)
+ ✓ Compiled in 153ms (727 modules)
+ ✓ Compiled in 220ms (1920 modules)
+ ✓ Compiled in 181ms (727 modules)
+ ✓ Compiled in 142ms (727 modules)
+ ✓ Compiled in 222ms (1920 modules)
+ ✓ Compiled in 185ms (727 modules)
+ ✓ Compiled in 145ms (727 modules)
+ ✓ Compiled in 181ms (1920 modules)
+ GET /documentation/ 200 in 124ms
+ ✓ Compiled /documentation/analytics-insights in 215ms (1922 modules)
+ GET /documentation/analytics-insights/ 200 in 411ms
+ ✓ Compiled in 186ms (727 modules)
+ ✓ Compiled in 145ms (727 modules)
+ ✓ Compiled in 200ms (1914 modules)
+ ✓ Compiled in 181ms (727 modules)
+ ✓ Compiled in 142ms (727 modules)
+ ✓ Compiled in 203ms (1914 modules)
+ ✓ Compiled in 174ms (727 modules)
+ ✓ Compiled in 175ms (727 modules)
+ GET /documentation/ 200 in 123ms
+ ✓ Compiled in 160ms (727 modules)
+ ✓ Compiled /documentation/performance-benchmarking in 259ms (1930 modules)
+ GET /documentation/performance-benchmarking/ 200 in 531ms
+ ✓ Compiled in 170ms (727 modules)
+ ✓ Compiled /documentation/consensus-pipeline in 318ms (1918 modules)
+ GET /documentation/consensus-pipeline/ 200 in 589ms
+ GET /documentation/ 200 in 74ms
+ GET /documentation/model-discovery/ 200 in 95ms
+ GET /documentation/ 200 in 74ms
+ GET /documentation/analytics-insights/ 200 in 94ms
+ GET /documentation/ 200 in 65ms
+ GET /documentation/performance-benchmarking/ 200 in 98ms
+ GET /documentation/ 200 in 69ms
+ ✓ Compiled /documentation/automatic-failover in 271ms (1897 modules)
+ GET /documentation/automatic-failover/ 200 in 529ms
+ GET /documentation/ 200 in 72ms
+ ✓ Compiled /documentation/cost-intelligence in 196ms (1899 modules)
+ ⨯ [Error: [next-mdx-remote] error compiling MDX:
+Unexpected character `m` (U+006D) after self-closing slash, expected `>` to end the tag
+
+More information: https://mdxjs.com/docs/troubleshooting-mdx] {
+  digest: '1480310298'
+}
+ ⨯ [Error: [next-mdx-remote] error compiling MDX:
+Unexpected character `m` (U+006D) after self-closing slash, expected `>` to end the tag
+
+More information: https://mdxjs.com/docs/troubleshooting-mdx] {
+  digest: '1480310298'
+}
+ GET /documentation/cost-intelligence/ 500 in 334ms
+ GET /documentation/ 200 in 82ms
+ ⨯ [Error: [next-mdx-remote] error compiling MDX:
+Unexpected character `m` (U+006D) after self-closing slash, expected `>` to end the tag
+
+More information: https://mdxjs.com/docs/troubleshooting-mdx] {
+  digest: '1480310298'
+}
+ ⨯ [Error: [next-mdx-remote] error compiling MDX:
+Unexpected character `m` (U+006D) after self-closing slash, expected `>` to end the tag
+
+More information: https://mdxjs.com/docs/troubleshooting-mdx] {
+  digest: '1480310298'
+}
+ GET /documentation/cost-intelligence/ 500 in 72ms
+ GET /documentation/ 200 in 77ms
+ ✓ Compiled in 320ms (1909 modules)
+ ✓ Compiled in 139ms (727 modules)
+ ✓ Compiled in 136ms (727 modules)
+ ✓ Compiled in 179ms (727 modules)
+ ✓ Compiled in 118ms (727 modules)
+ ✓ Compiled in 159ms (1895 modules)
+ ✓ Compiled in 183ms (727 modules)
+ ✓ Compiled in 183ms (727 modules)
+ ✓ Compiled in 122ms (727 modules)
+ ✓ Compiled in 130ms (727 modules)
+ ✓ Compiled in 178ms (727 modules)
+ ✓ Compiled /documentation/cost-intelligence in 162ms (1184 modules)
+ GET /documentation/cost-intelligence/ 200 in 438ms
+ ✓ Compiled /documentation/terminal-ui in 327ms (1912 modules)
+ GET /documentation/terminal-ui/ 200 in 568ms
+ ✓ Compiled /documentation/profile-management in 269ms (1898 modules)
+ GET /documentation/profile-management/ 200 in 449ms
+ ✓ Compiled /documentation/mcp-tools-reference in 269ms (1898 modules)
+ GET /documentation/mcp-tools-reference/ 200 in 513ms
+ GET /documentation/ 200 in 87ms
+ GET /documentation/ 200 in 84ms
+ ✓ Compiled / in 276ms (1197 modules)
+ ✓ Compiled in 459ms (1919 modules)
+ ✓ Compiled in 397ms (1919 modules)
+ ✓ Compiled in 363ms (1919 modules)
+ ✓ Compiled in 291ms (1919 modules)
+ ✓ Compiled in 280ms (1919 modules)
+ ✓ Compiled in 346ms (1919 modules)
+ ✓ Compiled in 278ms (1919 modules)
+ ✓ Compiled in 254ms (1919 modules)
+ GET / 200 in 125ms
+ ✓ Compiled /features in 226ms (1196 modules)
+ GET /features/ 200 in 319ms
+ ✓ Compiled /documentation/consensus-pipeline in 114ms (1196 modules)
+ GET / 200 in 86ms
+ GET /features/ 200 in 69ms
+ GET / 200 in 67ms
+ GET /features/ 200 in 59ms
+ GET / 200 in 63ms
+ GET /features/ 200 in 61ms
+ ✓ Compiled /documentation/automatic-failover in 164ms (1195 modules)
+ ✓ Compiled /documentation in 246ms (1200 modules)
+ ✓ Compiled /documentation/model-discovery in 124ms (1198 modules)
+ GET /documentation/model-discovery/ 200 in 370ms
+ ✓ Compiled in 338ms (1911 modules)
+ ✓ Compiled in 161ms (727 modules)
+ ✓ Compiled in 135ms (727 modules)
+ ✓ Compiled in 211ms (727 modules)
+ ✓ Compiled in 131ms (727 modules)
+ ✓ Compiled in 184ms (727 modules)
+ ✓ Compiled in 137ms (727 modules)
+ ✓ Compiled in 149ms (727 modules)
+ ✓ Compiled in 191ms (727 modules)
+ ✓ Compiled in 142ms (727 modules)
+ ✓ Compiled in 155ms (727 modules)
+ ✓ Compiled in 188ms (727 modules)
+ ✓ Compiled in 138ms (727 modules)
+ ✓ Compiled in 158ms (727 modules)
+ ✓ Compiled in 191ms (727 modules)
+ GET /documentation/model-discovery/ 200 in 139ms
+ ✓ Compiled in 492ms (1911 modules)
