@@ -1,278 +1,440 @@
-# hive-tools CLI Complete Guide
+# hive-tools Complete Platform Guide
 
-The hive-tools CLI provides powerful command-line access to the multi-model consensus pipeline, knowledge base, and all configuration tools. With automatic prompt optimization, you get the best AI results without needing to be a prompt engineer.
+Welcome to hive-tools - your complete AI development platform! This guide covers everything from basic consensus to advanced analytics, cost tracking, and performance benchmarking. **No coding experience required** - we'll explain everything in simple terms.
 
-## What's New
+## 🎯 What You'll Learn
 
-- **Automatic Prompt Optimization**: No need to craft perfect prompts - our 4-stage pipeline handles it automatically
-- **Comprehensive Knowledge Storage**: Every word from every AI stage is permanently stored
-- **Cross-Conversation Learning**: The system learns from all past conversations
-- **Database Query Tools**: Direct access to your knowledge base through MCP tools
+- **4-Stage Consensus Pipeline** - Get trustworthy AI answers
+- **Advanced Analytics** - Track your AI usage and costs  
+- **Performance Benchmarking** - Compare AI models easily
+- **Automatic Failover** - Never lose AI access again
+- **Cost Intelligence** - Control your AI spending
+- **Rich Terminal Experience** - Beautiful, easy-to-use menus
 
-## Installation
+---
 
+## 🚀 Quick Start (Complete Beginner)
+
+### Step 1: Install hive-tools
 ```bash
-# Using npm (recommended)
+# Copy and paste this into your terminal
 npm install -g @hivetechs/hive-ai
-
-# Alternative: Clone and link locally
-git clone https://github.com/hivetechs/hive-ai.git
-cd hive-ai
-npm install
-npm link
 ```
 
-## Quick Start
+### Step 2: Get Your License Key
+1. Visit [store.hivetechs.io](https://store.hivetechs.io)
+2. Choose a plan (Free plan available!)
+3. Copy your license key
 
+### Step 3: Configure hive-tools
 ```bash
-# Configure your license key
+# Replace YOUR_LICENSE_KEY with your actual key
 hive configure --api-key YOUR_LICENSE_KEY
-
-# Ask a question - no prompt engineering needed!
-hive consensus "How do I implement authentication in React?"
-
-# The system automatically:
-# 1. Enhances your question for optimal AI comprehension
-# 2. Runs it through 4 specialized AI stages
-# 3. Stores all outputs permanently
-# 4. Returns a polished, accurate answer
 ```
 
-## Core Commands
-
-### Consensus Pipeline
-
-The heart of hive-tools - get trustworthy AI answers through multi-model consensus:
-
+### Step 4: Ask Your First Question
 ```bash
-# Basic usage - just ask naturally
-hive consensus "Explain the CAP theorem"
-
-# The pipeline automatically:
-# - Generator: Creates comprehensive initial response
-# - Refiner: Enhances with more depth and examples
-# - Validator: Ensures factual accuracy
-# - Curator: Polishes for clarity and structure
-
-# Use a specific pipeline profile
-hive consensus "Complex algorithm question" --profile high_quality
-
-# Continue a previous conversation (temporal continuity)
-hive consensus "Based on what we discussed, how should I implement caching?"
+# Try this example - no special formatting needed!
+hive consensus "How do I make a website responsive?"
 ```
 
-### Knowledge Base Queries
+**That's it!** The system automatically optimizes your question and gives you a verified, trustworthy answer.
 
-Access your comprehensive knowledge base with the new database query tool:
+---
 
+## 🧠 The 4-Stage Consensus Pipeline
+
+Think of this like having **4 AI experts** review your question:
+
+### How It Works (Simple Explanation)
+
+1. **🎯 Generator** - Creates a comprehensive first answer
+2. **✨ Refiner** - Improves clarity and adds examples  
+3. **🔍 Validator** - Fact-checks everything for accuracy
+4. **🎨 Curator** - Polishes the final response
+
+### Basic Usage
 ```bash
-# Search across all conversations
+# Just ask naturally - no special prompting needed
+hive consensus "Explain REST APIs"
+hive consensus "How to center a div with CSS?"
+hive consensus "What's the difference between var and let in JavaScript?"
+
+# Continue conversations naturally
+hive consensus "Based on that, how do I handle errors in APIs?"
+```
+
+### Advanced Options
+```bash
+# Use a specific quality profile
+hive consensus "Complex database question" --profile high_quality
+
+# Continue from a previous conversation ID
+hive consensus "More details please" --conversation-id abc123
+```
+
+---
+
+## 📊 Advanced Analytics & Insights
+
+**What it does:** Tracks how you use AI, what it costs, and gives smart recommendations.
+
+### View Your Analytics Dashboard
+```bash
+# Opens beautiful interactive menu
+hive analytics menu
+```
+
+### Quick Analytics Commands
+```bash
+# See model performance rankings
+hive analytics performance
+
+# Check your usage patterns  
+hive analytics usage
+
+# Get smart recommendations
+hive analytics insights
+
+# Export data for spreadsheets
+hive analytics export json
+```
+
+### Understanding Your Analytics
+
+**Usage Tracking** - See which AI models you use most
+**Cost Analysis** - Track spending and get budget alerts
+**Performance Scores** - Find the best models for your needs
+**Smart Insights** - AI recommendations for optimization
+
+**Example Insight:** "Your usage increased 23% this week. Consider upgrading to Premium for better cost efficiency."
+
+---
+
+## 🏆 Performance Benchmarking
+
+**What it does:** Tests AI models automatically so you know which ones work best.
+
+### View Model Rankings
+```bash
+# See the leaderboard
+hive benchmark leaderboard
+
+# Test a specific model
+hive benchmark run gpt-4 openai
+
+# View all test categories
+hive benchmark tests
+```
+
+### Understanding Benchmarks
+
+**Test Categories:**
+- 🧠 **Reasoning** - Logic and problem-solving
+- 💻 **Coding** - Programming tasks
+- ✍️ **Writing** - Content creation
+- 🔢 **Math** - Mathematical problems
+- 🔬 **Science** - Technical knowledge
+- 🎨 **Creative** - Creative tasks
+- 📚 **Knowledge** - Factual information
+- 🌐 **Language** - Translation and language tasks
+
+**Performance Score:** Combines accuracy, speed, and cost-effectiveness (0-100 scale)
+
+---
+
+## 🛡️ Automatic Failover & Redundancy
+
+**What it does:** Automatically switches to backup AI providers when one fails, so you never lose access.
+
+### Check System Health
+```bash
+# See which providers are working
+hive failover status
+
+# Test a specific provider
+hive failover health openai
+
+# Start automatic monitoring
+hive failover start
+```
+
+### Understanding Failover
+
+**Health Monitoring** - Continuously checks if AI providers are working
+**Automatic Switching** - Instantly switches to backup when problems detected
+**Zero Downtime** - Your work continues uninterrupted
+
+**Example:** If OpenAI goes down, automatically switches to Anthropic without you noticing.
+
+---
+
+## 💰 Cost Intelligence & Budget Management
+
+**What it does:** Tracks AI spending, sets budgets, and alerts you before overspending.
+
+### Cost Management Commands
+```bash
+# View interactive cost dashboard
+hive cost menu
+
+# Quick cost analysis
+hive cost analysis
+
+# Set a monthly budget
+hive cost budget 50
+
+# Export cost data
+hive cost export
+```
+
+### Understanding Costs
+
+**Cost Tracking** - See exactly what each AI query costs
+**Budget Alerts** - Get warned before hitting limits  
+**Spending Projections** - Predict future costs
+**Optimization Tips** - Save money with smarter model choices
+
+**Example Budget Alert:** "You've used 80% of your monthly budget. Consider switching to cost-effective models."
+
+---
+
+## 🔍 Model Discovery & Search
+
+**What it does:** Finds and compares AI models from 55+ providers automatically.
+
+### Search & Discovery
+```bash
+# Search for models
+hive models search "coding"
+
+# Compare specific models
+hive models compare gpt-4 claude-3-opus
+
+# Discover new providers
+hive discover providers
+
+# Update model database
+hive models update
+```
+
+### Understanding Model Discovery
+
+**Auto-Discovery** - Finds 319+ models automatically
+**Smart Search** - Filter by capability, cost, speed
+**Real-time Updates** - Always current with latest models
+**Easy Comparison** - Side-by-side feature comparison
+
+---
+
+## 🎨 Rich Terminal Experience
+
+**What it does:** Makes the command line beautiful and easy to use with colors, tables, and menus.
+
+### Interactive Menus
+```bash
+# Main menu - explore everything
+hive
+
+# Feature-specific menus
+hive analytics menu
+hive benchmark menu  
+hive cost menu
+hive failover menu
+```
+
+### Visual Features
+
+**Colorized Output** - Important info highlighted
+**Beautiful Tables** - Data shown clearly
+**Progress Bars** - See what's happening
+**Interactive Menus** - Point and click in terminal
+**Real-time Status** - Live updates on operations
+
+---
+
+## 👤 Smart Profile Management
+
+**What it does:** Pre-configured setups for different use cases (coding, writing, cost-saving).
+
+### Profile Commands
+```bash
+# List available profiles
+hive profiles list
+
+# Use a specific profile
+hive profiles use cost_effective
+
+# Create custom profile
+hive profiles create my_profile
+
+# View profile details
+hive profiles show high_quality
+```
+
+### Built-in Profiles
+
+**🎯 high_quality** - Best accuracy, higher cost
+**💰 cost_effective** - Good results, lower cost  
+**⚡ balanced** - Good balance of quality and cost
+**🚀 fast** - Quick responses, decent quality
+
+---
+
+## 📚 Knowledge Base & Memory
+
+**What it does:** Remembers everything from your conversations and learns over time.
+
+### Query Your Knowledge
+```bash
+# Search past conversations
 hive query search "React hooks"
 
-# Get a specific conversation with all stage outputs
-hive query conversation <conversation-id>
-
 # List recent conversations
-hive query list --limit 10
+hive query list
 
-# Search curator outputs (source of truth)
-hive query truth "authentication patterns"
+# Get specific conversation
+hive query conversation abc123
 
-# Get all stage outputs for analysis
-hive query stages <conversation-id>
+# Export conversation data
+hive query export abc123
 ```
 
-### Configuration Management
+### Understanding Memory
 
-#### Provider Configuration
+**Unlimited Context** - No token limits like other AI tools
+**Cross-Conversation Learning** - Builds knowledge over time
+**Thematic Memory** - Connects related conversations
+**Source of Truth** - Verified information stored permanently
 
+---
+
+## 🔧 Configuration & Setup
+
+### Provider Setup
 ```bash
-# Add providers with API keys
-hive configure-provider "OpenAI" "sk-your-api-key"
-hive configure-provider "Anthropic" "sk-ant-your-key"
-hive configure-provider "Google" "your-gemini-key"
-hive configure-provider "Grok" "xai-your-key"
+# Add AI providers (you need API keys)
+hive configure-provider OpenAI sk-your-key
+hive configure-provider Anthropic sk-ant-your-key
 
-# List all configured providers
-hive list-providers
-
-# Test provider connections
+# Test connections
 hive test-providers
+
+# List configured providers
+hive list-providers
 ```
 
-#### Model Management
-
+### Pipeline Configuration
 ```bash
-# List available models for a provider
-hive list-models --provider "OpenAI"
-
-# Add custom models
-hive add-custom-model "OpenAI" "gpt-4-turbo-preview" "Technical" "8192"
-
-# Update model registry
-hive update-model-registry
-```
-
-#### Pipeline Profiles
-
-Create custom pipelines for different use cases:
-
-```bash
-# Create a high-quality profile
-hive configure-pipeline "high_quality" \
+# Create custom pipeline
+hive configure-pipeline my_pipeline \
   --generator "OpenAI:gpt-4:0.7" \
   --refiner "Anthropic:claude-3-opus:0.5" \
-  --validator "Google:gemini-1.5-pro:0.3" \
+  --validator "Google:gemini-pro:0.3" \
   --curator "OpenAI:gpt-4:0.2"
 
-# Create a fast profile
-hive configure-pipeline "fast" \
-  --generator "Gemini:gemini-1.5-flash:0.7" \
-  --refiner "Grok:grok-3-beta:0.5" \
-  --validator "Gemini:gemini-1.5-flash:0.3" \
-  --curator "Grok:grok-3-beta:0.2"
-
-# Set default profile
-hive set-default-profile "high_quality"
-
-# List all profiles
-hive list-pipeline-profiles
+# Set as default
+hive set-default-profile my_pipeline
 ```
 
-## Advanced Features
+---
 
-### Cross-Conversation Learning
+## 🎯 Best Practices for Beginners
 
-The system automatically learns from all past conversations:
-
+### 1. Start Simple
 ```bash
-# Ask about a topic you've discussed before
-hive consensus "Can you elaborate on the React Context API we discussed?"
-
-# The system will:
-# 1. Recognize the thematic connection
-# 2. Retrieve relevant source-of-truth knowledge
-# 3. Build upon previous curator outputs
-# 4. Maintain consistency across conversations
+# Just ask naturally - no special formatting
+hive consensus "How do I learn programming?"
 ```
 
-### Temporal Continuity
-
-Continue conversations naturally:
-
+### 2. Use Interactive Menus
 ```bash
-# Start a conversation
-hive consensus "I'm building a Node.js API with Express"
-
-# Later, continue it
-hive consensus "Based on that structure, how should I add authentication?"
-
-# The system maintains context and continuity
+# When in doubt, use menus to explore
+hive analytics menu
+hive benchmark menu
 ```
 
-### Knowledge Base Analysis
-
+### 3. Monitor Your Costs
 ```bash
-# Analyze how knowledge evolves over time
-hive query evolution "machine learning"
+# Check spending regularly
+hive cost analysis
 
-# Find all conversations on a topic
-hive query topic "react hooks"
-
-# Export stage outputs for analysis
-hive query export <conversation-id> --format json
+# Set budgets to avoid surprises
+hive cost budget 25
 ```
 
-## Database Schema
-
-All conversation data is stored in `~/.hive-ai/hive-ai-knowledge.db`:
-
-- **conversations**: Metadata and final answers
-- **stage_outputs**: Complete output from all 4 stages
-- **knowledge_base**: Curator outputs as source of truth
-- **conversation_topics**: Extracted topics for thematic retrieval
-- **conversation_keywords**: Keywords for enhanced search
-
-## Testing Your Setup
-
-Use our comprehensive testing tools:
-
+### 4. Let Failover Protect You
 ```bash
-# Test single conversation quality
-hive test consensus "Complex technical question"
-
-# Test cross-conversation knowledge
-hive test knowledge-retrieval
-
-# Test thematic memory
-hive test thematic-memory
-
-# Verify pipeline stages
-node verify-consensus-pipeline.cjs
+# Start monitoring for automatic protection
+hive failover start
 ```
 
-## Best Practices
-
-1. **Just Ask Naturally**: No need to craft perfect prompts - the system handles optimization
-2. **Be Specific**: Include context and examples in your questions
-3. **Use Continuity**: Reference previous conversations for building knowledge
-4. **Check Your Knowledge**: Use query tools to explore what the system has learned
-5. **Profile Selection**: Use appropriate profiles for your use case (quality vs speed)
-
-## MCP Tool Integration
-
-For IDE users, the database query tool is available as an MCP tool:
-
-```typescript
-// Available operations
-{
-  tool: "database_query",
-  operation: "search_conversations",    // Search by content
-  operation: "get_conversation",       // Get specific conversation
-  operation: "list_all_conversations", // List recent conversations
-  operation: "search_source_of_truth", // Search curator outputs
-  operation: "get_knowledge",          // Get knowledge for topic
-  operation: "get_stage_outputs"       // Get all stages for conversation
-}
-```
-
-## Troubleshooting
-
-### Token Limits
-If you see truncated responses, the generator hit token limits. The refiner will expand the content.
-
-### Identical Stage Outputs
-If validator output matches refiner output, this indicates the refiner output is already optimal - not an error!
-
-### Knowledge Not Retrieved
-Ensure you have previous conversations on the topic. Knowledge retrieval prioritizes:
-1. Last 24 hours
-2. Last 7 days  
-3. All historical data
-
-## Environment Variables
-
+### 5. Learn from Analytics
 ```bash
-# Optional: Set default profile
-export HIVE_DEFAULT_PROFILE="high_quality"
+# Get smart recommendations
+hive analytics insights
 
-# Optional: Set custom database location
-export HIVE_DB_PATH="/custom/path/hive-knowledge.db"
-
-# Optional: Enable debug logging
-export HIVE_DEBUG="true"
+# See which models work best for you
+hive benchmark leaderboard
 ```
 
-## Getting Help
+---
 
+## 🆘 Common Questions & Troubleshooting
+
+### "I got an error about API keys"
 ```bash
-# Show help for any command
-hive --help
-hive consensus --help
-hive query --help
+# Check if providers are configured correctly
+hive test-providers
 
-# Report issues
-https://github.com/hivetechs/hive-ai/issues
+# Reconfigure if needed
+hive configure-provider OpenAI your-new-key
 ```
 
-Remember: You no longer need to be a prompt engineer. Just ask your questions naturally, and hive-tools handles the rest through automatic prompt optimization and multi-stage consensus processing.
+### "The response seems short"
+```bash
+# Try a higher quality profile
+hive consensus "your question" --profile high_quality
+
+# Or ask for more detail
+hive consensus "Can you elaborate on that?"
+```
+
+### "I want to see my usage"
+```bash
+# Check analytics dashboard
+hive analytics menu
+
+# Or quick usage view
+hive analytics usage
+```
+
+### "How do I save money?"
+```bash
+# Get cost optimization tips
+hive analytics insights
+
+# Use cost-effective profile
+hive profiles use cost_effective
+```
+
+---
+
+## 🔗 Related Links
+
+- **[MCP Tools Guide](/documentation/mcp-tool-guide)** - All 41 tools for IDE integration
+- **[Features Overview](/features)** - See all platform capabilities
+- **[Support](/support)** - Get help when you need it
+- **[Pricing](/pricing)** - Choose the right plan
+
+---
+
+## 💡 Remember
+
+- **No prompt engineering needed** - Just ask naturally
+- **Everything is remembered** - Build knowledge over time  
+- **Stay protected** - Failover keeps you running
+- **Monitor costs** - Analytics help optimize spending
+- **Use menus** - When in doubt, explore with interactive menus
+
+**You're now ready to use the complete hive-tools platform!** Start with simple questions and explore the advanced features as you become more comfortable.

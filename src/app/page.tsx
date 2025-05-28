@@ -87,14 +87,14 @@ export default function Home() {
                 </p>
                 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                  Get AI answers you can
-                  <span className="text-primary block bg-gradient-to-r from-primary to-accent-blue bg-clip-text text-transparent">actually trust</span>
+                  Why trust one AI when you can
+                  <span className="text-primary block bg-gradient-to-r from-primary to-accent-blue bg-clip-text text-transparent">trust them all?</span>
                 </h1>
                 
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  hive-tools eliminates AI hallucinations through multi-model consensus, 
-                  unlimited context awareness, and long-term memory — delivering code you can actually trust.
-                  No prompt engineering required: our 4-stage pipeline automatically optimizes every query for the best results.
+                  The world's first AI consensus platform that eliminates hallucinations, transcends context limits, and optimizes 
+                  cost & performance across 319+ models from 55+ providers. Our 4-stage consensus pipeline delivers answers you can 
+                  actually trust for mission-critical work.
                 </p>
                 
                 <div className="flex flex-wrap gap-4 mb-6">
@@ -162,10 +162,10 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-xl md:text-2xl font-bold text-white">
-                  Access 319+ AI Models Automatically
+                  World's First AI Consensus Platform
                 </h3>
                 <p className="text-base text-white/85 mt-1">
-                  Zero research, zero maintenance — auto-discovery from 55+ providers
+                  319+ models, consensus intelligence, cost optimization, performance benchmarking & automatic failover
                 </p>
               </div>
             </div>
@@ -212,11 +212,11 @@ export default function Home() {
         <div className="container-custom relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Built for developers who demand accuracy
+              Four Pillars of AI Intelligence
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our consensus pipeline eliminates hallucinations, provides unlimited context, 
-              and maintains long-term memory for responses you can trust.
+              The only platform that combines consensus validation, universal model access, real-time optimization, 
+              and intelligent cost management — delivering AI you can actually trust for production applications.
             </p>
           </div>
 
@@ -231,15 +231,15 @@ export default function Home() {
               </div>
               
               <h3 className="text-xl font-semibold text-white mb-3">
-                Eliminates AI Hallucinations
+                Consensus Intelligence
               </h3>
               
               <p className="text-gray-300 mb-6">
-                Our 4-stage verification process through multiple AI models 
-                eliminates false or made-up code suggestions.
+                Multi-AI validation through our 4-stage consensus pipeline eliminates 
+                hallucinations and delivers truth you can trust for mission-critical decisions.
               </p>
               
-              <a href="/features#hallucination-prevention" className="text-primary font-medium inline-flex items-center group">
+              <a href="/documentation/consensus-pipeline" className="text-primary font-medium inline-flex items-center group">
                 Learn more 
                 <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </a>
@@ -255,15 +255,15 @@ export default function Home() {
               </div>
               
               <h3 className="text-xl font-semibold text-white mb-3">
-                Production-Ready Code
+                Universal Model Access
               </h3>
               
               <p className="text-gray-300 mb-6">
-                Get code that follows best practices, includes error handling, 
-                and is optimized for performance.
+                Instantly access 319+ models from 55+ providers with intelligent selection, 
+                automatic failover, and real-time performance optimization.
               </p>
               
-              <a href="/features#production-ready-code" className="text-primary font-medium inline-flex items-center group">
+              <a href="/documentation/model-discovery" className="text-primary font-medium inline-flex items-center group">
                 Learn more 
                 <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </a>
@@ -279,15 +279,15 @@ export default function Home() {
               </div>
               
               <h3 className="text-xl font-semibold text-white mb-3">
-                Unlimited Context & Memory
+                Cost & Performance Intelligence
               </h3>
               
               <p className="text-gray-300 mb-6">
-                No token limits or context restrictions. Long-term thematic storage 
-                remembers your project patterns and coding preferences.
+                Automatic cost optimization without quality compromise. Real-time analytics, 
+                usage insights, and intelligent provider switching maximize your AI ROI.
               </p>
               
-              <a href="/features#unlimited-memory" className="text-primary font-medium inline-flex items-center group">
+              <a href="/documentation/cost-intelligence" className="text-primary font-medium inline-flex items-center group">
                 Learn more 
                 <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </a>
@@ -384,13 +384,13 @@ export default function Home() {
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">Eliminates hallucinations</span>
+                  <span className="ml-2 text-gray-300 text-sm">Consensus intelligence</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">Unlimited context</span>
+                  <span className="ml-2 text-gray-300 text-sm">Unlimited context & memory</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -452,13 +452,13 @@ export default function Home() {
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">Eliminates hallucinations</span>
+                  <span className="ml-2 text-gray-300 text-sm">Consensus intelligence</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">Unlimited context</span>
+                  <span className="ml-2 text-gray-300 text-sm">Unlimited context & memory</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -524,13 +524,13 @@ export default function Home() {
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">Eliminates hallucinations</span>
+                  <span className="ml-2 text-gray-300 text-sm">Consensus intelligence</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">Unlimited context</span>
+                  <span className="ml-2 text-gray-300 text-sm">Unlimited context & memory</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -592,13 +592,13 @@ export default function Home() {
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">Eliminates hallucinations</span>
+                  <span className="ml-2 text-gray-300 text-sm">Consensus intelligence</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">Unlimited context</span>
+                  <span className="ml-2 text-gray-300 text-sm">Unlimited context & memory</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -715,7 +715,7 @@ export default function Home() {
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                   </tr>
                   <tr className="border-t border-dark-600">
-                    <td className="p-6 text-gray-300 font-medium">Eliminates AI hallucinations</td>
+                    <td className="p-6 text-gray-300 font-medium">Consensus intelligence (eliminates hallucinations)</td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
@@ -817,11 +817,11 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to ship better code?
+                Ready for AI you can actually trust?
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Start using hive-tools to write more reliable, 
-                production-ready code with AI consensus.
+                Join developers who've eliminated AI hallucinations and optimized their costs 
+                with the world's first consensus-powered AI platform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
