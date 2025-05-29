@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 
-export const runtime = 'edge';
+// Temporarily disable edge runtime
+// export const runtime = 'edge';
 
 export async function GET() {
   try {
