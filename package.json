@@ -11,7 +11,8 @@
     "test-deploy": "./scripts/test-before-deploy.sh",
     "typecheck": "tsc --noEmit",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy"
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cloudflare:build": "opennextjs-cloudflare build"
   },
   "dependencies": {
     "@auth/mongodb-adapter": "^3.9.1",
