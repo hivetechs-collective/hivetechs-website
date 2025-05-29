@@ -4,7 +4,8 @@ export const runtime = 'edge';
 
 export async function POST(request: NextRequest) {
   try {
-    const { plan, email, payment } = await request.json()
+    const body = await request.json();
+    const { plan, email, payment } = body as { plan: string; email: string; payment: any };
 
     // DEMO MODE: Check if using test card
     if (payment.cardNumber === '4242424242424242') {
@@ -77,7 +78,7 @@ export async function POST(request: NextRequest) {
       const error = await response.json()
       console.error('Paddle transaction error:', error)
       return NextResponse.json(
-        { error: error.error?.detail || 'Payment failed' },
+        { error: (error as any).error?.detail || 'Payment failed' },
         { status: 400 }
       )
     }
@@ -87,9 +88,9 @@ export async function POST(request: NextRequest) {
     // Return transaction details
     return NextResponse.json({
       success: true,
-      transactionId: transaction.data.id,
-      subscriptionId: transaction.data.subscription_id,
-      status: transaction.data.status
+      transactionId: (transaction as any).data.id,
+      subscriptionId: (transaction as any).data.subscription_id,
+      status: (transaction as any).data.status
     })
 
   } catch (error) {

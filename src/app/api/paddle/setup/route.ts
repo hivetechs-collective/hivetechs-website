@@ -16,7 +16,7 @@ export async function POST() {
       headers
     })
     const existingData = await existingResponse.json()
-    const existingProducts = existingData.data || []
+    const existingProducts = (existingData as any).data || []
     
     console.log('Existing products:', existingProducts.map((p: any) => p.name))
 

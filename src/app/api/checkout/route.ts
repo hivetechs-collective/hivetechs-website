@@ -8,7 +8,8 @@ const USE_PADDLE = process.env.USE_PADDLE === 'true'
 
 export async function POST(request: NextRequest) {
   try {
-    const { plan, email } = await request.json()
+    const body = await request.json();
+    const { plan, email } = body as { plan: string; email: string };
 
     // Use Paddle if enabled
     if (USE_PADDLE) {
@@ -54,7 +55,7 @@ async function handlePaddleCheckout(plan: string, email: string | undefined, req
   })
 
   return NextResponse.json({ 
-    checkoutUrl: checkout.data.checkout_url,
+    checkoutUrl: (checkout as any).data.checkout_url,
     provider: 'paddle' 
   })
 }

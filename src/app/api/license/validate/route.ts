@@ -18,7 +18,8 @@ function getTierLimits(tier: string) {
 
 export async function POST(request: NextRequest) {
   try {
-    const { licenseKey } = await request.json();
+    const body = await request.json();
+    const { licenseKey } = body as { licenseKey: string };
     
     if (!licenseKey) {
       return NextResponse.json({ error: 'License key required' }, { status: 400 });

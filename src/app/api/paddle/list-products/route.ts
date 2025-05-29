@@ -21,7 +21,7 @@ export async function GET() {
     
     // Also get prices for each product
     const productsWithPrices = await Promise.all(
-      data.data.map(async (product: any) => {
+      (data as any).data.map(async (product: any) => {
         const priceResponse = await fetch(`https://api.paddle.com/prices?product_id=${product.id}`, {
           headers: {
             'Authorization': `Bearer ${process.env.PADDLE_API_KEY}`,
@@ -35,7 +35,7 @@ export async function GET() {
           id: product.id,
           name: product.name,
           description: product.description,
-          prices: priceData.data?.map((price: any) => ({
+          prices: (priceData as any).data?.map((price: any) => ({
             id: price.id,
             amount: price.unit_price.amount,
             currency: price.unit_price.currency_code,

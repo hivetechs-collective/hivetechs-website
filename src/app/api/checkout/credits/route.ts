@@ -4,7 +4,8 @@ export const runtime = 'edge';
 
 export async function POST(request: NextRequest) {
   try {
-    const { credits } = await request.json();
+    const body = await request.json();
+    const { credits } = body as { credits: string };
 
     // Map credit amounts to Gumroad product IDs
     const creditMap: Record<string, string> = {

@@ -4,6 +4,7 @@ export const runtime = 'edge';
 
 export async function POST(request: NextRequest) {
   try {
+    const body = await request.json();
     const { 
       licenseKey, 
       conversationsUsed = 1,
@@ -12,7 +13,15 @@ export async function POST(request: NextRequest) {
       questionHash,
       responseLength,
       processingTime
-    } = await request.json();
+    } = body as { 
+      licenseKey: string;
+      conversationsUsed?: number;
+      conversationId?: string;
+      installationId?: string;
+      questionHash?: string;
+      responseLength?: number;
+      processingTime?: number;
+    };
     
     if (!licenseKey) {
       return NextResponse.json({ error: 'License key required' }, { status: 400 });
