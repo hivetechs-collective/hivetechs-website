@@ -2,45 +2,83 @@
 
 Get up and running with hive-tools in **under 5 minutes**! This guide covers the essentials for new users.
 
+> **🚧 Early Access Notice:** hive-tools is currently in early access. Installation instructions will be updated when public npm registry access is available.
+
+> **💡 Just Purchased?** If you arrived here after purchasing a subscription, welcome! Follow the steps below to get started.
+
 ## 🚀 Installation
 
-### 1. Install hive-tools
-Open your terminal and run:
+### Option 1: Early Access Installation (Current)
 ```bash
+# Clone the repository
+git clone https://github.com/hivetechs/hive-ai.git
+cd hive-ai
+
+# Install dependencies
+npm install
+
+# Link for global use
+npm link
+```
+
+### Option 2: NPM Installation (Coming Soon)
+```bash
+# This will be available once we publish to npm registry
 npm install -g @hivetechs/hive-ai
 ```
 
-### 2. Get Your License Key
-1. Visit **[store.hivetechs.io](https://store.hivetechs.io)**
-2. Choose a plan (**Free plan available!**)
-3. Copy your license key
+## ⚡ First-Time Setup
 
-### 3. Configure Your License
-Replace `YOUR_LICENSE_KEY` with your actual key:
-```bash
-hive configure --api-key YOUR_LICENSE_KEY
-```
+### Run the Setup Wizard
+The setup wizard is your **best first step** - it handles everything automatically:
 
-### 4. Run Setup Wizard
-For the best first-time experience:
 ```bash
+# Start the interactive setup wizard
 hive setup wizard
 ```
 
-## ✅ Verify Installation
+The wizard will guide you through:
+1. **License Key** - Optional for early access users
+2. **AI Provider Setup** - Configure OpenAI, Anthropic, or other providers
+3. **Budget Limits** - Protect yourself from unexpected costs
+4. **Default Profile** - Optimize for your use case
+5. **Quick Test** - Verify everything works
 
-Test that everything is working:
+### Quick Setup Option
+For the fastest setup:
 ```bash
+# Run quick setup (5 minutes)
+hive setup quick
+```
+
+## ✨ Your First Commands
+
+Once setup is complete, try these:
+
+```bash
+# Open the main menu - great starting point!
+hive
+
 # Ask your first question
 hive consensus "What is React?"
 
-# Check system status
-hive test-providers
+# View the interactive dashboard
+hive dashboard
+
+# Check your configuration
+hive config show
 ```
 
-## 🎯 First Steps
+## 🎯 Essential First Steps
 
-### Basic Usage
+### 1. Explore the Main Menu
+The easiest way to discover features:
+```bash
+hive
+```
+Navigate with arrow keys, select with Enter.
+
+### 2. Try Basic Queries
 ```bash
 # Ask questions naturally - no special formatting needed
 hive consensus "How do I center a div in CSS?"
@@ -48,75 +86,84 @@ hive consensus "Explain async/await in JavaScript"
 hive consensus "What's the difference between let and const?"
 ```
 
-### Explore Features
+### 3. Monitor Your Usage
 ```bash
-# Open the main menu
-hive
-
-# View the interactive dashboard
+# Real-time dashboard
 hive dashboard
 
-# Check analytics
+# Check costs
+hive cost summary
+
+# View analytics
 hive analytics menu
 ```
 
-## 🔧 Essential Configuration
+## 🔑 License & Access
 
-### Add AI Provider Keys (Optional)
-If you have your own API keys:
+### Early Access Users
+During early access, you can use hive-tools with:
+- Your own AI provider API keys (OpenAI, Anthropic, etc.)
+- Community features and basic analytics
+- All 41 MCP tools
+
+### License Key (Coming Soon)
+When our store launches, license keys will unlock:
+- Managed AI access without personal API keys
+- Advanced analytics and insights
+- Priority support
+- Commercial usage rights
+
+> **Note:** Store integration with Paddle is pending. See our [Development Roadmap](/documentation/roadmap) for details.
+
+## 🛠️ Manual Configuration
+
+If you prefer manual setup over the wizard:
+
+### Add AI Providers
 ```bash
-# OpenAI
-hive configure-provider OpenAI sk-your-openai-key
-
-# Anthropic (Claude)
-hive configure-provider Anthropic sk-ant-your-anthropic-key
+# Add providers one by one
+hive provider configure openai YOUR_OPENAI_KEY
+hive provider configure anthropic YOUR_ANTHROPIC_KEY
 
 # Test connections
 hive test-providers
 ```
 
-### Set Your Budget
-Protect yourself from unexpected costs:
+### Set Budget Limits
 ```bash
-# Set a monthly budget (in USD)
-hive cost budget 25
+# Daily limit
+hive budget config --type daily --limit 10.00
 
-# Enable monitoring
-hive monitor start
+# Monthly limit
+hive budget config --type monthly --limit 100.00
+
+# Enable alerts
+hive budget alerts --desktop
 ```
 
-### Choose a Profile
-Select based on your needs:
-```bash
-# For best quality
-hive profiles use high_quality
-
-# For cost savings
-hive profiles use cost_effective
-
-# View all profiles
-hive profiles list
-```
-
-## 🆘 Common Issues
+## 🆘 Troubleshooting
 
 ### "Command not found"
+If `hive` command isn't recognized:
 ```bash
-# Check if npm is installed
+# For early access installation
+cd /path/to/hive-ai
+npm link
+
+# Verify Node.js is installed
+node --version
 npm --version
 
-# If not, install Node.js from nodejs.org
-# Then reinstall hive-tools
-npm install -g @hivetechs/hive-ai
+# If not, install from nodejs.org first
 ```
 
-### "Invalid API key"
+### "No API providers configured"
 ```bash
-# Reconfigure your license
-hive configure --api-key YOUR_LICENSE_KEY
+# Run the setup wizard
+hive setup wizard
 
-# Check configuration
-hive config show
+# Or add a provider manually
+hive provider configure openai YOUR_KEY
 ```
 
 ### "Provider connection failed"
@@ -124,17 +171,23 @@ hive config show
 # Test all providers
 hive test-providers
 
-# Check failover status
+# Check failover is running
 hive failover status
+
+# Start failover if needed
+hive failover start
 ```
 
-### "Responses are too short/long"
+### "Budget exceeded" warnings
 ```bash
-# Use a different profile
-hive profiles use high_quality
+# Check current spending
+hive cost summary
 
-# Or specify profile per request
-hive consensus "your question" --profile high_quality
+# Adjust limits
+hive budget config --type daily --limit 25.00
+
+# Use cost-effective profile
+hive profiles use cost_effective
 ```
 
 ## 📚 What's Next?
@@ -165,4 +218,11 @@ hive consensus "your question" --profile high_quality
 
 ---
 
-**Ready to go?** Start with `hive consensus "your first question"` and explore from there!
+**Ready to go?** Start with `hive` to open the main menu and explore from there!
+
+## 🚧 Early Access Information
+
+- **Installation**: Currently via GitHub clone (npm coming soon)
+- **License Keys**: Use your own API keys during early access
+- **Store**: Paddle integration pending - [View Roadmap](/documentation/roadmap)
+- **Support**: Email support@hivetechs.io for early access help

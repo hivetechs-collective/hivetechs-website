@@ -101,11 +101,6 @@ export default function Home() {
                   <Button size="lg" onClick={() => handleSubscribe('basic')} className="bg-gradient-to-r from-primary to-accent-blue hover:from-primary-light hover:to-accent-blue transform hover:scale-105 transition-all shadow-lg shadow-primary/25 animate-pulse">
                     Start free trial
                   </Button>
-                  <Link href="/documentation/quick-start">
-                    <Button size="lg" variant="secondary" className="bg-dark-700 hover:bg-dark-600 text-white border border-primary/20 hover:border-primary/40 transform hover:scale-105 transition-all">
-                      Quick Start Guide →
-                    </Button>
-                  </Link>
                 </div>
                 
                 <p className="text-sm text-gray-400">
@@ -321,6 +316,17 @@ export default function Home() {
                 <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </a>
             </motion.div>
+          </div>
+          
+          {/* Quick Start CTA after understanding the pillars */}
+          <div className="text-center mt-12">
+            <p className="text-gray-300 mb-4">Ready to experience the power of consensus AI?</p>
+            <Link href="/documentation/quick-start">
+              <Button size="lg" variant="secondary" className="bg-dark-700 hover:bg-dark-600 text-white border border-primary/20 hover:border-primary/40 transform hover:scale-105 transition-all">
+                <Zap className="w-5 h-5 mr-2" />
+                Quick Start Guide
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -821,6 +827,16 @@ export default function Home() {
                 >
                   Start free
                 </Button>
+              </div>
+              
+              {/* Quick Start option after comparing plans */}
+              <div className="mt-8 pt-8 border-t border-dark-600">
+                <p className="text-gray-400 mb-3">Already have a plan or want to try with your own API keys?</p>
+                <Link href="/documentation/quick-start">
+                  <Button variant="ghost" className="text-primary hover:text-primary-400">
+                    View Quick Start Guide →
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

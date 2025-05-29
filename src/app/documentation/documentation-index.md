@@ -140,14 +140,26 @@ Welcome to the complete hive-tools documentation. Our platform provides revoluti
 - Real-world examples and use cases
 - Integration patterns
 
+## 📅 Coming Soon
+
+### [🚀 Development Roadmap](/documentation/roadmap)
+**Track Our Progress** - See what's coming next for hive-tools and when to expect new features.
+- NPM registry publication timeline
+- Paddle store integration status
+- Upcoming features and improvements
+- Enterprise capabilities roadmap
+
 ## 🚀 Quick Start
 
 ```bash
-# Install hive-tools
-npm install -g @hivetechs/hive-ai
+# Early Access Installation
+git clone https://github.com/hivetechs/hive-ai.git
+cd hive-ai
+npm install
+npm link
 
-# Configure your license
-hive configure --api-key YOUR_LICENSE_KEY
+# Run the setup wizard
+hive setup wizard
 
 # Ask a question - no prompt engineering needed!
 hive consensus "How do I implement authentication?"
@@ -158,6 +170,8 @@ hive analytics  # Analytics dashboard
 hive benchmark  # Performance testing
 hive cost      # Cost tracking
 ```
+
+> **Early Access Note:** NPM package coming soon. See [Quick Start Guide](/documentation/quick-start) for detailed setup instructions.
 
 ## 🎯 Getting Started Paths
 

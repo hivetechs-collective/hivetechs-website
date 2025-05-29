@@ -211,6 +211,13 @@ export default function Pricing() {
                 Start with a 7-day unlimited trial with full access to all features. 
                 No credit card required. Upgrade, downgrade, or cancel anytime.
               </p>
+              <div className="flex justify-center gap-4">
+                <Link href="/documentation/quick-start">
+                  <Button variant="secondary" className="bg-dark-700 hover:bg-dark-600 text-white border border-primary/20">
+                    Quick Start Guide →
+                  </Button>
+                </Link>
+              </div>
             </motion.div>
           </div>
         </div>
