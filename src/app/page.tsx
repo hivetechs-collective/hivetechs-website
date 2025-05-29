@@ -92,9 +92,9 @@ export default function Home() {
                 </h1>
                 
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  The world's first AI consensus platform that eliminates hallucinations, transcends context limits, and optimizes 
-                  cost & performance across 319+ models from 55+ providers. Our 4-stage consensus pipeline delivers answers you can 
-                  actually trust for mission-critical work.
+                  The world's first AI consensus platform with interactive dashboards, real-time monitoring, and export capabilities. 
+                  Eliminates hallucinations, optimizes costs across 319+ models from 55+ providers, and provides intelligent 
+                  recommendations you can trust for mission-critical work.
                 </p>
                 
                 <div className="flex flex-wrap gap-4 mb-6">
@@ -165,7 +165,7 @@ export default function Home() {
                   World's First AI Consensus Platform
                 </h3>
                 <p className="text-base text-white/85 mt-1">
-                  319+ models, consensus intelligence, cost optimization, performance benchmarking & automatic failover
+                  Interactive dashboards, real-time monitoring, export capabilities, AI recommendations & cost visualization
                 </p>
               </div>
             </div>
@@ -220,7 +220,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="feature-grid">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
             {/* Feature 1 */}
             <motion.div 
               className="bg-dark-700 rounded-2xl border border-dark-600 p-8 card-hover smooth-transition"
@@ -288,6 +288,30 @@ export default function Home() {
               </p>
               
               <a href="/documentation/cost-intelligence" className="text-primary font-medium inline-flex items-center group">
+                Learn more 
+                <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </motion.div>
+
+            {/* Feature 4 - NEW */}
+            <motion.div 
+              className="bg-dark-700 rounded-2xl border border-dark-600 p-8 card-hover smooth-transition"
+              whileHover={{ y: -5 }}
+            >
+              <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-6">
+                <Star className="w-6 h-6 text-primary" />
+              </div>
+              
+              <h3 className="text-xl font-semibold text-white mb-3">
+                Interactive Dashboards
+              </h3>
+              
+              <p className="text-gray-300 mb-6">
+                Real-time monitoring, cost visualization, and AI-powered recommendations 
+                with interactive dashboards and export capabilities for complete insights.
+              </p>
+              
+              <a href="/documentation/interactive-dashboard" className="text-primary font-medium inline-flex items-center group">
                 Learn more 
                 <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </a>

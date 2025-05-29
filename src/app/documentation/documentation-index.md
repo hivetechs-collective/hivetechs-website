@@ -4,6 +4,8 @@ Welcome to the complete hive-tools documentation. Our platform provides revoluti
 
 ## 📚 Core Features Documentation
 
+> **💡 Click any feature title below to access complete documentation and guides**
+
 ### [🧠 4-Stage Consensus Pipeline](/documentation/consensus-pipeline)
 **Eliminate AI Hallucinations** - Learn how our revolutionary 4-stage consensus system combines multiple AI models to deliver trustworthy, verified responses every time.
 - How consensus prevents hallucinations
@@ -50,6 +52,46 @@ Welcome to the complete hive-tools documentation. Our platform provides revoluti
 - Optimization strategies
 - Spending projections
 
+### [📊 Interactive Dashboard](/documentation/interactive-dashboard)
+**Real-time AI Operations Control Center** - Mission control for your AI usage with live monitoring, cost visualization, and intelligent insights.
+- Live usage monitoring and metrics
+- Budget tracking with visual progress bars
+- Performance analytics and alerts
+- Customizable layouts and themes
+- Export and sharing capabilities
+
+### [📤 Export & Integration Features](/documentation/export-integration)
+**Universal Data Export & Business Integration** - Export your AI data in multiple formats and integrate with existing business tools.
+- Multi-format exports (JSON, CSV, Excel, PDF, Markdown)
+- Scheduled automated exports
+- Email and cloud storage integration
+- API and webhook connectivity
+- Business intelligence tool integration
+
+### [🚨 Real-time Monitoring & Alerts](/documentation/real-time-monitoring)
+**Proactive AI System Monitoring** - Advanced monitoring with intelligent alerts, session management, and automated responses.
+- Multi-channel notifications (email, webhook, desktop)
+- Usage spike detection and analysis
+- Budget threshold monitoring
+- Performance degradation alerts
+- Automated monitoring sessions
+
+### [📈 Cost Visualization](/documentation/cost-visualization)
+**Advanced AI Cost Analytics** - Visual cost analysis with ASCII charts, trend analysis, and provider breakdowns.
+- Interactive ASCII charts (line, bar, area, pie)
+- Provider cost breakdowns and comparisons
+- Live cost tracking and projections
+- Efficiency analysis and optimization
+- Historical trend visualization
+
+### [🤖 AI-Powered Recommendations](/documentation/ai-recommendations)
+**Intelligent Model Selection Assistant** - AI-driven recommendations for optimal model selection based on your specific use cases.
+- Use case analysis and matching
+- Technical requirements assessment
+- Confidence scoring and risk analysis
+- Business constraints consideration
+- Performance vs cost optimization
+
 ### [🎨 Rich Terminal UI](/documentation/terminal-ui)
 **Beautiful Command-Line Experience** - Guide to our interactive terminal interface with menus, tables, and visualizations.
 - Interactive menu system
@@ -65,6 +107,8 @@ Welcome to the complete hive-tools documentation. Our platform provides revoluti
 - Profile switching
 
 ## 🛠️ Tool-Specific Documentation
+
+> **💡 Click any guide title below for comprehensive usage documentation**
 
 ### [CLI Tools Complete Guide](/documentation/cli-tools-guide)
 **Command-Line Interface** - Comprehensive guide to all CLI commands and features.
@@ -135,12 +179,14 @@ hive cost      # Cost tracking
 
 ## 🔥 What's New in v2.0
 
+- **Interactive Dashboards**: Real-time monitoring with live metrics and visualization
+- **Export & Integration**: Multi-format exports with business tool integration
+- **Advanced Monitoring**: Real-time alerts with session management
+- **Cost Visualization**: ASCII charts and advanced cost analytics
+- **AI Recommendations**: Intelligent model selection based on use cases
 - **Complete AI Platform**: 41 MCP tools beyond just consensus
 - **Advanced Analytics**: SQLite-based tracking with AI insights
 - **Performance Benchmarking**: 8-category testing for 319+ models
-- **Automatic Failover**: Zero-downtime provider switching
-- **Cost Intelligence**: Real-time tracking and optimization
-- **Rich Terminal UI**: Beautiful interactive interface
 
 ---
 

@@ -9,6 +9,11 @@ Welcome to hive-tools - your complete AI development platform! This guide covers
 - **Performance Benchmarking** - Compare AI models easily
 - **Automatic Failover** - Never lose AI access again
 - **Cost Intelligence** - Control your AI spending
+- **Interactive Dashboard** - Real-time monitoring and control center
+- **Export & Integration** - Professional reports and data sharing
+- **Real-time Monitoring** - Live alerts and usage tracking
+- **Cost Visualization** - ASCII charts and trend analysis
+- **AI-Powered Recommendations** - Smart model selection assistance
 - **Rich Terminal Experience** - Beautiful, easy-to-use menus
 
 ---
@@ -253,6 +258,317 @@ hive failover menu
 
 ---
 
+## 📊 Interactive Dashboard
+
+**What it does:** Real-time mission control for all your AI operations with live metrics, cost tracking, and customizable layouts.
+
+### Dashboard Commands
+```bash
+# Open interactive dashboard
+hive dashboard
+
+# Start live monitoring mode
+hive dashboard monitor
+
+# View usage metrics
+hive dashboard usage
+
+# Check cost overview
+hive dashboard costs
+
+# Monitor model performance
+hive dashboard performance
+
+# Customize dashboard layout
+hive dashboard layout custom
+```
+
+### Understanding the Dashboard
+
+**Live Metrics** - Real-time usage, costs, and performance data
+**Budget Tracking** - Visual budget progress and alerts
+**Model Performance** - Live comparison of model efficiency  
+**Session Management** - Track current and historical sessions
+**Custom Layouts** - Arrange metrics to fit your workflow
+
+**Example View:** See your current spending, top-performing models, and usage trends all in one live-updating display.
+
+---
+
+## 📤 Export & Integration Features
+
+**What it does:** Export AI data in multiple formats and integrate with business tools for professional reporting and data sharing.
+
+### Export Commands
+```bash
+# Interactive export wizard
+hive export menu
+
+# Export model comparisons
+hive export models --format csv
+hive export models --format pdf --type leaderboard
+
+# Export conversations  
+hive export conversations --format json --last 7d
+hive export conversations --format markdown --conversation-id abc123
+
+# Export analytics data
+hive export analytics --format excel --month current
+hive export analytics --format csv --timeframe week
+
+# Export cost reports
+hive export costs --format pdf --quarter current
+hive export costs --format json --detailed
+```
+
+### Advanced Export Features
+```bash
+# Scheduled exports
+hive export schedule --type analytics --monthly --format excel
+hive export schedule --type costs --weekly --email boss@company.com
+
+# Cloud storage integration
+hive export analytics --format csv --upload google-drive
+hive export costs --format pdf --upload dropbox
+
+# Custom export templates
+hive export template create monthly-report --type analytics --format excel
+hive export template use monthly-report
+```
+
+### Understanding Exports
+
+**Multiple Formats** - JSON, CSV, Excel, PDF, Markdown for any use case
+**Scheduled Automation** - Set up recurring reports automatically
+**Cloud Integration** - Direct upload to Google Drive, Dropbox, S3
+**Professional Reports** - Executive-ready PDFs with charts and insights
+**Business Tool Integration** - Import into Excel, BI tools, accounting software
+
+---
+
+## 🔔 Real-time Monitoring & Alerts
+
+**What it does:** Intelligent monitoring with multi-channel alerts, usage spike detection, and automated session management.
+
+### Monitoring Commands
+```bash
+# Start real-time monitoring
+hive monitor start
+
+# Check monitoring status
+hive monitor status
+
+# View active alerts
+hive monitor alerts
+
+# Configure alert thresholds
+hive monitor config --usage-threshold 100 --cost-threshold 10
+
+# Set up email notifications
+hive monitor email config --smtp-server smtp.gmail.com --username your@email.com
+
+# Configure Slack alerts
+hive monitor slack config --webhook-url https://hooks.slack.com/your-webhook
+
+# View session monitoring
+hive monitor sessions
+
+# Set budget alerts
+hive monitor budget --daily 5 --monthly 50 --alert-at 80
+```
+
+### Alert Types
+```bash
+# Usage spike alerts
+hive monitor alert add usage-spike --threshold 200 --period 1hour
+
+# Cost threshold alerts  
+hive monitor alert add cost-threshold --daily 5 --monthly 25
+
+# Model failure alerts
+hive monitor alert add model-failure --providers openai,anthropic
+
+# Session monitoring
+hive monitor alert add session-monitoring --max-duration 30min
+```
+
+### Understanding Monitoring
+
+**Multi-Channel Alerts** - Email, Slack, webhooks, desktop notifications
+**Usage Spike Detection** - Automatic detection of unusual usage patterns
+**Session Management** - Track long-running sessions and optimize workflows
+**Budget Protection** - Real-time cost monitoring with automatic alerts
+**Provider Health** - Monitor AI provider status and performance
+
+---
+
+## 📈 Cost Visualization & Analytics
+
+**What it does:** Advanced cost analytics with ASCII charts, trend analysis, and provider efficiency comparisons for smart financial insights.
+
+### Visualization Commands
+```bash
+# Interactive visualization menu
+hive visualize menu
+
+# Cost trend charts
+hive visualize costs --chart line --timeframe month
+hive visualize costs --chart bar --group-by provider
+
+# Usage pattern visualization
+hive visualize usage --chart timeline --last 30d
+hive visualize usage --chart heatmap --group-by hour
+
+# Model efficiency charts
+hive visualize models --chart comparison --metrics cost,performance
+hive visualize models --chart efficiency --top 10
+
+# Budget tracking charts
+hive visualize budget --chart progress --current-month
+hive visualize budget --chart forecast --next-quarter
+```
+
+### Chart Types
+```bash
+# Line charts for trends
+hive visualize costs --chart line --provider openai
+
+# Bar charts for comparisons  
+hive visualize usage --chart bar --group-by model
+
+# Pie charts for distribution
+hive visualize costs --chart pie --group-by category
+
+# Heatmaps for patterns
+hive visualize usage --chart heatmap --group-by day,hour
+
+# ASCII charts in terminal
+hive visualize costs --chart ascii --last 7d
+```
+
+### Understanding Visualizations
+
+**ASCII Charts** - Beautiful charts right in your terminal
+**Multiple Chart Types** - Line, bar, pie, heatmap, and timeline charts
+**Real-time Updates** - Charts update automatically with new data
+**Cost Trend Analysis** - Identify spending patterns and optimization opportunities
+**Provider Efficiency** - Compare cost-effectiveness across different AI providers
+
+---
+
+## 🤖 AI-Powered Recommendations
+
+**What it does:** Intelligent model selection with use case analysis, confidence scoring, and personalized optimization recommendations.
+
+### Recommendation Commands
+```bash
+# Get model recommendations
+hive recommend model "I need help with coding in Python"
+hive recommend model "Write a professional email" --budget low
+
+# Use case analysis
+hive recommend analyze "data analysis and visualization tasks"
+hive recommend analyze "creative writing and content creation"
+
+# Optimization recommendations
+hive recommend optimize --focus cost
+hive recommend optimize --focus performance  
+hive recommend optimize --focus quality
+
+# Profile recommendations
+hive recommend profile --usage-pattern coding
+hive recommend profile --budget 25 --quality high
+
+# Provider recommendations
+hive recommend provider --task-type "technical writing"
+hive recommend provider --budget-conscious --reliable
+```
+
+### Advanced Recommendations
+```bash
+# Learning from usage patterns
+hive recommend learn --analyze-history 30d
+hive recommend learn --update-preferences
+
+# Confidence scoring
+hive recommend model "complex reasoning task" --show-confidence
+hive recommend model "simple question" --min-confidence 90
+
+# Personalized recommendations
+hive recommend personalize --enable
+hive recommend personalize --reset-learning
+
+# Bulk recommendations
+hive recommend batch --tasks-file tasks.txt --output recommendations.json
+```
+
+### Understanding Recommendations
+
+**Use Case Analysis** - AI analyzes your task and suggests optimal models
+**Confidence Scoring** - Each recommendation includes confidence level
+**Personalized Learning** - System learns from your preferences over time
+**Cost-Quality Balance** - Recommendations balance budget with quality needs
+**Provider Diversity** - Suggests models across different providers for redundancy
+
+---
+
+## 🛠️ Interactive Setup Wizard
+
+**What it does:** Guided onboarding with quick and complete setup options for providers, budgets, profiles, and monitoring configuration.
+
+### Setup Wizard Commands
+```bash
+# Start complete setup wizard
+hive setup wizard
+
+# Quick setup for new users
+hive setup quick
+
+# Provider configuration wizard
+hive setup providers
+
+# Budget setup wizard
+hive setup budget
+
+# Profile configuration wizard
+hive setup profiles
+
+# Monitoring setup wizard
+hive setup monitoring
+
+# Advanced configuration
+hive setup advanced
+```
+
+### Setup Options
+```bash
+# First-time user setup
+hive setup first-time --guided
+
+# Existing user migration
+hive setup migrate --from-config config.json
+
+# Team setup
+hive setup team --shared-config
+
+# Development setup
+hive setup dev --enable-debug --test-mode
+
+# Production setup  
+hive setup production --monitoring --alerts --budgets
+```
+
+### Understanding Setup Wizard
+
+**Guided Onboarding** - Step-by-step setup with helpful explanations
+**Quick vs Complete** - Choose fast setup or comprehensive configuration
+**Provider Management** - Easy API key setup and testing
+**Budget Configuration** - Set spending limits and alerts during setup
+**Profile Creation** - Create custom profiles for different use cases
+**Monitoring Setup** - Configure alerts and notifications from the start
+
+---
+
 ## 👤 Smart Profile Management
 
 **What it does:** Pre-configured setups for different use cases (coding, writing, cost-saving).
@@ -341,41 +657,66 @@ hive set-default-profile my_pipeline
 
 ## 🎯 Best Practices for Beginners
 
-### 1. Start Simple
+### 1. Start with Setup Wizard
 ```bash
-# Just ask naturally - no special formatting
-hive consensus "How do I learn programming?"
+# Complete guided setup for new users
+hive setup wizard
+
+# Quick setup if you're in a hurry
+hive setup quick
 ```
 
 ### 2. Use Interactive Menus
 ```bash
 # When in doubt, use menus to explore
 hive analytics menu
-hive benchmark menu
+hive dashboard
+hive export menu
 ```
 
-### 3. Monitor Your Costs
+### 3. Monitor Your Costs with Real-time Tracking
 ```bash
-# Check spending regularly
-hive cost analysis
+# Set up comprehensive monitoring
+hive monitor start
+
+# Check spending with visualization
+hive visualize costs --chart line --last 30d
 
 # Set budgets to avoid surprises
 hive cost budget 25
 ```
 
-### 4. Let Failover Protect You
+### 4. Get AI-Powered Recommendations
+```bash
+# Get smart model recommendations
+hive recommend model "your task description"
+
+# Learn from your usage patterns
+hive recommend learn --analyze-history 30d
+```
+
+### 5. Use the Interactive Dashboard
+```bash
+# Monitor everything in real-time
+hive dashboard
+
+# Track your AI operations live
+hive dashboard monitor
+```
+
+### 6. Export and Share Your Data
+```bash
+# Create professional reports
+hive export analytics --format pdf --month current
+
+# Set up automated reporting
+hive export schedule --type costs --monthly --email boss@company.com
+```
+
+### 7. Let Failover Protect You
 ```bash
 # Start monitoring for automatic protection
 hive failover start
-```
-
-### 5. Learn from Analytics
-```bash
-# Get smart recommendations
-hive analytics insights
-
-# See which models work best for you
-hive benchmark leaderboard
 ```
 
 ---
@@ -411,11 +752,50 @@ hive analytics usage
 
 ### "How do I save money?"
 ```bash
-# Get cost optimization tips
-hive analytics insights
+# Get AI-powered cost optimization recommendations
+hive recommend optimize --focus cost
 
 # Use cost-effective profile
 hive profiles use cost_effective
+
+# Visualize spending patterns
+hive visualize costs --chart line --last 30d
+```
+
+### "How do I set up monitoring?"
+```bash
+# Start with the setup wizard
+hive setup monitoring
+
+# Or manually start monitoring
+hive monitor start
+```
+
+### "Can I get automated reports?"
+```bash
+# Set up scheduled exports
+hive export schedule --type analytics --monthly --format pdf
+
+# Create professional reports
+hive export costs --format excel --month current
+```
+
+### "How do I get model recommendations?"
+```bash
+# Get smart recommendations for your task
+hive recommend model "describe your task here"
+
+# Analyze your usage for better suggestions
+hive recommend learn --analyze-history 30d
+```
+
+### "How do I use the dashboard?"
+```bash
+# Open the interactive dashboard
+hive dashboard
+
+# Start live monitoring mode
+hive dashboard monitor
 ```
 
 ---
@@ -431,10 +811,14 @@ hive profiles use cost_effective
 
 ## 💡 Remember
 
+- **Start with the setup wizard** - `hive setup wizard` for guided onboarding
 - **No prompt engineering needed** - Just ask naturally
-- **Everything is remembered** - Build knowledge over time  
+- **Use the interactive dashboard** - Real-time monitoring with `hive dashboard`
+- **Get AI recommendations** - Smart model selection with `hive recommend`
+- **Export and share data** - Professional reports with `hive export`
+- **Monitor everything** - Real-time alerts with `hive monitor start`
+- **Visualize your data** - Beautiful charts with `hive visualize`
 - **Stay protected** - Failover keeps you running
-- **Monitor costs** - Analytics help optimize spending
 - **Use menus** - When in doubt, explore with interactive menus
 
-**You're now ready to use the complete hive-tools platform!** Start with simple questions and explore the advanced features as you become more comfortable.
+**You're now ready to use the complete hive-tools platform!** Start with the setup wizard and explore all the advanced Phase 3 features as you become more comfortable.

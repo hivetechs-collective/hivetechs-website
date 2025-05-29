@@ -718,6 +718,18 @@ export default function Features() {
                   <span>Comprehensive testing strategies and documentation</span>
                 </li>
               </ul>
+              
+              <div className="mt-8">
+                <Link 
+                  href="/documentation/production-ready-code" 
+                  className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary-600 text-dark font-semibold rounded-lg transition-colors duration-200 group"
+                >
+                  🛡️ Learn More About Production-Ready Code
+                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -807,6 +819,18 @@ export default function Features() {
                   <span>Provides context-aware responses without requiring explicit references</span>
                 </li>
               </ul>
+              
+              <div className="mt-8">
+                <Link 
+                  href="/documentation/unlimited-context" 
+                  className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary-600 text-dark font-semibold rounded-lg transition-colors duration-200 group"
+                >
+                  🔄 Learn More About Unlimited Context
+                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -862,6 +886,18 @@ export default function Features() {
               <p className="text-sm text-gray-300 italic">
                 "The depth of technical knowledge across multiple domains has helped us solve complex problems that would have taken weeks to research." - Michael T., CTO
               </p>
+              
+              <div className="mt-8">
+                <Link 
+                  href="/documentation/consensus-pipeline" 
+                  className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary-600 text-dark font-semibold rounded-lg transition-colors duration-200 group"
+                >
+                  🌐 Learn More About Universal Support
+                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </div>
             </div>
             <div className="bg-dark-800 rounded-lg p-8 flex items-center justify-center h-auto py-12">
               <div className="w-full max-w-md text-center">
@@ -976,6 +1012,18 @@ export default function Features() {
               <p className="text-sm text-gray-300 italic">
                 "It's like having a team member who remembers every detail of our past conversations and builds on that knowledge over time." - Alex R., Product Manager
               </p>
+              
+              <div className="mt-8">
+                <Link 
+                  href="/documentation/persistent-memory" 
+                  className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary-600 text-dark font-semibold rounded-lg transition-colors duration-200 group"
+                >
+                  📚 Learn More About Persistent Memory
+                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -1058,16 +1106,81 @@ export default function Features() {
               </p>
             </div>
 
-            {/* Feature 6 - Data Export */}
+            {/* Feature 6 - Interactive Dashboard */}
+            <div className="bg-dark-700 p-8 rounded-lg shadow-md">
+              <div className="bg-primary/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" clipRule="evenodd"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-4">Interactive Dashboard</h3>
+              <p className="text-white font-medium">
+                Real-time monitoring dashboard with live metrics, budget tracking, and customizable layouts for comprehensive AI operations oversight.
+              </p>
+            </div>
+
+            {/* Feature 7 - Export & Integration */}
             <div className="bg-dark-700 p-8 rounded-lg shadow-md">
               <div className="bg-primary/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd"></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-4">Data Export & Reporting</h3>
+              <h3 className="text-xl font-bold mb-4">Export & Integration</h3>
               <p className="text-white font-medium">
-                Export analytics, usage data, and insights in JSON/CSV formats for integration with business intelligence tools.
+                Export AI data in multiple formats (JSON, CSV, Excel, PDF) with scheduled automation and business tool integration.
+              </p>
+            </div>
+
+            {/* Feature 8 - Real-time Monitoring */}
+            <div className="bg-dark-700 p-8 rounded-lg shadow-md">
+              <div className="bg-primary/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-4">Real-time Monitoring</h3>
+              <p className="text-white font-medium">
+                Intelligent monitoring with multi-channel alerts, usage spike detection, and automated session management.
+              </p>
+            </div>
+
+            {/* Feature 9 - Cost Visualization */}
+            <div className="bg-dark-700 p-8 rounded-lg shadow-md">
+              <div className="bg-primary/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-4">Cost Visualization</h3>
+              <p className="text-white font-medium">
+                Advanced cost analytics with ASCII charts, trend analysis, and provider efficiency comparisons for smart financial insights.
+              </p>
+            </div>
+
+            {/* Feature 10 - AI Recommendations */}
+            <div className="bg-dark-700 p-8 rounded-lg shadow-md">
+              <div className="bg-primary/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-4">AI-Powered Recommendations</h3>
+              <p className="text-white font-medium">
+                Intelligent model selection with use case analysis, confidence scoring, and personalized optimization recommendations.
+              </p>
+            </div>
+
+            {/* Feature 11 - Setup Wizard */}
+            <div className="bg-dark-700 p-8 rounded-lg shadow-md">
+              <div className="bg-primary/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clipRule="evenodd"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-4">Interactive Setup Wizard</h3>
+              <p className="text-white font-medium">
+                Guided onboarding with quick and complete setup options for providers, budgets, profiles, and monitoring configuration.
               </p>
             </div>
           </div>
