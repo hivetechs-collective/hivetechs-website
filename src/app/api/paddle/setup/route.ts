@@ -105,7 +105,7 @@ export async function POST() {
       console.log(`Created product ${product.name}:`, data)
       createdProducts.push({
         name: product.name,
-        id: data.data?.id || data.id,
+        id: (data as any).data?.id || (data as any).id,
         type: product.type
       })
     }
