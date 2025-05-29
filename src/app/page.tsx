@@ -101,6 +101,11 @@ export default function Home() {
                   <Button size="lg" onClick={() => handleSubscribe('basic')} className="bg-gradient-to-r from-primary to-accent-blue hover:from-primary-light hover:to-accent-blue transform hover:scale-105 transition-all shadow-lg shadow-primary/25 animate-pulse">
                     Start free trial
                   </Button>
+                  <Link href="/documentation/quick-start">
+                    <Button size="lg" variant="secondary" className="bg-dark-700 hover:bg-dark-600 text-white border border-primary/20 hover:border-primary/40 transform hover:scale-105 transition-all">
+                      Quick Start Guide →
+                    </Button>
+                  </Link>
                 </div>
                 
                 <p className="text-sm text-gray-400">

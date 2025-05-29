@@ -2,6 +2,15 @@
 
 Welcome to the complete hive-tools documentation. Our platform provides revolutionary AI capabilities through 41 MCP tools, advanced analytics, performance benchmarking, and automatic failover systems.
 
+## 🚀 Getting Started
+
+### [⚡ Quick Start Guide](/documentation/quick-start)
+**Get up and running in under 5 minutes!** - Everything you need to install, configure, and start using hive-tools immediately.
+- One-line installation
+- License key setup
+- First commands
+- Quick troubleshooting
+
 ## 📚 Core Features Documentation
 
 > **💡 Click any feature title below to access complete documentation and guides**

@@ -40,6 +40,24 @@ export default async function Documentation() {
         </div>
       </section>
 
+      {/* Quick Start CTA Banner */}
+      <section className="py-8 bg-primary/10 border-b border-primary/20">
+        <div className="container-custom">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div>
+              <h2 className="text-2xl font-bold text-white mb-1">New to hive-tools?</h2>
+              <p className="text-gray-300">Get up and running in under 5 minutes with our step-by-step guide</p>
+            </div>
+            <Link href="/documentation/quick-start" className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary-600 text-dark font-semibold rounded-lg transition-colors duration-200 group">
+              ⚡ Quick Start Guide
+              <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Documentation Content */}
       <section className="py-20 bg-dark">
         <div className="container-custom">
