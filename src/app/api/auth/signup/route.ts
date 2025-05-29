@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Database, generateLicenseKey, type User } from '@/lib/database'
 
-// Using Node.js runtime instead of edge runtime for Cloudflare Pages compatibility
-// export const runtime = 'edge';
+export const runtime = 'edge';
 
 export async function POST(request: NextRequest) {
   try {
@@ -27,11 +26,13 @@ export async function POST(request: NextRequest) {
 
     console.log('🆕 Creating free account for:', email);
 
-    // Note: In Node.js runtime on Cloudflare Pages, environment bindings 
-    // are not directly accessible like in edge runtime
-    // For now, we'll use local in-memory storage for development
-    console.log('🌍 Using Node.js runtime - env bindings not available');
-    const env = undefined; // Will use in-memory database
+    // Access Cloudflare bindings in edge runtime
+    console.log('🌍 Using edge runtime - attempting to access bindings');
+    const env = {
+      HIVE_DB: (globalThis as any).HIVE_DB || process.env.HIVE_DB,
+      HIVE_KV: (globalThis as any).HIVE_KV || process.env.HIVE_KV
+    };
+    console.log('🌍 Environment bindings:', { hasD1: !!env.HIVE_DB, hasKV: !!env.HIVE_KV });
     
     // Initialize database (works in both Cloudflare Pages and local dev)
     console.log('🗄️ Initializing database...');
