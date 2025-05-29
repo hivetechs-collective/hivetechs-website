@@ -80,3 +80,4 @@ The website integrates with Gumroad for subscription management and payment proc
 ## License
 
 Copyright © 2025 HiveTechs Collective LLC. All rights reserved.
+# Trigger OpenNext deployment
