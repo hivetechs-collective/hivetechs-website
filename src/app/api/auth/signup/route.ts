@@ -6,7 +6,8 @@ export const runtime = 'edge'; // Works in both Cloudflare Pages and local dev
 
 export async function POST(request: NextRequest) {
   try {
-    const { email, name } = await request.json();
+    const body = await request.json();
+    const { email, name } = body as { email: string; name?: string };
     
     if (!email) {
       return NextResponse.json({ error: 'Email is required' }, { status: 400 });
