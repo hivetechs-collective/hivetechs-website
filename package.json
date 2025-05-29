@@ -12,7 +12,8 @@
     "typecheck": "tsc --noEmit",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "cloudflare:build": "opennextjs-cloudflare build && mkdir -p .vercel/output/static && cp -r .open-next/* .vercel/output/static/"
+    "cloudflare:build": "opennextjs-cloudflare build",
+    "cloudflare:deploy": "npm run cloudflare:build && wrangler deploy"
   },
   "dependencies": {
     "@auth/mongodb-adapter": "^3.9.1",

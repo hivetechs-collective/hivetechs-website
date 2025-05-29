@@ -206,15 +206,13 @@ export class Database {
         INSERT INTO users (
           id, email, name, license_key, subscription_tier, 
           daily_limit, monthly_limit, account_status, created_at, 
-          max_devices, paddle_customer_id, paddle_subscription_id,
-          subscription_status, subscription_end_date
+          max_devices, paddle_customer_id, paddle_subscription_id
         )
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
       `).bind(
         user.id, user.email, user.name, user.license_key, user.subscription_tier,
         user.daily_limit, user.monthly_limit, user.account_status, user.created_at,
-        user.max_devices, user.paddle_customer_id || null, user.paddle_subscription_id || null,
-        user.subscription_status || null, user.subscription_end_date || null
+        user.max_devices, user.paddle_customer_id || null, user.paddle_subscription_id || null
       ).run();
     } else if (this.inMemory) {
       await this.inMemory.createUser(user);
