@@ -1,7 +1,5 @@
 'use client'
 
-import { useEffect } from 'react'
-import { useRouter } from 'next/navigation'
 import PageLayout from '@/components/PageLayout'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
@@ -9,17 +7,6 @@ import { motion } from 'framer-motion'
 import { CheckCircle, Zap, ArrowRight } from 'lucide-react'
 
 export default function WelcomePage() {
-  const router = useRouter()
-
-  // Auto-redirect to quick start after 10 seconds
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      router.push('/documentation/quick-start')
-    }, 10000)
-
-    return () => clearTimeout(timer)
-  }, [router])
-
   return (
     <PageLayout>
       {/* Success Hero */}
@@ -71,9 +58,6 @@ export default function WelcomePage() {
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>
                 </Link>
-                <p className="text-sm text-gray-400 mt-4">
-                  Auto-redirecting in 10 seconds...
-                </p>
               </div>
 
               {/* Additional Resources */}

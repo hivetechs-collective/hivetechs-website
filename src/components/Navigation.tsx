@@ -59,12 +59,11 @@ export default function Navigation() {
           
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
-            <Button 
-              size="sm"
-              onClick={() => window.open('https://store.hivetechs.io', '_blank')}
-            >
-              Get started
-            </Button>
+            <Link href="/pricing">
+              <Button size="sm">
+                Get started
+              </Button>
+            </Link>
           </div>
           
           {/* Mobile Menu Button */}
@@ -97,12 +96,11 @@ export default function Navigation() {
                 </Link>
               ))}
               <div className="pt-4 space-y-3 border-t border-dark-600">
-                <Button 
-                  className="w-full"
-                  onClick={() => window.open('https://store.hivetechs.io', '_blank')}
-                >
-                  Get started
-                </Button>
+                <Link href="/pricing" className="w-full">
+                  <Button className="w-full">
+                    Get started
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

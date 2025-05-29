@@ -132,17 +132,10 @@ export default function Pricing() {
       setShowConsentModal(true)
       return
     }
-    const creditMap: Record<string, string> = {
-      '25': 'credits-25',
-      '75': 'credits-75',
-      '200': 'credits-200',
-    }
     
-    const productId = creditMap[credits]
-    if (productId) {
-      const checkoutUrl = `https://store.hivetechs.io/l/${productId}?wanted=true`
-      window.open(checkoutUrl, '_blank')
-    }
+    // For now, redirect to contact for credit purchases
+    // TODO: Implement credit purchase checkout when Paddle is ready
+    alert(`Credit purchases coming soon! You selected ${credits} credits. For now, please contact support@hivetechs.io to purchase additional credits.`)
   }
 
   const handleConsentAccept = () => {

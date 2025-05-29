@@ -397,7 +397,7 @@ export default function Home() {
               </div>
               <p className="text-gray-300 mb-3 text-sm">For hobbyists & students</p>
               <div className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full w-fit mb-4">
-                7-day unlimited trial
+                No credit card required
               </div>
               
               <ul className="space-y-3 mb-6">
@@ -434,7 +434,7 @@ export default function Home() {
               
               <Button 
                 className="w-full bg-dark-700 border-dark-600 text-white hover:bg-dark-600 text-sm"
-                onClick={() => window.open('https://store.hivetechs.io', '_blank')}
+                onClick={() => handleSubscribe('free')}
               >
                 Get started free
               </Button>

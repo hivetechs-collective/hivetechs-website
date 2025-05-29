@@ -114,7 +114,8 @@ export default function CustomCheckout({ plan, price, onSuccess }: CustomCheckou
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-2 bg-dark-800 border border-dark-600 rounded-lg text-white placeholder-gray-500 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+            className="w-full px-4 py-3 bg-[#1a1a1a] border border-[#333] rounded-lg text-white placeholder-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 hover:bg-[#222] transition-all"
+            placeholder="you@example.com"
             required
           />
         </div>
@@ -129,7 +130,7 @@ export default function CustomCheckout({ plan, price, onSuccess }: CustomCheckou
             onChange={(e) => setCardNumber(formatCardNumber(e.target.value))}
             maxLength={19}
             placeholder="4242 4242 4242 4242"
-            className="w-full px-4 py-2 bg-dark-800 border border-dark-600 rounded-lg text-white placeholder-gray-500 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+            className="w-full px-4 py-3 bg-[#1a1a1a] border border-[#333] rounded-lg text-white placeholder-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 hover:bg-[#222] transition-all"
             required
           />
         </div>
@@ -145,7 +146,7 @@ export default function CustomCheckout({ plan, price, onSuccess }: CustomCheckou
               onChange={(e) => setExpiry(e.target.value)}
               placeholder="MM/YY"
               maxLength={5}
-              className="w-full px-4 py-2 bg-dark-800 border border-dark-600 rounded-lg text-white placeholder-gray-500 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+              className="w-full px-4 py-3 bg-[#1a1a1a] border border-[#333] rounded-lg text-white placeholder-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 hover:bg-[#222] transition-all"
               required
             />
           </div>
@@ -159,7 +160,7 @@ export default function CustomCheckout({ plan, price, onSuccess }: CustomCheckou
               onChange={(e) => setCvv(e.target.value)}
               placeholder="123"
               maxLength={4}
-              className="w-full px-4 py-2 bg-dark-800 border border-dark-600 rounded-lg text-white placeholder-gray-500 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+              className="w-full px-4 py-3 bg-[#1a1a1a] border border-[#333] rounded-lg text-white placeholder-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 hover:bg-[#222] transition-all"
               required
             />
           </div>
