@@ -104,7 +104,6 @@ const creditPacks = [
 ]
 
 export default function Pricing() {
-  const usePaddle = process.env.NEXT_PUBLIC_USE_PADDLE === 'true'
   const { isAccepted, updateConsent } = useCookieConsent()
   const [showConsentModal, setShowConsentModal] = useState(false)
   const [pendingAction, setPendingAction] = useState<{ type: 'subscribe' | 'credit', value: string } | null>(null)
@@ -116,33 +115,13 @@ export default function Pricing() {
       setShowConsentModal(true)
       return
     }
-    if (usePaddle) {
-      // Use custom Paddle checkout
-      if (plan === 'free') {
-        window.location.href = '/auth/signup' // or handle free tier differently
-        return
-      }
-      window.location.href = `/checkout/${plan}`
-      return
-    }
-    
-    // Original Gumroad logic
+    // Always use custom Paddle checkout
     if (plan === 'free') {
-      window.open('https://store.hivetechs.io', '_blank')
-      return
-    }
-    
-    const productMap: Record<string, string> = {
-      'basic': 'basic-plan',
-      'standard': 'standard-plan', 
-      'premium': 'premium-plan',
-      'team': 'team-plan',
-    }
-    
-    const productId = productMap[plan]
-    if (productId) {
-      const checkoutUrl = `https://store.hivetechs.io/l/${productId}?wanted=true`
-      window.open(checkoutUrl, '_blank')
+      // Free plan goes to signup
+      window.location.href = '/auth/signup'
+    } else {
+      // All paid plans use custom checkout
+      window.location.href = `/checkout/${plan}`
     }
   }
 
@@ -329,9 +308,11 @@ export default function Pricing() {
                       <span className="text-gray-300">/month</span>
                     </div>
                     <p className="text-gray-300 mb-3">{plan.description}</p>
-                    <div className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full w-fit">
-                      7-day unlimited trial included
-                    </div>
+                    {plan.id !== 'free' && (
+                      <div className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full w-fit">
+                        7-day unlimited trial included
+                      </div>
+                    )}
                   </div>
                   
                   <ul className="space-y-4 mb-8">

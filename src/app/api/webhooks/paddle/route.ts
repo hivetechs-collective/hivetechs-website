@@ -4,6 +4,59 @@ import { PaddleWebhookEvent } from '@/lib/paddle/types'
 
 export const runtime = 'edge';
 
+// Helper function to generate license key
+function generateLicenseKey(): string {
+  const segments = [];
+  for (let i = 0; i < 4; i++) {
+    const segment = crypto.getRandomValues(new Uint8Array(2))
+      .reduce((str, byte) => str + byte.toString(16).padStart(2, '0'), '')
+      .toUpperCase();
+    segments.push(segment);
+  }
+  return `HIVE-${segments.join('-')}`;
+}
+
+// Helper function to map Paddle plan ID to tier
+function mapPaddlePlanToTier(paddlePriceId: string): string {
+  // Map your Paddle price IDs to tiers
+  const priceToTierMap: Record<string, string> = {
+    'pri_basic_monthly': 'basic',
+    'pri_standard_monthly': 'standard', 
+    'pri_premium_monthly': 'premium',
+    'pri_team_monthly': 'team',
+    // Add your actual Paddle price IDs here
+  };
+  
+  return priceToTierMap[paddlePriceId] || 'basic';
+}
+
+// Helper function to get tier limits
+function getTierLimits(tier: string) {
+  const limits = {
+    'free': { daily: 5, monthly: 100 },
+    'basic': { daily: 50, monthly: 1000 },
+    'standard': { daily: 100, monthly: 2000 },
+    'premium': { daily: 200, monthly: 4000 },
+    'team': { daily: 600, monthly: 12000 }
+  };
+  return limits[tier as keyof typeof limits] || limits.free;
+}
+
+// Helper function to send welcome email
+async function sendWelcomeEmail(email: string, licenseKey: string, tier: string) {
+  try {
+    // TODO: Implement email sending using your email service (Resend, SendGrid, etc.)
+    console.log(`Sending welcome email to ${email} with license ${licenseKey} for tier ${tier}`);
+    
+    // This would be your actual email sending logic
+    // const emailService = new EmailService();
+    // await emailService.sendWelcomeEmail(email, licenseKey, tier);
+    
+  } catch (error) {
+    console.error('Failed to send welcome email:', error);
+  }
+}
+
 export async function POST(request: NextRequest) {
   try {
     // Get the raw body for signature verification
@@ -66,12 +119,89 @@ export async function POST(request: NextRequest) {
 
 async function handleSubscriptionCreated(event: PaddleWebhookEvent) {
   const subscription = event.data
+  const customer = subscription.customer
   console.log('New subscription created:', subscription.id)
   
-  // TODO: 
-  // 1. Create or update customer record in database
-  // 2. Provision access to the service
-  // 3. Send welcome email
+  try {
+    // @ts-ignore - env will be available in Cloudflare Pages environment
+    const { HIVE_DB, HIVE_KV } = process.env;
+    
+    if (!HIVE_DB) {
+      console.error('Database not configured');
+      return;
+    }
+    
+    // Generate license key
+    const licenseKey = generateLicenseKey();
+    const tier = mapPaddlePlanToTier(subscription.items[0].price.id);
+    const limits = getTierLimits(tier);
+    
+    // Log event to existing subscription_events table
+    // @ts-ignore - D1 database methods
+    await HIVE_DB.prepare(`
+      INSERT INTO subscription_events (user_id, event_type, event_data)
+      VALUES (?, ?, ?)
+    `).bind(
+      customer.id,
+      `paddle.subscription.created`,
+      JSON.stringify(event)
+    ).run();
+    
+    // Create or update user in existing users table
+    // @ts-ignore - D1 database methods
+    await HIVE_DB.prepare(`
+      INSERT INTO users (
+        id, email, name, paddle_customer_id, paddle_subscription_id, 
+        license_key, subscription_tier, daily_limit, monthly_limit, created_at
+      )
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      ON CONFLICT(email) 
+      DO UPDATE SET 
+        paddle_customer_id = excluded.paddle_customer_id,
+        paddle_subscription_id = excluded.paddle_subscription_id,
+        license_key = excluded.license_key,
+        subscription_tier = excluded.subscription_tier,
+        daily_limit = excluded.daily_limit,
+        monthly_limit = excluded.monthly_limit
+    `).bind(
+      crypto.randomUUID(),
+      customer.email,
+      customer.name || '',
+      customer.id,
+      subscription.id,
+      licenseKey,
+      tier,
+      limits.daily,
+      limits.monthly,
+      new Date().toISOString()
+    ).run();
+    
+    // Cache license in KV if available
+    if (HIVE_KV) {
+      try {
+        // @ts-ignore - KV namespace methods
+        await HIVE_KV.put(`license:${licenseKey}`, JSON.stringify({
+          valid: true,
+          userId: customer.id,
+          tier: tier,
+          dailyLimit: limits.daily,
+          monthlyLimit: limits.monthly
+        }), {
+          expirationTtl: 3600 // 1 hour cache
+        });
+      } catch (error) {
+        console.log('KV cache error:', error);
+      }
+    }
+    
+    // Send welcome email with license key
+    await sendWelcomeEmail(customer.email, licenseKey, tier);
+    
+    console.log(`Subscription created successfully for ${customer.email} with license ${licenseKey}`);
+    
+  } catch (error) {
+    console.error('Error handling subscription creation:', error);
+  }
 }
 
 async function handleSubscriptionUpdated(event: PaddleWebhookEvent) {

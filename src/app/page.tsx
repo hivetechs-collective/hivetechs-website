@@ -22,17 +22,14 @@ export default function Home() {
       setShowConsentModal(true)
       return
     }
-    const productMap: Record<string, string> = {
-      'basic': 'basic-plan',
-      'standard': 'standard-plan',
-      'premium': 'premium-plan',
-      'team': 'team-plan',
-    }
     
-    const productId = productMap[plan]
-    if (productId) {
-      const checkoutUrl = `https://store.hivetechs.io/l/${productId}?wanted=true`
-      window.open(checkoutUrl, '_blank')
+    // Use custom Paddle checkout for all plans
+    if (plan === 'free') {
+      // Free plan goes to signup
+      window.location.href = '/auth/signup'
+    } else {
+      // All paid plans use custom checkout
+      window.location.href = `/checkout/${plan}`
     }
   }
 
@@ -823,7 +820,7 @@ export default function Home() {
                   size="lg" 
                   variant="secondary"
                   className="bg-dark-700 border-dark-600 text-white hover:bg-dark-600"
-                  onClick={() => window.open('https://store.hivetechs.io', '_blank')}
+                  onClick={() => handleSubscribe('free')}
                 >
                   Start free
                 </Button>

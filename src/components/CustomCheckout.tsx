@@ -51,7 +51,7 @@ export default function CustomCheckout({ plan, price, onSuccess }: CustomCheckou
       if (onSuccess) {
         onSuccess()
       } else {
-        window.location.href = '/thank-you'
+        window.location.href = '/welcome'
       }
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Payment failed')
@@ -114,7 +114,7 @@ export default function CustomCheckout({ plan, price, onSuccess }: CustomCheckou
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-2 bg-dark-700 border border-dark-600 rounded-lg text-white focus:border-primary focus:outline-none"
+            className="w-full px-4 py-2 bg-dark-800 border border-dark-600 rounded-lg text-white placeholder-gray-500 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
             required
           />
         </div>
@@ -129,7 +129,7 @@ export default function CustomCheckout({ plan, price, onSuccess }: CustomCheckou
             onChange={(e) => setCardNumber(formatCardNumber(e.target.value))}
             maxLength={19}
             placeholder="4242 4242 4242 4242"
-            className="w-full px-4 py-2 bg-dark-700 border border-dark-600 rounded-lg text-white focus:border-primary focus:outline-none"
+            className="w-full px-4 py-2 bg-dark-800 border border-dark-600 rounded-lg text-white placeholder-gray-500 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
             required
           />
         </div>
@@ -145,7 +145,7 @@ export default function CustomCheckout({ plan, price, onSuccess }: CustomCheckou
               onChange={(e) => setExpiry(e.target.value)}
               placeholder="MM/YY"
               maxLength={5}
-              className="w-full px-4 py-2 bg-dark-700 border border-dark-600 rounded-lg text-white focus:border-primary focus:outline-none"
+              className="w-full px-4 py-2 bg-dark-800 border border-dark-600 rounded-lg text-white placeholder-gray-500 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
               required
             />
           </div>
@@ -159,7 +159,7 @@ export default function CustomCheckout({ plan, price, onSuccess }: CustomCheckou
               onChange={(e) => setCvv(e.target.value)}
               placeholder="123"
               maxLength={4}
-              className="w-full px-4 py-2 bg-dark-700 border border-dark-600 rounded-lg text-white focus:border-primary focus:outline-none"
+              className="w-full px-4 py-2 bg-dark-800 border border-dark-600 rounded-lg text-white placeholder-gray-500 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
               required
             />
           </div>
@@ -179,9 +179,17 @@ export default function CustomCheckout({ plan, price, onSuccess }: CustomCheckou
           {loading ? 'Processing...' : `Subscribe for $${price}/month`}
         </Button>
 
-        <p className="text-xs text-gray-400 text-center mt-4">
-          Powered by Paddle. Your payment info is secure and encrypted.
-        </p>
+        <div className="mt-4 space-y-2">
+          <p className="text-xs text-gray-400 text-center">
+            Powered by Paddle. Your payment info is secure and encrypted.
+          </p>
+          {/* Temporary notice - remove when Paddle is live */}
+          <div className="p-3 bg-amber-500/10 border border-amber-500/30 rounded-lg">
+            <p className="text-xs text-amber-300 text-center">
+              🚧 Demo Mode: Paddle integration pending. Use test card 4242 4242 4242 4242
+            </p>
+          </div>
+        </div>
       </form>
       </div>
     </motion.div>

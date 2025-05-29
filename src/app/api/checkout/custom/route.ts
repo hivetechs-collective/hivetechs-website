@@ -6,6 +6,28 @@ export async function POST(request: NextRequest) {
   try {
     const { plan, email, payment } = await request.json()
 
+    // DEMO MODE: Check if using test card
+    if (payment.cardNumber === '4242424242424242') {
+      // Simulate processing delay
+      await new Promise(resolve => setTimeout(resolve, 1500))
+      
+      return NextResponse.json({
+        success: true,
+        transactionId: 'demo_txn_' + Date.now(),
+        subscriptionId: 'demo_sub_' + Date.now(),
+        status: 'completed',
+        message: 'Demo subscription created successfully'
+      })
+    }
+
+    // Check if Paddle is configured
+    if (!process.env.PADDLE_API_KEY) {
+      return NextResponse.json(
+        { error: 'Payment processing not configured. Please use test card 4242 4242 4242 4242' },
+        { status: 400 }
+      )
+    }
+
     // Map plan to price ID (these will be set after running setup)
     const priceMap: Record<string, string> = {
       'basic': process.env.PADDLE_PRICE_BASIC || '',

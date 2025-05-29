@@ -1,0 +1,24 @@
+name = "hivetechs-website"
+pages_build_output_dir = "./out"
+
+[[d1_databases]]
+binding = "HIVE_DB"
+database_name = "hive-user-db"
+database_id = "b646eb8d-810f-41c1-ba12-b95a543b4884"
+
+# KV namespace for edge caching
+# Note: Run `wrangler kv:namespace create "HIVE_KV"` to create the namespace
+# Then update the id below with the returned namespace ID
+[[kv_namespaces]]
+binding = "HIVE_KV"
+id = "your-kv-namespace-id-here"
+preview_id = "your-preview-kv-namespace-id-here"
+
+[vars]
+PADDLE_ENVIRONMENT = "sandbox"
+
+[env.production.vars]
+PADDLE_ENVIRONMENT = "production"
+
+[env.staging.vars]
+PADDLE_ENVIRONMENT = "sandbox"
