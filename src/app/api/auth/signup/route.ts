@@ -6,16 +6,22 @@ export const runtime = 'edge'; // Works in both Cloudflare Pages and local dev
 
 export async function POST(request: NextRequest) {
   try {
+    console.log('📥 Signup API called');
+    
     const body = await request.json();
     const { email, name } = body as { email: string; name?: string };
     
+    console.log('📧 Request data:', { email, name: name || 'not provided' });
+    
     if (!email) {
+      console.log('❌ Email missing');
       return NextResponse.json({ error: 'Email is required' }, { status: 400 });
     }
 
     // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
+      console.log('❌ Invalid email format:', email);
       return NextResponse.json({ error: 'Invalid email format' }, { status: 400 });
     }
 
@@ -26,22 +32,32 @@ export async function POST(request: NextRequest) {
     try {
       const context = getRequestContext();
       env = context?.env;
+      console.log('🌍 Environment context:', env ? 'Found' : 'Not found');
     } catch (e) {
+      console.log('🌍 Environment context error:', e);
       // Running in local dev, env will be undefined
     }
     
     // Initialize database (works in both Cloudflare Pages and local dev)
+    console.log('🗄️ Initializing database...');
     const db = new Database(env);
+    console.log('✅ Database initialized');
     
     // Check if user already exists
+    console.log('🔍 Checking if user exists...');
     const existingUser = await db.getUserByEmail(email);
+    console.log('🔍 User check result:', existingUser ? 'User exists' : 'User not found');
+    
     if (existingUser) {
+      console.log('❌ Account already exists for:', email);
       return NextResponse.json({ error: 'Account already exists' }, { status: 409 });
     }
 
     // Create new user
+    console.log('🔑 Generating license key...');
     const licenseKey = generateLicenseKey();
     const userId = globalThis.crypto.randomUUID();
+    console.log('🔑 Generated:', { userId, licenseKey });
     
     const newUser: User = {
       id: userId,
@@ -56,7 +72,9 @@ export async function POST(request: NextRequest) {
       max_devices: 2
     };
 
+    console.log('💾 Creating user in database...');
     await db.createUser(newUser);
+    console.log('💾 User created successfully');
 
     console.log('✅ Free account created:', {
       email: newUser.email,
@@ -80,9 +98,15 @@ export async function POST(request: NextRequest) {
     });
 
   } catch (error) {
-    console.error('Signup error:', error);
+    console.error('💥 Signup error details:', error);
+    console.error('💥 Error stack:', error instanceof Error ? error.stack : 'No stack trace');
+    console.error('💥 Error message:', error instanceof Error ? error.message : String(error));
+    
     return NextResponse.json(
-      { error: 'Failed to create account' },
+      { 
+        error: 'Failed to create account',
+        details: error instanceof Error ? error.message : String(error)
+      },
       { status: 500 }
     );
   }
