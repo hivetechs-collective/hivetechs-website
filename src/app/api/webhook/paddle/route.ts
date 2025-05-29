@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Database, generateLicenseKey, type User } from '@/lib/database'
+import { getRequestContext } from '@cloudflare/next-on-pages'
 
 export const runtime = 'edge'; // Works in both Cloudflare Pages and local dev
 
@@ -90,9 +91,17 @@ export async function POST(request: NextRequest) {
     const event: PaddleWebhookEvent = JSON.parse(body);
     console.log(`📨 Received Paddle webhook: ${event.event_type}`, event.event_id);
 
+    // Get Cloudflare environment context properly
+    let env: any = undefined;
+    try {
+      const context = getRequestContext();
+      env = context?.env;
+    } catch (e) {
+      // Running in local dev, env will be undefined
+    }
+    
     // Initialize database
-    // @ts-ignore - env might have HIVE_DB in Cloudflare Pages
-    const db = new Database(typeof env !== 'undefined' ? env : undefined);
+    const db = new Database(env);
 
     switch (event.event_type) {
       case 'customer.created':

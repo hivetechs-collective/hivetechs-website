@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Database } from '@/lib/database'
+import { getRequestContext } from '@cloudflare/next-on-pages'
 
 export const runtime = 'edge';
 
@@ -23,9 +24,17 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'License key required' }, { status: 400 });
     }
 
+    // Get Cloudflare environment context properly
+    let env: any = undefined;
+    try {
+      const context = getRequestContext();
+      env = context?.env;
+    } catch (e) {
+      // Running in local dev, env will be undefined
+    }
+    
     // Initialize database (works in both Cloudflare Pages and local dev)
-    // @ts-ignore - env might have HIVE_DB in Cloudflare Pages
-    const db = new Database(typeof env !== 'undefined' ? env : undefined);
+    const db = new Database(env);
     
     // Get user by license key
     const user = await db.getUserByLicenseKey(licenseKey);
