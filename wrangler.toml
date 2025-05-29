@@ -7,12 +7,10 @@ database_name = "hive-user-db"
 database_id = "b646eb8d-810f-41c1-ba12-b95a543b4884"
 
 # KV namespace for edge caching
-# Note: Run `wrangler kv:namespace create "HIVE_KV"` to create the namespace
-# Then update the id below with the returned namespace ID
 [[kv_namespaces]]
 binding = "HIVE_KV"
-id = "your-kv-namespace-id-here"
-preview_id = "your-preview-kv-namespace-id-here"
+id = "8955126bb53147c19c02bea2af0715e3"
+preview_id = "8ceea500649643bc9958385a4765827e"
 
 [vars]
 PADDLE_ENVIRONMENT = "sandbox"
@@ -20,5 +18,5 @@ PADDLE_ENVIRONMENT = "sandbox"
 [env.production.vars]
 PADDLE_ENVIRONMENT = "production"
 
-[env.staging.vars]
+[env.preview.vars]
 PADDLE_ENVIRONMENT = "sandbox"

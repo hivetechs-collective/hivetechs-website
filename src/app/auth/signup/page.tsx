@@ -10,8 +10,10 @@ import Image from 'next/image'
 
 export default function SignupPage() {
   const [email, setEmail] = useState('')
+  const [name, setName] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const [success, setSuccess] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -19,14 +21,31 @@ export default function SignupPage() {
     setError('')
 
     try {
-      // TODO: Implement actual signup logic
-      // For now, just redirect to welcome page
+      const response = await fetch('/api/auth/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, name })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Signup failed');
+      }
+
+      console.log('✅ Account created:', data.user);
+      setSuccess(true);
+      
+      // Redirect to welcome page with license key info
       setTimeout(() => {
-        window.location.href = '/welcome'
-      }, 1000)
+        window.location.href = `/welcome?license=${data.user.license_key}&email=${encodeURIComponent(email)}`;
+      }, 2000);
+
     } catch (err) {
-      setError('Signup failed. Please try again.')
-      setLoading(false)
+      setError(err instanceof Error ? err.message : 'Signup failed. Please try again.');
+      setLoading(false);
     }
   }
 
@@ -98,6 +117,19 @@ export default function SignupPage() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
+                    Name (Optional)
+                  </label>
+                  <input
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="w-full px-4 py-3 bg-[#1a1a1a] border border-[#333] rounded-lg text-white placeholder-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 hover:bg-[#222] transition-all"
+                    placeholder="Your name"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
                     Email Address
                   </label>
                   <input
@@ -109,6 +141,16 @@ export default function SignupPage() {
                     required
                   />
                 </div>
+
+                {success && (
+                  <div className="p-3 bg-green-500/10 border border-green-500/50 rounded-lg flex items-start gap-2">
+                    <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-sm text-green-400 font-medium">Account created successfully!</p>
+                      <p className="text-xs text-green-300 mt-1">Redirecting to welcome page...</p>
+                    </div>
+                  </div>
+                )}
 
                 {error && (
                   <div className="p-3 bg-red-500/10 border border-red-500/50 rounded-lg flex items-start gap-2">

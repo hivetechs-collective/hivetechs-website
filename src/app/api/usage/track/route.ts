@@ -60,7 +60,7 @@ export async function POST(request: NextRequest) {
           conversations_used = conversations_used + ?,
           updated_at = ?
       `).bind(
-        crypto.randomUUID(),
+        globalThis.crypto.randomUUID(),
         licenseKey,
         today,
         conversationsUsed,
@@ -84,7 +84,7 @@ export async function POST(request: NextRequest) {
           conversations_used = conversations_used + ?,
           updated_at = ?
       `).bind(
-        crypto.randomUUID(),
+        globalThis.crypto.randomUUID(),
         licenseKey,
         thisMonth,
         conversationsUsed,
@@ -105,11 +105,11 @@ export async function POST(request: NextRequest) {
         )
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
       `).bind(
-        crypto.randomUUID(),
+        globalThis.crypto.randomUUID(),
         licenseKey,
         installationId || request.headers.get('x-installation-id') || 'unknown',
-        conversationId || crypto.randomUUID(),
-        crypto.randomUUID(),
+        conversationId || globalThis.crypto.randomUUID(),
+        globalThis.crypto.randomUUID(),
         true,
         now,
         questionHash || '',

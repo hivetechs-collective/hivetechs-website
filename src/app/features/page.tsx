@@ -569,7 +569,7 @@ export default function Features() {
                 
                 <div className="mt-6 p-4 bg-dark-700 rounded-lg border-l-4 border-yellow-500">
                   <div className="text-xs text-yellow-400 font-semibold mb-1">⚡ Auto-Failover Active</div>
-                  <div className="text-xs text-gray-300">Switched from Meta to Anthropic due to high error rate (25% > 20% threshold)</div>
+                  <div className="text-xs text-gray-300">Switched from Meta to Anthropic due to high error rate (25% &gt; 20% threshold)</div>
                 </div>
               </div>
             </div>

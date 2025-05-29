@@ -1,6 +1,6 @@
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link'
-import Image from 'next/Image'
+import Image from 'next/image'
 import fs from 'fs'
 import path from 'path'
 import { MDXRemote } from 'next-mdx-remote/rsc'
