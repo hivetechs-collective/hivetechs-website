@@ -25,7 +25,7 @@ export default function PaddleSetupPage() {
       const data = await response.json()
 
       if (!response.ok) {
-        throw new Error(data.error || 'Setup failed')
+        throw new Error((data as any).error || 'Setup failed')
       }
 
       setResult(data)
