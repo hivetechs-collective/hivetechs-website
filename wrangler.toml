@@ -1,5 +1,7 @@
 name = "hivetechs-website"
 pages_build_output_dir = "./out"
+compatibility_date = "2024-01-30"
+compatibility_flags = ["nodejs_compat"]
 
 [[d1_databases]]
 binding = "HIVE_DB"
@@ -15,8 +17,28 @@ preview_id = "8ceea500649643bc9958385a4765827e"
 [vars]
 PADDLE_ENVIRONMENT = "sandbox"
 
+[env.production]
+[[env.production.d1_databases]]
+binding = "HIVE_DB"
+database_name = "hive-user-db"
+database_id = "b646eb8d-810f-41c1-ba12-b95a543b4884"
+
+[[env.production.kv_namespaces]]
+binding = "HIVE_KV"
+id = "8955126bb53147c19c02bea2af0715e3"
+
 [env.production.vars]
 PADDLE_ENVIRONMENT = "production"
+
+[env.preview]
+[[env.preview.d1_databases]]
+binding = "HIVE_DB"
+database_name = "hive-user-db"
+database_id = "b646eb8d-810f-41c1-ba12-b95a543b4884"
+
+[[env.preview.kv_namespaces]]
+binding = "HIVE_KV"
+id = "8ceea500649643bc9958385a4765827e"
 
 [env.preview.vars]
 PADDLE_ENVIRONMENT = "sandbox"
