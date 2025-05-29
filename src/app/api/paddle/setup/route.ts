@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server'
 
-export const runtime = 'edge';
 
 // This endpoint creates all your products in Paddle programmatically
 export async function POST() {

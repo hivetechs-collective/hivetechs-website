@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Database, generateLicenseKey, type User } from '@/lib/database'
-
-export const runtime = 'edge';
+import { getCloudflareContext } from '@opennextjs/cloudflare'
 
 export async function POST(request: NextRequest) {
   try {
@@ -26,13 +25,10 @@ export async function POST(request: NextRequest) {
 
     console.log('🆕 Creating free account for:', email);
 
-    // Access Cloudflare bindings in edge runtime
-    console.log('🌍 Using edge runtime - attempting to access bindings');
-    const env = {
-      HIVE_DB: (globalThis as any).HIVE_DB || process.env.HIVE_DB,
-      HIVE_KV: (globalThis as any).HIVE_KV || process.env.HIVE_KV
-    };
-    console.log('🌍 Environment bindings:', { hasD1: !!env.HIVE_DB, hasKV: !!env.HIVE_KV });
+    // Access Cloudflare bindings with Node.js runtime
+    console.log('🌍 Using Node.js runtime - accessing Cloudflare bindings');
+    const { env } = await getCloudflareContext({ async: true });
+    console.log('🌍 Environment bindings:', { hasD1: !!env?.HIVE_DB, hasKV: !!env?.HIVE_KV });
     
     // Initialize database (works in both Cloudflare Pages and local dev)
     console.log('🗄️ Initializing database...');

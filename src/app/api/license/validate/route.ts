@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Database } from '@/lib/database'
-import { getRequestContext } from '@cloudflare/next-on-pages'
 
-export const runtime = 'edge';
 
 // Helper function to get tier limits
 function getTierLimits(tier: string) {
@@ -25,14 +23,8 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'License key required' }, { status: 400 });
     }
 
-    // Get Cloudflare environment context properly
-    let env: any = undefined;
-    try {
-      const context = getRequestContext();
-      env = context?.env;
-    } catch (e) {
-      // Running in local dev, env will be undefined
-    }
+    // Environment will be undefined in Node.js runtime
+    const env: any = undefined;
     
     // Initialize database (works in both Cloudflare Pages and local dev)
     const db = new Database(env);

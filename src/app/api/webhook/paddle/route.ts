@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Database, generateLicenseKey, type User } from '@/lib/database'
-import { getRequestContext } from '@cloudflare/next-on-pages'
 
-export const runtime = 'edge'; // Works in both Cloudflare Pages and local dev
 
 // Paddle webhook event types we care about
 type PaddleEventType = 
@@ -91,14 +89,8 @@ export async function POST(request: NextRequest) {
     const event: PaddleWebhookEvent = JSON.parse(body);
     console.log(`📨 Received Paddle webhook: ${event.event_type}`, event.event_id);
 
-    // Get Cloudflare environment context properly
-    let env: any = undefined;
-    try {
-      const context = getRequestContext();
-      env = context?.env;
-    } catch (e) {
-      // Running in local dev, env will be undefined
-    }
+    // Environment will be undefined in Node.js runtime
+    const env: any = undefined;
     
     // Initialize database
     const db = new Database(env);

@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server'
 
-export const runtime = 'edge';
 
 // Test creating a single product
 export async function GET() {

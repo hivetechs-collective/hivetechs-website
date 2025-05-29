@@ -1,24 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server'
-
-export const runtime = 'edge';
+import { getCloudflareContext } from '@opennextjs/cloudflare'
 
 export async function GET() {
   try {
     console.log('🧪 Test API called');
     
-    // Test environment access without @cloudflare/next-on-pages
+    // Test environment access with @opennextjs/cloudflare
     let env: any = undefined;
     let envStatus = 'not-found';
     
     try {
-      // In Cloudflare Pages edge runtime, bindings should be available on process.env
-      // or through the globalThis object
-      env = {
-        HIVE_DB: (globalThis as any).HIVE_DB || process.env.HIVE_DB,
-        HIVE_KV: (globalThis as any).HIVE_KV || process.env.HIVE_KV,
-        PADDLE_ENVIRONMENT: process.env.PADDLE_ENVIRONMENT
-      };
-      envStatus = (env.HIVE_DB || env.HIVE_KV) ? 'found' : 'not-found';
+      // Access Cloudflare bindings through the new adapter in async mode
+      const { env: cloudflareEnv } = await getCloudflareContext({ async: true });
+      env = cloudflareEnv;
+      envStatus = (env?.HIVE_DB || env?.HIVE_KV) ? 'found' : 'not-found';
       
       console.log('🌍 Environment test:', {
         envExists: !!env,
@@ -63,4 +58,4 @@ export async function GET() {
       error: error instanceof Error ? error.message : String(error)
     }, { status: 500 });
   }
-}// Trigger deployment
+}
