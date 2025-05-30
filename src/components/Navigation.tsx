@@ -41,6 +41,8 @@ export default function Navigation() {
                 width={40} 
                 height={40} 
                 className="w-10 h-10 object-contain relative z-10"
+                priority
+                unoptimized
               />
               {/* Subtle glow effect */}
               <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full" />
