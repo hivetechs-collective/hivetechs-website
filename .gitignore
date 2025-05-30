@@ -1,3 +1,59 @@
+# =============================================================================
+# HIVETECHS SECURITY - CONFIDENTIAL FILES PROTECTION
+# =============================================================================
+
+# CRITICAL: Never commit these confidential business files
+*PLAN.md
+*GUIDE.md
+*SUMMARY.md
+*ARCHITECTURE*.md
+*IMPLEMENTATION*.md
+*FEATURE_ENFORCEMENT*.md
+*SETUP.md
+*DESIGN.md
+QA_CHECKLIST.md
+ROADMAP.md
+
+# Database and SQL files (contain schemas and business logic)
+*.sql
+database-migration*.sql
+schema-updates.sql
+
+# Development and deployment configuration
+dev.log
+*.log
+wrangler.toml
+next.config.js
+open-next.config.ts
+
+# Scripts with business logic
+src/scripts/generate-license-keys.js
+src/scripts/*-keys.js
+scripts/license-*.js
+
+# API implementation files (contain business logic)
+src/lib/database.ts
+src/lib/mongodb.ts
+src/lib/subscription.ts
+src/lib/paddle/
+src/lib/gumroad/
+
+# Backend API routes (expose business logic)
+src/app/api/
+!src/app/api/hello/
+
+# Admin and internal pages
+src/app/admin/
+src/app/team-dashboard/
+
+# Webhook workers (contain payment logic)
+webhook-worker.js
+*-worker.js
+
+# =============================================================================
+# STANDARD NEXTJS/NODE GITIGNORE
+# =============================================================================
+
 # dependencies
 /node_modules
 /.pnp
@@ -24,17 +80,30 @@ yarn-error.log*
 
 # local env files
 .env*.local
+.env.local
+.env.production
 
 # vercel
 .vercel
 
 # opennext cloudflare
 .open-next
+public/_cloudflare/
 
 # typescript
 *.tsbuildinfo
-# next-env.d.ts
+tsconfig.tsbuildinfo
 
-# Environment variables
-.env.local
-.env.production
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Package management
+package-lock.json
+
+# =============================================================================
+# ONLY COMMIT: Public-facing pages, components, styles, and basic documentation
+# =============================================================================
