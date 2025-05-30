@@ -20,7 +20,11 @@
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "cloudflare:build": "opennextjs-cloudflare build",
-    "cloudflare:deploy": "npm run cloudflare:build && wrangler deploy"
+    "cloudflare:deploy": "npm run cloudflare:build && wrangler deploy",
+    "check-build": "node scripts/check-build.js",
+    "setup-dev": "node scripts/setup-dev.js",
+    "predev": "npm run setup-dev",
+    "prebuild": "npm run check-build"
   },
   "dependencies": {
     "@auth/mongodb-adapter": "^3.9.1",
