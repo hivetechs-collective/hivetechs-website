@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { motion } from 'framer-motion'
-import { Check, Lock, CreditCard } from 'lucide-react'
+import { Check, Lock, CreditCard, Shield, Zap } from 'lucide-react'
 import Image from 'next/image'
 
 interface CustomCheckoutProps {
@@ -90,19 +90,60 @@ export default function CustomCheckout({ plan, price, onSuccess }: CustomCheckou
         Complete your subscription
       </h2>
       
+      {/* Trial Banner */}
+      {plan !== 'free' && (
+        <div className="mb-6 p-4 bg-gradient-to-r from-primary/10 to-accent-blue/10 rounded-lg border border-primary/30">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+              <Zap className="w-5 h-5 text-primary" />
+            </div>
+            <div>
+              <p className="font-semibold text-white">Start with 7 days free</p>
+              <p className="text-sm text-gray-300">Try everything risk-free. Cancel anytime.</p>
+            </div>
+          </div>
+        </div>
+      )}
+      
       <div className="mb-6 p-4 bg-dark-800/50 rounded-lg border border-dark-600">
         <div className="flex justify-between items-center">
           <span className="text-gray-300 font-medium">{plan} Plan</span>
           <span className="text-2xl font-bold text-white">${price}<span className="text-sm text-gray-400">/month</span></span>
         </div>
-        {plan !== 'free' && (
-          <div className="mt-2 flex items-center gap-2">
-            <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-              <Check className="w-3 h-3 text-primary" />
-            </div>
-            <p className="text-sm text-primary">7-day unlimited trial included</p>
-          </div>
-        )}
+        <div className="mt-3 space-y-2">
+          {plan === 'Unlimited' && (
+            <>
+              <div className="flex items-center gap-2">
+                <Check className="w-4 h-4 text-primary" />
+                <span className="text-sm text-gray-300">Unlimited conversations</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="w-4 h-4 text-primary" />
+                <span className="text-sm text-gray-300">Priority processing</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="w-4 h-4 text-primary" />
+                <span className="text-sm text-gray-300">All consensus models</span>
+              </div>
+            </>
+          )}
+          {plan === 'Team Unlimited' && (
+            <>
+              <div className="flex items-center gap-2">
+                <Check className="w-4 h-4 text-primary" />
+                <span className="text-sm text-gray-300">5 developer licenses</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="w-4 h-4 text-primary" />
+                <span className="text-sm text-gray-300">Team usage dashboard & analytics</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="w-4 h-4 text-primary" />
+                <span className="text-sm text-gray-300">Priority support</span>
+              </div>
+            </>
+          )}
+        </div>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -174,22 +215,40 @@ export default function CustomCheckout({ plan, price, onSuccess }: CustomCheckou
 
         <Button
           type="submit"
-          className="w-full"
+          className="w-full bg-gradient-to-r from-primary to-accent-blue hover:from-primary-light hover:to-accent-blue"
           disabled={loading}
         >
-          {loading ? 'Processing...' : `Subscribe for $${price}/month`}
+          {loading ? 'Processing...' : plan !== 'free' ? 'Start 7-day trial' : `Subscribe for $${price}/month`}
         </Button>
 
-        <div className="mt-4 space-y-2">
+        <div className="mt-6 space-y-3">
+          {/* Security badges */}
+          <div className="flex items-center justify-center gap-4">
+            <div className="flex items-center gap-2 text-gray-400">
+              <Lock className="w-4 h-4" />
+              <span className="text-xs">Secure checkout</span>
+            </div>
+            <div className="flex items-center gap-2 text-gray-400">
+              <Shield className="w-4 h-4" />
+              <span className="text-xs">SSL encrypted</span>
+            </div>
+          </div>
+          
           <p className="text-xs text-gray-400 text-center">
             Powered by Paddle. Your payment info is secure and encrypted.
           </p>
+          
           {/* Temporary notice - remove when Paddle is live */}
           <div className="p-3 bg-amber-500/10 border border-amber-500/30 rounded-lg">
             <p className="text-xs text-amber-300 text-center">
               🚧 Demo Mode: Paddle integration pending. Use test card 4242 4242 4242 4242
             </p>
           </div>
+          
+          {/* Guarantee */}
+          <p className="text-xs text-gray-400 text-center mt-4">
+            Cancel anytime during your trial. No questions asked.
+          </p>
         </div>
       </form>
       </div>

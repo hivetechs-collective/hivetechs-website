@@ -286,7 +286,7 @@ export default function RefundPage() {
                   <span className="text-primary mr-3">•</span>
                   <div>
                     <p className="text-gray-300">
-                      <strong className="text-white">Free Trial:</strong> The 7-day unlimited trial is separate from the 15-day money-back guarantee, 
+                      <strong className="text-white">Free Trial:</strong> The 7-day free trial is separate from the 15-day money-back guarantee, 
                       which starts when you make your first payment.
                     </p>
                   </div>

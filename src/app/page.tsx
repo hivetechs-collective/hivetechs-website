@@ -372,7 +372,7 @@ export default function Home() {
             </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 max-w-7xl mx-auto">
             {/* Free Plan */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -463,9 +463,9 @@ export default function Home() {
                 <span className="text-4xl font-bold text-white">$5</span>
                 <span className="text-gray-300 text-sm">/month</span>
               </div>
-              <p className="text-gray-300 mb-3 text-sm">For individual developers</p>
+              <p className="text-gray-300 mb-3 text-sm">For light usage</p>
               <div className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full w-fit mb-4">
-                7-day unlimited trial
+                7-day free trial
               </div>
               
               <ul className="space-y-3 mb-6">
@@ -490,12 +490,6 @@ export default function Home() {
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">Unlimited context & memory</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-2.5 h-2.5 text-primary" />
-                  </div>
                   <span className="ml-2 text-gray-300 text-sm">All integrations</span>
                 </li>
               </ul>
@@ -509,35 +503,93 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Premium Plan - Most Popular */}
+            {/* Standard Plan */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
-              className="relative overflow-hidden rounded-2xl p-6 border-2 border-primary shadow-2xl shadow-primary/20 scale-105"
+              className="relative overflow-hidden rounded-2xl p-6 border border-dark-600 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all"
             >
               {/* Card Background with gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-dark-700 via-dark-800 to-dark-900" />
               <div className="absolute inset-0 bg-gradient-to-r from-accent-yellow/5 via-transparent to-accent-blue/5" />
               
-              {/* Floating Orb for popular card */}
-              <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/20 rounded-full blur-3xl animate-pulse" />
+              {/* Floating Orb for each card */}
+              <div className="absolute -top-10 -right-10 w-32 h-32 bg-accent-blue/10 rounded-full blur-3xl animate-pulse" />
               
               <div className="relative z-10">
-                <div className="bg-gradient-to-r from-primary to-accent-blue text-dark px-3 py-1 rounded-full text-xs font-semibold shadow-lg w-fit mx-auto mb-3">
-                  Most popular
-                </div>
+              <h3 className="text-xl font-bold text-white mb-2">Standard</h3>
+              <div className="flex items-baseline gap-2 mb-2">
+                <span className="text-4xl font-bold text-white">$10</span>
+                <span className="text-gray-300 text-sm">/month</span>
+              </div>
+              <p className="text-gray-300 mb-3 text-sm">For regular use</p>
+              <div className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full w-fit mb-4">
+                7-day free trial
+              </div>
               
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start">
+                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-2.5 h-2.5 text-primary" />
+                  </div>
+                  <span className="ml-2 text-gray-300 text-sm">100 daily / 2,000 monthly</span>
+                </li>
+                <li className="flex items-start">
+                  <Link href="/pricing#credit-packs" className="ml-6 text-xs text-primary/80 hover:text-primary transition-colors underline decoration-dotted underline-offset-2">
+                    Need more? Get credit packs →
+                  </Link>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-2.5 h-2.5 text-primary" />
+                  </div>
+                  <span className="ml-2 text-gray-300 text-sm">Priority processing</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-2.5 h-2.5 text-primary" />
+                  </div>
+                  <span className="ml-2 text-gray-300 text-sm">Standard support</span>
+                </li>
+              </ul>
+              
+              <Button 
+                className="w-full bg-dark-700 border-dark-600 text-white hover:bg-dark-600 text-sm"
+                onClick={() => handleSubscribe('standard')}
+              >
+                Start 7-day trial
+              </Button>
+              </div>
+            </motion.div>
+
+            {/* Premium Plan */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5 }}
+              className="relative overflow-hidden rounded-2xl p-6 border border-dark-600 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all"
+            >
+              {/* Card Background with gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-dark-700 via-dark-800 to-dark-900" />
+              <div className="absolute inset-0 bg-gradient-to-r from-accent-yellow/5 via-transparent to-accent-blue/5" />
+              
+              {/* Floating Orb for each card */}
+              <div className="absolute -top-10 -right-10 w-32 h-32 bg-accent-blue/10 rounded-full blur-3xl animate-pulse" />
+              
+              <div className="relative z-10">
               <h3 className="text-xl font-bold text-white mb-2">Premium</h3>
               <div className="flex items-baseline gap-2 mb-2">
                 <span className="text-4xl font-bold text-white">$20</span>
                 <span className="text-gray-300 text-sm">/month</span>
               </div>
-              <p className="text-gray-300 mb-3 text-sm">For professional developers</p>
+              <p className="text-gray-300 mb-3 text-sm">For power users</p>
               <div className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full w-fit mb-4">
-                7-day unlimited trial
+                7-day free trial
               </div>
               
               <ul className="space-y-3 mb-6">
@@ -556,24 +608,18 @@ export default function Home() {
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">Consensus intelligence</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-2.5 h-2.5 text-primary" />
-                  </div>
-                  <span className="ml-2 text-gray-300 text-sm">Unlimited context & memory</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-2.5 h-2.5 text-primary" />
-                  </div>
                   <span className="ml-2 text-gray-300 text-sm">Advanced models</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-2.5 h-2.5 text-primary" />
+                  </div>
+                  <span className="ml-2 text-gray-300 text-sm">Priority processing</span>
                 </li>
               </ul>
               
               <Button 
-                className="w-full bg-gradient-to-r from-primary to-accent-blue hover:from-primary-light hover:to-accent-blue transform hover:scale-105 transition-all shadow-lg shadow-primary/25 text-sm"
+                className="w-full bg-dark-700 border-dark-600 text-white hover:bg-dark-600 text-sm"
                 onClick={() => handleSubscribe('premium')}
               >
                 Start 7-day trial
@@ -581,11 +627,78 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Team Plan */}
+            {/* Unlimited Plan - Most Popular */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5 }}
+              className="relative overflow-hidden rounded-2xl p-6 border-2 border-primary shadow-2xl shadow-primary/20 scale-105"
+            >
+              {/* Card Background with gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-dark-700 via-dark-800 to-dark-900" />
+              <div className="absolute inset-0 bg-gradient-to-r from-accent-yellow/5 via-transparent to-accent-blue/5" />
+              
+              {/* Floating Orb for popular card */}
+              <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/20 rounded-full blur-3xl animate-pulse" />
+              
+              <div className="relative z-10">
+                <div className="bg-gradient-to-r from-primary to-accent-blue text-dark px-3 py-1 rounded-full text-xs font-semibold shadow-lg w-fit mx-auto mb-3">
+                  Most popular
+                </div>
+              
+              <h3 className="text-xl font-bold text-white mb-2">Unlimited</h3>
+              <div className="flex items-baseline gap-2 mb-2">
+                <span className="text-4xl font-bold text-white">$30</span>
+                <span className="text-gray-300 text-sm">/month</span>
+              </div>
+              <p className="text-gray-300 mb-3 text-sm">For professional developers</p>
+              <div className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full w-fit mb-4">
+                7-day free trial
+              </div>
+              
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start">
+                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-2.5 h-2.5 text-primary" />
+                  </div>
+                  <span className="ml-2 text-gray-300 text-sm font-semibold">Unlimited conversations</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-2.5 h-2.5 text-primary" />
+                  </div>
+                  <span className="ml-2 text-gray-300 text-sm">Consensus intelligence</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-2.5 h-2.5 text-primary" />
+                  </div>
+                  <span className="ml-2 text-gray-300 text-sm">Priority processing</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-2.5 h-2.5 text-primary" />
+                  </div>
+                  <span className="ml-2 text-gray-300 text-sm">Single user license</span>
+                </li>
+              </ul>
+              
+              <Button 
+                className="w-full bg-gradient-to-r from-primary to-accent-blue hover:from-primary-light hover:to-accent-blue transform hover:scale-105 transition-all shadow-lg shadow-primary/25 text-sm"
+                onClick={() => handleSubscribe('unlimited')}
+              >
+                Start 7-day trial
+              </Button>
+              </div>
+            </motion.div>
+
+            {/* Team Unlimited Plan */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
               className="relative overflow-hidden rounded-2xl p-6 border border-dark-600 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all"
@@ -598,14 +711,14 @@ export default function Home() {
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-accent-blue/10 rounded-full blur-3xl animate-pulse" />
               
               <div className="relative z-10">
-              <h3 className="text-xl font-bold text-white mb-2">Team</h3>
+              <h3 className="text-xl font-bold text-white mb-2">Team Unlimited</h3>
               <div className="flex items-baseline gap-2 mb-2">
-                <span className="text-4xl font-bold text-white">$50</span>
+                <span className="text-4xl font-bold text-white">$100</span>
                 <span className="text-gray-300 text-sm">/month</span>
               </div>
-              <p className="text-gray-300 mb-3 text-sm">For development teams</p>
+              <p className="text-gray-300 mb-3 text-sm">Best value for teams</p>
               <div className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full w-fit mb-4">
-                7-day unlimited trial
+                67% savings vs individual
               </div>
               
               <ul className="space-y-3 mb-6">
@@ -613,36 +726,31 @@ export default function Home() {
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">600 daily / 12,000 monthly</span>
-                </li>
-                <li className="flex items-start">
-                  <Link href="/pricing#credit-packs" className="ml-6 text-xs text-primary/80 hover:text-primary transition-colors underline decoration-dotted underline-offset-2">
-                    Need more? Get credit packs →
-                  </Link>
+                  <span className="ml-2 text-gray-300 text-sm font-semibold">Unlimited for 5 developers</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">Consensus intelligence</span>
+                  <span className="ml-2 text-gray-300 text-sm">5 individual license keys</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">Unlimited context & memory</span>
+                  <span className="ml-2 text-gray-300 text-sm">Priority support</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">5 team members</span>
+                  <span className="ml-2 text-gray-300 text-sm">Team usage dashboard</span>
                 </li>
               </ul>
               
               <Button 
                 className="w-full bg-dark-700 border-dark-600 text-white hover:bg-dark-600 text-sm"
-                onClick={() => handleSubscribe('team')}
+                onClick={() => handleSubscribe('team-unlimited')}
               >
                 Start 7-day trial
               </Button>
@@ -696,13 +804,14 @@ export default function Home() {
                     <th className="text-center p-6 text-white font-semibold">Free</th>
                     <th className="text-center p-6 text-white font-semibold">Basic</th>
                     <th className="text-center p-6 text-white font-semibold">Standard</th>
+                    <th className="text-center p-6 text-white font-semibold">Premium</th>
                     <th className="text-center p-6 text-white font-semibold relative">
                       <div className="bg-gradient-to-r from-primary to-accent-blue text-dark text-xs px-2 py-1 rounded-full absolute top-1 left-1/2 transform -translate-x-1/2">
                         Most Popular
                       </div>
-                      <div className="mt-6">Premium</div>
+                      <div className="mt-6">Unlimited</div>
                     </th>
-                    <th className="text-center p-6 text-white font-semibold">Team</th>
+                    <th className="text-center p-6 text-white font-semibold">Team Unlimited</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -711,27 +820,31 @@ export default function Home() {
                     <td className="p-6 text-center text-white font-bold">$0</td>
                     <td className="p-6 text-center text-white font-bold">$5</td>
                     <td className="p-6 text-center text-white font-bold">$10</td>
-                    <td className="p-6 text-center text-white font-bold bg-primary/5">$20</td>
-                    <td className="p-6 text-center text-white font-bold">$50</td>
+                    <td className="p-6 text-center text-white font-bold">$20</td>
+                    <td className="p-6 text-center text-white font-bold bg-primary/5">$30</td>
+                    <td className="p-6 text-center text-white font-bold">$100</td>
                   </tr>
                   <tr className="border-t border-dark-600">
                     <td className="p-6 text-gray-300 font-medium">Daily conversations</td>
                     <td className="p-6 text-center text-gray-300">5</td>
                     <td className="p-6 text-center text-gray-300">50</td>
                     <td className="p-6 text-center text-gray-300">100</td>
-                    <td className="p-6 text-center text-gray-300 bg-primary/5">200</td>
-                    <td className="p-6 text-center text-gray-300">600 (shared)</td>
+                    <td className="p-6 text-center text-gray-300">200</td>
+                    <td className="p-6 text-center text-gray-300 bg-primary/5">Unlimited</td>
+                    <td className="p-6 text-center text-gray-300">Unlimited</td>
                   </tr>
                   <tr className="border-t border-dark-600">
                     <td className="p-6 text-gray-300 font-medium">Monthly conversations</td>
                     <td className="p-6 text-center text-gray-300">100</td>
                     <td className="p-6 text-center text-gray-300">1,000</td>
                     <td className="p-6 text-center text-gray-300">2,000</td>
-                    <td className="p-6 text-center text-gray-300 bg-primary/5">4,000</td>
-                    <td className="p-6 text-center text-gray-300">12,000 (shared)</td>
+                    <td className="p-6 text-center text-gray-300">4,000</td>
+                    <td className="p-6 text-center text-gray-300 bg-primary/5">Unlimited</td>
+                    <td className="p-6 text-center text-gray-300">Unlimited</td>
                   </tr>
                   <tr className="border-t border-dark-600">
                     <td className="p-6 text-gray-300 font-medium">Multi-model consensus</td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
@@ -743,11 +856,13 @@ export default function Home() {
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center bg-primary/5"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                   </tr>
                   <tr className="border-t border-dark-600">
                     <td className="p-6 text-gray-300 font-medium">Consensus intelligence (eliminates hallucinations)</td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
@@ -759,6 +874,7 @@ export default function Home() {
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center bg-primary/5"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                   </tr>
@@ -767,11 +883,13 @@ export default function Home() {
                     <td className="p-6 text-center"><span className="w-2 h-0.5 bg-dark-500 block mx-auto" /></td>
                     <td className="p-6 text-center"><span className="w-2 h-0.5 bg-dark-500 block mx-auto" /></td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center bg-primary/5"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                   </tr>
                   <tr className="border-t border-dark-600">
                     <td className="p-6 text-gray-300 font-medium">Team members included</td>
+                    <td className="p-6 text-center text-gray-300">1</td>
                     <td className="p-6 text-center text-gray-300">1</td>
                     <td className="p-6 text-center text-gray-300">1</td>
                     <td className="p-6 text-center text-gray-300">1</td>
@@ -783,6 +901,7 @@ export default function Home() {
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center bg-primary/5"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                   </tr>
@@ -791,11 +910,13 @@ export default function Home() {
                     <td className="p-6 text-center text-gray-300">Community</td>
                     <td className="p-6 text-center text-gray-300">Community</td>
                     <td className="p-6 text-center text-gray-300">Standard</td>
+                    <td className="p-6 text-center text-gray-300">Standard</td>
                     <td className="p-6 text-center text-gray-300 bg-primary/5">Standard</td>
                     <td className="p-6 text-center text-gray-300">Dedicated</td>
                   </tr>
                   <tr className="border-t border-dark-600">
                     <td className="p-6 text-gray-300 font-medium">Cancel anytime online</td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>

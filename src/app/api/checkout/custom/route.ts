@@ -34,6 +34,8 @@ export async function POST(request: NextRequest) {
       'standard': process.env.PADDLE_PRICE_STANDARD || '',
       'premium': process.env.PADDLE_PRICE_PREMIUM || '',
       'team': process.env.PADDLE_PRICE_TEAM || '',
+      'unlimited': process.env.PADDLE_PRICE_UNLIMITED || '',
+      'team-unlimited': process.env.PADDLE_PRICE_TEAM_UNLIMITED || '',
     }
 
     const priceId = priceMap[plan]

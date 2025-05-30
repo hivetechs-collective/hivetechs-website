@@ -6,7 +6,7 @@ export interface User {
   email: string;
   name: string;
   license_key: string;
-  subscription_tier: 'free' | 'basic' | 'standard' | 'premium' | 'team';
+  subscription_tier: 'free' | 'basic' | 'standard' | 'premium' | 'team' | 'unlimited' | 'team-unlimited';
   daily_limit: number;
   monthly_limit: number;
   account_status: 'active' | 'suspended' | 'cancelled';
@@ -17,6 +17,7 @@ export interface User {
   paddle_subscription_id?: string;
   subscription_status?: string;
   subscription_end_date?: string;
+  credits_balance?: number;
 }
 
 export interface ApiKey {
@@ -38,6 +39,17 @@ export interface UsageLog {
   response_time_ms?: number;
   status_code: number;
   tokens_used?: number;
+}
+
+export interface CreditTransaction {
+  id: string;
+  user_id: string;
+  transaction_type: 'purchase' | 'usage';
+  amount: number; // positive for purchases, negative for usage
+  balance_after: number;
+  description?: string;
+  paddle_transaction_id?: string;
+  created_at: string;
 }
 
 // In-memory store for local development

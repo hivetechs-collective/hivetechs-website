@@ -43,7 +43,7 @@ const plans: PricingPlan[] = [
     id: 'basic',
     name: 'Basic',
     price: 5,
-    description: 'Perfect for individual developers',
+    description: 'Perfect for light usage',
     features: [
       { text: '50 daily / 1,000 monthly conversations', included: true },
       { text: 'Eliminates AI hallucinations', included: true },
@@ -56,21 +56,21 @@ const plans: PricingPlan[] = [
     id: 'standard',
     name: 'Standard',
     price: 10,
-    description: 'For power users and small teams',
+    description: 'Great for regular use',
     features: [
       { text: '100 daily / 2,000 monthly conversations', included: true },
       { text: 'Eliminates AI hallucinations', included: true },
       { text: 'Unlimited context & long-term memory', included: true },
       { text: 'All terminal and IDE integrations', included: true },
       { text: 'Priority processing', included: true },
+      { text: 'Standard support', included: true },
     ]
   },
   {
     id: 'premium',
     name: 'Premium',
     price: 20,
-    description: 'For professional developers',
-    popular: true,
+    description: 'For power users',
     features: [
       { text: '200 daily / 4,000 monthly conversations', included: true },
       { text: 'Eliminates AI hallucinations', included: true },
@@ -78,21 +78,40 @@ const plans: PricingPlan[] = [
       { text: 'All terminal and IDE integrations', included: true },
       { text: 'Priority processing', included: true },
       { text: 'Advanced model combinations', included: true },
+      { text: 'Standard support', included: true },
     ]
   },
   {
-    id: 'team',
-    name: 'Team',
-    price: 50,
-    description: 'For development teams',
+    id: 'unlimited',
+    name: 'Unlimited',
+    price: 30,
+    description: 'For professional developers',
+    popular: true,
     features: [
-      { text: '600 daily / 12,000 monthly conversations (shared)', included: true },
+      { text: 'Unlimited conversations', included: true },
       { text: 'Eliminates AI hallucinations', included: true },
       { text: 'Unlimited context & long-term memory', included: true },
       { text: 'All terminal and IDE integrations', included: true },
       { text: 'Priority processing', included: true },
-      { text: '5 team members included', included: true },
-      { text: 'Dedicated support', included: true },
+      { text: 'Advanced model combinations', included: true },
+      { text: 'Single user license', included: true },
+    ]
+  },
+  {
+    id: 'team-unlimited',
+    name: 'Team Unlimited',
+    price: 100,
+    description: 'Best value for development teams',
+    features: [
+      { text: 'Unlimited conversations for 5 developers', included: true },
+      { text: '5 individual license keys', included: true },
+      { text: 'Eliminates AI hallucinations', included: true },
+      { text: 'Unlimited context & long-term memory', included: true },
+      { text: 'All terminal and IDE integrations', included: true },
+      { text: 'Priority processing', included: true },
+      { text: 'Team usage dashboard & analytics', included: true },
+      { text: 'Priority support', included: true },
+      { text: '70% savings vs individual plans', included: true },
     ]
   }
 ]
@@ -133,9 +152,8 @@ export default function Pricing() {
       return
     }
     
-    // For now, redirect to contact for credit purchases
-    // TODO: Implement credit purchase checkout when Paddle is ready
-    alert(`Credit purchases coming soon! You selected ${credits} credits. For now, please contact support@hivetechs.io to purchase additional credits.`)
+    // Redirect to credit checkout
+    window.location.href = `/checkout/credits?pack=${credits}`
   }
 
   const handleConsentAccept = () => {
@@ -180,7 +198,7 @@ export default function Pricing() {
                 Pricing that scales with you
               </h1>
               <p className="text-xl text-gray-300 mb-8">
-                Start with a 7-day unlimited trial with full access to all features. 
+                Start with a 7-day free trial with full access to all features. 
                 No credit card required. Upgrade, downgrade, or cancel anytime.
               </p>
               <div className="flex justify-center gap-4">
@@ -263,7 +281,7 @@ export default function Pricing() {
         <div className="absolute inset-0 bg-gradient-to-r from-accent-yellow/5 via-transparent to-accent-blue/5" />
         
         <div className="relative container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
             {plans.map((plan, index) => (
               <motion.div
                 key={plan.id}
@@ -303,7 +321,7 @@ export default function Pricing() {
                     <p className="text-gray-300 mb-3">{plan.description}</p>
                     {plan.id !== 'free' && (
                       <div className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full w-fit">
-                        7-day unlimited trial included
+                        7-day free trial included
                       </div>
                     )}
                   </div>
@@ -485,7 +503,7 @@ export default function Pricing() {
             />
             <FAQ 
               question="Is there a refund policy?"
-              answer="New users get a 7-day unlimited trial with full access. After that, we offer a 15-day money-back guarantee for new subscriptions. See our refund policy for full details."
+              answer="New users get a 7-day free trial with full access. After that, we offer a 15-day money-back guarantee for new subscriptions. See our refund policy for full details."
             />
             <FAQ 
               question="How do I cancel my subscription?"

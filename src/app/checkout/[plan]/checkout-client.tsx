@@ -14,6 +14,8 @@ const planDetails = {
   standard: { name: 'Standard', price: 10 },
   premium: { name: 'Premium', price: 20 },
   team: { name: 'Team', price: 50 },
+  unlimited: { name: 'Unlimited', price: 30 },
+  'team-unlimited': { name: 'Team Unlimited', price: 100 },
 }
 
 export default function CheckoutClient() {
@@ -89,6 +91,11 @@ export default function CheckoutClient() {
             <p className="text-xl text-gray-300">
               Join thousands of developers using hive-tools for better AI responses
             </p>
+            {details.name.includes('Unlimited') && (
+              <div className="mt-6 inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full">
+                <span className="text-sm font-semibold">🎉 Most Popular Choice</span>
+              </div>
+            )}
           </div>
           
           <CustomCheckout
