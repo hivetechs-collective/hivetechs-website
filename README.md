@@ -77,7 +77,45 @@ The website integrates with Gumroad for subscription management and payment proc
 - Documentation section
 - Blog for company updates and technical articles
 
-## License
+## License & Legal Notice
+
+**⚠️ PROPRIETARY SOFTWARE - ALL RIGHTS RESERVED**
+
+This repository contains proprietary software and intellectual property owned exclusively by **HiveTechs Collective LLC**. 
+
+### 🚫 Unauthorized Use Prohibited
+
+The following activities are **STRICTLY PROHIBITED** without explicit written permission:
+- Copying, reproducing, or distributing any part of this codebase
+- Creating derivative works or competing products
+- Using any business logic, UI designs, or proprietary methodologies
+- Reverse engineering or extracting intellectual property
+
+### 📜 License Requirements
+
+- **Commercial Use**: Requires explicit licensing agreement
+- **Educational Use**: Limited to non-commercial academic research only
+- **Attribution**: Required for any permitted use
+- **Distribution**: Prohibited without written authorization
+
+### 📞 Contact for Licensing
+
+- **Legal Inquiries**: legal@hivetechs.io
+- **Licensing**: licensing@hivetechs.io
+- **Website**: https://hivetechs.io
+
+### ⚖️ Legal Protection
+
+This software is protected by:
+- U.S. and international copyright law
+- Trade secret protections
+- Proprietary business methodologies
+- Contractual licensing agreements
+
+**Violation of this license may result in legal action for damages and injunctive relief.**
+
+For complete license terms, see the [LICENSE](LICENSE) file.
+
+---
 
 Copyright © 2025 HiveTechs Collective LLC. All rights reserved.
-# Trigger OpenNext deployment

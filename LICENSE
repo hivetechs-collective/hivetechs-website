@@ -1,0 +1,79 @@
+HiveTechs Collective Website & Platform License
+
+Copyright (c) 2025 HiveTechs Collective LLC
+All rights reserved.
+
+PROPRIETARY SOFTWARE NOTICE:
+This repository contains proprietary software, documentation, business logic, 
+design elements, and commercial intellectual property belonging exclusively 
+to HiveTechs Collective LLC.
+
+RESTRICTIONS:
+The following activities are STRICTLY PROHIBITED without explicit written 
+permission from HiveTechs Collective LLC:
+
+1. REPRODUCTION & DISTRIBUTION:
+   - Copying, reproducing, or distributing any part of this codebase
+   - Creating derivative works based on this software
+   - Publishing, sharing, or making available any portion of this code
+
+2. REVERSE ENGINEERING:
+   - Decompiling, disassembling, or reverse engineering any component
+   - Extracting business logic, algorithms, or proprietary methodologies
+   - Analyzing code structure for competitive advantage
+
+3. COMMERCIAL USE:
+   - Using this software or its components in any commercial product
+   - Incorporating any design patterns, UI/UX elements, or functionality
+   - Leveraging any business logic, payment processing, or user management systems
+
+4. INTELLECTUAL PROPERTY:
+   - Copying or adapting user interface designs, layout concepts, or visual elements
+   - Replicating subscription models, pricing strategies, or business workflows
+   - Using proprietary branding, logos, or marketing materials
+
+PERMITTED ACTIVITIES:
+- Viewing this repository for educational purposes only
+- Academic research with proper attribution (non-commercial only)
+- Security research for responsible disclosure to HiveTechs Collective
+
+THIRD-PARTY COMPONENTS:
+While this repository may include open-source components, all original work, 
+business logic, integrations, and custom implementations remain proprietary 
+to HiveTechs Collective LLC and are subject to this license.
+
+LEGAL PROTECTIONS:
+This software is protected by:
+- United States copyright law
+- International copyright treaties
+- Trade secret protections
+- Proprietary rights under applicable law
+
+VIOLATION CONSEQUENCES:
+Unauthorized use, reproduction, or distribution of this software may result in:
+- Civil legal action for damages
+- Injunctive relief to prevent further infringement
+- Criminal prosecution under applicable law
+- Recovery of attorney fees and legal costs
+
+CONTACT:
+For licensing inquiries, permissions, or legal questions:
+- Email: legal@hivetechs.io
+- Website: https://hivetechs.io
+- Address: HiveTechs Collective LLC [Legal Department]
+
+NO WARRANTY:
+THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL 
+HIVETECHS COLLECTIVE LLC BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY.
+
+JURISDICTION:
+This license shall be governed by the laws of the jurisdiction where 
+HiveTechs Collective LLC is incorporated, without regard to conflict of law principles.
+
+EFFECTIVE DATE: January 30, 2025
+LICENSE VERSION: 1.0
+
+This license is effective immediately upon access to this repository and 
+remains in effect until explicitly terminated by HiveTechs Collective LLC.

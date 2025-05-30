@@ -2,6 +2,13 @@
   "name": "hivetechs-website",
   "version": "0.1.0",
   "private": true,
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "HiveTechs Collective LLC <legal@hivetechs.io>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hivetechs-collective/hivetechs-website.git"
+  },
+  "homepage": "https://hivetechs.io",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
