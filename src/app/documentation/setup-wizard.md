@@ -747,7 +747,7 @@ Transform your AI development experience with **intelligent, guided setup** that
 ### **Start Your Perfect Setup**
 
 ```bash
-# Install the platform
+# Install hive-tools
 npm install -g @hivetechs/hive-ai
 
 # Start with guided setup for beginners
@@ -758,7 +758,7 @@ hive setup quick
 ```
 
 ### **Next Steps**
-1. **[Start Free Trial](https://store.hivetechs.io)** - Get your license key and begin setup
+1. **[Get Started](https://store.hivetechs.io)** - Get your license key and begin setup
 2. **[Interactive Dashboard](/documentation/interactive-dashboard)** - Monitor your AI operations in real-time
 3. **[CLI Tools Guide](/documentation/cli-tools-guide)** - Master all platform capabilities
 

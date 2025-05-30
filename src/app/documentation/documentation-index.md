@@ -152,11 +152,8 @@ Welcome to the complete hive-tools documentation. Our platform provides revoluti
 ## 🚀 Quick Start
 
 ```bash
-# Early Access Installation
-git clone https://github.com/hivetechs/hive-ai.git
-cd hive-ai
-npm install
-npm link
+# Install hive-tools
+npm install -g @hivetechs/hive-ai
 
 # Run the setup wizard
 hive setup wizard
@@ -171,7 +168,7 @@ hive benchmark  # Performance testing
 hive cost      # Cost tracking
 ```
 
-> **Early Access Note:** NPM package coming soon. See [Quick Start Guide](/documentation/quick-start) for detailed setup instructions.
+> See [Quick Start Guide](/documentation/quick-start) for detailed setup instructions.
 
 ## 🎯 Getting Started Paths
 

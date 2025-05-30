@@ -30,85 +30,62 @@ const plans: PricingPlan[] = [
     id: 'free',
     name: 'Free',
     price: 0,
-    description: 'For occasional users and hobbyists',
+    description: 'Perfect for trying out',
     features: [
-      { text: '5 daily / 100 monthly conversations', included: true },
-      { text: 'Eliminates AI hallucinations', included: true },
-      { text: 'Unlimited context & long-term memory', included: true },
-      { text: 'All terminal and IDE integrations', included: true },
-      { text: 'Full support', included: true },
+      { text: '10 daily enhanced consensus conversations', included: true },
+      { text: 'All features included', included: true },
     ]
   },
   {
     id: 'basic',
     name: 'Basic',
     price: 5,
-    description: 'Perfect for light usage',
+    description: 'For regular use',
     features: [
-      { text: '50 daily / 1,000 monthly conversations', included: true },
-      { text: 'Eliminates AI hallucinations', included: true },
-      { text: 'Unlimited context & long-term memory', included: true },
-      { text: 'All terminal and IDE integrations', included: true },
-      { text: 'Full support', included: true },
+      { text: '50 daily conversations', included: true },
+      { text: 'All features included', included: true },
     ]
   },
   {
     id: 'standard',
     name: 'Standard',
     price: 10,
-    description: 'Great for regular use',
+    description: 'For power users',
     features: [
-      { text: '100 daily / 2,000 monthly conversations', included: true },
-      { text: 'Eliminates AI hallucinations', included: true },
-      { text: 'Unlimited context & long-term memory', included: true },
-      { text: 'All terminal and IDE integrations', included: true },
-      { text: 'Full support', included: true },
+      { text: '100 daily conversations', included: true },
+      { text: 'All features included', included: true },
     ]
   },
   {
     id: 'premium',
     name: 'Premium',
     price: 20,
-    description: 'For power users',
+    description: 'For heavy usage',
     features: [
-      { text: '200 daily / 4,000 monthly conversations', included: true },
-      { text: 'Eliminates AI hallucinations', included: true },
-      { text: 'Unlimited context & long-term memory', included: true },
-      { text: 'All terminal and IDE integrations', included: true },
-      { text: 'Advanced model combinations', included: true },
-      { text: 'Full support', included: true },
+      { text: '200 daily conversations', included: true },
+      { text: 'All features included', included: true },
     ]
   },
   {
     id: 'unlimited',
     name: 'Unlimited',
     price: 30,
-    description: 'For professional developers',
+    description: 'No conversation limits',
     popular: true,
     features: [
       { text: 'Unlimited conversations', included: true },
-      { text: 'Eliminates AI hallucinations', included: true },
-      { text: 'Unlimited context & long-term memory', included: true },
-      { text: 'All terminal and IDE integrations', included: true },
-      { text: 'Advanced model combinations', included: true },
-      { text: 'Full support', included: true },
-      { text: 'Single user license', included: true },
+      { text: 'All features included', included: true },
     ]
   },
   {
     id: 'team-unlimited',
     name: 'Team Unlimited',
     price: 115,
-    description: 'Best value for development teams',
+    description: 'For teams (5 developers)',
     features: [
-      { text: 'Unlimited conversations for 5 developers', included: true },
-      { text: '5 individual license keys', included: true },
-      { text: 'Eliminates AI hallucinations', included: true },
-      { text: 'Unlimited context & long-term memory', included: true },
-      { text: 'All terminal and IDE integrations', included: true },
-      { text: 'Team usage dashboard & analytics', included: true },
-      { text: 'Priority support', included: true },
-      { text: '23% savings vs individual plans', included: true },
+      { text: 'Unlimited conversations × 5 developers', included: true },
+      { text: 'All features included', included: true },
+      { text: 'Save 23% vs 5 individual plans', included: true },
     ]
   }
 ]
@@ -316,7 +293,12 @@ export default function Pricing() {
                       <span className="text-gray-300">/month</span>
                     </div>
                     <p className="text-gray-300 mb-3">{plan.description}</p>
-                    {plan.id !== 'free' && (
+                    {plan.id !== 'unlimited' && plan.id !== 'team-unlimited' && (
+                      <div className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full w-fit">
+                        7-day free unlimited usage
+                      </div>
+                    )}
+                    {(plan.id === 'unlimited' || plan.id === 'team-unlimited') && (
                       <div className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full w-fit">
                         7-day free trial included
                       </div>
@@ -366,25 +348,12 @@ export default function Pricing() {
                     )}
                     onClick={() => handleSubscribe(plan.id)}
                   >
-                    {plan.id === 'free' ? 'Sign up free' : 'Start 7-day trial'}
+                    {plan.id === 'free' ? 'Get started free' : 
+                     (plan.id === 'unlimited' || plan.id === 'team-unlimited') ? 'Start 7-day trial' : 'Start 7-day unlimited trial'}
                   </Button>
                 </div>
               </motion.div>
             ))}
-          </div>
-
-          {/* Enterprise CTA */}
-          <div className="mt-16 text-center">
-            <p className="text-gray-300 mb-4">
-              Need more than 12,000 conversations or custom features?
-            </p>
-            <Link 
-              href="/contact" 
-              className="text-primary font-medium inline-flex items-center hover:gap-3 transition-all"
-            >
-              Contact us for Enterprise pricing
-              <ChevronRight className="w-4 h-4 ml-2" />
-            </Link>
           </div>
         </div>
       </section>
@@ -484,7 +453,7 @@ export default function Pricing() {
           <div className="max-w-4xl mx-auto space-y-6">
             <FAQ 
               question="What happens when I reach my conversation limit?"
-              answer="We have both daily and monthly limits. When you reach your daily limit, it resets the next day. When you reach your monthly limit, you can purchase additional conversation credits to continue using the service. Your subscription will automatically reset at the beginning of each billing cycle."
+              answer="We have daily conversation limits. When you reach your daily limit, it resets the next day. You can also purchase additional conversation credits that never expire to supplement your daily allowance."
             />
             <FAQ 
               question="Can I upgrade or downgrade my plan?"
@@ -492,7 +461,7 @@ export default function Pricing() {
             />
             <FAQ 
               question="Do unused conversations roll over?"
-              answer="Monthly conversation limits don't roll over, but purchased conversation credits never expire and can be used anytime."
+              answer="Daily limits reset each day and don't roll over. However, purchased conversation credits never expire and can be used anytime to supplement your daily allowance."
             />
             <FAQ 
               question="What counts as a conversation?"

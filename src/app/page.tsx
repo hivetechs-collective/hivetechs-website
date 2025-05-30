@@ -395,9 +395,9 @@ export default function Home() {
                 <span className="text-4xl font-bold text-white">$0</span>
                 <span className="text-gray-300 text-sm">/month</span>
               </div>
-              <p className="text-gray-300 mb-3 text-sm">For hobbyists & students</p>
+              <p className="text-gray-300 mb-3 text-sm">Perfect for trying out</p>
               <div className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full w-fit mb-4">
-                No credit card required
+                7-day free unlimited usage
               </div>
               
               <ul className="space-y-3 mb-6">
@@ -405,30 +405,13 @@ export default function Home() {
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">5 daily / 100 monthly</span>
-                </li>
-                <li className="flex items-start">
-                  <Link href="/pricing#credit-packs" className="ml-6 text-xs text-primary/80 hover:text-primary transition-colors underline decoration-dotted underline-offset-2">
-                    Need more? Get credit packs →
-                  </Link>
+                  <span className="ml-2 text-gray-300 text-sm">10 daily enhanced consensus conversations</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">Consensus intelligence</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-2.5 h-2.5 text-primary" />
-                  </div>
-                  <span className="ml-2 text-gray-300 text-sm">Unlimited context & memory</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-2.5 h-2.5 text-primary" />
-                  </div>
-                  <span className="ml-2 text-gray-300 text-sm">All integrations</span>
+                  <span className="ml-2 text-gray-300 text-sm">All features included</span>
                 </li>
               </ul>
               
@@ -463,9 +446,9 @@ export default function Home() {
                 <span className="text-4xl font-bold text-white">$5</span>
                 <span className="text-gray-300 text-sm">/month</span>
               </div>
-              <p className="text-gray-300 mb-3 text-sm">For light usage</p>
+              <p className="text-gray-300 mb-3 text-sm">For regular use</p>
               <div className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full w-fit mb-4">
-                7-day free trial
+                7-day free unlimited usage
               </div>
               
               <ul className="space-y-3 mb-6">
@@ -473,24 +456,13 @@ export default function Home() {
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">50 daily / 1,000 monthly</span>
-                </li>
-                <li className="flex items-start">
-                  <Link href="/pricing#credit-packs" className="ml-6 text-xs text-primary/80 hover:text-primary transition-colors underline decoration-dotted underline-offset-2">
-                    Need more? Get credit packs →
-                  </Link>
+                  <span className="ml-2 text-gray-300 text-sm">50 daily conversations</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">Consensus intelligence</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-2.5 h-2.5 text-primary" />
-                  </div>
-                  <span className="ml-2 text-gray-300 text-sm">All integrations</span>
+                  <span className="ml-2 text-gray-300 text-sm">All features included</span>
                 </li>
               </ul>
               
@@ -498,7 +470,7 @@ export default function Home() {
                 className="w-full bg-dark-700 border-dark-600 text-white hover:bg-dark-600 text-sm"
                 onClick={() => handleSubscribe('basic')}
               >
-                Start 7-day trial
+                Start 7-day unlimited trial
               </Button>
               </div>
             </motion.div>
@@ -525,9 +497,9 @@ export default function Home() {
                 <span className="text-4xl font-bold text-white">$10</span>
                 <span className="text-gray-300 text-sm">/month</span>
               </div>
-              <p className="text-gray-300 mb-3 text-sm">For regular use</p>
+              <p className="text-gray-300 mb-3 text-sm">For power users</p>
               <div className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full w-fit mb-4">
-                7-day free trial
+                7-day free unlimited usage
               </div>
               
               <ul className="space-y-3 mb-6">
@@ -535,18 +507,13 @@ export default function Home() {
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">100 daily / 2,000 monthly</span>
-                </li>
-                <li className="flex items-start">
-                  <Link href="/pricing#credit-packs" className="ml-6 text-xs text-primary/80 hover:text-primary transition-colors underline decoration-dotted underline-offset-2">
-                    Need more? Get credit packs →
-                  </Link>
+                  <span className="ml-2 text-gray-300 text-sm">100 daily conversations</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">Full support</span>
+                  <span className="ml-2 text-gray-300 text-sm">All features included</span>
                 </li>
               </ul>
               
@@ -554,7 +521,7 @@ export default function Home() {
                 className="w-full bg-dark-700 border-dark-600 text-white hover:bg-dark-600 text-sm"
                 onClick={() => handleSubscribe('standard')}
               >
-                Start 7-day trial
+                Start 7-day unlimited trial
               </Button>
               </div>
             </motion.div>
@@ -581,9 +548,9 @@ export default function Home() {
                 <span className="text-4xl font-bold text-white">$20</span>
                 <span className="text-gray-300 text-sm">/month</span>
               </div>
-              <p className="text-gray-300 mb-3 text-sm">For power users</p>
+              <p className="text-gray-300 mb-3 text-sm">For heavy usage</p>
               <div className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full w-fit mb-4">
-                7-day free trial
+                7-day free unlimited usage
               </div>
               
               <ul className="space-y-3 mb-6">
@@ -591,18 +558,13 @@ export default function Home() {
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">200 daily / 4,000 monthly</span>
-                </li>
-                <li className="flex items-start">
-                  <Link href="/pricing#credit-packs" className="ml-6 text-xs text-primary/80 hover:text-primary transition-colors underline decoration-dotted underline-offset-2">
-                    Need more? Get credit packs →
-                  </Link>
+                  <span className="ml-2 text-gray-300 text-sm">200 daily conversations</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">Advanced models</span>
+                  <span className="ml-2 text-gray-300 text-sm">All features included</span>
                 </li>
               </ul>
               
@@ -610,7 +572,7 @@ export default function Home() {
                 className="w-full bg-dark-700 border-dark-600 text-white hover:bg-dark-600 text-sm"
                 onClick={() => handleSubscribe('premium')}
               >
-                Start 7-day trial
+                Start 7-day unlimited trial
               </Button>
               </div>
             </motion.div>
@@ -641,9 +603,9 @@ export default function Home() {
                 <span className="text-4xl font-bold text-white">$30</span>
                 <span className="text-gray-300 text-sm">/month</span>
               </div>
-              <p className="text-gray-300 mb-3 text-sm">For professional developers</p>
+              <p className="text-gray-300 mb-3 text-sm">No conversation limits</p>
               <div className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full w-fit mb-4">
-                7-day free trial
+                7-day free unlimited usage
               </div>
               
               <ul className="space-y-3 mb-6">
@@ -657,13 +619,7 @@ export default function Home() {
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">Consensus intelligence</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-2.5 h-2.5 text-primary" />
-                  </div>
-                  <span className="ml-2 text-gray-300 text-sm">Single user license</span>
+                  <span className="ml-2 text-gray-300 text-sm">All features included</span>
                 </li>
               </ul>
               
@@ -698,7 +654,7 @@ export default function Home() {
                 <span className="text-4xl font-bold text-white">$115</span>
                 <span className="text-gray-300 text-sm">/month</span>
               </div>
-              <p className="text-gray-300 mb-3 text-sm">Best value for teams</p>
+              <p className="text-gray-300 mb-3 text-sm">For teams (5 developers)</p>
               <div className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full w-fit mb-4">
                 23% savings vs individual
               </div>
@@ -708,25 +664,19 @@ export default function Home() {
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm font-semibold">Unlimited for 5 developers</span>
+                  <span className="ml-2 text-gray-300 text-sm font-semibold">Unlimited conversations × 5 developers</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">5 individual license keys</span>
+                  <span className="ml-2 text-gray-300 text-sm">All features included</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">Priority support</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-2.5 h-2.5 text-primary" />
-                  </div>
-                  <span className="ml-2 text-gray-300 text-sm">Team usage dashboard</span>
+                  <span className="ml-2 text-gray-300 text-sm">Save 23% vs 5 individual plans</span>
                 </li>
               </ul>
               
@@ -807,19 +757,10 @@ export default function Home() {
                   </tr>
                   <tr className="border-t border-dark-600">
                     <td className="p-6 text-gray-300 font-medium">Daily conversations</td>
-                    <td className="p-6 text-center text-gray-300">5</td>
+                    <td className="p-6 text-center text-gray-300">10</td>
                     <td className="p-6 text-center text-gray-300">50</td>
                     <td className="p-6 text-center text-gray-300">100</td>
                     <td className="p-6 text-center text-gray-300">200</td>
-                    <td className="p-6 text-center text-gray-300 bg-primary/5">Unlimited</td>
-                    <td className="p-6 text-center text-gray-300">Unlimited</td>
-                  </tr>
-                  <tr className="border-t border-dark-600">
-                    <td className="p-6 text-gray-300 font-medium">Monthly conversations</td>
-                    <td className="p-6 text-center text-gray-300">100</td>
-                    <td className="p-6 text-center text-gray-300">1,000</td>
-                    <td className="p-6 text-center text-gray-300">2,000</td>
-                    <td className="p-6 text-center text-gray-300">4,000</td>
                     <td className="p-6 text-center text-gray-300 bg-primary/5">Unlimited</td>
                     <td className="p-6 text-center text-gray-300">Unlimited</td>
                   </tr>
@@ -852,6 +793,33 @@ export default function Home() {
                   </tr>
                   <tr className="border-t border-dark-600">
                     <td className="p-6 text-gray-300 font-medium">Unlimited context & long-term memory</td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center bg-primary/5"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                  </tr>
+                  <tr className="border-t border-dark-600">
+                    <td className="p-6 text-gray-300 font-medium">Access to 319+ models from 55+ providers</td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center bg-primary/5"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                  </tr>
+                  <tr className="border-t border-dark-600">
+                    <td className="p-6 text-gray-300 font-medium">Automatic cost optimization across all models</td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center bg-primary/5"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
+                  </tr>
+                  <tr className="border-t border-dark-600">
+                    <td className="p-6 text-gray-300 font-medium">Real-time monitoring & export capabilities</td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>

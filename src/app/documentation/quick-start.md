@@ -2,28 +2,13 @@
 
 Get up and running with hive-tools in **under 5 minutes**! This guide covers the essentials for new users.
 
-> **🚧 Early Access Notice:** hive-tools is currently in early access. Installation instructions will be updated when public npm registry access is available.
 
 > **💡 Just Purchased?** If you arrived here after purchasing a subscription, welcome! Follow the steps below to get started.
 
 ## 🚀 Installation
 
-### Option 1: Early Access Installation (Current)
 ```bash
-# Clone the repository
-git clone https://github.com/hivetechs/hive-ai.git
-cd hive-ai
-
-# Install dependencies
-npm install
-
-# Link for global use
-npm link
-```
-
-### Option 2: NPM Installation (Coming Soon)
-```bash
-# This will be available once we publish to npm registry
+# Install hive-tools globally
 npm install -g @hivetechs/hive-ai
 ```
 
@@ -38,7 +23,7 @@ hive setup wizard
 ```
 
 The wizard will guide you through:
-1. **License Key** - Optional for early access users
+1. **License Key** - Enter your license key for full access
 2. **AI Provider Setup** - Configure OpenAI, Anthropic, or other providers
 3. **Budget Limits** - Protect yourself from unexpected costs
 4. **Default Profile** - Optimize for your use case
@@ -100,20 +85,18 @@ hive analytics menu
 
 ## 🔑 License & Access
 
-### Early Access Users
-During early access, you can use hive-tools with:
-- Your own AI provider API keys (OpenAI, Anthropic, etc.)
-- Community features and basic analytics
-- All 41 MCP tools
-
-### License Key (Coming Soon)
-When our store launches, license keys will unlock:
+### License Key Features
+Your license key unlocks:
 - Managed AI access without personal API keys
 - Advanced analytics and insights
 - Priority support
 - Commercial usage rights
+- All 41 MCP tools
 
-> **Note:** Store integration with Paddle is pending. See our [Development Roadmap](/documentation/roadmap) for details.
+### Community Access
+You can also use hive-tools with:
+- Your own AI provider API keys (OpenAI, Anthropic, etc.)
+- Community features and basic analytics
 
 ## 🛠️ Manual Configuration
 
@@ -146,9 +129,8 @@ hive budget alerts --desktop
 ### "Command not found"
 If `hive` command isn't recognized:
 ```bash
-# For early access installation
-cd /path/to/hive-ai
-npm link
+# Reinstall globally
+npm install -g @hivetechs/hive-ai
 
 # Verify Node.js is installed
 node --version
@@ -220,9 +202,3 @@ hive profiles use cost_effective
 
 **Ready to go?** Start with `hive` to open the main menu and explore from there!
 
-## 🚧 Early Access Information
-
-- **Installation**: Currently via GitHub clone (npm coming soon)
-- **License Keys**: Use your own API keys during early access
-- **Store**: Paddle integration pending - [View Roadmap](/documentation/roadmap)
-- **Support**: Email support@hivetechs.io for early access help
