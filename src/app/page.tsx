@@ -546,7 +546,7 @@ export default function Home() {
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">Email support</span>
+                  <span className="ml-2 text-gray-300 text-sm">Full support</span>
                 </li>
               </ul>
               
@@ -879,11 +879,11 @@ export default function Home() {
                   </tr>
                   <tr className="border-t border-dark-600">
                     <td className="p-6 text-gray-300 font-medium">Support level</td>
-                    <td className="p-6 text-center text-gray-300">Email support</td>
-                    <td className="p-6 text-center text-gray-300">Email support</td>
-                    <td className="p-6 text-center text-gray-300">Email support</td>
-                    <td className="p-6 text-center text-gray-300">Email support</td>
-                    <td className="p-6 text-center text-gray-300 bg-primary/5">Email support</td>
+                    <td className="p-6 text-center text-gray-300">Full support</td>
+                    <td className="p-6 text-center text-gray-300">Full support</td>
+                    <td className="p-6 text-center text-gray-300">Full support</td>
+                    <td className="p-6 text-center text-gray-300">Full support</td>
+                    <td className="p-6 text-center text-gray-300 bg-primary/5">Full support</td>
                     <td className="p-6 text-center text-gray-300">Priority support</td>
                   </tr>
                   <tr className="border-t border-dark-600">

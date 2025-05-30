@@ -36,7 +36,7 @@ const plans: PricingPlan[] = [
       { text: 'Eliminates AI hallucinations', included: true },
       { text: 'Unlimited context & long-term memory', included: true },
       { text: 'All terminal and IDE integrations', included: true },
-      { text: 'Email support', included: true },
+      { text: 'Full support', included: true },
     ]
   },
   {
@@ -49,7 +49,7 @@ const plans: PricingPlan[] = [
       { text: 'Eliminates AI hallucinations', included: true },
       { text: 'Unlimited context & long-term memory', included: true },
       { text: 'All terminal and IDE integrations', included: true },
-      { text: 'Email support', included: true },
+      { text: 'Full support', included: true },
     ]
   },
   {
@@ -62,7 +62,7 @@ const plans: PricingPlan[] = [
       { text: 'Eliminates AI hallucinations', included: true },
       { text: 'Unlimited context & long-term memory', included: true },
       { text: 'All terminal and IDE integrations', included: true },
-      { text: 'Email support', included: true },
+      { text: 'Full support', included: true },
     ]
   },
   {
@@ -76,7 +76,7 @@ const plans: PricingPlan[] = [
       { text: 'Unlimited context & long-term memory', included: true },
       { text: 'All terminal and IDE integrations', included: true },
       { text: 'Advanced model combinations', included: true },
-      { text: 'Email support', included: true },
+      { text: 'Full support', included: true },
     ]
   },
   {
@@ -91,7 +91,7 @@ const plans: PricingPlan[] = [
       { text: 'Unlimited context & long-term memory', included: true },
       { text: 'All terminal and IDE integrations', included: true },
       { text: 'Advanced model combinations', included: true },
-      { text: 'Email support', included: true },
+      { text: 'Full support', included: true },
       { text: 'Single user license', included: true },
     ]
   },
