@@ -36,7 +36,7 @@ const plans: PricingPlan[] = [
       { text: 'Eliminates AI hallucinations', included: true },
       { text: 'Unlimited context & long-term memory', included: true },
       { text: 'All terminal and IDE integrations', included: true },
-      { text: 'Community support', included: true },
+      { text: 'Email support', included: true },
     ]
   },
   {
@@ -49,7 +49,7 @@ const plans: PricingPlan[] = [
       { text: 'Eliminates AI hallucinations', included: true },
       { text: 'Unlimited context & long-term memory', included: true },
       { text: 'All terminal and IDE integrations', included: true },
-      { text: 'Community support', included: true },
+      { text: 'Email support', included: true },
     ]
   },
   {
@@ -62,8 +62,7 @@ const plans: PricingPlan[] = [
       { text: 'Eliminates AI hallucinations', included: true },
       { text: 'Unlimited context & long-term memory', included: true },
       { text: 'All terminal and IDE integrations', included: true },
-      { text: 'Priority processing', included: true },
-      { text: 'Standard support', included: true },
+      { text: 'Email support', included: true },
     ]
   },
   {
@@ -76,9 +75,8 @@ const plans: PricingPlan[] = [
       { text: 'Eliminates AI hallucinations', included: true },
       { text: 'Unlimited context & long-term memory', included: true },
       { text: 'All terminal and IDE integrations', included: true },
-      { text: 'Priority processing', included: true },
       { text: 'Advanced model combinations', included: true },
-      { text: 'Standard support', included: true },
+      { text: 'Email support', included: true },
     ]
   },
   {
@@ -92,15 +90,15 @@ const plans: PricingPlan[] = [
       { text: 'Eliminates AI hallucinations', included: true },
       { text: 'Unlimited context & long-term memory', included: true },
       { text: 'All terminal and IDE integrations', included: true },
-      { text: 'Priority processing', included: true },
       { text: 'Advanced model combinations', included: true },
+      { text: 'Email support', included: true },
       { text: 'Single user license', included: true },
     ]
   },
   {
     id: 'team-unlimited',
     name: 'Team Unlimited',
-    price: 100,
+    price: 115,
     description: 'Best value for development teams',
     features: [
       { text: 'Unlimited conversations for 5 developers', included: true },
@@ -108,10 +106,9 @@ const plans: PricingPlan[] = [
       { text: 'Eliminates AI hallucinations', included: true },
       { text: 'Unlimited context & long-term memory', included: true },
       { text: 'All terminal and IDE integrations', included: true },
-      { text: 'Priority processing', included: true },
       { text: 'Team usage dashboard & analytics', included: true },
       { text: 'Priority support', included: true },
-      { text: '70% savings vs individual plans', included: true },
+      { text: '23% savings vs individual plans', included: true },
     ]
   }
 ]

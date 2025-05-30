@@ -546,13 +546,7 @@ export default function Home() {
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">Priority processing</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-2.5 h-2.5 text-primary" />
-                  </div>
-                  <span className="ml-2 text-gray-300 text-sm">Standard support</span>
+                  <span className="ml-2 text-gray-300 text-sm">Email support</span>
                 </li>
               </ul>
               
@@ -609,12 +603,6 @@ export default function Home() {
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
                   <span className="ml-2 text-gray-300 text-sm">Advanced models</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-2.5 h-2.5 text-primary" />
-                  </div>
-                  <span className="ml-2 text-gray-300 text-sm">Priority processing</span>
                 </li>
               </ul>
               
@@ -675,12 +663,6 @@ export default function Home() {
                   <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5 text-primary" />
                   </div>
-                  <span className="ml-2 text-gray-300 text-sm">Priority processing</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-2.5 h-2.5 text-primary" />
-                  </div>
                   <span className="ml-2 text-gray-300 text-sm">Single user license</span>
                 </li>
               </ul>
@@ -713,12 +695,12 @@ export default function Home() {
               <div className="relative z-10">
               <h3 className="text-xl font-bold text-white mb-2">Team Unlimited</h3>
               <div className="flex items-baseline gap-2 mb-2">
-                <span className="text-4xl font-bold text-white">$100</span>
+                <span className="text-4xl font-bold text-white">$115</span>
                 <span className="text-gray-300 text-sm">/month</span>
               </div>
               <p className="text-gray-300 mb-3 text-sm">Best value for teams</p>
               <div className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full w-fit mb-4">
-                67% savings vs individual
+                23% savings vs individual
               </div>
               
               <ul className="space-y-3 mb-6">
@@ -759,12 +741,11 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-gray-400 mb-2">Looking for our Standard ($10) plan?</p>
             <Link 
               href="/pricing" 
               className="text-primary font-medium inline-flex items-center hover:gap-3 transition-all"
             >
-              View all pricing options 
+              View all pricing details 
               <ChevronRight className="w-4 h-4 ml-2" />
             </Link>
           </div>
@@ -822,7 +803,7 @@ export default function Home() {
                     <td className="p-6 text-center text-white font-bold">$10</td>
                     <td className="p-6 text-center text-white font-bold">$20</td>
                     <td className="p-6 text-center text-white font-bold bg-primary/5">$30</td>
-                    <td className="p-6 text-center text-white font-bold">$100</td>
+                    <td className="p-6 text-center text-white font-bold">$115</td>
                   </tr>
                   <tr className="border-t border-dark-600">
                     <td className="p-6 text-gray-300 font-medium">Daily conversations</td>
@@ -879,15 +860,6 @@ export default function Home() {
                     <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
                   </tr>
                   <tr className="border-t border-dark-600">
-                    <td className="p-6 text-gray-300 font-medium">Priority processing</td>
-                    <td className="p-6 text-center"><span className="w-2 h-0.5 bg-dark-500 block mx-auto" /></td>
-                    <td className="p-6 text-center"><span className="w-2 h-0.5 bg-dark-500 block mx-auto" /></td>
-                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
-                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
-                    <td className="p-6 text-center bg-primary/5"><Check className="w-5 h-5 text-primary mx-auto" /></td>
-                    <td className="p-6 text-center"><Check className="w-5 h-5 text-primary mx-auto" /></td>
-                  </tr>
-                  <tr className="border-t border-dark-600">
                     <td className="p-6 text-gray-300 font-medium">Team members included</td>
                     <td className="p-6 text-center text-gray-300">1</td>
                     <td className="p-6 text-center text-gray-300">1</td>
@@ -907,12 +879,12 @@ export default function Home() {
                   </tr>
                   <tr className="border-t border-dark-600">
                     <td className="p-6 text-gray-300 font-medium">Support level</td>
-                    <td className="p-6 text-center text-gray-300">Community</td>
-                    <td className="p-6 text-center text-gray-300">Community</td>
-                    <td className="p-6 text-center text-gray-300">Standard</td>
-                    <td className="p-6 text-center text-gray-300">Standard</td>
-                    <td className="p-6 text-center text-gray-300 bg-primary/5">Standard</td>
-                    <td className="p-6 text-center text-gray-300">Dedicated</td>
+                    <td className="p-6 text-center text-gray-300">Email support</td>
+                    <td className="p-6 text-center text-gray-300">Email support</td>
+                    <td className="p-6 text-center text-gray-300">Email support</td>
+                    <td className="p-6 text-center text-gray-300">Email support</td>
+                    <td className="p-6 text-center text-gray-300 bg-primary/5">Email support</td>
+                    <td className="p-6 text-center text-gray-300">Priority support</td>
                   </tr>
                   <tr className="border-t border-dark-600">
                     <td className="p-6 text-gray-300 font-medium">Cancel anytime online</td>
